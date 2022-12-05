@@ -70,6 +70,7 @@ blockquote {
   }
 
   .card-title {
+    font-size: 1.25rem;
     color: var(--global-text-color);
   }
 
@@ -121,9 +122,20 @@ blockquote {
   }
 }
 
+.post-header {
+  text-align: center;
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
 .post-description {
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   a {
     color: inherit;
     &:hover {
@@ -133,6 +145,9 @@ blockquote {
   }
 }
 
+.desc {
+  font-style: italic;
+}
 
 // Navbar customization
 
@@ -277,6 +292,7 @@ footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
   .container {
+    text-align: center;
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
@@ -316,6 +332,14 @@ footer.sticky-bottom {
       }
     }
   }
+
+  .inline-img {
+    display: inline-block;
+    padding: 0;
+    vertical-align: baseline;
+    height: 0.95rem;
+    width: 1.5rem;
+  }
 }
 
 // Repositories
@@ -331,11 +355,14 @@ footer.sticky-bottom {
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
   padding-bottom: 3rem;
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
   }
 }
 
@@ -351,7 +378,7 @@ footer.sticky-bottom {
     p, li {
       list-style: none;
       display: inline-block;
-      padding: 1rem 0.5rem;
+      padding: 0rem 0.5rem;
       color: var(--global-text-color-light);
     }
   }
@@ -421,7 +448,7 @@ footer.sticky-bottom {
 .projects {
   a {
     text-decoration: none;
-
+    text-align: center;
     &:hover {
       .card-title {
         color: var(--global-theme-color);
@@ -447,19 +474,22 @@ footer.sticky-bottom {
 
   .grid-sizer, .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   h2.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: right;
   }
 }
 
+// News
+
+.news {
+  margin-top: 2rem;
+}
 
 // Publications
 
@@ -544,6 +574,7 @@ footer.sticky-bottom {
         }
       }
       .links {
+        display: flex;
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -551,6 +582,8 @@ footer.sticky-bottom {
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
+          margin-left: 0;
+          margin-right: 0.75rem;
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
