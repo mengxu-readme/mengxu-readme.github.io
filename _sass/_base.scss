@@ -145,10 +145,6 @@ blockquote {
   }
 }
 
-.desc {
-  font-style: italic;
-}
-
 // Navbar customization
 
 .navbar {
@@ -688,6 +684,10 @@ html.transition *:after {
       border-left: 5px solid var(--global-theme-color);
       padding: 8px;
     }
+  }
+
+  .desc {
+    font-style: italic;
   }
 }
 
