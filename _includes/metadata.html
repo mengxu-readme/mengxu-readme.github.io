@@ -183,7 +183,7 @@
           "name": "{{ site.first_name }} {{ site.last_name }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "WebSite",
+        "@type": "Website",
         "description": "{%- if page.description -%}{{ page.description }}{%- else if site.description -%}{{ site.description }}{%- endif -%}",
         "headline": "{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}",
         {% if sameaslinks != blank -%}
