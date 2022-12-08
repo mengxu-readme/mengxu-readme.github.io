@@ -4,6 +4,7 @@ permalink: /repositories/
 title: Repositories
 description:
 nav: false
+sitemap: false
 nav_order: 3
 ---
 
