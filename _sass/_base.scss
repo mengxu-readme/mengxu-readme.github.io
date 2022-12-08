@@ -694,6 +694,7 @@ html.transition *:after {
 		background-clip: text;
 		animation-name: shimmer;
 		animation-duration: 3s;
+    animation-timing-function: linear;
 		animation-iteration-count: initial;
 		background-repeat: no-repeat;
 		background-position: top left -0.35rem;
