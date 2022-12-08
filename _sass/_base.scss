@@ -685,6 +685,29 @@ html.transition *:after {
       padding: 8px;
     }
   }
+  
+  .shimmer {
+		color: rgba(0, 0, 0, 0);
+		background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color));
+		background-size: 0.35rem 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		animation-name: shimmer;
+		animation-duration: 3s;
+		animation-iteration-count: initial;
+		background-repeat: no-repeat;
+		background-position: top left -0.35rem;
+		background-color: var(--global-text-color);
+  }
+
+  @keyframes shimmer {
+      0% {
+          background-position: top left;
+      }
+      100% {
+          background-position: top right;
+      }
+  }
 
   .desc {
     font-style: italic;
