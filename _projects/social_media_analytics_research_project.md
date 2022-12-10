@@ -2,7 +2,7 @@
 layout: page
 title: Social Media Analytics
 description:
-img: assets/img/twitter_iphone.jpg
+img: assets/img/iphone_twitter.jpg
 importance: 1
 category: Research
 ---

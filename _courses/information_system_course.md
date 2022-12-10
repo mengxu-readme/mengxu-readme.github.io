@@ -23,4 +23,4 @@ My responsibilities as a Graduate Teaching Assistant included creating assignmen
 This mandatory class for all undergraduate students who majored in Business.
 
 #### Course Syllabus
-You can find [the course syllabus here](/../assets/pdf/MGT2210_Spring 2020_syllabus.pdf).
+You can find [the course syllabus here](/../assets/pdf/MGT2210_Spring 2020_Syllabus.pdf).
