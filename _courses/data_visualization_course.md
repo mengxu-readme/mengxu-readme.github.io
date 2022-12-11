@@ -2,7 +2,7 @@
 layout: page
 title: Visual Reporting and Communication
 description:
-img: assets/img/data_visualization.jpg
+img: assets/img/courses/data_visualization.jpg
 importance: 1
 category: Instructor
 ---
@@ -24,4 +24,4 @@ I was an instructor for this data visualization class and was responsible for de
 This was a core class for the Master of Science in Business Analytics students at Mercer University.
 
 #### Course Syllabus
-You can find [the course syllabus here](/../assets/pdf/BA631_Fall 2020_Syllabus.pdf).
+You can find [the course syllabus here](/../assets/pdf/courses/BA631_Fall 2020_Syllabus.pdf).

@@ -6,7 +6,7 @@ subtitle: Per aspera ad astra
 
 profile:
   align: right
-  image: my_pic.jpg
+  image: about/my_pic.jpg
   image_circular: false # crops the image to make it circular
   address:
 

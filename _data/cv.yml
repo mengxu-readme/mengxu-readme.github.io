@@ -13,7 +13,7 @@
       degree: Master of Business Administration (MBA), Business Analytics
       icon:
         link: "https://www.scheller.gatech.edu"
-        src: "/assets/img/georgia_tech_logo.svg"
+        src: "/assets/img/cv/georgia_tech_logo.svg"
       year: 2020
       description:
         - "GPA: 4.00"
@@ -22,7 +22,7 @@
       degree: Bachelor of Business Administration (BBA), Risk Management and Insurance
       icon:
         link: "https://www.terry.uga.edu/"
-        src: "/assets/img/georgia_logo.svg"
+        src: "/assets/img/cv/georgia_logo.svg"
       year: 2013
       description:
         - "GPA: 3.88"
@@ -39,25 +39,18 @@
       description:
         - Worked on several IT projects under the supervision of Dr. Shannon Thomas at the Department of Information Technology
 
-    - title: Social Media Analytics Project
+    - title: Social Media Analytics Research Project
       icon:
         class: "fas fa-laptop-code"
       institution: Georgia Institute of Technology
       location: Atlanta, GA
       year: 2019
       description:
-        - Collected tweets using Twitter API, analyzed tweets about iPhones before and after the launch of several iPhone models to analyze consumer sentiment
-        - Examined the relationship between consumer sentiment and Apple’s stock performance during new iPhone product launches
+        - Analyzed the sentiment for three new iPhone releases utilizing various media outlets such as Wall Street Journal news, Apple’s Newsroom, and TechCrunch articles as well as general consumer responses via Twitter using Twitter APIs
+        - Examined the relationship between sentiment and Apple’s stock performance before and after new iPhone product launches and how sentiment was reflected in stock price
+        - Provided the managerial implications for companies to be more engaged with general consumers on social media platforms before, during, and after each new product release
+        - Please see more details such as data sources, regression analysis, and limitations regarding <a href="https://mengxu-readme.github.io/projects/social_media_analytics_research_project/">this research project</a> on <a href="https://mengxu-readme.github.io">my website</a> 
 
-    - title: Big Data Project
-      icon:
-        class: "fas fa-laptop-code"
-      institution: Georgia Institute of Technology
-      location: Atlanta, GA
-      year: 2019
-      description:
-        - Utilized data provided by a large shopping mall, combined the dataset with external data such as holiday, weather, and unemployment rate, and built a neural network model to predict foot traffic at this shopping mall
-        - Used the prediction to help the shopping mall optimize its marketing strategy
 
 - title: Teaching Experience
   type: time_table
@@ -111,7 +104,7 @@
       location: Atlanta, GA
       year: 2019
       description:
-        - Conducted research and analysis of e-commerce fulfillment market independently to devise a strategy for positioning a new product, UPS® eFulfillment
+        - Conducted research and analysis of e-commerce fulfillment market independently to devise a strategy for positioning a new product <a href="https://www.ups.com/us/en/supplychain/logistics/ecommerce-fulfillment.page">UPS® eFulfillment</a>
 
     - title: Account Executive
       icon:
