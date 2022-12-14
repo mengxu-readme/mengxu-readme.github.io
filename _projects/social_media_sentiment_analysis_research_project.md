@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Social Media Analytics Research
+title: Social Media Sentiment Analysis Research
 description:
 img: assets/img/projects/iphone_twitter.jpg
 importance: 1

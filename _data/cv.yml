@@ -39,7 +39,7 @@
       description:
         - Worked on several IT projects under the supervision of Dr. Shannon Thomas at the Department of Information Technology
 
-    - title: Social Media Analytics Research Project
+    - title: Social Media Sentiment Analysis Research Project
       icon:
         class: "fas fa-laptop-code"
       institution: Georgia Institute of Technology
@@ -48,7 +48,7 @@
       description:
         - Analyzed the sentiment for three new iPhone releases utilizing various media outlets such as Wall Street Journal news, Apple’s Newsroom, and TechCrunch articles as well as general consumer responses via Twitter using Twitter APIs
         - Examined the relationship between sentiment and Apple’s stock performance before and after new iPhone product launches and how sentiment was reflected in stock price
-        - Provided the managerial implications for companies to be more engaged with general consumers on social media platforms before, during, and after each new product release
+        - Provided managerial implications for companies to be more engaged with general consumers on social media platforms before, during, and after each new product release
         - Please see more details such as data sources, regression analysis, and limitations regarding <a href="https://mengxu-readme.github.io/projects/social_media_analytics_research_project/">this research project</a> on <a href="https://mengxu-readme.github.io">my website</a> 
 
 
