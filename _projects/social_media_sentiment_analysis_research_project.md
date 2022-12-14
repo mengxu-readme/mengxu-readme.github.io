@@ -38,11 +38,11 @@ Social Media – Twitter:
 
 from searchtweets import load_credentials, gen_rule_payload, collect_results
 
-premium_search_args = load_credentials(filename='./twitter_keys.yaml', yaml_key='search_tweets_api', env_overwrite=False)
+search_args = load_credentials(filename='./twitter_keys.yaml', yaml_key='search_tweets_api', env_overwrite=False)
 
 rule = gen_rule_payload('iphone 11 lang:en', results_per_call=100, from_date='201909220800', to_date='201909222200')
 
-tweets = collect_results(rule, max_results=500, result_stream_args=premium_search_args)
+tweets = collect_results(rule, max_results=500, result_stream_args=search_args)
 
 [print(tweet.all_text, end='\n\n') for tweet in tweets[:]]
 
