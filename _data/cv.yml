@@ -32,7 +32,7 @@
   contents:
     - title: Graduate Research Assistant
       icon:
-        class: "fas fa-book-open"
+        class: "fas fa-edit"
       institution: Georgia Institute of Technology
       location: Atlanta, GA
       year: 2018 - 2019
@@ -41,7 +41,7 @@
 
     - title: Social Media Sentiment Analysis Research Project
       icon:
-        class: "fas fa-laptop-code"
+        class: "fas fa-edit"
       institution: Georgia Institute of Technology
       location: Atlanta, GA
       year: 2019
@@ -78,7 +78,7 @@
   contents:
     - title: Senior Product Manager
       icon:
-        class: "fas fa-user-tie"
+        class: "fas fa-users"
       institution: Equifax, Research and Development Department
       location: Atlanta, GA
       year: 2021 - 2022
@@ -88,7 +88,7 @@
 
     - title: Senior Marketing Strategy Analyst
       icon:
-        class: "fas fa-book-open"
+        class: "fas fa-edit"
       institution: UPS, Marketing Department
       location: Atlanta, GA
       year: 2020 - 2021
@@ -99,7 +99,7 @@
     
     - title: Marketing Research Intern
       icon:
-        class: "fas fa-book-open"
+        class: "fas fa-edit"
       institution: UPS, Marketing Department
       location: Atlanta, GA
       year: 2019
@@ -108,7 +108,7 @@
 
     - title: Account Executive
       icon:
-        class: "fas fa-pen"
+        class: "fas fa-user-alt"
       institution: Builders, Underwriting Department
       location: Atlanta, GA
       year: 2014 - 2018
