@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hello! Thank you for stopping by my personal website!
 
-My name is Meng Xu, and I’m an aspiring PhD applicant who is eager to explore the field of Strategy and Entrepreneurship.
+My name is Meng Xu, and I’m an aspiring PhD applicant who is eager to explore the field of `Strategy and Entrepreneurship`.
 
 Before I made the life-changing decision to pursue a PhD, I was a Sr. Product Manager at a fintech company, leading cross-functional teams and managing a SaaS analytics platform that was used by data scientists from over fifteen countries and generated over half a billion annual revenue. I received my MBA from Georgia Institute of Technology and my BBA from the University of Georgia (Go Dawgs!).
 
