@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Tips for Beginners as a Beginner - How to Read a Paper
-date: 2022-12-15T21:09:00-05:00
+date: 2022-12-15T20:00:00-05:00
 description:
 tags: PhD Research
 categories:
