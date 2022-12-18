@@ -21,6 +21,6 @@ A blog can be a perfect outlet to share my ideas that hopefully will inspire oth
 What makes writing better? Writing more! Writing papers will always be looming in the background no matter which stage I am with my academic career. The more I write, the more familiar I am with my styles and the more aware I am with my weaknesses. Writing is like exercising, and you need to keep your writing muscles toned.
 
 #### Express yourself freely
-A blog is a fantastic platform to express myself. Getting stuck while writing my Statement of Purpose? Write a blog to spark some ideas. Feeling burned out during the qualifying exam? Write a blog to distract yourself and give myself a break. Paper submission being rejected? Write a blog to vent and get my motivation back. Emotional and physical health benefits of expressive writing have been approved by [a study published by the American Psychological Association](https://www.apa.org/monitor/sep01/keepdiary).
+A blog is a fantastic platform to express myself. Getting stuck while writing my Statement of Purpose? Write a blog to spark some ideas. Feeling burned out during the qualifying exam? Write a blog to distract yourself and give myself a break. Paper submission being rejected? Write a blog to vent and get my motivation back. Emotional and physical health benefits of expressive writing have been studied by [a research published by the American Psychological Association](https://www.apa.org/monitor/sep01/keepdiary).
 
 This is my first time writing a blog, and I’m already loving it!
