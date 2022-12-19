@@ -53,7 +53,7 @@ tweets = collect_results(rule, max_results=500, result_stream_args=search_args)
 <p style="margin-top: 1rem;">I got the stock information for iPhone 8 and iPhone X that was released in 2017 from WRDS. As 2019 stock information was not yet available via WRDS, for the iPhone 11, the data was collected from Yahoo Finance. I used (AAPL Return – SP500 Market Index Return) to calculate Adjusted Returns. Date_idx shows the index of the dates with 0 being the release date.</p>
 
 <div class="table-responsive">
-<table class="table table-sm" style="margin-left: auto; margin-right: auto; width: 90%;">
+<table class="table table-sm" style="margin-left: auto; margin-right: auto;">
   <thead>
     <tr>
       <th style="text-align: left">Phone</th>
