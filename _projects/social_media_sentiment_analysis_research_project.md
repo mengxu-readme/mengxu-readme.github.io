@@ -169,7 +169,7 @@ Sentiment score for each Apple Newsroom, TechCrunch, and WSJ:
 
 Top words - Apple Newsroom
 
-<div style="margin-left: auto; margin-right: auto; width: 60%;">
+<div style="margin-left: auto; margin-right: auto; width: 65%;">
 {% include figure.html path="assets/img/projects/apple_newsroom_top_words.png" title="Apple Newsroom Top Words" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
@@ -179,7 +179,7 @@ Top words - Apple Newsroom
 
 Top words - TechCrunch
 
-<div style="margin-left: auto; margin-right: auto; width: 60%;">
+<div style="margin-left: auto; margin-right: auto; width: 65%;">
 {% include figure.html path="assets/img/projects/techcrunch_top_words.png" title="TechCrunch Top Words" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
@@ -189,7 +189,7 @@ Top words - TechCrunch
 
 Top words - Wall Street Journal
 
-<div style="margin-left: auto; margin-right: auto; width: 60%;">
+<div style="margin-left: auto; margin-right: auto; width: 65%;">
 {% include figure.html path="assets/img/projects/wsj_top_words.png" title="Wall Street Journal Top Words" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
@@ -271,7 +271,7 @@ Consumers in general become more positive after a new phone is released than the
 
 Top words that people used in their tweets, filtering out stop words.
 
-<div style="margin-left: auto; margin-right: auto; width: 60%;">
+<div style="margin-left: auto; margin-right: auto; width: 65%;">
 {% include figure.html path="assets/img/projects/twitter_top_words.png" title="Twitter Top Words" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
