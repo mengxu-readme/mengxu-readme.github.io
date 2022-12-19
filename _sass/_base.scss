@@ -56,7 +56,7 @@ blockquote {
 .caption {
   font-size: 0.875rem;
   margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -686,13 +686,13 @@ html.transition *:after {
     }
   }
   
-  .shimmer {
+  .scan {
 		color: rgba(0, 0, 0, 0);
 		background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color));
 		background-size: 0.35rem 100%;
 		-webkit-background-clip: text;
 		background-clip: text;
-		animation-name: shimmer;
+		animation-name: scan;
 		animation-duration: 3s;
     animation-timing-function: linear;
 		animation-iteration-count: initial;
@@ -701,7 +701,7 @@ html.transition *:after {
 		background-color: var(--global-text-color);
   }
 
-  @keyframes shimmer {
+  @keyframes scan {
       0% {
           background-position: top left;
       }
