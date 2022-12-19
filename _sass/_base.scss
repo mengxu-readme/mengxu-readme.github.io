@@ -478,6 +478,7 @@ footer.sticky-bottom {
     border-bottom: 1px solid var(--global-divider-color);
     margin-bottom: 2rem;
     text-align: right;
+    padding-bottom: 0.25rem;
   }
 }
 
@@ -507,7 +508,7 @@ footer.sticky-bottom {
   h2.year {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     margin-top: 2rem;
     margin-bottom: -2rem;
     text-align: right;
