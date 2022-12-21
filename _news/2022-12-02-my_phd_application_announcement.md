@@ -1,6 +1,7 @@
 ---
 layout: post
-date: 2022-12-02T00:00:00-05:00
+title: My PhD Application Announcement
+date: 2022-12-02T20:00:00-05:00
 inline: true
 ---
 
