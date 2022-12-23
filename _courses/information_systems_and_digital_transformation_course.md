@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Information System and Digital Transformation
+title: Information Systems and Digital Transformation
 description:
-img: assets/img/courses/information_system.jpg
+img: assets/img/courses/information_technology.jpg
 importance: 1
 category: Teaching Assistant
 ---
@@ -23,4 +23,4 @@ My responsibilities as a Graduate Teaching Assistant included creating assignmen
 This mandatory class for all undergraduate students who majored in Business.
 
 #### Course Syllabus
-You can find [the course syllabus here](/../assets/pdf/courses/MGT2210_Spring 2020_Syllabus.pdf).
+You can find <a href="/../assets/pdf/courses/MGT2210_Spring 2020_Syllabus.pdf" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
