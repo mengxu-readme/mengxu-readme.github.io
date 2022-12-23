@@ -135,15 +135,15 @@ I knew that I was going to repeat some steps many times, so I defined functions 
 
 Google trends data showed that the popularity of “iPhone” searches dramatically started to increase about 2 weeks prior to each release date. I used this data to help me narrow down the scope and set the timeframes for how far back I needed to go to find articles prior to each release date.
 
-{% include figure.html path="assets/img/projects/google_trends.png" title="Google Trends" class="img-fluid rounded z-depth-1" caption="Google Trends" zoomable=true %}
+{% include figure.html path="assets/img/projects/google_trends.png" title="Google Trends" alt="Google Trends" class="img-fluid rounded z-depth-1" caption="Google Trends" zoomable=true %}
 
 AAPL stock performance was quite different for each new phone release. In the graphs below, the axis goes up to 3 days prior to and 2 days subsequent to each release date (0). The line graph shows that AAPL stock experienced some increase after the releases of iPhone 8 and iPhone 11, while it dropped after the release of iPhone X.
 
-{% include figure.html path="assets/img/projects/stock_performance.png" title="Stock Performance" class="img-fluid rounded z-depth-1" caption="Stock Performance" zoomable=true %}
+{% include figure.html path="assets/img/projects/stock_performance.png" title="Stock Performance" alt="Stock Performance" class="img-fluid rounded z-depth-1" caption="Stock Performance" zoomable=true %}
 
 A closer look at the average performance of AAPL stock returns told a different story. The blue bars represent the 3-day average adjusted stock returns for each phone before release, and orange bars represent the 3-day average adjusted stock returns for each phone after release. The stock return increased the most for iPhone 8, changing from negative to positive return. It also had good performance for iPhone X. However, the adjusted stock return dropped significantly after the release of iPhone 11. This graph made me think that iPhone 11 might not be a successful iPhone release.
 
-{% include figure.html path="assets/img/projects/average_stock_performance.png" title="Average Stock Performance" class="img-fluid rounded z-depth-1" caption="Average Stock Performance" zoomable=true %}
+{% include figure.html path="assets/img/projects/average_stock_performance.png" title="Average Stock Performance" alt="Average Stock Performance" class="img-fluid rounded z-depth-1" caption="Average Stock Performance" zoomable=true %}
 
 I grouped the articles into three folders: Apple, TechCrunch, and WSJ. The articles tend to mention multiple iPhone products together, so it was difficult to attribute each article to only one phone. Also, due to my desire to evaluate the sentiment of the press and marketing leading up to each release date, in addition to the major decline in the publishing of Apple and iPhone related articles after each release, I decided not to split the articles into 6 separate groups as I did for tweets. I looped through each txt file in each folder to read all articles as a large string.
 
@@ -153,24 +153,24 @@ News reports generally relayed positive sentiment about iPhones, with Apple bein
 
 Sentiment score for each Apple Newsroom, TechCrunch, and WSJ:
 
-{% include figure.html path="assets/img/projects/sentiment_score.png" title="Sentiment Score" class="img-fluid rounded z-depth-1" caption="Sentiment Score" zoomable=true %}
+{% include figure.html path="assets/img/projects/sentiment_score.png" title="Sentiment Score" alt="Sentiment Score" class="img-fluid rounded z-depth-1" caption="Sentiment Score" zoomable=true %}
 
 Top words - Apple Newsroom
 
 <div style="margin-left: auto; margin-right: auto; width: 65%;">
-{% include figure.html path="assets/img/projects/apple_newsroom_top_words.png" title="Apple Newsroom Top Words" class="img-fluid rounded z-depth-1" caption="Apple Newsroom Top Words" zoomable=true %}
+{% include figure.html path="assets/img/projects/apple_newsroom_top_words.png" title="Apple Newsroom Top Words" alt="Apple Newsroom Top Words" class="img-fluid rounded z-depth-1" caption="Apple Newsroom Top Words" zoomable=true %}
 </div>
 
 Top words - TechCrunch
 
 <div style="margin-left: auto; margin-right: auto; width: 65%;">
-{% include figure.html path="assets/img/projects/techcrunch_top_words.png" title="TechCrunch Top Words" class="img-fluid rounded z-depth-1" caption="TechCrunch Top Words" zoomable=true %}
+{% include figure.html path="assets/img/projects/techcrunch_top_words.png" title="TechCrunch Top Words" alt="TechCrunch Top Words" class="img-fluid rounded z-depth-1" caption="TechCrunch Top Words" zoomable=true %}
 </div>
 
 Top words - Wall Street Journal
 
 <div style="margin-left: auto; margin-right: auto; width: 65%;">
-{% include figure.html path="assets/img/projects/wsj_top_words.png" title="Wall Street Journal Top Words" class="img-fluid rounded z-depth-1" caption="Wall Street Journal Top Words" zoomable=true %}
+{% include figure.html path="assets/img/projects/wsj_top_words.png" title="Wall Street Journal Top Words" alt="Wall Street Journal Top Words" class="img-fluid rounded z-depth-1" caption="Wall Street Journal Top Words" zoomable=true %}
 </div>
 
 I set the tweets into 6 groups: iPhone 8 pre, iPhone 8 post, iPhone x pre, iPhone x post, iPhone 11 pre, iPhone 11 post, and then applied <b>groupby(Phone).mean()</b> to get the mean <b>net  positive percentage</b> for each group. I then mapped <b>net positive percentage</b> values to the stock performance file.
@@ -239,12 +239,12 @@ I set the tweets into 6 groups: iPhone 8 pre, iPhone 8 post, iPhone x pre, iPhon
 
 Consumers in general become more positive after a new phone is released than they are before the release, but that jump was much smaller for iPhone 11 than for the 8 or X models.
 
-{% include figure.html path="assets/img/projects/iphone_pre_post_npp.png" title="iPhone Pre-Post Release Net Positive Percentage" class="img-fluid rounded z-depth-1" caption="iPhone Pre-Post Release Net Positive Percentage" zoomable=true %}
+{% include figure.html path="assets/img/projects/iphone_pre_post_npp.png" title="iPhone Pre-Post Release Net Positive Percentage" alt="iPhone Pre-Post Release Net Positive Percentage" class="img-fluid rounded z-depth-1" caption="iPhone Pre-Post Release Net Positive Percentage" zoomable=true %}
 
 Top words that people used in their tweets, filtering out stop words.
 
 <div style="margin-left: auto; margin-right: auto; width: 65%;">
-{% include figure.html path="assets/img/projects/twitter_top_words.png" title="Twitter Top Words" class="img-fluid rounded z-depth-1" caption="Twitter Top Words" zoomable=true %}
+{% include figure.html path="assets/img/projects/twitter_top_words.png" title="Twitter Top Words" alt="Twitter Top Words" class="img-fluid rounded z-depth-1" caption="Twitter Top Words" zoomable=true %}
 </div>
 
 I used <b>get_dummies</b> to create three dummies, iPhone 8, iPhone x, and iPhone 11, dropping iPhone 11 which would be used as the “baseline” because only N-1 dummy variables were needed.
@@ -334,7 +334,7 @@ I used <b>get_dummies</b> to create three dummies, iPhone 8, iPhone x, and iPhon
 
 I ran a regression analysis using this DataFrame. The p-values for the independent variables are all significant, except that for <b>pre_post</b>. The negative coefficient of <b>pre_post</b> shows that AAPL stock generally does worse after new phone releases than before the release (but it’s not significant). <b>pre_post</b> has a larger p-value and is not a good indicator. This is likely due to different stock performance before and after release for each iPhone and limited data (only 6 observations). The variable <b>net_pos_pct</b> is a very small number and that is why it has a large coefficient. Since iPhone 11 was dropped and used as the baseline, the coefficients for iPhone 8 and iPhone X signify that, compared to <b>iPhone 11</b>, <b>iPhone 8</b> and <b>iPhone X</b> had a more positive affect on AAPL stock returns, so I may conclude that iPhone 8 and iPhone X were more successful iPhones than the iPhone 11 was, partly due to a successful marketing strategy that helped to produce more positive sentiment.
 
-{% include figure.html path="assets/img/projects/regression_analysis.png" title="Regression Analysis" class="img-fluid rounded z-depth-1" caption="Regression Analysis" zoomable=true %}
+{% include figure.html path="assets/img/projects/regression_analysis.png" title="Regression Analysis" alt="Regression Analysis" class="img-fluid rounded z-depth-1" caption="Regression Analysis" zoomable=true %}
 
 {% highlight py %}
 
