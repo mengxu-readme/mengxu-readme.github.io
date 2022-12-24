@@ -16,6 +16,14 @@
     {%- capture title -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
     {% if page.url == '/blog/index.html' %}
         {{ site.blog_nav_title }} | {{ title }}
+    {%- elsif page.url contains '/blog/' -%}
+        {%- if page.url contains '/blog/tag/' or page.url contains '/blog/category/' -%}
+            {{ site.blog_nav_title }} | {{ page.title }} | {{ title }}
+        {%- elsif page.title == nil or page.title == "" -%}
+            {{ site.blog_nav_title }} | {{ page.date | date: "%Y" }} | {{ title }}
+        {%- else -%}
+            {{ page.title }} | {{ title }}
+        {%- endif -%}
     {%- elsif page.title != "blank" and page.url != "/" -%}
         {%- if page.title == nil or page.title == "" -%}
             {{ page.date | date: "%Y" }} | {{ title }}
