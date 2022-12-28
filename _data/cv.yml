@@ -17,7 +17,7 @@
         alt: "georgia tech logo"
       year: 2020
       description:
-        - "GPA: 4.00"
+        - "GPA: 4.00 / 4.00"
 
     - institution: The University of Georgia, Terry College of Business
       degree: Bachelor of Business Administration (BBA), Risk Management and Insurance
@@ -27,7 +27,7 @@
         alt: "georgia logo"
       year: 2013
       description:
-        - "GPA: 3.88"
+        - "GPA: 3.88 / 4.00"
 
 - title: Research Experience
   type: time_table
