@@ -21,7 +21,7 @@ category: Research
 
 The general purpose of this project was to analyze the sentiment for iPhone 8, iPhone X, and iPhone 11 releases using various media outlets such as news, press, and tech articles as well as general consumer responses via Twitter and seeing if or how that sentiment relates to or is reflected in Apple’s stock price. The iPhone 8 was released on September 22, 2017; the iPhone X was released on November 3, 2017; and the iPhone 11 was released on September 20, 2019.
 
-I wanted to see how people were talking about iPhone products on Twitter, what major news sources reported about new iPhone releases, and how the stock performed before and after each release. I ran a regression analysis that helped me identify factors that affected AAPL stock performance. With the model I created, people will be able to predict AAPL stock returns based on consumer sentiment. Apple can increase its stock returns by being more engaged with general consumers on social media platforms before and after each new iPhone release.
+I wanted to see how people were talking about iPhone products on Twitter, what major news sources reported about new iPhone releases, and how the stock performed before and after each release. I ran a regression analysis with the data I collected to identify factors that affected AAPL stock performance. With the model I created, people will be able to predict AAPL stock returns based on consumer sentiment. Apple can increase its stock returns by being more engaged with general consumers on social media platforms before and after each new iPhone release.
 
 ### Data
 
@@ -32,7 +32,7 @@ I wanted to see how people were talking about iPhone products on Twitter, what m
 </li>
 <li>
 Social Media – Twitter:
-<p style="margin-top: 0.5rem;">I created 3 Twitter API accounts with Sandbox Subscription to pull 500 tweets per day, three days before the release (which was counted as the “before” group) and the release date plus two days after each release (which counted as the “after” group), for a total of 6 days’ worth of Twitter data for each iPhone release. That’s 500 * 6 * 3 = 9000 tweets in total.</p>
+<p style="margin-top: 0.5rem;">I created 3 Twitter API accounts with Sandbox Subscription to pull 500 tweets per day, three days before the release (which was counted as the “before” group) and the release date plus two days after each release (which counted as the “after” group), for a total of 6 days’ worth of Twitter data for each iPhone release. 500 * 6 * 3 = 9000 tweets in total.</p>
 
 {% highlight py %}
 
@@ -54,7 +54,7 @@ tweets = collect_results(rule, max_results=500, result_stream_args=search_args)
 
 </li>
 <li>Stock Information:
-<p style="margin-top: 0.5rem;">I got the stock information for iPhone 8 and iPhone X that was released in 2017 from WRDS. As 2019 stock information was not yet available via WRDS, for the iPhone 11, the data was collected from Yahoo Finance. I used (AAPL Return – SP500 Market Index Return) to calculate Adjusted Returns. Date_idx shows the index of the dates with 0 being the release date.</p>
+<p style="margin-top: 0.5rem;">The stock information for iPhone 8 and iPhone X that was released in 2017 came from WRDS. As 2019 stock information was not yet available via WRDS, for the iPhone 11, the data was collected from Yahoo Finance. I used (AAPL Return – SP500 Market Index Return) to calculate Adjusted Returns for AAPL. Date_idx shows the index of the dates with 0 being the release date.</p>
 
 <div class="table-responsive">
 <table class="table table-sm">
@@ -125,15 +125,17 @@ News Articles
 <li>TechCrunch: 11 articles</li>
 <li>Wall Street Journal: 31 articles</li>
 </ul>
-<p style="margin-top: 0.75rem;">I grouped the articles into three folders: Apple, TC, and WSJ. I then looped through each txt file in each folder to read all articles as a large string to store in a DataFrame so I could calculate sentiment score for each news source.</p>
+<p style="margin-top: 0.75rem;">I grouped the articles into three folders: Apple (Apple Newsroom), TC (TechCrunch), and WSJ (Wall Street Journal). I then looped through each txt file in each folder to read all articles as a large string to store in a DataFrame so I could calculate sentiment score for each news source.</p>
 </li>
 </ul>
 
 ### Analysis
 
-I knew that I was going to repeat some steps many times, so I defined functions to simplify the analysis. I started visually exploring the data by making plots.
+Knowing that I was going to repeat some steps many times, I defined functions to simplify the analysis. 
 
-Google trends data showed that the popularity of “iPhone” searches dramatically started to increase about 2 weeks prior to each release date. I used this data to help me narrow down the scope and set the timeframes for how far back I needed to go to find articles prior to each release date.
+I started by visually exploring the data and making plots.
+
+Google trends data showed that the popularity of “iPhone” searches dramatically started to increase about 2 weeks prior to each release date. I used this data to narrow down the scope and set the timeframes for how far back I needed to go to find articles prior to each release date.
 
 {% include figure.html path="assets/img/projects/google_trends.png" title="Google Trends" alt="Google Trends" class="img-fluid rounded z-depth-1" caption="Google Trends" zoomable=true %}
 
@@ -141,15 +143,15 @@ AAPL stock performance was quite different for each new phone release. In the gr
 
 {% include figure.html path="assets/img/projects/stock_performance.png" title="Stock Performance" alt="Stock Performance" class="img-fluid rounded z-depth-1" caption="Stock Performance" zoomable=true %}
 
-A closer look at the average performance of AAPL stock returns told a different story. The blue bars represent the 3-day average adjusted stock returns for each phone before release, and orange bars represent the 3-day average adjusted stock returns for each phone after release. The stock return increased the most for iPhone 8, changing from negative to positive return. It also had good performance for iPhone X. However, the adjusted stock return dropped significantly after the release of iPhone 11. This graph made me think that iPhone 11 might not be a successful iPhone release.
+A closer look at the average performance of AAPL stock returns told a different story. The blue bars represent the 3-day average adjusted stock returns for each iPhone before release, and orange bars represent the 3-day average adjusted stock returns for each iPhone after release. The stock return increased the most for iPhone 8, changing from negative to positive return, and it also performed well for iPhone X. However, the adjusted stock return dropped significantly after the release of iPhone 11. This graph made me think that iPhone 11 might not be a successful iPhone release.
 
 {% include figure.html path="assets/img/projects/average_stock_performance.png" title="Average Stock Performance" alt="Average Stock Performance" class="img-fluid rounded z-depth-1" caption="Average Stock Performance" zoomable=true %}
 
 I grouped the articles into three folders: Apple, TechCrunch, and WSJ. The articles tend to mention multiple iPhone products together, so it was difficult to attribute each article to only one phone. Also, due to my desire to evaluate the sentiment of the press and marketing leading up to each release date, in addition to the major decline in the publishing of Apple and iPhone related articles after each release, I decided not to split the articles into 6 separate groups as I did for tweets. I looped through each txt file in each folder to read all articles as a large string.
 
-With the <b>Inquirer Dictionary</b>, I got sentiment score <b>net_pos_pct</b> for each news source. I did not use LM Financial Dictionary for WSJ articles because I wanted to compare sentiment scores for each news source, and I thought it better and more consistent to use the same dictionary to do so. The variable <b>net_pos_pct</b> is net positive percentage, which is calculated using <b>(Positive words – Negative words) / Total words</b>.
+With the <b>Inquirer Dictionary</b>, I calculated sentiment score <b>net_pos_pct</b> for each news source. I did not use LM Financial Dictionary for WSJ articles because I wanted to compare sentiment scores for each news source, and I thought it would be better and more consistent to use the same dictionary to do so. The variable <b>net_pos_pct</b> is net positive percentage, which is calculated using <b>(Positive words – Negative words) / Total words</b>.
 
-News reports generally relayed positive sentiment about iPhones, with Apple being the most positive about its own products. I defined a function to generate word clouds that allowed me  to add weights to words based on the frequency of their appearances and show them in different sizes based on the weights to better visualize the content of the articles and tweets. By looking at the top words for each news source, it is clear that news sources emphasized different aspects of iPhones, reflecting each news source’s area of expertise. <b>Apple</b> mainly used words such as camera, photo, video (because new or updated camera was the key new feature) and store, customer, available, etc. <b>TechCrunch</b> frequently used tech words such as biometrics, screen, security, device, sensor, etc. <b>WSJ</b> liked to use words such as revenue, sales, share, and investor.
+News reports generally relayed positive sentiment about iPhones, with Apple being the most positive about its own products. I defined a function to generate word clouds that allowed me to add weights to words based on the frequency of their appearances and show them in different sizes based on the weights to better visualize the content of the articles and tweets. By looking at the top words for each news source, it is clear that news sources emphasized different aspects of iPhones, reflecting each news source’s area of expertise. <b>Apple</b> mainly used words such as camera, photo, video (because new or updated camera was the key new feature) and store, customer, available, etc. <b>TechCrunch</b> frequently used tech words such as biometrics, screen, security, device, sensor, etc. <b>WSJ</b> liked to use words such as revenue, sales, share, and investor.
 
 Sentiment score for each Apple Newsroom, TechCrunch, and WSJ:
 
@@ -237,7 +239,7 @@ I set the tweets into 6 groups: iPhone 8 pre, iPhone 8 post, iPhone x pre, iPhon
     Stock Performance & iPhone Pre-Post Release Net Positive Percentage
 </div>
 
-Consumers in general become more positive after a new phone is released than they are before the release, but that jump was much smaller for iPhone 11 than for the 8 or X models.
+Consumers in general became more positive after a new phone was released than they were before the release, but that jump was much smaller for iPhone 11 than for the iPhone 8 or iPhone X models.
 
 {% include figure.html path="assets/img/projects/iphone_pre_post_npp.png" title="iPhone Pre-Post Release Net Positive Percentage" alt="iPhone Pre-Post Release Net Positive Percentage" class="img-fluid rounded z-depth-1" caption="iPhone Pre-Post Release Net Positive Percentage" zoomable=true %}
 
@@ -332,7 +334,7 @@ I used <b>get_dummies</b> to create three dummies, iPhone 8, iPhone x, and iPhon
     Stock Performance & iPhone Pre-Post Release Net Positive Percentage Dummy
 </div>
 
-I ran a regression analysis using this DataFrame. The p-values for the independent variables are all significant, except that for <b>pre_post</b>. The negative coefficient of <b>pre_post</b> shows that AAPL stock generally does worse after new phone releases than before the release (but it’s not significant). <b>pre_post</b> has a larger p-value and is not a good indicator. This is likely due to different stock performance before and after release for each iPhone and limited data (only 6 observations). The variable <b>net_pos_pct</b> is a very small number and that is why it has a large coefficient. Since iPhone 11 was dropped and used as the baseline, the coefficients for iPhone 8 and iPhone X signify that, compared to <b>iPhone 11</b>, <b>iPhone 8</b> and <b>iPhone X</b> had a more positive affect on AAPL stock returns, so I may conclude that iPhone 8 and iPhone X were more successful iPhones than the iPhone 11 was, partly due to a successful marketing strategy that helped to produce more positive sentiment.
+I ran a regression analysis using this DataFrame. The p-values for the independent variables are all significant, except that for <b>pre_post</b>. The negative coefficient of <b>pre_post</b> shows that AAPL stock generally does worse after new phone releases than before the release (but it’s not significant). <b>pre_post</b> has a larger p-value and is not a good indicator. This is likely due to different stock performance before and after release for each iPhone and limited data (only 6 observations). The variable <b>net_pos_pct</b> is a very small number and that is why it has a large coefficient. Since iPhone 11 was dropped and used as the baseline, the coefficients for iPhone 8 and iPhone X signify that, compared to <b>iPhone 11</b>, <b>iPhone 8</b> and <b>iPhone X</b> had a more positive affect on AAPL stock returns. I may conclude that iPhone 8 and iPhone X were more successful iPhone models than the iPhone 11 was, partly due to a successful marketing strategy that helped to produce more positive sentiment.
 
 {% include figure.html path="assets/img/projects/regression_analysis.png" title="Regression Analysis" alt="Regression Analysis" class="img-fluid rounded z-depth-1" caption="Regression Analysis" zoomable=true %}
 
@@ -548,4 +550,4 @@ The second challenge was that because of the nature of this project, I did a lot
 
 ### Conclusion and Recommendations
 
-Consumer sentiment is a strong predictor of a company’s stock performance. For iPhones, consumers and news reporters are in general more positive than negative. iPhone 11 was not as successful as iPhone 8 and iPhone X based on the smaller increase in positive sentiment after its release relative to the other two models and based on the coefficients and p-values of the regression analysis. I also noticed that for the iPhone 11, there were considerably fewer articles published from my sources related to Apple and iPhone products in general in the two weeks leading up to the release than for the same time frame prior to the 8 and X releases. This along with the observations of the lower stock returns during the period for the 11, seem to support that there was less success with the marketing strategy and less positive sentiment associated with the release of the 11, at least in news coverage. I recommend that Apple marketing strategy and media or brand management make an effort to stay more engaged with general consumers via social media platforms and especially through media coverage such as news publishers before and after each new iPhone release, especially with technology focused publishing because tech articles tend to mention leaks and new information regarding new features in a very positive sentiment. Continuous and consistent coverage will encourage consumers to actively talk about the products, keep topics trending, create more opportunities to develop positive sentiment, and ultimately lead to better stock performance.
+Consumer sentiment is a strong predictor of a company’s stock performance. For iPhones, consumers and news reporters were in general more positive than negative. iPhone 11 was not as successful as iPhone 8 and iPhone X based on the smaller increase in positive sentiment after its release relative to the other two models and based on the coefficients and p-values of the regression analysis. I also noticed that for the iPhone 11, there were considerably fewer articles published from my sources related to Apple and iPhone products in general in the two weeks leading up to the release than for the same time frame prior to the iPhone 8 and iPhone X releases. Along with the observations of the lower stock returns during the period for the iPhone 11, this seems to support that there was less success with the marketing strategy and less positive sentiment associated with the release of the iPhone 11, at least in news coverage. I recommend that Apple marketing strategy and media or brand management teams make an effort to stay more engaged with general consumers via social media platforms and through media coverage such as news publishers before and after each new iPhone release, especially with technology focused publishing because tech articles tend to mention leaks and new information regarding new features in a very positive sentiment. Continuous and consistent coverage will encourage consumers to actively talk about the products, keep topics trending, create more opportunities to develop positive sentiment, and ultimately lead to better stock performance.
