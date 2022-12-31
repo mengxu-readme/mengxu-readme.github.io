@@ -6,6 +6,7 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
+  title: ':title - Page :num'
   per_page: 5
   sort_field: date
   sort_reverse: true
