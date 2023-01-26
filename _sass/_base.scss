@@ -696,30 +696,31 @@ html.transition *:after {
   }
   
   .scan {
-		color: rgba(0, 0, 0, 0);
-		background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color));
-		background-size: 0.35rem 100%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		animation-name: scan;
-		animation-duration: 3s;
+    color: rgba(0, 0, 0, 0);
+    background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
+                linear-gradient(to bottom, var(--global-bg-color), var(--global-bg-color));
+    background-size: 0.35rem 100%, 100% 0.35rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation-name: scan;
+    animation-duration: 3s;
     animation-timing-function: linear;
-		animation-iteration-count: initial;
-		background-repeat: no-repeat;
-		background-position: top left -0.35rem;
-		background-color: var(--global-text-color);
+    animation-iteration-count: initial;
+    background-repeat: no-repeat;
+    background-position: top left -0.35rem, left top -0.35rem;
+    background-color: var(--global-text-color);
   }
 
   @keyframes scan {
-      0% {
-          background-position: top left;
-      }
-      50% {
-          background-position: top right;
-      }
-      100% {
-          background-position: top left -0.35rem;
-      }
+    0% {
+      background-position: top left, left top;
+    }
+    50% {
+      background-position: top right, left bottom;
+    }
+    100% {
+      background-position: top left -0.35rem, left top -0.35rem;
+    }
   }
 
   .desc {
