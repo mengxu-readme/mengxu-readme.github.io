@@ -14,6 +14,7 @@
       icon:
         link: "https://www.scheller.gatech.edu"
         src: "/assets/img/cv/georgia_tech_logo.svg"
+        title: "Georgia Institute of Technology, Scheller College of Business"
         alt: "georgia tech logo"
       year: 2020
       description:
@@ -24,6 +25,7 @@
       icon:
         link: "https://www.terry.uga.edu/"
         src: "/assets/img/cv/georgia_logo.svg"
+        title: "The University of Georgia, Terry College of Business"
         alt: "georgia logo"
       year: 2013
       description:
