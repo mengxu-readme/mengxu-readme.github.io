@@ -41,10 +41,10 @@ layout: default
           </div>
 
           <!-- News -->
-          {% if page.news -%}
+          {% if page.news and site.announcements.enabled -%}
             <div style="margin-top: 1rem;">
               <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
-              {%- include news.html %}
+              {%- include news.html limit=true %}
             </div>
           {%- endif %}
 
