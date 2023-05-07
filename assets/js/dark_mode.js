@@ -4,5 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mode_toggle.addEventListener("click", function() {
         toggleTheme(localStorage.getItem("theme"));
     });
+
+    initTheme(localStorage.getItem("theme"));
 });
 
