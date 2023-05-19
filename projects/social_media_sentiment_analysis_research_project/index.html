@@ -58,6 +58,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
 
     
+    <!-- Sidebar Table of Contents -->
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
+    
 
     <!-- Styles -->
     
@@ -113,9 +116,6 @@
                 <a class="nav-link" href="/publications/">Publications</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Projects</a>
-              </li>
-              <li class="nav-item ">
                 <a class="nav-link" href="/teaching/">Teaching</a>
               </li>
               <li class="nav-item ">
@@ -146,7 +146,15 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
+        
+        <div class="row">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-sm-3">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-sm-9">
+            <!-- page.html -->
         <div class="post">
 
           <header class="post-header">
@@ -156,16 +164,6 @@
 
           <article>
             <hr style="margin-top: 3rem">
-
-<h3>Table of Contents</h3>
-
-<ul>
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#data">Data</a></li>
-  <li><a href="#analysis">Analysis</a></li>
-  <li><a href="#challenges">Challenges</a></li>
-  <li><a href="#conclusion-and-recommendations">Conclusion and Recommendations</a></li>
-</ul>
 
 <h3 id="introduction">Introduction</h3>
 
@@ -844,6 +842,9 @@ News Articles
 
         </div>
 
+          </div>
+        </div>
+        
       
     </div>
 
@@ -871,6 +872,9 @@ News Articles
   <!-- Medium Zoom JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
   <script defer src="/assets/js/zoom.js"></script>
+  <!-- Sidebar Table of Contents -->
+  <script defer src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
 
   <!-- Bootstrap Table -->
   <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
