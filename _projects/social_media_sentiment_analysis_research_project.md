@@ -5,17 +5,12 @@ description:
 img: assets/img/projects/iphone_twitter.jpg
 importance: 1
 category: Research
+toc:
+  sidebar: left
+sitemap: false
 ---
 
 <hr style="margin-top: 3rem"/>
-
-<h3>Table of Contents</h3>
-
-- [Introduction](#introduction)
-- [Data](#data)
-- [Analysis](#analysis)
-- [Challenges](#challenges)
-- [Conclusion and Recommendations](#conclusion-and-recommendations)
 
 ### Introduction
 
