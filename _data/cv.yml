@@ -3,8 +3,6 @@
   contents:
     - name: Full Name
       value: Meng Xu
-    - name: Citizenship
-      value: U.S. Citizen <i class="fas fa-flag-usa"></i>
 
 - title: Education
   type: education_time_table
