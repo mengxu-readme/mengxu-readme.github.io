@@ -396,6 +396,12 @@ footer.sticky-bottom {
   }
 }
 
+.table-cv-map {
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+}
+
 // Repositories
 
 @media (min-width: 768px) {
