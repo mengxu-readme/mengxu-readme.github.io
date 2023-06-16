@@ -439,6 +439,12 @@ footer.sticky-bottom {
   width: 1.5rem;
 }
 
+.table-cv-map {
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+}
+
 @media (min-width: 768px) {
   .repo {
     max-width: 50%;
