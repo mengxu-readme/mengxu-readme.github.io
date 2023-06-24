@@ -27,8 +27,8 @@ pagination:
   </div>
   {% endif %}
 
-  {% if site.display_tags %}
-  <div class="tag-list">
+  {% if site.display_tags or site.display_categories %}
+  <div class="tag-category-list">
     <ul class="p-0 m-0">
       {% for tag in site.display_tags %}
         <li>
@@ -36,6 +36,17 @@ pagination:
         </li>
         {% unless forloop.last %}
           <li>&bull;</li>
+        {% endunless %}
+      {% endfor %}
+      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
+        <p>&bull;</p>
+      {% endif %}
+      {% for category in site.display_categories %}
+        <li>
+          <i class="fas fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+        </li>
+        {% unless forloop.last %}
+          <p>&bull;</p>
         {% endunless %}
       {% endfor %}
     </ul>
