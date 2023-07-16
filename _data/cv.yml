@@ -14,6 +14,7 @@
         src: "/assets/img/cv/georgia_tech_logo.svg"
         title: "Georgia Institute of Technology, Scheller College of Business"
         alt: "georgia tech logo"
+      location: Atlanta, GA
       year: 2020
       description:
         - "GPA: 4.00 / 4.00"
@@ -25,6 +26,7 @@
         src: "/assets/img/cv/georgia_logo.svg"
         title: "The University of Georgia, Terry College of Business"
         alt: "georgia logo"
+      location: Athens, GA
       year: 2013
       description:
         - "GPA: 3.88 / 4.00"
@@ -81,7 +83,8 @@
     - title: Senior Product Manager
       icon:
         class: "fas fa-users"
-      institution: Equifax, Research and Development Department
+      institution: Equifax
+      department: Research and Development
       location: Atlanta, GA
       year: 2021 - 2022
       description:
@@ -91,7 +94,8 @@
     - title: Senior Marketing Strategy Analyst
       icon:
         class: "fas fa-edit"
-      institution: UPS, Marketing Department
+      institution: UPS
+      department: Marketing
       location: Atlanta, GA
       year: 2020 - 2021
       description:
@@ -102,7 +106,8 @@
     - title: Marketing Research Intern
       icon:
         class: "fas fa-edit"
-      institution: UPS, Marketing Department
+      institution: UPS
+      department: Marketing
       location: Atlanta, GA
       year: 2019
       description:
@@ -111,7 +116,8 @@
     - title: Account Executive
       icon:
         class: "fas fa-user-alt"
-      institution: Builders, Underwriting Department
+      institution: Builders
+      department: Underwriting
       location: Atlanta, GA
       year: 2014 - 2018
       description:

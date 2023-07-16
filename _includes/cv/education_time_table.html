@@ -3,12 +3,26 @@
     <li class="list-group-item">
       <div class="row">
         {% if content.year %}
-          <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
-              {{ content.year }}
-            </span>
-          </div>
-        {% endif %}
+            <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
+              <table class="table-cv">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">{{ content.year }}</span>
+                    </td>
+                  </tr>
+                  {% if content.location %}
+                  <tr>
+                    <td>
+                      <p class="location"><i class="fas fa-map-marker-alt iconlocation"></i> {{ content.location }}</p>
+                    </td>
+                  </tr>
+                  {% endif %}
+                </tbody>
+              </table>
+              
+            </div>
+          {% endif %}
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           {% if content.institution %}
           <h6 class="title font-weight-bold ml-1 ml-md-4">
@@ -19,7 +33,7 @@
           </h6>
           {% endif %}
           {% if content.degree %}
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{content.degree}}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;"><i class="fas fa-graduation-cap icondegree"></i> {{content.degree}}</h6>
           {% endif %}
           {% if content.description %}
             <ul class="items">
@@ -56,6 +70,21 @@
                 </li>
               {% endfor %}
             </ul>
+          {% endif %}
+          {% if content.linkitems %}
+            <div class="container-links ml-1 ml-md-4">
+            {% for item in content.linkitems %}
+                {% if item.link %}
+                  <div class="container-link-button">
+                    {% if item.linkname %}
+                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">{{ item.linkname}}</a>
+                    {% else %}
+                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">doc</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+            {% endfor %}
+            </div>
           {% endif %}
         </div>
       </div>

@@ -113,7 +113,7 @@ contact_note: >
 # -----------------------------------------------------------------------------
 
 google_analytics: G-5QW1MZ6BBM # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
-panelbear_analytics: # panelbear analytics site ID (format: XXXXXXXXX)
+cronitor_analytics:  # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
 google_site_verification: WB7A_xUUe6qutbsaCFuUDljb7-aiJNpIhzosq9n52gI # your google-site-verification ID (Google Search Console)
 bing_site_verification: 9840050BC32E661645C019601C266AA5 # out your bing-site-verification ID (Bing Webmaster)
@@ -227,6 +227,7 @@ plugins:
   - jekyll-diagrams
   - jekyll-email-protect
   - jekyll-feed
+  - jekyll-get-json
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
@@ -360,10 +361,10 @@ jekyll-diagrams:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    true   # enables google analytics
-enable_panelbear_analytics: false  # enables panelbear analytics
-enable_google_verification: true   # enables google site verification
-enable_bing_verification:   true   # enables bing site verification
+enable_google_analytics:    true  # enables google analytics
+enable_cronitor_analytics: false  # enables cronitor RUM analytics
+enable_google_verification: true  # enables google site verification
+enable_bing_verification:   true  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
@@ -411,3 +412,24 @@ mdb:
 medium_zoom:
   version: "1.0.8"
   integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
+
+# -----------------------------------------------------------------------------
+# Get external JSON data
+# -----------------------------------------------------------------------------
+
+jekyll_get_json:
+  - data:
+    json: # it can also be an url
+jsonresume:
+  - basics
+  - work
+  - education
+  - publications
+  - projects
+  - volunteer
+  - awards
+  - certificates
+  - skills
+  - languages
+  - interests
+  - references
