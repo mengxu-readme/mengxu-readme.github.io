@@ -104,6 +104,7 @@ instagram_id: # your instagram id
 facebook_id: # your facebook id
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
+zotero_username: # your zotero username
 
 contact_note: >
   You are welcome to contact me <i class="fas fa-smile"></i>
