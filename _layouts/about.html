@@ -26,7 +26,8 @@ layout: default
               {% include figure.html
               path=profile_image_path
               class=profile_image_class
-              alt="My Profile Picture" -%}
+              alt="My Profile Picture"
+              cache_bust=true -%}
             {% endif -%}
             {%- if page.profile.address %}
             <div class="address">
