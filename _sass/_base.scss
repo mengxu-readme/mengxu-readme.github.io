@@ -568,11 +568,9 @@ footer.sticky-bottom {
   }
 }
 
-// Publications
+// Research
 
-.publications {
-  margin-top: 3rem;
-
+.research {
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -591,20 +589,20 @@ footer.sticky-bottom {
 
   h2.bibliography {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 0.75rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 1rem;
     text-align: right;
+    padding-bottom: 0.25rem;
   }
 
   ol.bibliography {
     list-style: none;
     padding: 0;
     margin-top: 0;
+    margin-bottom: 0.5rem;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
 
       .preview {
         width: 100%;

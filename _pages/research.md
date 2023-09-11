@@ -1,13 +1,13 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
+permalink: /research/
+title: Research
 description:
 nav: true
 nav_order: 1
 ---
-<!-- _pages/publications.md -->
-<div class="publications">
+<!-- _pages/research.md -->
+<div class="research">
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
 
