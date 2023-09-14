@@ -640,19 +640,11 @@ footer.sticky-bottom {
       }
 
       .author {
-        a {
-          border-bottom: 1px dashed var(--global-theme-color);
-
-          &:hover {
-            border-bottom-style: solid;
-            text-decoration: none;
-          }
-        }
+        font-size: 0.95rem;
 
         >em {
           border-bottom: 1px solid;
           font-style: normal;
-          font-size: 0.95rem;
         }
 
         >span.more-authors {
@@ -665,6 +657,10 @@ footer.sticky-bottom {
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
+      }
+
+      .periodical {
+        font-size: 0.95rem;
       }
 
       .links {
