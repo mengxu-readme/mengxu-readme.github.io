@@ -252,7 +252,7 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt']
+  exclude: ['robots.txt', 'assets/js/newrelic.js']
   uglifier_args:
     harmony: true
 
@@ -364,6 +364,7 @@ jekyll-diagrams:
 
 enable_google_analytics:    true  # enables google analytics
 enable_cronitor_analytics: false  # enables cronitor RUM analytics
+enable_newrelic_analytics:  true  # enables newrelic browser analytics
 enable_google_verification: true  # enables google site verification
 enable_bing_verification:   true  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement

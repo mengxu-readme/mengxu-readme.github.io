@@ -16,3 +16,7 @@
     cronitor('config', { clientKey: '{{site.cronitor_analytics}}' });
   </script>
 {%- endif -%}
+{%- if site.enable_newrelic_analytics -%}
+  <!-- New Relic Browser -->
+  <script async src="/assets/js/newrelic.js"></script>    
+{%- endif -%}
