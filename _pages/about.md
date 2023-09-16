@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hello! Thank you for stopping by my personal website!
 
-My name is Meng Xu, and I’m a first year Management PhD student at the University of Georgia. I study strategic management, strategic leadership, and corporate governance.
+My name is Meng Xu, a first year Management PhD student at the University of Georgia. I study strategic leadership and corporate governance, and I'm interested in innovative organizational research methods.
 
 Before I made the life-changing decision to pursue a PhD, I was a Sr. Product Manager at a fintech company, leading cross-functional teams and managing a SaaS analytics platform that was adopted by enterprise customers from over fifteen countries and generated over $600M in annual revenue. I received my MBA from Georgia Institute of Technology and my BBA from the University of Georgia (Go Dawgs!).
 
