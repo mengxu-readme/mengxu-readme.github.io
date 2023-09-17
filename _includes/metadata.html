@@ -146,6 +146,10 @@
         {%- capture link -%}{{ site.blogger_url }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
+    {%- if site.school_url -%}
+        {%- capture link -%}{{ site.school_url }}{%- endcapture -%}
+        {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}
     {%- if site.work_url -%}
         {%- capture link -%}{{ site.work_url }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
