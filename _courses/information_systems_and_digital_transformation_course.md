@@ -3,7 +3,7 @@ layout: page
 title: Information Systems and Digital Transformation
 description:
 img: assets/img/courses/information_technology.jpg
-importance: 1
+importance: 2
 category: Teaching Assistant
 ---
 
