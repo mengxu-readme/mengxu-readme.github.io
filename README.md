@@ -1,5 +1,7 @@
 # mengxu-readme
 
+<img src="assets/img/about/icon.svg" title="Website Icon" alt="Website Icon"/>
+
 Meng Xu's Personal Website: https://mengxu-readme.github.io
 
 [![build](https://img.shields.io/github/actions/workflow/status/mengxu-readme/mengxu-readme.github.io/deploy.yml)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/deploy.yml)
