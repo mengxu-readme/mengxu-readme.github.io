@@ -1,6 +1,6 @@
 # mengxu-readme
 
-<img src="assets/img/about/icon.svg" title="Website Icon" alt="Website Icon"/>
+<a href="https://mengxu-readme.github.io"><img src="assets/img/about/icon.svg" title="Website Icon" alt="Website Icon"/></a>
 
 Meng Xu's Personal Website: https://mengxu-readme.github.io
 
