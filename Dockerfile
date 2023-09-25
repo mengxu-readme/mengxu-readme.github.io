@@ -1,6 +1,6 @@
 FROM bitnami/minideb:latest
 
-Label MAINTAINER Amir Pourmand
+LABEL MAINTAINER="Meng Xu"
 
 RUN apt-get update -y
 

@@ -1,9 +1,10 @@
 version: "3"
 
 services:
-  jekyll_custom:
+  mengxu-readme:
     build: .
-    image: al-folio-local-docker
+    container_name: mengxu-readme
+    image: mengxu-readme:latest
     ports:
       - 8080:8080
     volumes:

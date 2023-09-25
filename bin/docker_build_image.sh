@@ -1,5 +1,6 @@
-  FILE=Gemfile.lock
+FILE="Gemfile.lock"
 if [ -f "$FILE" ]; then
-    rm $FILE
+    rm "$FILE"
 fi
-  docker build -t "al-folio:latest" . 
+
+docker build -t "mengxu-readme:latest" .

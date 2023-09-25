@@ -1,7 +1,8 @@
 version: "3"
 # this file uses prebuilt image in dockerhub
 services:
-  jekyll:
+  mengxu-readme:
+    container_name: mengxu-readme
     image: amirpourmand/al-folio
     ports:
       - 8080:8080
