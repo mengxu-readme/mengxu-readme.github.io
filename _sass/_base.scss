@@ -50,6 +50,9 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
+  &.table-bordered{
+    border: 1px solid var(--global-divider-color) !important;
+  }
 }
 
 figure,
@@ -118,7 +121,7 @@ blockquote {
 .profile {
   width: 100%;
 
-  .address {
+  .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
