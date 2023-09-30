@@ -12,7 +12,7 @@ First of all, I’d encourage you to check with your organizations. Organization
 <p style="font-weight: bold;">Take Advantage of “Open Access” or “Free Access” Papers</p>
 Some journals provide a few free articles in each issue. For example, Strategic Management Journal offers authors the ability to publish their articles Open Access: immediately free to read, download, and share. If a paper has the “Open Access” option, you can have access to the full text for free. This is how I had access to the first research paper that I’ve ever read.
 <div style="margin-left: auto; margin-right: auto; width: 90%;">
-{% include figure.html path="assets/img/posts/open_access_research_papger.png" title="Open Access Research Paper" alt="Open Access Research Paper" class="img-fluid rounded z-depth-1" caption="Open Access Research Paper" zoomable=true %}
+{% include figure.html path="assets/img/posts/open_access_research_paper.png" title="Open Access Research Paper" alt="Open Access Research Paper" class="img-fluid rounded z-depth-1" caption="Open Access Research Paper" zoomable=true %}
 </div>
 
 <p style="font-weight: bold;">Become a Member of a Professional Association</p>
