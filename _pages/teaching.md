@@ -10,7 +10,7 @@ horizontal: false
 ---
 
 <!-- pages/teaching.md -->
-<div class="projects">
+<div class="teaching">
 {%- if site.enable_course_categories and page.display_categories %}
   <!-- Display categorized courses -->
   {%- for category in page.display_categories %}

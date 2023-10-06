@@ -72,7 +72,7 @@
                 </div>
               </li>
               {%- else %}
-              <li class="nav-item {% if page.url == p.permalink %}active{% endif %}">
+              <li class="nav-item {% if page.url == p.permalink or (page.url contains 'courses' and p.permalink == '/teaching/') %}active{% endif %}">
                 <a class="nav-link" href="{{ p.url | relative_url }}">{{ p.title }}
                   {%- if page.title == p.title -%}
                   <span class="sr-only">(current)</span>

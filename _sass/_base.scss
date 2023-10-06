@@ -646,6 +646,18 @@ footer.sticky-bottom {
   }
 }
 
+// Teaching
+
+.teaching {
+  @extend .projects;
+}
+
+// Repositories
+
+.repositories {
+  @extend .projects;
+}
+
 // Research
 
 .research {
