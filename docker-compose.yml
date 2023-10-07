@@ -4,6 +4,7 @@ services:
   mengxu-readme:
     container_name: mengxu-readme
     image: amirpourmand/al-folio
+    build: .
     ports:
       - 8080:8080
     volumes:
