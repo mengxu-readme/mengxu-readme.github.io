@@ -8,7 +8,7 @@
       <div class="row g-0">
         {%- if course.img -%}
         <div class="card-img col-md-6">
-          {% include figure.html path=course.img alt="course thumbnail" %}
+          {% include figure.html path=course.img alt="course thumbnail" cache_bust=true %}
         </div>
         <div class="col-md-6">
         {%- else -%}

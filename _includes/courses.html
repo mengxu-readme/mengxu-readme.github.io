@@ -10,7 +10,8 @@
         {%- if course.img %}
         {%- include figure.html
           path=course.img
-          alt="course thumbnail" -%}
+          alt="course thumbnail"
+          cache_bust=true -%}
         {%- endif %}
         <div class="card-body">
           <h2 class="card-title">{{ course.title }}</h2>

@@ -6,7 +6,7 @@ layout: default
       <div class="post">
         <header class="header">
           <h1 class="title">
-            <span class="font-weight-bold scan">{{ site.first_name }}</span> {{ site.last_name }} <img src="./../assets/img/about/icon.svg" title="Website Icon" alt="Website Icon"/>
+            <span class="font-weight-bold scan">{{ site.first_name }}</span> {{ site.last_name }} <img src="{{ '/assets/img/about/icon.svg' | relative_url | bust_file_cache }}" title="Website Icon" alt="Website Icon"/>
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
         </header>

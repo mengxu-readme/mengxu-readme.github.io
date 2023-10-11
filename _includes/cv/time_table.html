@@ -29,7 +29,7 @@
               <h6 class="title font-weight-bold ml-1 ml-md-4">
                 {{content.institution}}
                 {% if content.icon %}
-                  <a href="{{ content.icon.link }}"><img src="{{ content.icon.src }}" title="{{ content.icon.title }}" alt="{{ content.icon.alt }}" class="inline-img"/></a>
+                  <a href="{{ content.icon.link }}"><img src="{{ content.icon.src | relative_url | bust_file_cache }}" title="{{ content.icon.title }}" alt="{{ content.icon.alt }}" class="inline-img"/></a>
                 {% endif %}
               </h6>
               {% endif %}
