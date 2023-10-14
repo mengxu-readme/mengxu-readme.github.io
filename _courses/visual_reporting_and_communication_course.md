@@ -24,4 +24,4 @@ I was an instructor for this data visualization class and was responsible for de
 This was a core class for the Master of Science in Business Analytics students at Mercer University.
 
 #### Course Syllabus
-You can find <a href="/../assets/pdf/courses/BA631_Fall 2020_Syllabus.pdf" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ 'courses/BA631_Fall 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

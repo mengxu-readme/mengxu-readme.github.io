@@ -23,4 +23,4 @@ My main responsibilities as a Graduate Teaching Assistant include answering stud
 This is a core class for the business major undergraduate students at the University of Georgia.
 
 #### Course Syllabus
-You can find <a href="/../assets/pdf/courses/MGMT3000_Fall 2023_Syllabus.pdf" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ 'courses/MGMT3000_Fall 2023_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
