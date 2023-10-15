@@ -1,0 +1,5 @@
+[Dockerfile]
+end_of_line = lf
+
+[entry_point.sh]
+end_of_line = lf

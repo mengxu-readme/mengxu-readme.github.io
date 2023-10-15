@@ -1,11 +1,26 @@
 version: "3"
-# this file uses prebuilt image in dockerhub
 services:
   mengxu-readme:
-    container_name: mengxu-readme
-    image: amirpourmand/al-folio
+    container_name: website
+    image: mengxu-readme-website
     build: .
     ports:
       - 8080:8080
     volumes:
       - .:/srv/jekyll
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  html-proofer:
+    container_name: validator
+    image: klakegg/html-proofer
+    volumes:
+      - ./_site:/site
+    command: ["--assume-extension", "/site", "--http-status-ignore", "999"]
+    depends_on:
+      mengxu-readme:
+        condition: service_healthy
