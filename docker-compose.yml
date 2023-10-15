@@ -20,7 +20,7 @@ services:
     image: klakegg/html-proofer
     volumes:
       - ./_site:/site
-    command: ["--assume-extension", "/site", "--http-status-ignore", "999"]
+    command: ["/site", "--http-status-ignore", "999"]
     depends_on:
       mengxu-readme:
         condition: service_healthy
