@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Why I Blog and Why You Should too
+description: Meng Xu's reason of blogging
+keywords: blog, why
 date: 2022-12-10T20:00:00-05:00
-description:
 tags:
 categories:
 ---

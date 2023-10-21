@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Information Systems and Digital Transformation
-description:
+description: Information Systems and Digital Transformation course at Georgia Institute of Technology
+keywords: information systems, digital transformation, georgia tech, georgia institute of technology
 img: assets/img/courses/information_technology.jpg
 importance: 2
 category: Teaching Assistant

@@ -1,11 +1,10 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
-description:
+description: Meng Xu's Projects Page
+keywords: project
 nav: false
 sitemap: false
-nav_order: 2
 display_categories: [Research, Other]
 horizontal: false
 ---

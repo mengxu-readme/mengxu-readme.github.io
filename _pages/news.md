@@ -1,8 +1,10 @@
 ---
 layout: page
 title: News
+description: Meng Xu's News Page
+keywords: news, announcement
 permalink: /news/
-description:
+nav: false
 ---
 
 <hr style="margin-top: 3rem"/>

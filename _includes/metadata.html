@@ -14,51 +14,88 @@
 {%- endif %}
 
     <!-- Standard metadata -->
+    {%- assign first_6_chars = page.url | slice: 0, 6 -%}
+    {%- assign is_blog_main = false -%}
+    {%- assign is_blog_tag = false -%}
+    {%- assign is_blog_category = false -%}
+    {%- assign is_blog_year = false -%}
+    {%- assign is_blog_post = false -%}
+    {%- if page.url == '/blog/index.html' -%}
+        {%- assign is_blog_main = true -%}
+    {%- elsif first_6_chars == '/blog/' -%}
+        {%- assign first_10_chars = page.url | slice: 0, 10 -%}
+        {%- assign first_15_chars = page.url | slice: 0, 15 -%}
+        {%- if first_10_chars == '/blog/tag/' -%}
+            {%- assign is_blog_tag = true -%}
+        {%- elsif first_15_chars == '/blog/category/' -%}
+            {%- assign is_blog_category = true -%}
+        {%- else -%}
+            {%- assign size = page.url | replace: '/blog/', '' | split: '/' | size %}
+            {%- if size == 1 -%}
+                {%- assign is_blog_year = true -%}
+            {%- else -%}
+                {%- assign is_blog_post = true -%}
+            {%- endif -%}
+        {%- endif -%}
+    {%- endif -%}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-    {%- capture title -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
-    {% if page.url == '/blog/index.html' %}
-        {{ site.blog_nav_title }} | {{ title }}
-    {%- elsif page.url contains '/blog/' -%}
-        {%- if page.url contains '/blog/tag/' or page.url contains '/blog/category/' -%}
-            {{ site.blog_nav_title }} | {{ page.title }} | {{ title }}
-        {%- elsif page.title == nil or page.title == "" -%}
-            {{ site.blog_nav_title }} | {{ page.date | date: "%Y" }} | {{ title }}
-        {%- else -%}
-            {{ page.title }} | {{ title }}
-        {%- endif -%}
+    {%- capture name -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
+    {%- if is_blog_main -%}
+        {%- capture title -%}{{ site.blog_nav_title }} | {{ name }}{%- endcapture -%}
+    {%- elsif is_blog_tag or is_blog_category -%}
+        {%- capture title -%}{{ site.blog_nav_title }} | {{ page.title }} | {{ name }}{%- endcapture -%}
+    {%- elsif is_blog_year -%}
+        {%- capture title -%}{{ site.blog_nav_title }} | {{ page.date | date: "%Y" }} | {{ name }}{%- endcapture -%}
+    {%- elsif is_blog_post -%}
+        {%- capture title -%}{{ page.title }} | {{ name }}{%- endcapture -%}
     {%- elsif page.title != "blank" and page.url != "/" -%}
         {%- if page.title == nil or page.title == "" -%}
-            {{ page.date | date: "%Y" }} | {{ title }}
+            {%- capture title -%}{{ page.date | date: "%Y" }} | {{ name }}{%- endcapture -%}
         {%- else -%}
-            {{ page.title }} | {{ title }}
+            {%- capture title -%}{{ page.title }} | {{ name }}{%- endcapture -%}
         {%- endif -%}
     {%- else -%}
-        {{ title }}
+        {%- capture title -%}{{ name }}{%- endcapture -%}
     {%- endif -%}
-    </title>
-    <meta name="author" content="{{ site.first_name }} {{ site.last_name }}" />
-    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-{%- if page.keywords or site.keywords %}
-    <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
-{%- endif %}
+    <title>{{ title }}</title>
+    <meta name="author" content="{{ name }}" />
+    {%- if page.description -%}
+        {%- capture description -%}{{ page.description }}{%- endcapture -%}
+    {%- elsif is_blog_tag -%}
+        {%- capture description -%}Meng Xu's Blog Tag Archive{%- endcapture -%}
+    {%- elsif is_blog_category -%}
+        {%- capture description -%}Meng Xu's Blog Category Archive{%- endcapture -%}
+    {%- elsif is_blog_year -%}
+        {%- capture description -%}Meng Xu's Blog Yearly Archive{%- endcapture -%}
+    {%- else -%}
+        {%- capture description -%}{{ site.description }}{%- endcapture -%}
+    {%- endif -%}
 
-{%- assign is_blog_post = false -%}
-{%- if page.url != '/blog/index.html' and page.url contains '/blog/' -%}
-    {%- unless page.url contains '/tag/' or page.url contains '/category/' -%}
-        {%- assign is_blog_post = true -%}
-    {%- endunless -%}
-{%- endif -%}
+    {%- if page.keywords -%}
+        {%- capture keywords -%}{{ page.keywords }}{%- endcapture -%}
+    {%- elsif is_blog_tag -%}
+        {%- capture keywords -%}blog, tag, archive{%- endcapture -%}
+    {%- elsif is_blog_category -%}
+        {%- capture keywords -%}blog, category, archive{%- endcapture -%}
+    {%- elsif is_blog_year -%}
+        {%- capture keywords -%}blog, year, archive{%- endcapture -%}
+    {%- else -%}
+        {%- capture keywords -%}{{ site.keywords }}{%- endcapture -%}
+    {%- endif -%}
+
+    <meta name="description" content="{{ description}}" />
+    <meta name="keywords" content="{{ keywords }}" />
 
 {%- if site.serve_og_meta %}
     <!-- OpenGraph -->
-    <meta property="og:site_name" content="{{ title }}" />
-    <meta property="og:type" content="{%- if is_blog_post -%}article{%- else -%}website{%- endif -%}" />
-    <meta property="og:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta property="og:site_name" content="{{ name }}" />
+    <meta property="og:type" content="{%- if is_blog_post -%}Blog{%- else -%}Website{%- endif -%}" />
+    <meta property="og:title" content="{{ title }}" />
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
-    <meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    <meta property="og:description" content="{{ description }}" />
     {% if page.og_image or site.og_image -%}
     <meta property="og:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
     {%- endif %}
@@ -66,8 +103,8 @@
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
-    <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
     {% if page.og_image or site.og_image -%}
     <meta name="twitter:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
     {%- endif %}
@@ -231,16 +268,16 @@
         "author":
         {
             "@type": "Person",
-            "name": "{{ site.first_name }} {{ site.last_name }}"
+            "name": "{{ name }}"
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}",
         "@type": "{%- if is_blog_post -%}Blog{%- else -%}Website{%- endif -%}",
-        "description": "{%- if page.description -%}{{ page.description }}{%- else if site.description -%}{{ site.description }}{%- endif -%}",
-        "headline": "{%- if page.title -%}{{ page.title }}{%- else -%}{{ site.title }}{%- endif -%}",
+        "description": "{{ description }}",
+        "headline": "{{ title }}",
         {% if sameaslinks != blank -%}
         "sameAs": {{ sameaslinks }},
         {%- endif %}
-        "name": "{{ site.first_name }} {{ site.last_name }}",
+        "name": "{{ name }}",
         "@context": "https://schema.org"
     }
     </script>

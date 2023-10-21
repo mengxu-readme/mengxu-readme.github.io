@@ -1,8 +1,9 @@
 ---
 layout: post
 title: How to Access Paywalled Research Papers For Free
+description: Meng Xu's solution of accessing paywalled research papers
+keywords: blog, how, access, paywall, research paper, phd, research
 date: 2023-1-25T12:00:00-05:00
-description:
 tags: PhD Research
 categories:
 ---

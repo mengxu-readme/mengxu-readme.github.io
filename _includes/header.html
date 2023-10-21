@@ -31,8 +31,10 @@
                 {% endif %}
               {% endfor %}
 
+              {% assign first_6_chars = page.url | slice: 0, 6 %}
+
               <!-- About -->
-              <li class="nav-item {% if page.permalink == '/' or page.permalink == '/news/' %}active{% endif %}">
+              <li class="nav-item {% if page.permalink == '/' or first_6_chars == '/news/' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/' | relative_url }}">{{ about_title }}
                   {%- if page.permalink == '/' -%}
                   <span class="sr-only">(current)</span>
@@ -41,9 +43,9 @@
               </li>
               {% if site.blog_nav_title %}
               <!-- Blog -->
-              <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
+              <li class="nav-item {% if first_6_chars == '/blog/' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/blog/' | relative_url }}">{{ site.blog_nav_title }}
-                  {%- if page.url contains 'blog' -%}
+                  {%- if first_6_chars == '/blog/' -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
@@ -72,7 +74,8 @@
                 </div>
               </li>
               {%- else %}
-              <li class="nav-item {% if page.url == p.permalink or (page.url contains 'courses' and p.permalink == '/teaching/') %}active{% endif %}">
+              {% assign first_9_chars = page.url | slice: 0, 9 %}
+              <li class="nav-item {% if page.url == p.permalink or (first_9_chars == '/courses/' and p.permalink == '/teaching/') %}active{% endif %}">
                 <a class="nav-link" href="{{ p.url | relative_url }}">{{ p.title }}
                   {%- if page.title == p.title -%}
                   <span class="sr-only">(current)</span>

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Reflections on My UGA Management PhD Application
+description: Meng Xu's reflections of UGA management PhD application
+keywords: blog, reflection, uga, the university of georgia, management, phd, application
 date: 2023-5-14T14:00:00-04:00
-description:
 tags: PhD
 categories:
 ---

@@ -1,8 +1,9 @@
 ---
 layout: page
-permalink: /teaching/
 title: Teaching
-description:
+description: Meng Xu's Teaching Page
+keywords: teaching, course, instructor, teaching assistant
+permalink: /teaching/
 nav: true
 nav_order: 4
 display_categories: [Instructor, Teaching Assistant]

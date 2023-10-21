@@ -1,8 +1,9 @@
 ---
 layout: post
 title: My Tips for Beginners as a Beginner - How to Read a Paper
+description: Meng Xu's tips of reading a paper
+keywords: blog, tips, read, paper, phd, research
 date: 2022-12-30T20:00:00-05:00
-description:
 tags: PhD Research
 categories:
 ---

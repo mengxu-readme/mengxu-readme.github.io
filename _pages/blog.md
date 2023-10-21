@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Blog
+description: Meng Xu's Blog Page
+keywords: blog, post
 permalink: /blog/
 pagination:
   enabled: true
@@ -70,7 +72,6 @@ pagination:
                       <i class="fa-solid fa-thumbtack fa-xs"></i>
                     </div>
                     <h3 class="card-title text-lowercase">{{ post.title }}</h3>
-                    <p class="card-text">{{ post.description }}</p>
 
                     {% if post.external_source == blank %}
                       {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
@@ -125,7 +126,6 @@ pagination:
           <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
         {% endif %}
       </h3>
-      <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ read_time }} Min Read &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %-d, %Y' }}

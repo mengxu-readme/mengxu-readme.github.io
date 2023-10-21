@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Principles of Management
-description:
+description: Principles of Management course at the University of Georgia
+keywords: management, principles, uga, the university of georgia
 img: assets/img/courses/management_principles.jpg
 importance: 1
 category: Teaching Assistant

@@ -1,11 +1,10 @@
 ---
 layout: page
-permalink: /repositories/
 title: Repositories
-description:
+description: Meng Xu's Repositories Page
+keywords: repository, github
 nav: false
 sitemap: false
-nav_order: 3
 ---
 
 <div class="repositories">
@@ -17,8 +16,6 @@ nav_order: 3
   {% endfor %}
 </div>
 
----
-
 {% if site.repo_trophies.enabled %}
 {% for user in site.data.repositories.github_users %}
   {% if site.data.repositories.github_users.size > 1 %}
@@ -28,13 +25,9 @@ nav_order: 3
   {% include repository/repo_trophies.html username=user %}
   </div>
 
-  ---
-
 {% endfor %}
 {% endif %}
 {% endif %}
-
-## GitHub Repositories
 
 {% if site.data.repositories.github_repos %}
 <h2 class="category">Repository</h2>
