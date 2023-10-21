@@ -208,13 +208,10 @@ exclude:
   - _pages/projects.md
   - _pages/repositories.md
   - bin
-  - Gemfile
-  - Gemfile.lock
-  - vendor
   - docker-compose.yml
-  - docker-local.yml
   - Dockerfile
   - LICENSE
+  - purgecss.config.js
   - README.md
 keep_files:
   - CNAME
