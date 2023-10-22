@@ -14,13 +14,13 @@
 {%- endif %}
 
     <!-- Standard metadata -->
-    {%- assign first_6_chars = page.url | slice: 0, 6 -%}
     {%- assign is_blog_main = false -%}
     {%- assign is_blog_tag = false -%}
     {%- assign is_blog_category = false -%}
     {%- assign is_blog_year = false -%}
     {%- assign is_blog_post = false -%}
-    {%- if page.url == '/blog/index.html' -%}
+    {%- assign first_6_chars = page.url | slice: 0, 6 -%}
+    {%- if page.url == '/blog/index.html' or page.url == '/blog/' -%}
         {%- assign is_blog_main = true -%}
     {%- elsif first_6_chars == '/blog/' -%}
         {%- assign first_10_chars = page.url | slice: 0, 10 -%}
@@ -30,7 +30,7 @@
         {%- elsif first_15_chars == '/blog/category/' -%}
             {%- assign is_blog_category = true -%}
         {%- else -%}
-            {%- assign size = page.url | replace: '/blog/', '' | split: '/' | size %}
+            {%- assign size = page.url | replace_first: '/blog/', '' | split: '/' | size -%}
             {%- if size == 1 -%}
                 {%- assign is_blog_year = true -%}
             {%- else -%}
