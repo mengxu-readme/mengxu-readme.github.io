@@ -304,20 +304,20 @@ scholar:
   group_by: type
   type_names: {wip: Works In Progress}
 
-# Display different badges withs stats for your reasearch
-enable_research_badges:
+# Display different badges withs stats for your publications
+enable_publication_badges:
   altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
   dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
 
-# Maximum number of authors to be shown for each reasearch (more authors are visible on click)
+# Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10  # more authors are revealed on click using animation; smaller delay means faster animation
 
-# Enables reasearch thumbnails. If disabled, none of the reasearch will display thumbnails, even if specified in the bib entry.
-enable_reasearch_thumbnails: true
+# Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
+enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes

@@ -7,7 +7,7 @@ nav: false
 sitemap: false
 ---
 
-<div class="repositories">
+<div class="projects">
 {% if site.data.repositories.github_users %}
 <h2 class="category">User</h2>
 <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
@@ -21,7 +21,7 @@ sitemap: false
   {% if site.data.repositories.github_users.size > 1 %}
   <h4>{{ user }}</h4>
   {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% include repository/repo_trophies.html username=user %}
   </div>
 

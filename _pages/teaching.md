@@ -11,7 +11,7 @@ horizontal: false
 ---
 
 <!-- pages/teaching.md -->
-<div class="teaching">
+<div class="projects">
 {%- if site.enable_course_categories and page.display_categories %}
   <!-- Display categorized courses -->
   {%- for category in page.display_categories %}
@@ -22,15 +22,15 @@ horizontal: false
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
-    {%- for course in sorted_courses -%}
-      {% include courses_horizontal.html %}
+    {%- for project in sorted_courses -%}
+      {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for course in sorted_courses -%}
-      {% include courses.html %}
+    {%- for project in sorted_courses -%}
+      {% include projects.html %}
     {%- endfor %}
   </div>
   {%- endif -%}
@@ -43,15 +43,15 @@ horizontal: false
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
-    {%- for course in sorted_courses -%}
-      {% include courses_horizontal.html %}
+    {%- for project in sorted_courses -%}
+      {% include projects_horizontal.html %}
     {%- endfor %}
     </div>
   </div>
   {%- else -%}
   <div class="grid">
-    {%- for course in sorted_courses -%}
-      {% include courses.html %}
+    {%- for project in sorted_courses -%}
+      {% include projects.html %}
     {%- endfor %}
   </div>
   {%- endif -%}

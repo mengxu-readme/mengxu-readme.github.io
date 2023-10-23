@@ -4,8 +4,8 @@ layout: default
 
 <!-- about.html -->
       <div class="post">
-        <header class="header">
-          <h1 class="title">
+        <header>
+          <h1>
             <span class="font-weight-bold scan">{{ site.first_name }}</span> {{ site.last_name }} <img src="{{ '/assets/img/about/icon.svg' | relative_url | bust_file_cache }}" title="Website Icon" alt="Website Icon"/>
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
@@ -51,9 +51,9 @@ layout: default
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
-          <div style="margin-top: 1rem;">
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">Latest Posts</a></h2>
-            {%- include latest_posts.html %}
+            <div style="margin-top: 1rem;">
+              <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">Latest Posts</a></h2>
+              {%- include latest_posts.html %}
             </div>
           {%- endif %}
 

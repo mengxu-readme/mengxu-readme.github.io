@@ -10,7 +10,8 @@
         {%- if project.img %}
         {%- include figure.html
           path=project.img
-          alt="project thumbnail" -%}
+          alt="project thumbnail" 
+          cache_bust=true -%}
         {%- endif %}
         <div class="card-body">
           <h2 class="card-title">{{ project.title }}</h2>

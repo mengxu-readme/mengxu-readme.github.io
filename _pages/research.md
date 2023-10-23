@@ -8,7 +8,7 @@ nav: true
 nav_order: 3
 ---
 <!-- _pages/research.md -->
-<div class="research">
+<div class="publications">
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
 

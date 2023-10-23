@@ -646,21 +646,9 @@ footer.sticky-bottom {
   }
 }
 
-// Teaching
+// Publications
 
-.teaching {
-  @extend .projects;
-}
-
-// Repositories
-
-.repositories {
-  @extend .projects;
-}
-
-// Research
-
-.research {
+.publications {
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;

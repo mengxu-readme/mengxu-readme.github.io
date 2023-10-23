@@ -2,13 +2,13 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        {%- if site.enable_reasearch_thumbnails -%}
+        {%- if site.enable_publication_thumbnails -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {%- else -%}
-            {%- assign entry_path = entry.preview | prepend: '/assets/img/reasearch_preview/' -%}
+            {%- assign entry_path = entry.preview | prepend: '/assets/img/research_preview/' -%}
             {% include figure.html
             path=entry_path
             class="preview z-depth-1 rounded"
@@ -36,7 +36,7 @@
         {%- endif -%}
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="{% if site.enable_reasearch_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
         <!-- Author -->
@@ -126,17 +126,17 @@
           {%- if entry.journal -%}
             {%- capture entrytype -%}<em>Target: {{entry.journal}}</em>{%- endcapture -%}
           {%- endif -%}
-        {% elsif entry.type == "article" -%}
+        {%- elsif entry.type == "article" -%}
           {%- if entry.journal -%}
             {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
           {%- endif -%}
         {%- elsif proceedings contains entry.type -%}
           {%- if entry.booktitle -%}
-            {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
+            {%- capture entrytype -%}<em>In {{entry.booktitle}}</em>{%- endcapture -%}
           {%- endif -%}
         {%- elsif thesis contains entry.type -%}
           {%- if entry.school -%}
-            {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
+            {%- capture entrytype -%}<em>{{entry.school}}</em>{%- endcapture -%}
           {%- endif -%}
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
@@ -208,12 +208,12 @@
             <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
           {%- endif %}
           </div>
-          {% if site.enable_reasearch_badges %}
+          {% if site.enable_publication_badges %}
           {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
           {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
           {% if entry_has_altmetric_badge or entry_has_dimensions_badge %}
           <div class="badges">
-            {%- if site.enable_reasearch_badges.altmetric and entry_has_altmetric_badge %}
+            {%- if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"
               {% if entry.eprint %}
                 data-arxiv-id="{{ entry.eprint }}"
@@ -228,7 +228,7 @@
               {% endif %}
               ></span>
             {%- endif %}
-            {%- if site.enable_reasearch_badges.dimensions and entry_has_dimensions_badge %}
+            {%- if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
               <span class="__dimensions_badge_embed__"
               {% if entry.doi %}
                 data-doi="{{ entry.doi }}"
