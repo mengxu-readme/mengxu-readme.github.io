@@ -431,7 +431,7 @@ footer.fixed-bottom {
     color: var(--global-footer-link-color);
 
     &:hover {
-      color: var(--global-footer-hoover-color);
+      color: var(--global-theme-color);
       text-decoration: none;
     }
   }
