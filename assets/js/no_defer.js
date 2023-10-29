@@ -12,10 +12,10 @@ $(document).ready(function() {
         $(this).parents('[class*="card"]').length==0 &&
         $(this).parents('code').length == 0) {
       // make table use bootstrap-table
-      $(this).attr('data-toggle','table');
-      // add some classes to make the table look better
-      // $(this).addClass('table-sm');
-      $(this).addClass('table-hover');
+      $(this).bootstrapTable({
+        showHeader: !$(this).hasClass('table-hide-header'),
+        classes: $(this).attr('class'),
+      });
     }
   })
 });

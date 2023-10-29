@@ -12,15 +12,23 @@ layout: default
 
   <article>
     <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        {% for post in page.posts %}
-        <tr>
-          <th scope="row">{{ post.date | date: "%b %-d, %Y" }}</th>
-          <td>
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </td>
-        </tr>
-      {% endfor %}
+      <table class="table table-sm table-borderless table-hover table-hide-header">
+        <thead>
+          <tr>
+            <th data-field="date" scope="col">Date</th>
+            <th data-field="title" scope="col">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in page.posts %}
+            <tr>
+              <td style="font-weight: bold;">{{ post.date | date: "%b %-d, %Y" }}</td>
+              <td>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
       </table>
     </div>
   </article>
