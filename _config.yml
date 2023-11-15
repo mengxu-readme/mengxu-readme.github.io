@@ -304,7 +304,7 @@ scholar:
   group_by: type
   type_names: {wip: Works In Progress}
 
-# Display different badges withs stats for your publications
+# Display different badges with stats for your publications
 enable_publication_badges:
   altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
   dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
