@@ -64,14 +64,14 @@
       icon:
         class: "fas fa-users"
       institution: Academy of Management
-      department: Strategy Devision
+      department: Strategy Division
       location: Boston, MA
       year: 2023
 
 - title: Teaching Experience
   type: time_table
   contents:
-    - title: Graduate Teaching Assitant
+    - title: Graduate Teaching Assistant
       icon:
         class: "fas fa-chalkboard-teacher"
       institution: University of Georgia
