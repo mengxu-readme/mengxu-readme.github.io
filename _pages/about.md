@@ -24,4 +24,4 @@ Before I made the life-changing decision to pursue a PhD, I was a Sr. Product Ma
 
 Building this website is among the many things that I’ve done to kick-start my academic career. In four years (2027), it’s going to be a perfect place to showcase my research experience and publications when I enter the job market to look for a tenure-track assistant professor position at a top research university.
 
-Please feel free to drop me an email or connect with me on LinkedIn! Have a wonderful day! <i class="fas fa-coffee"></i>
+Please feel free to drop me an email or connect with me on LinkedIn! Have a wonderful day! <i class="fa-solid fa-coffee"></i>

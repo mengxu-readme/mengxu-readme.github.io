@@ -69,7 +69,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
+x_username: # your X handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: mxu # your LinkedIn user name
 telegram_username: # your Telegram user name
@@ -105,7 +105,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  You are welcome to contact me <i class="fas fa-smile"></i>
+  You are welcome to contact me <i class="fa-solid fa-smile"></i>
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

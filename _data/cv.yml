@@ -62,7 +62,7 @@
   contents:
     - title: Ambassador
       icon:
-        class: "fas fa-users"
+        class: "fa-solid fa-users"
       institution: Academy of Management
       department: Strategy Division
       location: Boston, MA
@@ -73,7 +73,7 @@
   contents:
     - title: Graduate Teaching Assistant
       icon:
-        class: "fas fa-chalkboard-teacher"
+        class: "fa-solid fa-chalkboard-teacher"
       institution: University of Georgia
       location: Athens, GA
       year: Fall 2023
@@ -82,7 +82,7 @@
 
     - title: Adjunct Professor
       icon:
-        class: "fas fa-chalkboard-teacher"
+        class: "fa-solid fa-chalkboard-teacher"
       institution: Mercer University
       location: Atlanta, GA
       year: Fall 2020
@@ -91,7 +91,7 @@
 
     - title: Graduate Teaching Assistant
       icon:
-        class: "fas fa-chalkboard-teacher"
+        class: "fa-solid fa-chalkboard-teacher"
       institution: Georgia Institute of Technology
       location: Atlanta, GA
       year: Spring 2020
@@ -103,21 +103,21 @@
   contents:
     - title: Senior Product Manager
       icon:
-        class: "fas fa-users"
+        class: "fa-solid fa-users"
       institution: Equifax
       location: Atlanta, GA
       year: 2021 - 2022
 
     - title: Senior Marketing Strategy Analyst
       icon:
-        class: "fas fa-edit"
+        class: "fa-solid fa-edit"
       institution: UPS
       location: Atlanta, GA
       year: 2020 - 2021
 
     - title: Account Executive
       icon:
-        class: "fas fa-user-alt"
+        class: "fa-solid fa-user-alt"
       institution: Builders
       location: Atlanta, GA
       year: 2014 - 2018
