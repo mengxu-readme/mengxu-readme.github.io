@@ -31,8 +31,6 @@
         alt: "georgia tech logo"
       location: Atlanta, GA
       year: 2020
-      description:
-        - "GPA: 4.00 / 4.00"
 
     - institution: The University of Georgia, Terry College of Business
       degree: BBA in Risk Management and Insurance
@@ -43,19 +41,26 @@
         alt: "georgia logo"
       location: Athens, GA
       year: 2013
-      description:
-        - "GPA: 3.88 / 4.00"
   
 - title: Research Interests
   type: list
   contents:
-    - <em>Strategic leadership</em>, <em>corporate governance</em>, and <em>innovative organizational research methods</em>
+    - <em>Strategic leadership</em>, <em>corporate governance</em>, and <em>research methods</em>
 
 - title: Works In Progress
   type: list
   contents:
     - "<strong>CEO power, CEO personality, and CEO non-dismissals.</strong> With Radina Blagoeva, Mirko Benischke, and Michael Withers. Target journal: <em><strong>Academy of Management Journal</strong></em>"
-    - "<strong>CEO media coverage.</strong> With Seung-Hwan Jeong, Ann Murphy, and Shunzhi Zhang"
+
+- title: Selected Workshops
+  type: time_table
+  contents:
+    - title: AMJ Paper & Idea Development Workshop
+      icon:
+        class: "fa-solid fa-users"
+      institution: Academy of Management
+      location: Atlanta, GA
+      year: Dec 2023
 
 - title: Professional Service
   type: time_table
@@ -71,15 +76,6 @@
 - title: Teaching Experience
   type: time_table
   contents:
-    - title: Graduate Teaching Assistant
-      icon:
-        class: "fa-solid fa-chalkboard-teacher"
-      institution: University of Georgia
-      location: Athens, GA
-      year: Fall 2023
-      description:
-        - MGMT 3000 Principles of Management, undergraduate business core course
-
     - title: Adjunct Professor
       icon:
         class: "fa-solid fa-chalkboard-teacher"
@@ -88,6 +84,15 @@
       year: Fall 2020
       description:
         - BA 631 Visual Reporting and Communication, Master of Science in Business Analytics core course
+
+    - title: Graduate Teaching Assistant
+      icon:
+        class: "fa-solid fa-chalkboard-teacher"
+      institution: University of Georgia
+      location: Athens, GA
+      year: Fall 2023
+      description:
+        - MGMT 3000 Principles of Management, undergraduate business core course
 
     - title: Graduate Teaching Assistant
       icon:
