@@ -76,7 +76,7 @@
                 </div>
               </li>
               {%- else %}
-              {% if first_6_chars == '/blog/' and p.permalink == '/blog/index.html' %}
+              {% if first_6_chars == '/blog/' and (p.permalink == '/blog/index.html' or p.permalink == '/blog/') %}
                 {% assign is_blog = true %}
               {% else %}
                 {% assign is_blog = false %}
