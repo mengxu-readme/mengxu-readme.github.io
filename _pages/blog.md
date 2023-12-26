@@ -4,6 +4,8 @@ title: Blog
 description: Meng Xu's Blog Page
 keywords: blog, post
 permalink: /blog/
+nav: true
+nav_order: 2
 pagination:
   enabled: true
   collection: posts

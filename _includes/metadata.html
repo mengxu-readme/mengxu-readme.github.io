@@ -44,11 +44,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {%- capture name -%}{{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
     {%- if is_blog_main -%}
-        {%- capture title -%}{{ site.blog_nav_title }} | {{ name }}{%- endcapture -%}
+        {%- capture title -%}Blog | {{ name }}{%- endcapture -%}
     {%- elsif is_blog_tag or is_blog_category -%}
-        {%- capture title -%}{{ site.blog_nav_title }} | {{ page.title }} | {{ name }}{%- endcapture -%}
+        {%- capture title -%}Blog | {{ page.title }} | {{ name }}{%- endcapture -%}
     {%- elsif is_blog_year -%}
-        {%- capture title -%}{{ site.blog_nav_title }} | {{ page.date | date: "%Y" }} | {{ name }}{%- endcapture -%}
+        {%- capture title -%}Blog | {{ page.date | date: "%Y" }} | {{ name }}{%- endcapture -%}
     {%- elsif is_blog_post -%}
         {%- capture title -%}{{ page.title }} | {{ name }}{%- endcapture -%}
     {%- elsif page.title != "blank" and page.url != "/" -%}
