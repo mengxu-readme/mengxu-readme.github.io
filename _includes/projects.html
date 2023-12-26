@@ -10,6 +10,7 @@
         {%- if project.img %}
         {%- include figure.html
           path=project.img
+          sizes = "250px"
           alt="project thumbnail" 
           cache_bust=true -%}
         {%- endif %}
