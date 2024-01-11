@@ -11,7 +11,9 @@ category: Instructor
 <hr style="margin-top: 3rem"/>
 
 #### Course Objective
+
 This course is designed to help students become a better communicator in a work setting, especially through visual charts and graphs that turn “boring” or “confusing” data into clear, easy-to-understand insights. The specific goals and objectives are:
+
 - To become a better business “storyteller” with data
 - To gain hands on experience with data visualization tools (Excel, Tableau, etc.)
 - To create high-impact charts and graphs
@@ -20,9 +22,13 @@ This course is designed to help students become a better communicator in a work 
 - To adapt messages to different audiences
 
 #### My Role
+
 I was an instructor for this data visualization class and was responsible for designing the curriculum, giving lectures, creating homeworks, and grading final projects.
+
 #### Students
+
 This was a core class for the Master of Science in Business Analytics students at Mercer University.
 
 #### Course Syllabus
+
 You can find <a href="{{ 'courses/BA631_Fall 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

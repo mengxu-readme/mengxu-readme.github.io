@@ -50,7 +50,7 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
-  &.table-bordered{
+  &.table-bordered {
     border: 1px solid var(--global-divider-color) !important;
   }
 }
@@ -80,7 +80,12 @@ blockquote {
       color: var(--global-tip-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-tip-block-title);
     }
   }
@@ -93,7 +98,12 @@ blockquote {
       color: var(--global-warning-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-warning-block-title);
     }
   }
@@ -106,7 +116,12 @@ blockquote {
       color: var(--global-danger-block-text);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--global-danger-block-title);
     }
   }
@@ -276,7 +291,7 @@ blockquote {
     }
   }
 
-  .navbar-nav .nav-item.active>.nav-link {
+  .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
@@ -394,8 +409,8 @@ blockquote {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .wechat-modal > img {
@@ -408,12 +423,11 @@ blockquote {
   transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 400px) {
   .wechat-modal > img {
     width: 100%;
   }
 }
-
 
 // Footer
 footer.fixed-bottom {
@@ -589,7 +603,6 @@ footer.sticky-bottom {
     }
   }
 }
-
 table.table-hide-header thead {
   display: none;
 }
@@ -602,7 +615,6 @@ table.table-hide-header thead {
     text-decoration: none;
   }
 }
-
 
 // Projects
 
@@ -724,12 +736,12 @@ table.table-hide-header thead {
       .author {
         font-size: 0.95rem;
 
-        >em {
+        > em {
           border-bottom: 1px solid;
           font-style: normal;
         }
 
-        >span.more-authors {
+        > span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
@@ -849,7 +861,6 @@ code {
   padding: 3px 3px;
 }
 
-
 // Transitioning Themes
 html.transition,
 html.transition *,
@@ -882,12 +893,14 @@ html.transition *:after {
       }
     }
   }
-  
+
   .scan {
     color: rgba(0, 0, 0, 0);
     background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
-                linear-gradient(to bottom, var(--global-bg-color), var(--global-bg-color));
-    background-size: 0.35rem 100%, 100% 0.35rem;
+      linear-gradient(to bottom, var(--global-bg-color), var(--global-bg-color));
+    background-size:
+      0.35rem 100%,
+      100% 0.35rem;
     -webkit-background-clip: text;
     background-clip: text;
     animation-name: scan;
@@ -895,19 +908,27 @@ html.transition *:after {
     animation-timing-function: linear;
     animation-iteration-count: initial;
     background-repeat: no-repeat;
-    background-position: top left -0.35rem, left top -0.35rem;
+    background-position:
+      top left -0.35rem,
+      left top -0.35rem;
     background-color: var(--global-text-color);
   }
 
   @keyframes scan {
     0% {
-      background-position: top left, left top;
+      background-position:
+        top left,
+        left top;
     }
     50% {
-      background-position: top right, left bottom;
+      background-position:
+        top right,
+        left bottom;
     }
     100% {
-      background-position: top left -0.35rem, left top -0.35rem;
+      background-position:
+        top left -0.35rem,
+        left top -0.35rem;
     }
   }
 
@@ -978,14 +999,14 @@ progress::-moz-progress-bar {
   .copy {
     background: var(--global-card-bg-color);
     border-color: var(--global-bg-color);
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     border-style: none;
     color: var(--global-text-color);
     font-size: medium;
     opacity: 0;
     position: absolute;
-    right: .2rem;
-    top: .2rem;
+    right: 0.2rem;
+    top: 0.2rem;
   }
 
   &:active .copy,
@@ -1033,7 +1054,8 @@ progress::-moz-progress-bar {
     }
   }
 
-  .dropdown-item.active, .dropdown-item:active {
+  .dropdown-item.active,
+  .dropdown-item:active {
     background-color: var(--global-hover-color);
     color: var(--global-hover-text-color) !important;
 
@@ -1047,11 +1069,11 @@ progress::-moz-progress-bar {
 nav[data-toggle="toc"] {
   top: 5rem;
 
-  .nav .nav>li>a {
+  .nav .nav > li > a {
     font-size: 1rem;
   }
 
-  .nav>li>a {
+  .nav > li > a {
     color: var(--global-text-color);
     font-size: 1rem;
 

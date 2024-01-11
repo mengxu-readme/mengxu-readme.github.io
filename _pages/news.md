@@ -10,5 +10,5 @@ nav: false
 <hr style="margin-top: 3rem"/>
 
 <div>
-{% include news.html %}
+{% include news.liquid %}
 </div>

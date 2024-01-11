@@ -41,7 +41,7 @@
         alt: "georgia logo"
       location: Athens, GA
       year: 2013
-  
+
 - title: Research Interests
   type: list
   contents:
@@ -132,7 +132,7 @@
   subtype: horizontal
   contents:
     - title: "Skills"
-      items: 
+      items:
         - Explanatory and Predictive Modeling
         - Text Mining
         - Topic Modeling

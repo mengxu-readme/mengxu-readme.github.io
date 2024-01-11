@@ -8,10 +8,10 @@ tags: PhD
 categories:
 ---
 
-Back in December 2022 when I was working on my application, I told myself that if I was admitted, I would write a blog to share my PhD application experience. So here I am. 
+Back in December 2022 when I was working on my application, I told myself that if I was admitted, I would write a blog to share my PhD application experience. So here I am.
 
 <p style="font-weight: bold;">First, Answer the Question: Why Do You Want to Do a PhD?</p>
-It took me quite a few years to make the decision to do a PhD. I have worked in the industry for seven years with a very decent job and promising career path, meaning the opportunity cost for me is significant. My goal is sharp and clear: I want to be a professor at a research university. Doing research – identifying a problem and solving the problem – gives me a strong sense of self-fulfillment. I get bored easily and I want to explore new topics continuously. In academia, I’ll be able to work with the smartest people who also share the same values as I do. It’s very important to understand what I am getting myself into. Some people quit halfway through because the academic experience differs from their expectations. 
+It took me quite a few years to make the decision to do a PhD. I have worked in the industry for seven years with a very decent job and promising career path, meaning the opportunity cost for me is significant. My goal is sharp and clear: I want to be a professor at a research university. Doing research – identifying a problem and solving the problem – gives me a strong sense of self-fulfillment. I get bored easily and I want to explore new topics continuously. In academia, I’ll be able to work with the smartest people who also share the same values as I do. It’s very important to understand what I am getting myself into. Some people quit halfway through because the academic experience differs from their expectations.
 
 <p style="font-weight: bold;">Choose the Right Programs to Apply to</p>
 When I was evaluating which programs to apply to, I focused on:
