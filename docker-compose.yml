@@ -17,7 +17,7 @@ services:
       start_period: 15s
 
   html-proofer:
-    container_name: validator
+    container_name: html-proofer
     image: klakegg/html-proofer
     volumes:
       - ./_site:/site
