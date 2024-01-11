@@ -41,5 +41,5 @@ jobs:
           bundle exec jekyll build --lsi
           purgecss -c purgecss.config.js
           gem install html-proofer
-      - name: Validate ✅
+      - name: HTMLProofer Check 🔎
         run: htmlproofer ./_site --ignore-status-codes "999"
