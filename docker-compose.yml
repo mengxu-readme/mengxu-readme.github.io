@@ -25,3 +25,10 @@ services:
     depends_on:
       mengxu-readme:
         condition: service_healthy
+
+  prettier:
+    container_name: prettier
+    image: tmknom/prettier
+    volumes:
+      - .:/work
+    command: ["prettier", "/work", "--check"]
