@@ -1,4 +1,4 @@
-name: validate
+name: html-proofer
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  validate:
+  html-proofer:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:

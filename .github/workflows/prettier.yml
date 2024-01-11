@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  check:
+  prettier:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
