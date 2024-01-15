@@ -45,4 +45,4 @@ jobs:
         with:
           fail: true
           # removed md files that include liquid tags
-          args: --base /_site --verbose --no-progress
+          args: --base /_site --verbose --no-progress .
