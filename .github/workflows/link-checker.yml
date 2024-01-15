@@ -19,30 +19,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2.2"
-          bundler-cache: true
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@v0.13.1
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
-        run: |
-          pip3 install --upgrade jupyter
-          npm install -g mermaid.cli
-          npm install -g purgecss
-          export JEKYLL_ENV=production
-          bundle exec jekyll build --lsi
-          purgecss -c purgecss.config.js
-          gem install html-proofer
       - name: Link Check 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
           # removed md files that include liquid tags
-          args: --base /_site --verbose --no-progress './**/*.html'
+          args: --exclude-path _pages/blog.md --exclude-path _pages/404.md --exclude-path _courses/information_systems_and_digital_transformation_course.md --exclude-path _courses/principles_of_management.md --exclude-path _courses/visual_reporting_and_communication_course.md --verbose --no-progress './**/*.md' './**/*.html'
