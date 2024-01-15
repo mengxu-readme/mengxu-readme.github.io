@@ -8,6 +8,8 @@ Meng Xu's Personal Website: https://mengxu-readme.github.io
 
 [![pages-build-deployment](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/pages/pages-build-deployment)
 
+[![link-checker](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/link-checker.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/link-checker.yml)
+
 [![html-proofer](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/html-proofer.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/html-proofer.yml)
 
 [![prettier](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/prettier.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/prettier.yml)

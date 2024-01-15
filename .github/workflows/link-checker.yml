@@ -23,4 +23,5 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          args: --verbose --no-progress './**/*.md' './**/*.html'
+          # removed md files that include liquid tags
+          args: --exclude-path blog.md --exclude-path 404.md --exclude-path _courses/information_systems_and_digital_transformation_course.md --exclude-path _courses/principles_of_management.md --exclude-path _courses/visual_reporting_and_communication_course.md --verbose --no-progress './**/*.md' './**/*.html'
