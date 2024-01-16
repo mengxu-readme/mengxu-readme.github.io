@@ -4,15 +4,11 @@
 
 Meng Xu's Personal Website: https://mengxu-readme.github.io
 
-[![deploy](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/deploy.yml)
+[![link-checker](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/broken-links.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/broken-links.yml)
 
-[![pages-build-deployment](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/pages/pages-build-deployment)
-
-[![link-checker](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/link-checker.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/link-checker.yml)
+[![link-checker-site](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/broken-links-site.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/broken-links-site.yml)
 
 [![html-proofer](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/html-proofer.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/html-proofer.yml)
-
-[![prettier](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/prettier.yml/badge.svg?branch=master)](https://github.com/mengxu-readme/mengxu-readme.github.io/actions/workflows/prettier.yml)
 
 [![website](https://img.shields.io/website?url=https%3A%2F%2Fmengxu-readme.github.io%2F)](https://mengxu-readme.github.io)
 
