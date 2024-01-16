@@ -1,14 +1,14 @@
 name: axe
 
 on:
-  push:
-    branches:
-      - master
-      - main
-  pull_request:
-    branches:
-      - master
-      - main
+  # push:
+  #   branches:
+  #     - master
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - main
   workflow_dispatch:
     inputs:
       url:
@@ -19,7 +19,7 @@ env:
   URL: ""
 
 jobs:
-  check:
+  axe:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
