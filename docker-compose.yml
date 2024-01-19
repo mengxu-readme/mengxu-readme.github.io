@@ -15,20 +15,3 @@ services:
       timeout: 5s
       retries: 5
       start_period: 15s
-
-  html-proofer:
-    container_name: html-proofer
-    image: klakegg/html-proofer
-    volumes:
-      - ./_site:/site
-    command: ["/site", "--http-status-ignore", "999"]
-    depends_on:
-      mengxu-readme:
-        condition: service_healthy
-
-  prettier:
-    container_name: prettier
-    image: tmknom/prettier
-    volumes:
-      - .:/work
-    command: ["prettier", "/work", "--check"]
