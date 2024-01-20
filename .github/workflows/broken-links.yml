@@ -5,20 +5,35 @@ on:
     branches:
       - master
       - main
+    paths:
+      - "assets/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "!.github/workflows/axe.yml"
+      - "!.github/workflows/prettier.yml"
   pull_request:
     branches:
       - master
       - main
-  schedule:
-    - cron: "0 16 * * *"
-  workflow_dispatch:
+    paths:
+      - "assets/**"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "!.github/workflows/axe.yml"
+      - "!.github/workflows/prettier.yml"
 
 jobs:
   link-checker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Link Check 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:
