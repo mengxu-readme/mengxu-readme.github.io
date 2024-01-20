@@ -42,4 +42,4 @@ jobs:
       - name: HTMLProofer Check 🔎
         run: |
           gem install html-proofer
-          htmlproofer ./_site --ignore-status-codes "999"
+          htmlproofer --verbose ./_site --ignore-status-codes "999"
