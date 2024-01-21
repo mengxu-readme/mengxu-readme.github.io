@@ -34,7 +34,7 @@
           {% endfor %}
 
           {% assign first_6_chars = page.url | slice: 0, 6 %}
-          {% assign first_9_chars = page.url | slice: 0, 9 %}
+          {% assign first_10_chars = page.url | slice: 0, 10 %}
 
           <!-- About -->
           {% if first_6_chars == '/news/' %}
@@ -95,7 +95,7 @@
                 {% else %}
                   {% assign is_blog = false %}
                 {% endif %}
-                {% if first_9_chars == '/courses/' and p.permalink == '/teaching/' %}
+                {% if first_10_chars == '/teaching/' and p.permalink == '/teaching/' %}
                   {% assign is_teaching = true %}
                 {% else %}
                   {% assign is_teaching = false %}

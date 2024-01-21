@@ -3,7 +3,7 @@ layout: page
 title: Visual Reporting and Communication
 description: Visual Reporting and Communication course at Mercer University
 keywords: visual, reporting, communication, mercer university
-img: assets/img/courses/data_visualization.jpg
+img: assets/img/teaching/data_visualization.jpg
 importance: 1
 category: Instructor
 ---
@@ -31,4 +31,4 @@ This was a core class for the Master of Science in Business Analytics students a
 
 #### Course Syllabus
 
-You can find <a href="{{ 'courses/BA631_Fall 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ 'teaching/BA631_Fall 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

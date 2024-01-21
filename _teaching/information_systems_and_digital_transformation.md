@@ -3,7 +3,7 @@ layout: page
 title: Information Systems and Digital Transformation
 description: Information Systems and Digital Transformation course at Georgia Institute of Technology
 keywords: information systems, digital transformation, georgia tech, georgia institute of technology
-img: assets/img/courses/information_technology.jpg
+img: assets/img/teaching/information_technology.jpg
 importance: 2
 category: Teaching Assistant
 ---
@@ -29,4 +29,4 @@ This mandatory class for all undergraduate students who majored in Business.
 
 #### Course Syllabus
 
-You can find <a href="{{ 'courses/MGT2210_Spring 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ 'teaching/MGT2210_Spring 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

@@ -3,7 +3,7 @@ layout: page
 title: Principles of Management
 description: Principles of Management course at the University of Georgia
 keywords: management, principles, uga, the university of georgia
-img: assets/img/courses/management_principles.jpg
+img: assets/img/teaching/management_principles.jpg
 importance: 1
 category: Teaching Assistant
 ---
@@ -29,4 +29,4 @@ This is a core class for the business major undergraduate students at the Univer
 
 #### Course Syllabus
 
-You can find <a href="{{ 'courses/MGMT3000_Fall 2023_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ 'teaching/MGMT3000_Fall 2023_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

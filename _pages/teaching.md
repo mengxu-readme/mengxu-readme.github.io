@@ -12,11 +12,11 @@ horizontal: false
 
 <!-- pages/teaching.md -->
 <div class="projects">
-{% if site.enable_course_categories and page.display_categories %}
+{% if site.enable_teaching_categories and page.display_categories %}
   <!-- Display categorized courses -->
   {% for category in page.display_categories %}
   <h2 class="category">{{ category }}</h2>
-  {% assign categorized_courses = site.courses | where: "category", category %}
+  {% assign categorized_courses = site.teaching | where: "category", category %}
   {% assign sorted_courses = categorized_courses | sort: "importance" %}
   <!-- Generate cards for each course -->
   {% if page.horizontal %}
@@ -40,7 +40,7 @@ horizontal: false
 
 <!-- Display courses without categories -->
 
-{% assign sorted_courses = site.courses | sort: "importance" %}
+{% assign sorted_courses = site.teaching | sort: "importance" %}
 
   <!-- Generate cards for each course -->
 
