@@ -211,6 +211,7 @@ exclude:
   - _pages/projects.md
   - _pages/repositories.md
   - bin
+  - lighthouse_results
   - docker-compose.yml
   - Dockerfile
   - LICENSE
