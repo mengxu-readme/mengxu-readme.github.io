@@ -14,6 +14,7 @@ on:
       - "**.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/prettier.yml"
+      - "!lighthouse_results/**"
   pull_request:
     branches:
       - master
@@ -27,6 +28,7 @@ on:
       - "**.yml"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/prettier.yml"
+      - "!lighthouse_results/**"
 
 jobs:
   link-checker:
