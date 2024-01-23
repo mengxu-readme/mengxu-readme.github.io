@@ -2,3 +2,4 @@
 **/*.min.js
 assets/css/main.scss
 assets/js/new_relic_browser.js
+lighthouse_results/**
