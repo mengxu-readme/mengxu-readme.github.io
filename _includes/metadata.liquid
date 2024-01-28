@@ -14,7 +14,8 @@
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 {% endif %}
 
-<!-- Standard metadata -->
+{% capture author_name %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
+
 {% assign is_blog_main = false %}
 {% assign is_blog_tag = false %}
 {% assign is_blog_category = false %}
@@ -40,29 +41,29 @@
   {% endif %}
 {% endif %}
 
+<!-- Standard metadata -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-{% capture name %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
 {% if is_blog_main %}
-  {% capture title %}Blog | {{ name }}{% endcapture %}
+  {% capture title %}Blog | {{ author_name }}{% endcapture %}
 {% elsif is_blog_tag or is_blog_category %}
-  {% capture title %}Blog | {{ page.title }} | {{ name }}{% endcapture %}
+  {% capture title %}Blog | {{ page.title }} | {{ author_name }}{% endcapture %}
 {% elsif is_blog_year %}
-  {% capture title %}Blog | {{ page.date | date: "%Y" }} | {{ name }}{% endcapture %}
+  {% capture title %}Blog | {{ page.date | date: "%Y" }} | {{ author_name }}{% endcapture %}
 {% elsif is_blog_post %}
-  {% capture title %}{{ page.title }} | {{ name }}{% endcapture %}
+  {% capture title %}{{ page.title }} | {{ author_name }}{% endcapture %}
 {% elsif page.title != 'blank' and page.url != '/' %}
   {% if page.title == null or page.title == '' %}
-    {% capture title %}{{ page.date | date: "%Y" }} | {{ name }}{% endcapture %}
+    {% capture title %}{{ page.date | date: "%Y" }} | {{ author_name }}{% endcapture %}
   {% else %}
-    {% capture title %}{{ page.title }} | {{ name }}{% endcapture %}
+    {% capture title %}{{ page.title }} | {{ author_name }}{% endcapture %}
   {% endif %}
 {% else %}
-  {% capture title %}{{ name }}{% endcapture %}
+  {% capture title %}{{ author_name }}{% endcapture %}
 {% endif %}
 <title>{{ title }}</title>
-<meta name="author" content="{{ name }}">
+<meta name="author" content="{{ author_name }}">
 {% if page.description %}
   {% capture description %}{{ page.description }}{% endcapture %}
 {% elsif is_blog_tag %}
@@ -91,7 +92,7 @@
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="{{ name }}">
+  <meta property="og:site_name" content="{{ author_name }}">
   <meta property="og:type" content="{% if is_blog_post %}Blog{% else %}Website{% endif %}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
@@ -267,7 +268,7 @@
         "author":
         {
             "@type": "Person",
-            "name": "{{ name }}"
+            "name": "{{ author_name }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}",
         "@type": "{% if is_blog_post %}Blog{% else %}Website{% endif %}",
@@ -276,7 +277,7 @@
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks }},
         {% endif %}
-        "name": "{{ name }}",
+        "name": "{{ author_name }}",
         "@context": "https://schema.org"
     }
   </script>

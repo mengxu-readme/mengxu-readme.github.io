@@ -17,6 +17,7 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
+      - "!README.md"
   pull_request:
     branches:
       - master
@@ -33,6 +34,7 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
+      - "!README.md"
   schedule:
     - cron: "0 8 1 1 *"
   workflow_dispatch:
