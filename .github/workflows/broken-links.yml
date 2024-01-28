@@ -13,6 +13,7 @@ on:
       - "**/*.md"
       - "**.yml"
       - "!.github/workflows/axe.yml"
+      - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
   pull_request:
@@ -27,6 +28,7 @@ on:
       - "**/*.md"
       - "**.yml"
       - "!.github/workflows/axe.yml"
+      - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
 
