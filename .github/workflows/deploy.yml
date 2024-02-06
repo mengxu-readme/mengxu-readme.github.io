@@ -5,36 +5,24 @@ on:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!README.md"
+    paths-ignore:
+      - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links.yml"
+      - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier.yml"
+      - "lighthouse_results/**"
+      - "README.md"
   pull_request:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!README.md"
+    paths-ignore:
+      - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links.yml"
+      - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier.yml"
+      - "lighthouse_results/**"
+      - "README.md"
   schedule:
     - cron: "0 8 1 1 *"
   workflow_dispatch:
