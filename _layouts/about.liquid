@@ -47,7 +47,7 @@ layout: default
     {% endif %}
 
     <!-- Latest posts -->
-    {% if page.latest_posts %}
+    {% if site.latest_posts.enabled %}
       <div style="margin-top: 1rem;">
         <h2>
           <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
