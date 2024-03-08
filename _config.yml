@@ -210,8 +210,8 @@ exclude:
   - _pages/dropdown.md
   - _pages/projects.md
   - _pages/repositories.md
-  - bin
-  - lighthouse_results
+  - bin/
+  - lighthouse_results/
   - docker-compose.yml
   - Dockerfile
   - LICENSE
