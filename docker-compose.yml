@@ -9,6 +9,8 @@ services:
       - 35729:35729
     volumes:
       - .:/srv/jekyll
+    environment:
+      - JEKYLL_ENV=development
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080"]
       interval: 15s
