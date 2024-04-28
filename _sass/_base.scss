@@ -165,8 +165,8 @@ ul.task-list input[type="checkbox"] {
   }
 
   .card-title {
-    font-size: 1.25rem;
     color: var(--global-text-color);
+    font-size: 1.25rem;
   }
 
   .card-body {
@@ -220,6 +220,7 @@ ul.task-list input[type="checkbox"] {
 
 .post-header {
   text-align: center;
+
   h1 {
     color: var(--global-theme-color);
     font-size: 2.5rem;
@@ -441,7 +442,6 @@ footer.fixed-bottom {
   font-size: 0.75rem;
 
   .container {
-    text-align: center;
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
@@ -491,10 +491,10 @@ footer.sticky-bottom {
 
   .inline-img {
     display: inline-block;
+    width: 1.5rem;
+    height: 0.95rem;
     padding: 0;
     vertical-align: baseline;
-    height: 0.95rem;
-    width: 1.5rem;
   }
 }
 
@@ -614,6 +614,7 @@ footer.sticky-bottom {
     }
   }
 }
+
 table.table-hide-header thead {
   display: none;
 }
@@ -656,8 +657,8 @@ table.table-hide-header thead {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
     margin-bottom: 2rem;
-    text-align: right;
     padding-bottom: 0.25rem;
+    text-align: right;
     font-size: 1.85rem;
   }
 }
@@ -903,20 +904,20 @@ html.transition *:after {
     color: rgba(0, 0, 0, 0);
     background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
       linear-gradient(to bottom, var(--global-bg-color), var(--global-bg-color));
+    background-color: var(--global-text-color);
     background-size:
       0.35rem 100%,
       100% 0.35rem;
-    -webkit-background-clip: text;
+    background-position:
+      top left -0.35rem,
+      left top -0.35rem;
+    background-repeat: no-repeat;
     background-clip: text;
+    -webkit-background-clip: text;
     animation-name: scan;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: initial;
-    background-repeat: no-repeat;
-    background-position:
-      top left -0.35rem,
-      left top -0.35rem;
-    background-color: var(--global-text-color);
   }
 
   @keyframes scan {
