@@ -131,6 +131,7 @@ bing_site_verification: 9840050BC32E661645C019601C266AA5 # out your bing-site-ve
 blog_name: Mlog # blog_name will be displayed in your blog page
 blog_description: Verba volant, scripta manent
 permalink: /blog/:year/:title/
+lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
