@@ -551,6 +551,7 @@ footer.sticky-bottom {
 }
 
 .post-title {
+  font-size: 1.5rem;
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
@@ -660,7 +661,7 @@ table.table-hide-header thead {
     margin-bottom: 2rem;
     padding-bottom: 0.25rem;
     text-align: right;
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -689,7 +690,7 @@ table.table-hide-header thead {
     padding-bottom: 0.25rem;
     margin-bottom: 1rem;
     text-align: right;
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 
   ol.bibliography {
@@ -728,6 +729,7 @@ table.table-hide-header thead {
       }
 
       .title {
+        font-size: 1.05rem;
         font-weight: bolder;
       }
 
