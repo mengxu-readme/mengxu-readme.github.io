@@ -528,7 +528,7 @@ ninja.data = [
   {%- if site.enable_darkmode -%}
     {
       id: 'light-theme',
-      title: 'Change theme to light',
+      title: 'Change Theme to Light',
       description: 'Change the theme of the site to Light',
       section: 'Theme',
       handler: () => {
@@ -537,7 +537,7 @@ ninja.data = [
     },
     {
       id: 'dark-theme',
-      title: 'Change theme to dark',
+      title: 'Change Theme to Dark',
       description: 'Change the theme of the site to Dark',
       section: 'Theme',
       handler: () => {
@@ -546,7 +546,7 @@ ninja.data = [
     },
     {
       id: 'system-theme',
-      title: 'Use system default theme',
+      title: 'Use System Default Theme',
       description: 'Change the theme of the site to System Default',
       section: 'Theme',
       handler: () => {
