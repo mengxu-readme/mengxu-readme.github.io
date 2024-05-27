@@ -72,41 +72,25 @@
           {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
-      {%- for post in site.posts -%}
-        {
-          {%- assign title = post.title | escape -%}
-          id: "post-{{ title | slugify }}",
-          title: "{{ title }}",
-          description: "{{ post.description | strip_html | strip_newlines | escape }}",
-          section: "Posts",
-          handler: () => {
-            window.location.href = "{{ post.url | relative_url }}";
+      {%- for collection in site.collections -%}
+        {%- for item in collection.docs -%}
+          {
+            {%- if item.inline -%}
+              {%- assign title = item.content | remove: '<p>' | remove: '</p>' | escape | strip -%}
+            {%- else -%}
+              {%- assign title = item.title | escape -%}
+            {%- endif -%}
+            id: "{{ collection.label }}-{{ title | slugify }}",
+            title: '{{ title | emojify }}',
+            description: "{{ item.description | strip_html | strip_newlines | escape }}",
+            section: "{{ collection.label | capitalize }}",
+            {%- unless item.inline -%}
+              handler: () => {
+                window.location.href = "{{ item.url | relative_url }}";
+              },
+            {%- endunless -%}
           },
-        },
-      {%- endfor -%}
-      {%- for course in site.teaching -%}
-        {
-          {%- assign title = course.title | escape -%}
-          id: "teaching-{{ title | slugify }}",
-          title: "{{ title }}",
-          description: "{{ course.description | strip_html | strip_newlines | escape }}",
-          section: "Teaching",
-          handler: () => {
-            window.location.href = "{{ course.url | relative_url }}";
-          },
-        },
-      {%- endfor -%}
-      {%- for project in site.projects -%}
-        {
-          {%- assign title = project.title | escape -%}
-          id: "project-{{ title | slugify }}",
-          title: "{{ title }}",
-          description: "{{ project.description | strip_html | strip_newlines | escape }}",
-          section: "Projects",
-          handler: () => {
-            window.location.href = "{{ project.url | relative_url }}";
-          },
-        },
+        {%- endfor -%}
       {%- endfor -%}
       {%- if site.socials_in_search -%}
         {%- if site.email -%}
