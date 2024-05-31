@@ -505,6 +505,11 @@ footer.sticky-bottom {
   color: var(--global-text-color);
 }
 
+.date-column {
+  width: 75px;
+  transform: translateX(-15px) translateY(-5px);
+}
+
 // Repositories
 
 @media (min-width: 768px) {
@@ -1189,10 +1194,11 @@ ninja-keys {
   --ninja-accent-color: var(--global-theme-color);
   --ninja-icon-size: 0px;
   --ninja-modal-background: var(--global-bg-color);
-  --ninja-text-color: var(--global-text-color);
   --ninja-z-index: 1031;
 }
-
+ninja-keys::part(ninja-input) {
+  color: var(--ninja-selected-text-color);
+}
 ninja-keys::part(ninja-input-wrapper) {
   background: var(--global-bg-color);
 }
