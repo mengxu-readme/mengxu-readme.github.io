@@ -2,7 +2,7 @@
   <ul class="card-text font-weight-light list-group list-group-horizontal">
     {% for content in entry.contents %}
       <li class="list-group-item flex-fill" style="border: 0;">
-        <h5 class="font-italic" style="font-size:1rem;">{{ content.title }}</h5>
+        <h5 class="font-italic" style="font-size: 1rem;">{{ content.title }}</h5>
         {% if content.items %}
           <ul class="subitems">
             {% for subitem in content.items %}
@@ -19,7 +19,7 @@
   <ul class="card-text font-weight-light list-group list-group-flush">
     {% for content in entry.contents %}
       <li class="list-group-item">
-        <h5 class="font-italic" style="font-size:1rem;">{{ content.title }}</h5>
+        <h5 class="font-italic" style="font-size: 1rem;">{{ content.title }}</h5>
         {% if content.items %}
           <ul class="subitems">
             {% for subitem in content.items %}
