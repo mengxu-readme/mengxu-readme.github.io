@@ -43,3 +43,11 @@
     })(window, document, 'clarity', 'script', 'j3ifh32g0x');
   </script>
 {% endif %}
+{% if site.enable_pirsch_analytics %}
+  <script
+    defer
+    src="https://api.pirsch.io/pa.js"
+    id="pianjs"
+    data-code="{{ site.pirsch_analytics }}"
+  ></script>
+{% endif %}
