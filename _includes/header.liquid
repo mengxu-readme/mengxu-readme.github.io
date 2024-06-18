@@ -35,19 +35,11 @@
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
-          {% assign first_6_chars = page.url | slice: 0, 6 %}
-          {% assign first_10_chars = page.url | slice: 0, 10 %}
-
           <!-- About -->
-          {% if first_6_chars == '/news/' %}
-            {% assign is_news = true %}
-          {% else %}
-            {% assign is_news = false %}
-          {% endif %}
-          <li class="nav-item {% if page.permalink == '/' or is_news %}active{% endif %}">
+          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' or is_news %}
+              {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -92,20 +84,13 @@
                   </div>
                 </li>
               {% else %}
-                {% if first_6_chars == '/blog/' and (p.permalink == '/blog/index.html' or p.permalink == '/blog/') %}
-                  {% assign is_blog = true %}
-                {% else %}
-                  {% assign is_blog = false %}
-                {% endif %}
-                {% if first_10_chars == '/teaching/' and p.permalink == '/teaching/' %}
-                  {% assign is_teaching = true %}
-                {% else %}
-                  {% assign is_teaching = false %}
-                {% endif %}
-                <li class="nav-item {% if page.url == p.permalink or is_blog or is_teaching %}active{% endif %}">
-                  <a class="nav-link" href="{{ p.url | relative_url | remove: 'index.html' }}">
+                {% assign parent_link = p.permalink | remove: 'index.html' %}
+                {% assign page_url_prefix = page.url | slice: 0, parent_link.size %}
+                <li class="nav-item {% if page_url_prefix == parent_link %}active{% endif %}">
+                  {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
+                  <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
-                    {% if page.url == p.permalink or is_blog or is_teaching %}
+                    {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
