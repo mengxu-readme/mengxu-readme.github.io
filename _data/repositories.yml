@@ -1,5 +1,7 @@
 github_users:
   - mengxu-readme
 
+repo_description_lines_max: 2
+
 github_repos:
   - mengxu-readme/mengxu-readme.github.io
