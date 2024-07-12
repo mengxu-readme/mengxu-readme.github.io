@@ -10,9 +10,9 @@ nav_order: 3
 
 <!-- _pages/research.md -->
 
-{% if site.bib_search %}
-<input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter">
-{% endif %}
+<!-- Bibsearch Feature -->
+
+{% include bib_search.liquid %}
 
 <div class="publications">
 
