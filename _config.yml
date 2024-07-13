@@ -188,13 +188,13 @@ collections:
     defaults:
       layout: post
     output: true
-    permalink: /news/:path/
+    permalink: /:collection/:title/
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /:collection/:title/
   teaching:
     output: true
-    permalink: /teaching/:path/
+    permalink: /:collection/:title/
 
 announcements:
   enabled: true
