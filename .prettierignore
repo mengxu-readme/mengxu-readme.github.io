@@ -7,3 +7,4 @@ assets/js/distillpub/template.v2.js
 assets/js/new_relic_browser.js
 assets/js/search/*.js
 lighthouse_results/**
+_sass/font-awesome/*.scss
