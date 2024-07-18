@@ -45,20 +45,32 @@
 - title: Research Interests
   type: list
   contents:
-    - <em>Strategic leadership</em>, <em>corporate governance</em>, and <em>research methods</em>
+    - <em>Corporate governance</em>, <em>CEO succession</em>, and <em>research methods</em>
 
-- title: Works In Progress
+- title: Work In Progress
   type: list
   contents:
-    - "<strong>CEO power, CEO personality, and CEO non-dismissals.</strong> With Radina Blagoeva, Mirko Benischke, and Michael Withers. Target journal: <em><strong>Academy of Management Journal</strong></em>"
+    - "<strong>CEO power and non-dismissal</strong> with Radina Blagoeva, Mirko Benischke, and Michael Withers"
+    - "<strong>CEO succession plan</strong> with Eric Lee, Tim Quigley, and Scott Graffin"
+    - "<strong>CEO second chance</strong> with Saba Ahmadi Harandi, Aaron Hill, and Tim Quigley"
 
-- title: Selected Workshops
+- title: Selected Presentations And Workshops
   type: time_table
   contents:
-    - title: AMJ Paper & Idea Development Workshop
+    - title: "From potential to materialization: The configurational effect of CEO power and personality on CEO non-dismissal"
+      maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
+      icon:
+        class: "fa-solid fa-chalkboard-teacher"
+      institution: Strategic Management Society
+      department: Annual Conference
+      location: Istanbul, TR
+      year: Oct 2024
+    - title: "From potential to materialization: The configurational effect of CEO power and personality on CEO non-dismissal"
+      maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
       icon:
         class: "fa-solid fa-users"
       institution: Academy of Management
+      department: Academy Management Journal Paper Development Workshop
       location: Atlanta, GA
       year: Dec 2023
 
@@ -70,38 +82,46 @@
         class: "fa-solid fa-users"
       institution: Academy of Management
       department: Strategy Division
-      location: Boston, MA
-      year: 2023
+      year: 2023<br>2024
+    - title: Reviewer
+      icon:
+        class: "fa-solid fa-magnifying-glass"
+      institution: Academy of Management
+      department: Annual Meeting
+      year: 2024
+    - title: Reviewer
+      icon:
+        class: "fa-solid fa-magnifying-glass"
+      institution: International Corporate Governance Society
+      department: Annual Meeting
+      year: 2024
 
 - title: Teaching Experience
   type: time_table
   contents:
-    - title: Adjunct Professor
+    - title: Instructor
       icon:
         class: "fa-solid fa-chalkboard-teacher"
       institution: Mercer University
       location: Atlanta, GA
       year: Fall 2020
-      description:
-        - BA 631 Visual Reporting and Communication, Master of Science in Business Analytics core course
+      maindescription: BA 631 Visual Reporting and Communication
 
-    - title: Graduate Teaching Assistant
+    - title: Teaching Assistant
       icon:
         class: "fa-solid fa-chalkboard-teacher"
       institution: University of Georgia
       location: Athens, GA
-      year: Fall 2023
-      description:
-        - MGMT 3000 Principles of Management, undergraduate business core course
+      year: Fall 2023<br>Spring 2024
+      maindescription: MGMT 3000 Principles of Management
 
-    - title: Graduate Teaching Assistant
+    - title: Teaching Assistant
       icon:
         class: "fa-solid fa-chalkboard-teacher"
       institution: Georgia Institute of Technology
       location: Atlanta, GA
       year: Spring 2020
-      description:
-        - MGT 2210 Information Systems and Digital Transformation, undergraduate business core course
+      maindescription: MGT 2210 Information Systems and Digital Transformation
 
 - title: Non-Academic Professional Experience
   type: time_table
@@ -127,27 +147,8 @@
       location: Atlanta, GA
       year: 2014 - 2018
 
-- title: Analytics Readiness
-  type: nested_list
-  subtype: horizontal
+- title: Technical Skills
+  type: list
   contents:
-    - title: "Skills"
-      items:
-        - Explanatory and Predictive Modeling
-        - Text Mining
-        - Topic Modeling
-        - Natural Language Processing
-        - Network Analysis
-        - Data Visualization
-        - Web Crawling, Scraping, and Parsing
-        - API Integration
-
-    - title: "Tools"
-      items:
-        - Python
-        - SQL
-        - SPSS
-        - Tableau
-        - Power BI
-        - Gephi
-        - fsQCA
+    - "<strong>Skills:</strong> Text Mining, Topic Modeling, Natural Language Processing, Network Analysis, Web Crawling, Scraping, & Parsing, API Integration"
+    - "<strong>Tools:</strong> Python, SQL, Tableau, Power BI, Gephi, fsQCA, Stata"

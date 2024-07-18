@@ -326,7 +326,7 @@ scholar:
 
   query: "@*"
   group_by: type
-  type_names: { wip: Works In Progress }
+  type_names: { wip: Work In Progress }
 
 # Display different badges with stats for your publications
 # Customize badge behavior in _layouts/bib.liquid

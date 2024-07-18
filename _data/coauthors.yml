@@ -1,11 +1,31 @@
+"ahmadi harandi":
+  - firstname: ["Saba"]
+    url: https://warrington.ufl.edu/directory/person/13078/
+
 "benischke":
-  - firstname: ["Mirko", "M."]
+  - firstname: ["Mirko"]
     url: https://www.rsm.nl/people/mirko-benischke/
 
 "blagoeva":
-  - firstname: ["Radina", "R."]
+  - firstname: ["Radina"]
     url: https://www.terry.uga.edu/directory/radina-blagoeva/
 
+"graffin":
+  - firstname: ["Scott"]
+    url: https://www.terry.uga.edu/directory/scott-d-graffin/
+
+"hill":
+  - firstname: ["Aaron"]
+    url: https://warrington.ufl.edu/directory/person/7938/
+
+"lee":
+  - firstname: ["Eric"]
+    url: https://mays.tamu.edu/directory/eric-lee/
+
+"quigley":
+  - firstname: ["Tim"]
+    url: https://www.terry.uga.edu/directory/timothy-tim-quigley/
+
 "withers":
-  - firstname: ["Michael", "M."]
+  - firstname: ["Michael"]
     url: https://mays.tamu.edu/directory/michael-withers/
