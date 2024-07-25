@@ -12,10 +12,10 @@ name: "lighthouse-badger"
 # DEFINE YOUR INPUTS AND TRIGGERS IN THE FOLLOWING
 ########################################################################
 
-# INPUTS as Secrets (env) for not manually triggered workflows
+# INPUTS as environmental variables (env) for not manually triggered workflows
 env:
   URLS: https://mengxu-readme.github.io/
-  TOKEN_NAME: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
+  TOKEN_NAME: LIGHTHOUSE_BADGER_TOKEN
   # If any of the following env is blank, a default value is used instead
   REPO_BRANCH: "${{ github.repository }} master" # target repository & branch e.g. 'dummy/mytargetrepo main'
   MOBILE_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --throttling.cpuSlowdownMultiplier=2"
