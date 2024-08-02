@@ -70,6 +70,14 @@
       icon:
         class: "fa-solid fa-users"
       institution: Academy of Management
+      department: Annual Conference QCA PDW
+      location: Chicago, IL
+      year: Aug 2024
+    - title: "From potential to materialization: The configurational effect of CEO power and personality on CEO non-dismissal"
+      maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
+      icon:
+        class: "fa-solid fa-users"
+      institution: Academy of Management
       department: Academy Management Journal Paper Development Workshop
       location: Atlanta, GA
       year: Dec 2023
