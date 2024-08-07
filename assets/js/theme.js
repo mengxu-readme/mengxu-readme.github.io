@@ -25,7 +25,6 @@ let setThemeSetting = (themeSetting) => {
 let applyTheme = () => {
   let theme = determineComputedTheme();
 
-  transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
   setSearchTheme(theme);
