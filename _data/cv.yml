@@ -61,6 +61,14 @@
       maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
       icon:
         class: "fa-solid fa-chalkboard-teacher"
+      institution: International Corporate Governance Society
+      department: Annual Conference
+      location: Tempe, AZ
+      year: Nov 2024
+    - title: "From potential to materialization: The configurational effect of CEO power and personality on CEO non-dismissal"
+      maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
+      icon:
+        class: "fa-solid fa-chalkboard-teacher"
       institution: Strategic Management Society
       department: Annual Conference
       location: Istanbul, TR
@@ -73,14 +81,6 @@
       department: Annual Conference QCA PDW
       location: Chicago, IL
       year: Aug 2024
-    - title: "From potential to materialization: The configurational effect of CEO power and personality on CEO non-dismissal"
-      maindescription: "<strong>Meng Xu</strong>, Radina Blagoeva, Mirko Benischke, and Michael Withers"
-      icon:
-        class: "fa-solid fa-users"
-      institution: Academy of Management
-      department: Academy Management Journal Paper Development Workshop
-      location: Atlanta, GA
-      year: Dec 2023
 
 - title: Professional Service
   type: time_table
@@ -89,19 +89,19 @@
       icon:
         class: "fa-solid fa-users"
       institution: Academy of Management
-      department: Strategy Division
+      department: STR Division
       year: 2023<br>2024
     - title: Reviewer
       icon:
         class: "fa-solid fa-magnifying-glass"
       institution: Academy of Management
-      department: Annual Meeting
+      department: Annual Conference
       year: 2024
     - title: Reviewer
       icon:
         class: "fa-solid fa-magnifying-glass"
       institution: International Corporate Governance Society
-      department: Annual Meeting
+      department: Annual Conference
       year: 2024
 
 - title: Teaching Experience
