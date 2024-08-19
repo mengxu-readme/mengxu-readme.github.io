@@ -1,6 +1,6 @@
-# mengxu-readme
-
 <div align="center">
+
+<h1>mengxu-readme</h1>
 
 <a href="https://mengxu-readme.github.io"><img src="assets/img/about/icon.svg" title="Website Icon" alt="Website Icon"/></a>
 
