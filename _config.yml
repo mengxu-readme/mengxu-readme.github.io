@@ -278,7 +278,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/new_relic_browser.js", "assets/js/search/*.js"]
+  exclude: ["robots.txt", "assets/js/new_relic_browser.js", "assets/js/search/*.js", "assets/libs/**/*"]
   uglifier_args:
     harmony: true
 
