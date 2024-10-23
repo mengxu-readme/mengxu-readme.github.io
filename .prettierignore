@@ -8,3 +8,4 @@ assets/js/new_relic_browser.js
 assets/js/search/*.js
 lighthouse_results/**
 _sass/font-awesome/*.scss
+_sass/tabler-icons/*.scss
