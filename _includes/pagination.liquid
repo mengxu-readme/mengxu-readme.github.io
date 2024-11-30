@@ -2,7 +2,11 @@
   <nav aria-label="Blog page navigation">
     <ul class="pagination pagination-lg justify-content-center">
       <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
-        <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1" aria-disabled="{{ paginator.previous_page }}"
+        <a
+          class="page-link"
+          href="{% if paginator.previous_page %}{{ paginator.previous_page_path | relative_url }}{% else %}#{% endif %}"
+          tabindex="-1"
+          aria-disabled="{{ paginator.previous_page }}"
           >&lt;</a
         >
       </li>
@@ -14,7 +18,7 @@
         {% endfor %}
       {% endif %}
       <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
-        <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">&gt;</a>
+        <a class="page-link" href="{% if paginator.next_page %}{{ paginator.next_page_path | relative_url }}{% else %}#{% endif %}">&gt;</a>
       </li>
     </ul>
   </nav>
