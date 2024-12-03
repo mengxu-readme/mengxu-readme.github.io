@@ -9,13 +9,18 @@ layout: default
         <h2>
           Click
           <a
-            href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+            {% if page.cv_pdf contains '://' %}
+              href="{{ page.cv_pdf }}"
+            {% else %}
+              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url  }}"
+            {% endif %}
             aria-label="CV"
             target="_blank"
             rel="noopener noreferrer"
             style="font-size: 1.6rem;"
-            ><i class="fa-solid fa-file-pdf"></i
-          ></a>
+          >
+            <i class="fa-solid fa-file-pdf"></i>
+          </a>
           to Download a Copy
         </h2>
       {% endif %}
@@ -55,13 +60,18 @@ layout: default
         <h2>
           Click
           <a
-            href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+            {% if page.cv_pdf contains '://' %}
+              href="{{ page.cv_pdf }}"
+            {% else %}
+              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url  }}"
+            {% endif %}
             aria-label="CV"
             target="_blank"
             rel="noopener noreferrer"
             style="font-size: 1.6rem;"
-            ><i class="fa-solid fa-file-pdf"></i
-          ></a>
+          >
+            <i class="fa-solid fa-file-pdf"></i>
+          </a>
           to Download a Copy
         </h2>
       {% endif %}
