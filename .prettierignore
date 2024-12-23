@@ -2,10 +2,10 @@
 **/*.min.css
 **/*.min.js
 assets/css/main.scss
-assets/js/search-data.js
 assets/js/distillpub/template.v2.js
-assets/js/new_relic_browser.js
+assets/js/new-relic-setup.js
 assets/js/search/*.js
 lighthouse_results/**
 _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss
+_scripts/search.liquid.js
