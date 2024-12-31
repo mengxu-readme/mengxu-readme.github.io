@@ -44,7 +44,16 @@
               </h6>
             {% endif %}
             {% if content.degree %}
-              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;"><i class="fa-solid fa-graduation-cap icondegree"></i> {{ content.degree }}</h6>
+              <table class="table-cv ml-1 ml-md-4" style="font-size: 0.95rem;">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align: top; text-align: center">
+                      <i class="fa-solid fa-graduation-cap icondegree"></i>
+                    </td>
+                    <td>{{ content.degree }}</td>
+                  </tr>
+                </tbody>
+              </table>
             {% endif %}
           {% else %}
             {% if content.title %}
