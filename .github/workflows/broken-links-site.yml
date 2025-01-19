@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows: [deploy]
     types: [completed]
+    branches: ["main"]
 
 jobs:
   link-checker-site:

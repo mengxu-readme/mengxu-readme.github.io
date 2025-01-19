@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows: [deploy]
     types: [completed]
+    branches: ["main"]
   schedule:
     - cron: "0 16 * * *"
   workflow_dispatch:
