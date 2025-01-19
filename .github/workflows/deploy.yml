@@ -6,14 +6,21 @@ on:
       - master
       - main
     paths-ignore:
+      - ".devcontainer/devcontainer.json"
       - ".github/workflows/axe.yml"
       - ".github/workflows/broken-links.yml"
+      - ".github/workflows/codeql.yml"
+      - ".github/workflows/license-year.yml"
       - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier-html.yml"
       - ".github/workflows/prettier.yml"
+      - ".github/workflows/schedule-posts.txt"
+      - "bin/entry_point.sh"
       - "lighthouse_results/**"
       - ".dockerignore"
-      - ".editorconfig"
       - ".git-blame-ignore-revs"
+      - .gitattributes
+      - .gitignore
       - ".pre-commit-config.yaml"
       - ".prettierignore"
       - ".prettierrc"
@@ -26,14 +33,21 @@ on:
       - master
       - main
     paths-ignore:
+      - ".devcontainer/devcontainer.json"
       - ".github/workflows/axe.yml"
       - ".github/workflows/broken-links.yml"
+      - ".github/workflows/codeql.yml"
+      - ".github/workflows/license-year.yml"
       - ".github/workflows/lighthouse-badger.yml"
+      - ".github/workflows/prettier-html.yml"
       - ".github/workflows/prettier.yml"
+      - ".github/workflows/schedule-posts.txt"
+      - "bin/entry_point.sh"
       - "lighthouse_results/**"
       - ".dockerignore"
-      - ".editorconfig"
       - ".git-blame-ignore-revs"
+      - .gitattributes
+      - .gitignore
       - ".pre-commit-config.yaml"
       - ".prettierignore"
       - ".prettierrc"
