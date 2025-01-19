@@ -4,7 +4,6 @@ on:
   workflow_run:
     workflows: [deploy]
     types: [completed]
-    branches: ["main"]
 
 jobs:
   link-checker-site:
@@ -13,6 +12,16 @@ jobs:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
+      - name: Derive Branch 🧮
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_run" ]; then
+            echo "branch=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_ENV
+          elif [ "${{ github.event_name }}" == "schedule" ]; then
+            echo "branch=main" >> $GITHUB_ENV
+          elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "branch=${{ github.ref_name }}" >> $GITHUB_ENV
+          else
+            echo "branch=unknown" >> $GITHUB_ENV
       - name: Checkout 🛎️
         uses: actions/checkout@v4
       - name: Setup Ruby 💎
