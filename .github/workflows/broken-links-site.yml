@@ -22,6 +22,7 @@ jobs:
             echo "branch=${{ github.ref_name }}" >> $GITHUB_ENV
           else
             echo "branch=unknown" >> $GITHUB_ENV
+          fi
       - name: Checkout 🛎️
         uses: actions/checkout@v4
       - name: Setup Ruby 💎
