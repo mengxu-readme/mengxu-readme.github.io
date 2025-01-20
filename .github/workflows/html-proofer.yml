@@ -15,19 +15,10 @@ jobs:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Derive Branch 🧮
-        run: |
-          if [ "${{ github.event_name }}" == "workflow_run" ]; then
-            echo "branch=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_ENV
-          elif [ "${{ github.event_name }}" == "schedule" ]; then
-            echo "branch=main" >> $GITHUB_ENV
-          elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "branch=${{ github.ref_name }}" >> $GITHUB_ENV
-          else
-            echo "branch=unknown" >> $GITHUB_ENV
-          fi
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || github.event.workflow_run.head_branch || 'main' }}
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
