@@ -1,9 +1,9 @@
 // Check if the user is on a Mac and update the shortcut key for search accordingly
 document.addEventListener("readystatechange", () => {
-  if (document.readyState === "interactive") {
+  if (document.readyState === "complete") {
     let shortcutKeyElement = document.querySelector("#search-toggle .nav-link");
     if (!shortcutKeyElement) return;
-    shortcutKeyElement.style.minWidth = `${shortcutKeyElement.offsetWidth}px`;
+    shortcutKeyElement.style.minWidth = `${shortcutKeyElement.getBoundingClientRect().width}px`;
     let isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
     if (isMac) {
       // use the unicode for command key
@@ -25,5 +25,7 @@ document.addEventListener("readystatechange", () => {
         shortcutKeyElement.innerHTML = '<i class="ti ti-search"></i>';
       }
     }
+
+    shortcutKeyElement.style.visibility = "visible";
   }
 });
