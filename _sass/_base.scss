@@ -770,6 +770,7 @@ table.table-hide-header thead {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.25rem;
+          color: var(--global-card-bg-color) !important;
 
           a {
             color: white;
