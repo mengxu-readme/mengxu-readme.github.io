@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    {% if page.type == 'categories' %}
+      <h1 class="post-title"><i class="fa-solid fa-tag fa-sm"></i> {{ page.title }}</h1>
+    {% elsif page.type == 'year' %}
+      <h1 class="post-title"><i class="fa-solid fa-calendar fa-sm"></i> {{ page.date | date: '%Y' }}</h1>
+    {% elsif page.type == 'tags' %}
+      <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> {{ page.title }}</h1>
+    {% endif %}
+  </header>
+
+  <hr style="margin-top: 3rem">
+
+  <article class="archive">
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless table-hover table-hide-header">
+        <thead>
+          <tr>
+            <th data-field="date" scope="col">Date</th>
+            <th data-field="title" scope="col">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for document in page.documents %}
+            <tr>
+              <td style="font-weight: bold;">{{ document.date | date: '%b %d, %Y' }}</td>
+              <td>
+                {% if document.redirect == blank %}
+                  <a class="post-link" href="{{ document.url | relative_url }}">{{ document.title }}</a>
+                {% elsif document.redirect contains '://' %}
+                  <a class="post-link" href="{{ document.redirect }}" target="_blank">{{ document.title }}</a>
+                {% else %}
+                  <a class="post-link" href="{{ document.redirect | relative_url }}">{{ document.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </article>
+</div>
