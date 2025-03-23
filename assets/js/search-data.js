@@ -38,72 +38,72 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "post-corporate-governance-in-the-sun-my-icgs-adventure-at-asu",
-      
-        title: "Corporate Governance in the Sun: My ICGS Adventure at ASU",
-      
-      description: "Meng Xu&#39;s ICGS adventure at ASU",
-      section: "Posts",
-      handler: () => {
         
-          window.location.href = "/blog/2024/corporate_governance_in_the_sun_my_icgs_adventure_at_asu/";
+          title: "Corporate Governance in the Sun: My ICGS Adventure at ASU",
         
-      },
-    },{id: "post-my-first-year-as-a-phd-student",
-      
-        title: "My First Year as a PhD Student",
-      
-      description: "Meng Xu&#39;s first year as a PhD student",
-      section: "Posts",
-      handler: () => {
+        description: "Meng Xu&#39;s ICGS adventure at ASU",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/corporate_governance_in_the_sun_my_icgs_adventure_at_asu/";
+          
+        },
+      },{id: "post-my-first-year-as-a-phd-student",
         
-          window.location.href = "/blog/2024/my_first_year_as_a_phd_student/";
+          title: "My First Year as a PhD Student",
         
-      },
-    },{id: "post-reflections-on-my-uga-management-phd-application",
-      
-        title: "Reflections on My UGA Management PhD Application",
-      
-      description: "Meng Xu&#39;s reflections of UGA management PhD application",
-      section: "Posts",
-      handler: () => {
+        description: "Meng Xu&#39;s first year as a PhD student",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/my_first_year_as_a_phd_student/";
+          
+        },
+      },{id: "post-reflections-on-my-uga-management-phd-application",
         
-          window.location.href = "/blog/2023/reflections_on_my_uga_management_phd_application/";
+          title: "Reflections on My UGA Management PhD Application",
         
-      },
-    },{id: "post-how-to-access-paywalled-research-papers-for-free",
-      
-        title: "How to Access Paywalled Research Papers For Free",
-      
-      description: "Meng Xu&#39;s solution of accessing paywalled research papers",
-      section: "Posts",
-      handler: () => {
+        description: "Meng Xu&#39;s reflections of UGA management PhD application",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/reflections_on_my_uga_management_phd_application/";
+          
+        },
+      },{id: "post-how-to-access-paywalled-research-papers-for-free",
         
-          window.location.href = "/blog/2023/how_to_access_paywalled_research_papers_for_free/";
+          title: "How to Access Paywalled Research Papers For Free",
         
-      },
-    },{id: "post-my-tips-for-beginners-as-a-beginner-how-to-read-a-paper",
-      
-        title: "My Tips for Beginners as a Beginner - How to Read a Paper...",
-      
-      description: "Meng Xu&#39;s tips of reading a paper",
-      section: "Posts",
-      handler: () => {
+        description: "Meng Xu&#39;s solution of accessing paywalled research papers",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/how_to_access_paywalled_research_papers_for_free/";
+          
+        },
+      },{id: "post-my-tips-for-beginners-as-a-beginner-how-to-read-a-paper",
         
-          window.location.href = "/blog/2022/my_tips_for_beginners_as_a_beginner_how_to_read_a_paper/";
+          title: "My Tips for Beginners as a Beginner - How to Read a Paper...",
         
-      },
-    },{id: "post-why-i-blog-and-why-you-should-too",
-      
-        title: "Why I Blog and Why You Should too",
-      
-      description: "Meng Xu&#39;s reason of blogging",
-      section: "Posts",
-      handler: () => {
+        description: "Meng Xu&#39;s tips of reading a paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/my_tips_for_beginners_as_a_beginner_how_to_read_a_paper/";
+          
+        },
+      },{id: "post-why-i-blog-and-why-you-should-too",
         
-          window.location.href = "/blog/2022/why_i_blog_and_why_you_should_too/";
+          title: "Why I Blog and Why You Should too",
         
-      },
-    },{id: "news-i-officially-started-my-phd-application",
+        description: "Meng Xu&#39;s reason of blogging",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/why_i_blog_and_why_you_should_too/";
+          
+        },
+      },{id: "news-i-officially-started-my-phd-application",
           title: 'I officially started my PhD application!',
           description: "Meng Xu&#39;s PhD application announcement",
           section: "News",},{id: "news-i-am-accepted-into-the-management-ph-d-program-at-uga",
