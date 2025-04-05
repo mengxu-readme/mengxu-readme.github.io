@@ -70,39 +70,6 @@ ninja.data = [{
             window.location.href = "/blog/2023/reflections_on_my_uga_management_phd_application/";
           
         },
-      },{id: "post-how-to-access-paywalled-research-papers-for-free",
-        
-          title: "How to Access Paywalled Research Papers For Free",
-        
-        description: "Meng Xu&#39;s solution of accessing paywalled research papers",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/how_to_access_paywalled_research_papers_for_free/";
-          
-        },
-      },{id: "post-my-tips-for-beginners-as-a-beginner-how-to-read-a-paper",
-        
-          title: "My Tips for Beginners as a Beginner - How to Read a Paper...",
-        
-        description: "Meng Xu&#39;s tips of reading a paper",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2022/my_tips_for_beginners_as_a_beginner_how_to_read_a_paper/";
-          
-        },
-      },{id: "post-why-i-blog-and-why-you-should-too",
-        
-          title: "Why I Blog and Why You Should too",
-        
-        description: "Meng Xu&#39;s reason of blogging",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2022/why_i_blog_and_why_you_should_too/";
-          
-        },
       },{id: "news-i-officially-started-my-phd-application",
           title: 'I officially started my PhD application!',
           description: "Meng Xu&#39;s PhD application announcement",
