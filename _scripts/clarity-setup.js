@@ -1,3 +1,6 @@
+---
+permalink: /assets/js/clarity-setup.js
+---
 (function (c, l, a, r, i, t, y) {
   c[a] =
     c[a] ||

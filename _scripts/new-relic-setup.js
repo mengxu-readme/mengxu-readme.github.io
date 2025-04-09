@@ -1,3 +1,6 @@
+---
+permalink: /assets/js/new-relic-setup.js
+---
 ;window.NREUM||(NREUM={});NREUM.init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};
 
 ;NREUM.loader_config={accountID:"4145493",trustKey:"4145493",agentID:"1386112159",licenseKey:"NRJS-08b501b0a43cfa6da8d",applicationID:"1386112159"};

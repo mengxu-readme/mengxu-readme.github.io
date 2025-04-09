@@ -8,4 +8,4 @@ assets/js/search/*.js
 lighthouse_results/**
 _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss
-_scripts/search.liquid.js
+_scripts/*
