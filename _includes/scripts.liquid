@@ -247,12 +247,12 @@
 
 {% if site.enable_new_relic_browser %}
   <!-- New Relic Browser -->
-  <script defer src="{{ '/assets/js/new-relic-setup.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/new-relic-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 {% if site.enable_microsoft_clarity %}
   <!-- Microsoft Clarity -->
-  <script defer src="{{ '/assets/js/clarity-setup.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/clarity-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 {% if site.enable_pirsch_analytics %}
