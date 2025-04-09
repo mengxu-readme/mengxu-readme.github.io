@@ -3,6 +3,7 @@
 **/*.min.js
 assets/css/main.scss
 assets/js/distillpub/template.v2.js
+assets/js/new-relic-setup.js
 assets/js/search/*.js
 lighthouse_results/**
 _sass/font-awesome/*.scss
