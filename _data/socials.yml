@@ -29,7 +29,7 @@ linkedin_username: mxu # your LinkedIn user name
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
-rss_icon: true # set to true to show the RSS icon
+rss_icon: true # comment this line to hide the RSS icon
 # scholar_userid: # your Google Scholar ID
 school_url: https://www.terry.uga.edu/directory/meng-xu/ # school page URL
 # scopus_id: # your profile on Scopus
