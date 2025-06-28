@@ -76,12 +76,15 @@ ninja.data = [{
           section: "News",},{id: "news-i-am-accepted-into-the-management-ph-d-program-at-uga",
           title: 'I am accepted into the Management Ph.D Program at UGA!',
           description: "Meng Xu&#39;s PhD admission announcement",
-          section: "News",},{id: "news-i-am-attending-my-first-aom-conference-in-boston",
-          title: 'I am attending my first AOM conference in Boston!',
-          description: "Meng Xu&#39;s first AOM conference attendance",
           section: "News",},{id: "news-first-day-of-the-phd-program",
           title: 'First day of the PhD program!',
           description: "Meng Xu&#39;s first day of the PhD program",
+          section: "News",},{id: "news-my-first-conference-presentation",
+          title: 'My first conference presentation!',
+          description: "Meng Xu&#39;s first conference presentation",
+          section: "News",},{id: "news-i-passed-comps",
+          title: 'I passed comps!',
+          description: "Meng Xu&#39;s comps",
           section: "News",},{id: "teaching-information-systems-and-digital-transformation",
           title: 'Information Systems and Digital Transformation',
           description: "Information Systems and Digital Transformation course at Georgia Institute of Technology",
@@ -117,6 +120,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=GXFOOWUAAAAJ", "_blank");
         },
       },{
         id: 'social-school',
