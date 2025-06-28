@@ -47,4 +47,4 @@ jobs:
       - name: HTMLProofer Check 🔎
         run: |
           gem install html-proofer
-          htmlproofer --log-level :debug ./_site --file-ignore "./_site/assets/js/pdfjs/web/viewer.html"
+          htmlproofer --log-level :debug ./_site --ignore_files "./_site/assets/js/pdfjs/web/viewer.html"
