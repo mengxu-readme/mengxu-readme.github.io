@@ -26,10 +26,10 @@ latest_posts:
 
 Hello! Thank you for stopping by my personal website!
 
-My name is Meng Xu, a second year Strategy PhD student at the University of Georgia. I study strategic leadership and corporate governance, and I'm interested in research methods.
+My name is Meng Xu, a rising third year Strategy PhD Candidate at the University of Georgia. I study how firms and top executives are evaluated under uncertainty by multiple stakeholders, how they interpret and respond to these evaluations, and how these processes influence organizational decision-making and outcomes. I am also interested in methodological development, particularly in exploring novel approaches and contributing to ongoing efforts to strengthen empirical research in our field. 
 
 Before I made the life-changing decision to pursue a PhD, I was a Sr. Product Manager at a fintech company, leading cross-functional teams and managing a SaaS analytics platform that was adopted by enterprise customers from over fifteen countries and generated over $600M in annual revenue. I received my MBA from Georgia Institute of Technology and my BBA from the University of Georgia (Go Dawgs!).
 
-Building this website is among the many things that I’ve done to kick-start my academic career. In three years (2027), it’s going to be a perfect place to showcase my research experience and publications when I enter the job market to look for a tenure-track assistant professor position at a research university.
+Building this website is among the many things that I’ve done to kick-start my academic career. Over the next two years, I hope it grows into a welcoming space to share my academic journey as I prepare for the job market and begin looking for a tenure-track assistant professor position.
 
 Please feel free to drop me an email or connect with me on LinkedIn! Have a wonderful day! <i class="fa-solid fa-coffee"></i>

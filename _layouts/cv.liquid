@@ -21,34 +21,57 @@ layout: default
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
-          to Download a Copy
+          to View or Download a Copy
         </h2>
       {% endif %}
     </header>
 
     <article>
       <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" href="#{{ entry.title }}"></a>
-          <div class="card mt-3 p-3" id="{{ entry.title }}">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
-            </div>
+        {% if page.cv_pdf %}
+          <div
+            style="
+              position: relative;
+              width: 100%;
+              max-width: {{ site.max_width }};
+              margin: 1rem auto 0 auto;
+              aspect-ratio: 8.5/11;
+              border-radius: 10px;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url | url_encode }}{% endif %}"
+              title="Embedded CV PDF"
+              aria-label="Embedded CV PDF"
+              allowfullscreen
+              loading="lazy"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px;"
+            ></iframe>
           </div>
-        {% endfor %}
+        {% else %}
+          {% for entry in site.data.cv %}
+            <a class="anchor" href="#{{ entry.title }}"></a>
+            <div class="card mt-3 p-3" id="{{ entry.title }}">
+              <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+              <div>
+                {% if entry.type == 'list' %}
+                  {% include cv/list.liquid %}
+                {% elsif entry.type == 'map' %}
+                  {% include cv/map.liquid %}
+                {% elsif entry.type == 'nested_list' %}
+                  {% include cv/nested_list.liquid %}
+                {% elsif entry.type == 'time_table' %}
+                  {% include cv/time_table.liquid %}
+                {% elsif entry.type == 'list_groups' %}
+                  {% include cv/list_groups.liquid %}
+                {% else %}
+                  {{ entry.contents }}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     </article>
   </div>
@@ -72,55 +95,78 @@ layout: default
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
-          to Download a Copy
+          to View or Download a Copy
         </h2>
       {% endif %}
     </header>
 
     <article>
       <div class="cv">
-        {% for data in site.data.resume %}
-          {% if site.jsonresume and site.jsonresume.size > 0 %}
-            {% unless site.jsonresume contains data[0] %}
-              {% continue %}
-            {% endunless %}
-          {% endif %}
-          {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
-          <a class="anchor" href="#{{ data[0] }}"></a>
-          <div class="card mt-3 p-3" id="{{ data[0] }}">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-            <div>
-              {% case data[0] %}
-                {% when 'basics' %}
-                  {% include resume/basics.liquid %}
-                {% when 'education' %}
-                  {% include resume/education.liquid %}
-                {% when 'work' %}
-                  {% include resume/work.liquid %}
-                {% when 'volunteer' %}
-                  {% include resume/volunteer.liquid %}
-                {% when 'projects' %}
-                  {% include resume/projects.liquid %}
-                {% when 'awards' %}
-                  {% include resume/awards.liquid %}
-                {% when 'skills' %}
-                  {% include resume/skills.liquid %}
-                {% when 'publications' %}
-                  {% include resume/publications.liquid %}
-                {% when 'languages' %}
-                  {% include resume/languages.liquid %}
-                {% when 'interests' %}
-                  {% include resume/interests.liquid %}
-                {% when 'certificates' %}
-                  {% include resume/certificates.liquid %}
-                {% when 'references' %}
-                  {% include resume/references.liquid %}
-                {% else %}
-
-              {% endcase %}
-            </div>
+        {% if page.cv_pdf %}
+          <div
+            style="
+              position: relative;
+              width: 100%;
+              max-width: {{ site.max_width }};
+              margin: 1rem auto 0 auto;
+              aspect-ratio: 8.5/11;
+              border-radius: 10px;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url | url_encode }}{% endif %}"
+              title="Embedded CV PDF"
+              aria-label="Embedded CV PDF"
+              allowfullscreen
+              loading="lazy"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px;"
+            ></iframe>
           </div>
-        {% endfor %}
+        {% else %}
+          {% for data in site.data.resume %}
+            {% if site.jsonresume and site.jsonresume.size > 0 %}
+              {% unless site.jsonresume contains data[0] %}
+                {% continue %}
+              {% endunless %}
+            {% endif %}
+            {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
+            <a class="anchor" href="#{{ data[0] }}"></a>
+            <div class="card mt-3 p-3" id="{{ data[0] }}">
+              <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+              <div>
+                {% case data[0] %}
+                  {% when 'basics' %}
+                    {% include resume/basics.liquid %}
+                  {% when 'education' %}
+                    {% include resume/education.liquid %}
+                  {% when 'work' %}
+                    {% include resume/work.liquid %}
+                  {% when 'volunteer' %}
+                    {% include resume/volunteer.liquid %}
+                  {% when 'projects' %}
+                    {% include resume/projects.liquid %}
+                  {% when 'awards' %}
+                    {% include resume/awards.liquid %}
+                  {% when 'skills' %}
+                    {% include resume/skills.liquid %}
+                  {% when 'publications' %}
+                    {% include resume/publications.liquid %}
+                  {% when 'languages' %}
+                    {% include resume/languages.liquid %}
+                  {% when 'interests' %}
+                    {% include resume/interests.liquid %}
+                  {% when 'certificates' %}
+                    {% include resume/certificates.liquid %}
+                  {% when 'references' %}
+                    {% include resume/references.liquid %}
+                  {% else %}
+
+                {% endcase %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     </article>
   </div>
