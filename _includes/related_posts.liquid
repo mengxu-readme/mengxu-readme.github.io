@@ -2,10 +2,15 @@
 {% for post in site.related_posts | limit: site.related_blog_posts.max_related %}
   {% unless have_related_posts %}
     {% assign have_related_posts = true %}
-    <hr style="margin-top: 3rem">
+    {% if page.layout == 'post' %}
+      <hr style="margin-top: 3rem">
 
-    <!-- Adds related posts to the end of an article -->
-    <h4 class="text-3xl font-semibold mt-12">Enjoy Reading This Article?</h4>
+      <!-- Adds related posts to the end of an article -->
+      <h4 class="text-3xl font-semibold mt-12">Enjoy Reading This Article?</h4>
+    {% else %}
+      <h4 class="text-3xl font-semibold mt-12">Enjoy Reading This Article?</h4>
+    {% endif %}
+
     <p class="mb-2">Here are some more articles you might like to read next:</p>
   {% endunless %}
 

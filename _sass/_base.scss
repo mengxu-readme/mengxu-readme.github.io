@@ -672,6 +672,12 @@ table.table-hide-header thead {
   display: none;
 }
 
+// diff2html - Fix for diff2html line number overflow
+
+.d2h-diff-table {
+  position: relative;
+}
+
 // Distill
 
 .distill {
