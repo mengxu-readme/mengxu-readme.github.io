@@ -49,11 +49,13 @@ Also be kind to yourself. I think that it’s important to let go of the need to
 There were times I felt like I had to work extra hard to express my ideas clearly and write at an academic level, but over time, I learned that clarity matters more than fancy words.
 
 I didn’t need to say:
+
 <blockquote style="font-size: 1rem;">
 “From the standpoint of perceptual phenomenology, the chromatic presentation of the sky emerges as a function of light dispersion processes…”
 </blockquote>
 
 When all I truly needed to convey was:
+
 <blockquote style="font-size: 1rem;">
 “The sky is blue.”
 </blockquote>
