@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-corporate-governance-in-the-sun-my-icgs-adventure-at-asu",
+        },{id: "post-i-passed-comps-reflections-struggles-and-tips-for-future-students",
+        
+          title: "I Passed Comps! Reflections, Struggles, and Tips for Future Students",
+        
+        description: "Meng Xu Passed Comps",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/i_passed_comps_reflections_struggles_and_tips_for_future_students/";
+          
+        },
+      },{id: "post-corporate-governance-in-the-sun-my-icgs-adventure-at-asu",
         
           title: "Corporate Governance in the Sun: My ICGS Adventure at ASU",
         
