@@ -110,7 +110,8 @@ giscus:
   strict: # use strict identification mode
   reactions_enabled: # enable (1) or disable (0) emoji reactions
   input_position: # whether to display input form below (bottom) or above (top) the comments
-  theme: # name of the color scheme (preferred works well with al-folio light/dark mode)
+  dark_theme: # name of the dark color scheme (preferred works well with al-folio dark mode)
+  light_theme: # name of the light color scheme (preferred works well with al-folio light mode)
   emit_metadata:
   lang:
 
