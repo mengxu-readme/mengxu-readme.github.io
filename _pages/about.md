@@ -26,7 +26,7 @@ latest_posts:
 
 Hello! Thank you for stopping by my personal website!
 
-My name is Meng Xu, a rising third year Strategy PhD Candidate at the University of Georgia. I study how firms and top executives are evaluated under uncertainty by multiple stakeholders, how they interpret and respond to these evaluations, and how these processes influence organizational decision-making and outcomes. I am also interested in methodological development, particularly in exploring novel approaches and contributing to ongoing efforts to strengthen empirical research in our field.
+My name is Meng Xu, a third year Strategy PhD Candidate at the University of Georgia. I study how firms and top executives are evaluated under uncertainty by multiple stakeholders, how they interpret and respond to these evaluations, and how these processes influence organizational decision-making and outcomes. I am also interested in methodological development, particularly in exploring novel approaches and contributing to ongoing efforts to strengthen empirical research in our field.
 
 Before I made the life-changing decision to pursue a PhD, I was a Sr. Product Manager at a fintech company, leading cross-functional teams and managing a SaaS analytics platform that was adopted by enterprise customers from over fifteen countries and generated over $600M in annual revenue. I received my MBA from Georgia Institute of Technology and my BBA from the University of Georgia (Go Dawgs!).
 
