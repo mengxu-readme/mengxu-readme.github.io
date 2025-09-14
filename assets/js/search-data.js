@@ -101,6 +101,11 @@ ninja.data = [{
           description: "Information Systems and Digital Transformation course at Georgia Institute of Technology",
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/information_systems_and_digital_transformation/";
+            },},{id: "teaching-international-strategic-management",
+          title: 'International Strategic Management',
+          description: "International Strategic Management course at the University of Georgia",
+          section: "Teaching",handler: () => {
+              window.location.href = "/teaching/international_strategic_management/";
             },},{id: "teaching-principles-of-management",
           title: 'Principles of Management',
           description: "Principles of Management course at the University of Georgia",
