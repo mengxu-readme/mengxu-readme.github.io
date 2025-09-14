@@ -4,7 +4,7 @@ title: Visual Reporting and Communication
 description: Visual Reporting and Communication course at Mercer University
 keywords: visual, reporting, communication, mercer university
 img: assets/img/teaching/data_visualization.jpg
-importance: 1
+importance: 2
 category: Instructor
 ---
 
