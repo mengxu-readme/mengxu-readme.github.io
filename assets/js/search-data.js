@@ -117,6 +117,13 @@ ninja.data = [{
           section: "Teaching",handler: () => {
               window.location.href = "/teaching/visual_reporting_and_communication/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/cv/Meng_Xu_CV.pdf", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'Email',
         section: 'Socials',
