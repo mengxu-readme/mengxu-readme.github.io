@@ -1,4 +1,4 @@
-name: Update Google Scholar Citations
+name: update-citations
 
 on:
   schedule:
