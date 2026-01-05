@@ -1004,7 +1004,8 @@ html.transition *:after {
 
   .scan {
     color: rgba(0, 0, 0, 0);
-    background: linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
+    background:
+      linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
       linear-gradient(to bottom, var(--global-bg-color), var(--global-bg-color));
     background-color: var(--global-text-color);
     background-size:
