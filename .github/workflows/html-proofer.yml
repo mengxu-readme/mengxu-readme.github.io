@@ -46,5 +46,5 @@ jobs:
           purgecss -c purgecss.config.js
       - name: HTMLProofer Check 🔎
         run: |
-          gem install html-proofer
+          gem install html-proofer -v 5.1.1
           htmlproofer --log-level :debug ./_site --typhoeus '{"followlocation":false}' --ignore-files "./_site/assets/js/pdfjs/web/viewer.html" --ignore-urls "https://unsplash.com,https://www.linkedin.com/in/mxu,https://scholar.google.com/citations?user=GXFOOWUAAAAJ"
