@@ -47,4 +47,12 @@ jobs:
       - name: HTMLProofer Check 🔎
         run: |
           gem install html-proofer
-          htmlproofer --log-level :debug ./_site --typhoeus '{"followlocation":false}' --ignore-files "./_site/assets/js/pdfjs/web/viewer.html" --ignore-urls "https://unsplash.com,https://www.linkedin.com/in/mxu,https://scholar.google.com/citations?user=GXFOOWUAAAAJ"
+          htmlproofer ./_site \
+            --log-level :debug \
+            --typhoeus '{
+              "followlocation": false,
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+              }
+            }' \
+            --ignore-files "./_site/assets/js/pdfjs/web/viewer.html"
