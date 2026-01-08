@@ -1,4 +1,4 @@
-name: html-proofer
+name: check-external-links
 
 on:
   workflow_run:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  html-proofer:
+  check-external-links:
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-a-workflow-based-on-the-conclusion-of-another-workflow
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
     # available images: https://github.com/actions/runner-images#available-images
@@ -38,19 +38,22 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
+          pip3 install --upgrade beautifulsoup4 playwright
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: HTMLProofer Check 🔎
+      - name: Check external links 🔎
         run: |
-          gem install html-proofer
-          htmlproofer ./_site \
-            --log-level :debug \
-            --typhoeus '{
-              "followlocation": false
-            }' \
-            --ignore-files "./_site/assets/js/pdfjs/web/viewer.html" \
-            --ignore-urls "https://unsplash.com,https://www.linkedin.com/in/mxu,https://scholar.google.com/citations?user=GXFOOWUAAAAJ"
+          set +e
+          echo "🚀 Checking external links..."
+          python -u bin/check_external_links.py --site-dir _site --ignore-files "_site/assets/js/pdfjs/web/viewer.html"  --ignore-urls "https://www.linkedin.com/in/mxu"
+          status=$?
+          if [ $status -eq 0 ]; then
+            echo "✅ External links check succeeded." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ External links check failed." >> $GITHUB_STEP_SUMMARY
+          fi
+          set -e
