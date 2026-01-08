@@ -39,6 +39,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           pip3 install --upgrade beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
@@ -56,4 +57,4 @@ jobs:
           else
             echo "❌ External links check failed." >> $GITHUB_STEP_SUMMARY
           fi
-          set -e
+          exit $status
