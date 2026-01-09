@@ -1,0 +1,60 @@
+name: check-external-links
+
+on:
+  # workflow_run:
+  #   workflows: [deploy]
+  #   types: [completed]
+  # schedule:
+  #   - cron: "0 16 * * *"
+  workflow_dispatch:
+
+jobs:
+  check-external-links:
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-a-workflow-based-on-the-conclusion-of-another-workflow
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    # available images: https://github.com/actions/runner-images#available-images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip" # caching pip dependencies
+      - name: Update _config.yml ⚙️
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "giscus.repo"
+          value: ${{ github.repository }}
+      - name: Install and Build 🔧
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          pip3 install --upgrade beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium chromium-headless-shell
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+      - name: Check external links 🔎
+        run: |
+          set +e
+          echo "🚀 Checking external links..."
+          python -u bin/check_external_links.py --site-dir _site --ignore-files "_site/assets/js/pdfjs/web/viewer.html"  --ignore-urls "https://www.linkedin.com/in/mxu"
+          status=$?
+          if [ $status -eq 0 ]; then
+            echo "✅ External links check succeeded." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ External links check failed." >> $GITHUB_STEP_SUMMARY
+          fi
+          exit $status
