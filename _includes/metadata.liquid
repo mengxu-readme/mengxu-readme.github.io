@@ -218,9 +218,6 @@
       {% when 'scholar_userid' %}
         {% capture link %}https://scholar.google.com/citations?user={{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
-      {% when 'school_url' %}
-        {% capture link %}{{ social[1] }}{% endcapture %}
-        {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'scopus_id' %}
         {% capture link %}https://www.scopus.com/authid/detail.uri?authorId={{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
