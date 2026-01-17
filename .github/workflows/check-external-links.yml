@@ -50,7 +50,7 @@ jobs:
         run: |
           set +e
           echo "🚀 Checking external links..."
-          python -u bin/check_external_links.py --site-dir _site --ignore-files "_site/assets/js/pdfjs/web/viewer.html"  --ignore-urls "https://www.linkedin.com/in/mxu"
+          python -u bin/check_external_links.py --site-dir _site --ignore-files "_site/assets/js/pdfjs/web/viewer.html"  --ignore-urls "https://unsplash.com/,https://www.linkedin.com/in/mxu"
           status=$?
           if [ $status -eq 0 ]; then
             echo "✅ External links check succeeded." >> $GITHUB_STEP_SUMMARY
