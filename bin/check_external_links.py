@@ -5,6 +5,8 @@ import sys
 from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
+from playwright.sync_api import Error as PlaywrightError
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 
@@ -71,7 +73,17 @@ def main():
         )
 
         for link in links:
-            response = page.goto(link, timeout=15000)
+            try:
+                response = page.goto(link, timeout=15000)
+            except PlaywrightTimeoutError as e:
+                failed_links[link] = "timeout"
+                print(f"Timeout for {link}: {e}")
+                continue
+            except PlaywrightError as e:
+                failed_links[link] = "navigation error"
+                print(f"Navigation error for {link}: {e}")
+                continue
+
             request = response.request
             while request.redirected_from is not None:
                 request = request.redirected_from
