@@ -31,4 +31,4 @@ This was a core class for the Master of Science in Business Analytics students a
 
 #### Course Syllabus
 
-You can find <a href="{{ 'teaching/BA631_Fall 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ '/assets/pdf/teaching/BA631_Fall 2020_Syllabus.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

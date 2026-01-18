@@ -15,7 +15,9 @@ horizontal: false
 {% if site.enable_teaching_categories and page.display_categories %}
   <!-- Display categorized courses -->
   {% for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category }}</h2>
+  </a>
   {% assign categorized_courses = site.teaching | where: "category", category %}
   {% assign sorted_courses = categorized_courses | sort: "importance" %}
   <!-- Generate cards for each course -->

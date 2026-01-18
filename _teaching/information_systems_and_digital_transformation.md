@@ -29,4 +29,4 @@ This mandatory class for all undergraduate students who majored in Business.
 
 #### Course Syllabus
 
-You can find <a href="{{ 'teaching/MGT2210_Spring 2020_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ '/assets/pdf/teaching/MGT2210_Spring 2020_Syllabus.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

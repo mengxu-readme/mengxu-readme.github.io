@@ -30,4 +30,4 @@ This was a core undergraduate course for Management students at the University o
 
 #### Course Syllabus
 
-You can find <a href="{{ 'teaching/MGMT5560_Fall 2025_Syllabus.pdf' | prepend: 'assets/pdf/' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.
+You can find <a href="{{ '/assets/pdf/teaching/MGMT5560_Fall 2025_Syllabus.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">the course syllabus here</a>.

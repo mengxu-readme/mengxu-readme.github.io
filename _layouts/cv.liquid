@@ -12,7 +12,7 @@ layout: default
             {% if page.cv_pdf contains '://' %}
               href="{{ page.cv_pdf }}"
             {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url  }}"
+              href="{{ page.cv_pdf | relative_url }}"
             {% endif %}
             aria-label="CV"
             target="_blank"
@@ -41,7 +41,7 @@ layout: default
             "
           >
             <iframe
-              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url | url_encode }}{% endif %}"
+              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | relative_url | url_encode }}{% endif %}"
               title="Embedded CV PDF"
               aria-label="Embedded CV PDF"
               allowfullscreen
@@ -86,7 +86,7 @@ layout: default
             {% if page.cv_pdf contains '://' %}
               href="{{ page.cv_pdf }}"
             {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url  }}"
+              href="{{ page.cv_pdf | relative_url }}"
             {% endif %}
             aria-label="CV"
             target="_blank"
@@ -115,7 +115,7 @@ layout: default
             "
           >
             <iframe
-              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url | url_encode }}{% endif %}"
+              src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | relative_url | url_encode }}{% endif %}"
               title="Embedded CV PDF"
               aria-label="Embedded CV PDF"
               allowfullscreen

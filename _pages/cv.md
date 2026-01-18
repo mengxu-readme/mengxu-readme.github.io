@@ -6,5 +6,5 @@ keywords: cv, curriculum vitae
 permalink: /cv/
 nav: true
 nav_order: 5
-cv_pdf: cv/Meng_Xu_CV.pdf
+cv_pdf: /assets/pdf/cv/Meng_Xu_CV.pdf
 ---
