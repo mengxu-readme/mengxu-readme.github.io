@@ -152,8 +152,8 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=GXFOOWUAAAAJ", "_blank");
         },
       },{
-        id: 'social-work',
-        title: 'Work',
+        id: 'social-school',
+        title: 'School',
         section: 'Socials',
         handler: () => {
           window.open("https://www.terry.uga.edu/directory/meng-xu/", "_blank");
