@@ -133,6 +133,13 @@
       {% when 'bluesky_url' %}
         {% capture link %}{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'cv_pdf' %}
+        {% if social[1] contains '://' %}
+          {% capture link %}{{ social[1] }}{% endcapture %}
+        {% else %}
+          {% capture link %}{{ social[1] | relative_url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+        {% endif %}
+        {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'dblp_url' %}
         {% capture link %}{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
@@ -217,6 +224,9 @@
         {% endcomment %}
       {% when 'scholar_userid' %}
         {% capture link %}https://scholar.google.com/citations?user={{ social[1] }}{% endcapture %}
+        {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'school' %}
+        {% capture link %}{{ social[1].url }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'scopus_id' %}
         {% capture link %}https://www.scopus.com/authid/detail.uri?authorId={{ social[1] }}{% endcapture %}
