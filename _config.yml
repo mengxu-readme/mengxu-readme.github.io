@@ -181,6 +181,9 @@ exclude:
   - _pages/dropdown.md
   - _pages/projects.md
   - _pages/repositories.md
+  - assets/rendercv/design.yaml
+  - assets/rendercv/locale.yaml
+  - assets/rendercv/settings.yaml
   - bin/
   - lighthouse_results/
   - docker-compose.yml
