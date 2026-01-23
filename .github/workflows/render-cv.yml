@@ -1,4 +1,4 @@
-name: Render a CV
+name: render-cv
 on:
   push:
     branches:
