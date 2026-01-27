@@ -5,7 +5,7 @@
 @use "variables" as v;
 
 // Scan effect
-.scan {
+.post .scan {
   color: rgba(0, 0, 0, 0);
   background:
     linear-gradient(to right, var(--global-bg-color), var(--global-bg-color)),
