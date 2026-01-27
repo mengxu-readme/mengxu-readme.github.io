@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
   if (isMac) {
     // use the unicode for command key
-    shortcutKeyElement.innerHTML = '&#x2318; K <i class="ti ti-search"></i>';
+    shortcutKeyElement.innerHTML = '&#x2318; K <i class="fa-solid fa-magnifying-glass"></i>';
   } else {
     let isMobile = false;
     (function (a) {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isMobile = true;
     })(navigator.userAgent || navigator.vendor || window.opera);
     if (isMobile) {
-      shortcutKeyElement.innerHTML = '<i class="ti ti-search"></i>';
+      shortcutKeyElement.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
     }
   }
 

@@ -111,17 +111,17 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link" style="visibility: hidden;">Ctrl K <i class="ti ti-search"></i></span>
+                <span class="nav-link" style="visibility: hidden;">Ctrl K <i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
-              <button id="light-toggle" title="Change Theme" style="padding-right: 6px;">
-                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
-                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
-                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              <button id="light-toggle" title="Change Theme" style="padding-bottom: 1.5px;">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
               </button>
             </li>
           {% endif %}
