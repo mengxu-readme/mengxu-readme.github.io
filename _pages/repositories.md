@@ -10,7 +10,7 @@ sitemap: false
 <div class="projects">
 {% if site.data.repositories.github_users %}
 <h2 class="category">User</h2>
-<div class="d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for user in site.data.repositories.github_users %}
     {% include repository/repo_user.liquid username=user %}
   {% endfor %}
@@ -22,7 +22,7 @@ sitemap: false
 
   <h4>{{ user }}</h4>
   {% endif %}
-  <div class="d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% include repository/repo_trophies.liquid username=user %}
   </div>
 
@@ -33,7 +33,7 @@ sitemap: false
 {% if site.data.repositories.github_repos %}
 
 <h2 class="category">Repository</h2>
-<div class="d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   {% for repo in site.data.repositories.github_repos %}
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}

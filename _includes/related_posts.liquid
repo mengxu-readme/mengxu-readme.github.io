@@ -12,6 +12,8 @@
     {% endif %}
 
     <p class="mb-2">Here are some more articles you might like to read next:</p>
+
+    <ul class="list-disc pl-3">
   {% endunless %}
 
   <li class="my-2">
@@ -27,6 +29,9 @@
     {% endif %}
   </li>
 {% endfor %}
+{% if have_related_posts %}
+  </ul>
+{% endif %}
 {% if site.newsletter.enabled and site.footer_fixed %}
   <p class="mb-2" style="margin-top: 1.5rem !important">Subscribe to be notified of future articles:</p>
   {% include newsletter.liquid left=true %}
