@@ -35,4 +35,4 @@ jobs:
         with:
           fail: true
           # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path _pages/blog.md --exclude-path _pages/404.md --exclude-path _teaching/information_systems_and_digital_transformation.md --exclude-path _teaching/international_strategic_management.md --exclude-path _teaching/principles_of_management.md --exclude-path _teaching/visual_reporting_and_communication.md --verbose --no-progress './**/*.md' './**/*.html'
+          args: --user-agent 'curl/7.54' --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _teaching/information_systems_and_digital_transformation.md --exclude-path _teaching/international_strategic_management.md --exclude-path _teaching/principles_of_management.md --exclude-path _teaching/visual_reporting_and_communication.md --verbose --no-progress './**/*.md' './**/*.html'
