@@ -19,7 +19,8 @@ layout: default
     <p class="post-meta">
       {% if page.author %}{{ page.author }} • {% endif %}
       Created On: {{ page.date | date: '%B %d, %Y' }}
-      {% if page.last_updated %}• Last Updated On: {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
+      {% assign last_date = page.last_modified_at | default: page.last_updated %}
+      {% if last_date %}• Last Updated On: {{ last_date | date: '%B %d, %Y' }}{% endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
     </p>
     <p class="post-tags" style="margin-bottom: 0rem;">
