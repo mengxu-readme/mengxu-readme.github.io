@@ -21,13 +21,13 @@
  */
 
 /**
- * pdfjsVersion = 5.4.530
- * pdfjsBuild = 50cc4adac
+ * pdfjsVersion = 5.4.624
+ * pdfjsBuild = 384c6208b
  */
 /******/ var __webpack_modules__ = ({
 
-/***/ 34:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 34
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isCallable = __webpack_require__(4901);
@@ -37,10 +37,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 81:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 81
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -58,10 +58,10 @@ module.exports = function (argument, usingIterator) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 116:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 116
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -97,10 +97,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: findWithoutClosingOnEar
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 283:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 283
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -159,10 +159,10 @@ Function.prototype.toString = makeBuiltIn(function toString() {
 }, 'toString');
 
 
-/***/ }),
+/***/ },
 
-/***/ 350:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 350
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -184,10 +184,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 397:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 397
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var getBuiltIn = __webpack_require__(7751);
@@ -195,19 +195,19 @@ var getBuiltIn = __webpack_require__(7751);
 module.exports = getBuiltIn('document', 'documentElement');
 
 
-/***/ }),
+/***/ },
 
-/***/ 421:
-/***/ ((module) => {
+/***/ 421
+(module) {
 
 
 module.exports = {};
 
 
-/***/ }),
+/***/ },
 
-/***/ 507:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 507
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -223,10 +223,10 @@ module.exports = function (record, fn, ITERATOR_INSTEAD_OF_RECORD) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 533:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 533
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -265,10 +265,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 616:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 616
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -281,10 +281,10 @@ module.exports = !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 655:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 655
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var classof = __webpack_require__(6955);
@@ -297,10 +297,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 679:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 679
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isPrototypeOf = __webpack_require__(1625);
@@ -313,10 +313,10 @@ module.exports = function (it, Prototype) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 684:
-/***/ ((module) => {
+/***/ 684
+(module) {
 
 
 // Should throw an error on invalid iterator
@@ -332,10 +332,10 @@ module.exports = function (methodName, argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 741:
-/***/ ((module) => {
+/***/ 741
+(module) {
 
 
 var ceil = Math.ceil;
@@ -350,10 +350,10 @@ module.exports = Math.trunc || function trunc(x) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 757:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 757
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var getBuiltIn = __webpack_require__(7751);
@@ -371,10 +371,10 @@ module.exports = USE_SYMBOL_AS_UID ? function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 851:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 851
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var classof = __webpack_require__(6955);
@@ -392,10 +392,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1072:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1072
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var internalObjectKeys = __webpack_require__(1828);
@@ -409,10 +409,10 @@ module.exports = Object.keys || function keys(O) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1108:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1108
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var classof = __webpack_require__(6955);
@@ -423,10 +423,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1148:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1148
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -462,10 +462,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: everyWithoutClosingOnEa
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 1181:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1181
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var NATIVE_WEAK_MAP = __webpack_require__(8622);
@@ -540,10 +540,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1291:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1291
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var trunc = __webpack_require__(741);
@@ -557,10 +557,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1385:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1385
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var iteratorClose = __webpack_require__(9539);
@@ -580,10 +580,10 @@ module.exports = function (iters, kind, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1548:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1548
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -603,10 +603,10 @@ module.exports = !!structuredClone && !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 1625:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1625
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -614,10 +614,10 @@ var uncurryThis = __webpack_require__(9504);
 module.exports = uncurryThis({}.isPrototypeOf);
 
 
-/***/ }),
+/***/ },
 
-/***/ 1698:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1698
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -634,10 +634,10 @@ $({ target: 'Set', proto: true, real: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 1701:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1701
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -685,10 +685,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 1767:
-/***/ ((module) => {
+/***/ 1767
+(module) {
 
 
 // `GetIteratorDirect(obj)` abstract operation
@@ -702,10 +702,10 @@ module.exports = function (obj) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 1828:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 1828
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -730,10 +730,10 @@ module.exports = function (object, names) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2106:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2106
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var makeBuiltIn = __webpack_require__(283);
@@ -746,10 +746,10 @@ module.exports = function (target, name, descriptor) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2140:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2140
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var wellKnownSymbol = __webpack_require__(8227);
@@ -762,10 +762,10 @@ test[TO_STRING_TAG] = 'z';
 module.exports = String(test) === '[object z]';
 
 
-/***/ }),
+/***/ },
 
-/***/ 2195:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2195
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -778,10 +778,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2211:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2211
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -794,10 +794,10 @@ module.exports = !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 2333:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2333
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toIntegerOrInfinity = __webpack_require__(1291);
@@ -818,10 +818,10 @@ module.exports = function repeat(count) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2360:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2360
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 /* global ActiveXObject -- old IE, WSH */
@@ -910,10 +910,10 @@ module.exports = Object.create || function create(O, Properties) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2475:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2475
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -931,10 +931,10 @@ $({ target: 'Set', proto: true, real: true, forced: INCORRECT }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 2489:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2489
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -989,10 +989,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 2529:
-/***/ ((module) => {
+/***/ 2529
+(module) {
 
 
 // `CreateIterResultObject` abstract operation
@@ -1002,10 +1002,10 @@ module.exports = function (value, done) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2652:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2652
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var bind = __webpack_require__(6080);
@@ -1078,10 +1078,10 @@ module.exports = function (iterable, unboundFunction, options) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2777:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2777
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -1111,10 +1111,10 @@ module.exports = function (input, pref) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2787:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2787
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var hasOwn = __webpack_require__(9297);
@@ -1140,10 +1140,10 @@ module.exports = CORRECT_PROTOTYPE_GETTER ? $Object.getPrototypeOf : function (O
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2796:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2796
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -1170,10 +1170,10 @@ var POLYFILL = isForced.POLYFILL = 'P';
 module.exports = isForced;
 
 
-/***/ }),
+/***/ },
 
-/***/ 2812:
-/***/ ((module) => {
+/***/ 2812
+(module) {
 
 
 var $TypeError = TypeError;
@@ -1184,10 +1184,10 @@ module.exports = function (passed, required) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 2839:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2839
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -1198,10 +1198,10 @@ var userAgent = navigator && navigator.userAgent;
 module.exports = userAgent ? String(userAgent) : '';
 
 
-/***/ }),
+/***/ },
 
-/***/ 2967:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 2967
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 /* eslint-disable no-proto -- safe */
@@ -1234,10 +1234,10 @@ module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
 }() : undefined);
 
 
-/***/ }),
+/***/ },
 
-/***/ 3238:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3238
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -1258,10 +1258,10 @@ module.exports = function (O) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3392:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3392
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -1275,10 +1275,10 @@ module.exports = function (key) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3440:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3440
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -1308,10 +1308,10 @@ module.exports = function difference(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3463:
-/***/ ((module) => {
+/***/ 3463
+(module) {
 
 
 var $TypeError = TypeError;
@@ -1322,10 +1322,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3506:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3506
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isPossiblePrototype = __webpack_require__(3925);
@@ -1339,10 +1339,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3579:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3579
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -1378,10 +1378,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: someWithoutClosingOnEar
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 3650:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3650
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -1408,10 +1408,10 @@ module.exports = function symmetricDifference(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3706:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3706
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -1430,20 +1430,20 @@ if (!isCallable(store.inspectSource)) {
 module.exports = store.inspectSource;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3717:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 3717
+(__unused_webpack_module, exports) {
 
 
 // eslint-disable-next-line es/no-object-getownpropertysymbols -- safe
 exports.f = Object.getOwnPropertySymbols;
 
 
-/***/ }),
+/***/ },
 
-/***/ 3724:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3724
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -1455,10 +1455,10 @@ module.exports = !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 3789:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3789
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aCallable = __webpack_require__(9306);
@@ -1502,10 +1502,10 @@ module.exports = function (obj) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3838:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3838
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -1525,10 +1525,10 @@ module.exports = function isSubsetOf(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 3853:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3853
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -1546,10 +1546,10 @@ $({ target: 'Set', proto: true, real: true, forced: INCORRECT }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 3925:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3925
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isObject = __webpack_require__(34);
@@ -1559,10 +1559,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4055:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4055
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -1577,10 +1577,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4114:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4114
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -1626,10 +1626,10 @@ $({ target: 'Array', proto: true, arity: 1, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 4117:
-/***/ ((module) => {
+/***/ 4117
+(module) {
 
 
 // we can't use just `it == null` since of `document.all` special case
@@ -1639,10 +1639,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4204:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4204
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -1664,10 +1664,10 @@ module.exports = function union(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4209:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4209
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var wellKnownSymbol = __webpack_require__(8227);
@@ -1682,10 +1682,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4215:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4215
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 /* global Bun, Deno -- detection */
@@ -1710,10 +1710,10 @@ module.exports = (function () {
 })();
 
 
-/***/ }),
+/***/ },
 
-/***/ 4270:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4270
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -1733,10 +1733,10 @@ module.exports = function (input, pref) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4376:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4376
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var classof = __webpack_require__(2195);
@@ -1749,10 +1749,10 @@ module.exports = Array.isArray || function isArray(argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4402:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4402
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -1770,10 +1770,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4449:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4449
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -1799,10 +1799,10 @@ module.exports = function isDisjointFrom(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4483:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4483
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -1843,10 +1843,10 @@ if (PROPER_STRUCTURED_CLONE_TRANSFER) {
 module.exports = detach;
 
 
-/***/ }),
+/***/ },
 
-/***/ 4495:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4495
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 /* eslint-disable es/no-symbol -- required for testing */
@@ -1869,10 +1869,10 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 4527:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4527
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -1903,10 +1903,10 @@ module.exports = SILENT_ON_NON_WRITABLE_LENGTH_SET ? function (O, length) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4549:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4549
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -1933,10 +1933,10 @@ module.exports = function (METHOD_NAME, ExpectedError) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4576:
-/***/ (function(module) {
+/***/ 4576
+(module) {
 
 
 var check = function (it) {
@@ -1956,10 +1956,10 @@ module.exports =
   (function () { return this; })() || Function('return this')();
 
 
-/***/ }),
+/***/ },
 
-/***/ 4603:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4603
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var defineBuiltIn = __webpack_require__(6840);
@@ -2012,10 +2012,10 @@ if (params + '' !== 'a=2') {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ 4628:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4628
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -2035,10 +2035,10 @@ $({ target: 'Promise', stat: true }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 4644:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4644
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var NATIVE_ARRAY_BUFFER = __webpack_require__(7811);
@@ -2235,10 +2235,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4659:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4659
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -2251,10 +2251,10 @@ module.exports = function (object, key, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4901:
-/***/ ((module) => {
+/***/ 4901
+(module) {
 
 
 // https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot
@@ -2270,10 +2270,10 @@ module.exports = typeof documentAll == 'undefined' && documentAll !== undefined 
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4913:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 4913
+(__unused_webpack_module, exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -2321,10 +2321,10 @@ exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 4916:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 4916
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var getBuiltIn = __webpack_require__(7751);
@@ -2386,10 +2386,10 @@ module.exports = function (name, callback) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5024:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5024
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -2406,10 +2406,10 @@ $({ target: 'Set', proto: true, real: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 5031:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5031
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var getBuiltIn = __webpack_require__(7751);
@@ -2428,10 +2428,10 @@ module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5169:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5169
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isDetached = __webpack_require__(3238);
@@ -2444,10 +2444,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5170:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5170
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThisAccessor = __webpack_require__(6706);
@@ -2458,10 +2458,10 @@ module.exports = uncurryThisAccessor(SetHelpers.proto, 'size', 'get') || functio
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5397:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5397
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 // toObject with fallback for non-array-like ES3 strings
@@ -2473,10 +2473,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5610:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5610
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toIntegerOrInfinity = __webpack_require__(1291);
@@ -2493,10 +2493,10 @@ module.exports = function (index, length) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5636:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5636
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -2545,10 +2545,10 @@ module.exports = (PROPER_STRUCTURED_CLONE_TRANSFER || detachTransferable) && fun
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5745:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5745
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var store = __webpack_require__(7629);
@@ -2558,10 +2558,10 @@ module.exports = function (key, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5781:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5781
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -2588,10 +2588,10 @@ $({ target: 'URL', stat: true, forced: !USE_NATIVE_URL }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 5854:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5854
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toPrimitive = __webpack_require__(2777);
@@ -2608,10 +2608,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 5876:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5876
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -2629,10 +2629,10 @@ $({ target: 'Set', proto: true, real: true, forced: INCORRECT }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 5917:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5917
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -2648,10 +2648,10 @@ module.exports = !DESCRIPTORS && !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 5966:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 5966
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aCallable = __webpack_require__(9306);
@@ -2665,10 +2665,10 @@ module.exports = function (V, P) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6043:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6043
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aCallable = __webpack_require__(9306);
@@ -2693,10 +2693,10 @@ module.exports.f = function (C) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6069:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6069
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -2770,10 +2770,10 @@ $({ target: 'RegExp', stat: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 6080:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6080
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(7476);
@@ -2791,10 +2791,10 @@ module.exports = function (fn, that) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6119:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6119
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var shared = __webpack_require__(5745);
@@ -2807,10 +2807,10 @@ module.exports = function (key) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6193:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6193
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var ENVIRONMENT = __webpack_require__(4215);
@@ -2818,10 +2818,10 @@ var ENVIRONMENT = __webpack_require__(4215);
 module.exports = ENVIRONMENT === 'NODE';
 
 
-/***/ }),
+/***/ },
 
-/***/ 6198:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6198
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toLength = __webpack_require__(8014);
@@ -2833,19 +2833,19 @@ module.exports = function (obj) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6269:
-/***/ ((module) => {
+/***/ 6269
+(module) {
 
 
 module.exports = {};
 
 
-/***/ }),
+/***/ },
 
-/***/ 6279:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6279
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var defineBuiltIn = __webpack_require__(6840);
@@ -2856,10 +2856,10 @@ module.exports = function (target, src, options) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6319:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6319
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var anObject = __webpack_require__(8551);
@@ -2875,19 +2875,19 @@ module.exports = function (iterator, fn, value, ENTRIES) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6395:
-/***/ ((module) => {
+/***/ 6395
+(module) {
 
 
 module.exports = false;
 
 
-/***/ }),
+/***/ },
 
-/***/ 6518:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6518
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -2946,10 +2946,10 @@ module.exports = function (options, source) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6573:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6573
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -2970,10 +2970,10 @@ if (DESCRIPTORS && !('detached' in ArrayBufferPrototype)) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ 6699:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6699
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -2988,10 +2988,10 @@ module.exports = DESCRIPTORS ? function (object, key, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6706:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6706
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -3005,10 +3005,10 @@ module.exports = function (object, key, method) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6801:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 6801
+(__unused_webpack_module, exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -3033,10 +3033,10 @@ exports.f = DESCRIPTORS && !V8_PROTOTYPE_DEFINE_BUG ? Object.defineProperties : 
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6823:
-/***/ ((module) => {
+/***/ 6823
+(module) {
 
 
 var $String = String;
@@ -3050,10 +3050,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6837:
-/***/ ((module) => {
+/***/ 6837
+(module) {
 
 
 var $TypeError = TypeError;
@@ -3065,10 +3065,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6840:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6840
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isCallable = __webpack_require__(4901);
@@ -3100,10 +3100,10 @@ module.exports = function (O, key, value, options) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6955:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6955
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var TO_STRING_TAG_SUPPORT = __webpack_require__(2140);
@@ -3137,10 +3137,10 @@ module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6969:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 6969
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toPrimitive = __webpack_require__(2777);
@@ -3154,10 +3154,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 6980:
-/***/ ((module) => {
+/***/ 6980
+(module) {
 
 
 module.exports = function (bitmap, value) {
@@ -3170,10 +3170,10 @@ module.exports = function (bitmap, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7040:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7040
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 /* eslint-disable es/no-symbol -- required for testing */
@@ -3184,10 +3184,10 @@ module.exports = NATIVE_SYMBOL &&
   typeof Symbol.iterator == 'symbol';
 
 
-/***/ }),
+/***/ },
 
-/***/ 7055:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7055
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -3207,10 +3207,10 @@ module.exports = fails(function () {
 } : $Object;
 
 
-/***/ }),
+/***/ },
 
-/***/ 7080:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7080
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var has = (__webpack_require__(4402).has);
@@ -3222,10 +3222,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7347:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 7347
+(__unused_webpack_module, exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -3252,10 +3252,10 @@ exports.f = DESCRIPTORS ? $getOwnPropertyDescriptor : function getOwnPropertyDes
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7394:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7394
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -3274,10 +3274,10 @@ module.exports = ArrayBuffer && uncurryThisAccessor(ArrayBuffer.prototype, 'byte
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7416:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7416
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -3323,10 +3323,10 @@ module.exports = !fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 7452:
-/***/ ((module) => {
+/***/ 7452
+(module) {
 
 
 // a string of all valid unicode whitespaces
@@ -3334,10 +3334,10 @@ module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u
   '\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 
-/***/ }),
+/***/ },
 
-/***/ 7476:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7476
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var classofRaw = __webpack_require__(2195);
@@ -3351,10 +3351,10 @@ module.exports = function (fn) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7566:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7566
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var defineBuiltIn = __webpack_require__(6840);
@@ -3386,10 +3386,10 @@ if (params.has('a', 2) || !params.has('a', undefined)) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ 7588:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7588
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3425,10 +3425,10 @@ $({ target: 'Iterator', proto: true, real: true, forced: forEachWithoutClosingOn
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 7629:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7629
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var IS_PURE = __webpack_require__(6395);
@@ -3447,10 +3447,10 @@ var store = module.exports = globalThis[SHARED] || defineGlobalProperty(SHARED, 
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 7642:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7642
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3491,10 +3491,10 @@ $({ target: 'Set', proto: true, real: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 7657:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7657
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var fails = __webpack_require__(9039);
@@ -3547,10 +3547,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7696:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7696
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toIntegerOrInfinity = __webpack_require__(1291);
@@ -3569,10 +3569,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7740:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7740
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var hasOwn = __webpack_require__(9297);
@@ -3593,10 +3593,10 @@ module.exports = function (target, source, exceptions) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7750:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7750
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isNullOrUndefined = __webpack_require__(4117);
@@ -3611,10 +3611,10 @@ module.exports = function (it) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7751:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7751
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -3629,20 +3629,20 @@ module.exports = function (namespace, method) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 7811:
-/***/ ((module) => {
+/***/ 7811
+(module) {
 
 
 // eslint-disable-next-line es/no-typed-arrays -- safe
 module.exports = typeof ArrayBuffer != 'undefined' && typeof DataView != 'undefined';
 
 
-/***/ }),
+/***/ },
 
-/***/ 7936:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 7936
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3657,10 +3657,10 @@ if ($transfer) $({ target: 'ArrayBuffer', proto: true }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 8004:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8004
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3682,10 +3682,10 @@ $({ target: 'Set', proto: true, real: true, forced: INCORRECT }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 8014:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8014
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toIntegerOrInfinity = __webpack_require__(1291);
@@ -3700,10 +3700,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8100:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8100
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3718,10 +3718,10 @@ if ($transfer) $({ target: 'ArrayBuffer', proto: true }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 8111:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8111
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -3790,10 +3790,10 @@ $({ global: true, constructor: true, forced: FORCED }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 8227:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8227
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -3816,10 +3816,10 @@ module.exports = function (name) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8235:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8235
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -3879,20 +3879,20 @@ module.exports = function (source, i) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8335:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8335
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 // TODO: Remove from `core-js@4`
 __webpack_require__(9112);
 
 
-/***/ }),
+/***/ },
 
-/***/ 8469:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8469
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -3910,10 +3910,10 @@ module.exports = function (set, fn, interruptible) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8480:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 8480
+(__unused_webpack_module, exports, __webpack_require__) {
 
 
 var internalObjectKeys = __webpack_require__(1828);
@@ -3929,10 +3929,10 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8527:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8527
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -3955,10 +3955,10 @@ module.exports = function isSupersetOf(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8551:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8551
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isObject = __webpack_require__(34);
@@ -3973,10 +3973,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8622:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8622
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -3987,10 +3987,10 @@ var WeakMap = globalThis.WeakMap;
 module.exports = isCallable(WeakMap) && /native code/.test(String(WeakMap));
 
 
-/***/ }),
+/***/ },
 
-/***/ 8686:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8686
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -4007,10 +4007,10 @@ module.exports = DESCRIPTORS && fails(function () {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 8721:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8721
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var DESCRIPTORS = __webpack_require__(3724);
@@ -4035,10 +4035,10 @@ if (DESCRIPTORS && !('size' in URLSearchParamsPrototype)) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ 8727:
-/***/ ((module) => {
+/***/ 8727
+(module) {
 
 
 // IE8- don't enum bug keys
@@ -4053,10 +4053,10 @@ module.exports = [
 ];
 
 
-/***/ }),
+/***/ },
 
-/***/ 8750:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8750
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var aSet = __webpack_require__(7080);
@@ -4091,10 +4091,10 @@ module.exports = function intersection(other) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 8773:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ 8773
+(__unused_webpack_module, exports) {
 
 
 var $propertyIsEnumerable = {}.propertyIsEnumerable;
@@ -4112,10 +4112,10 @@ exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
 } : $propertyIsEnumerable;
 
 
-/***/ }),
+/***/ },
 
-/***/ 8981:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 8981
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var requireObjectCoercible = __webpack_require__(7750);
@@ -4129,10 +4129,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9039:
-/***/ ((module) => {
+/***/ 9039
+(module) {
 
 
 module.exports = function (exec) {
@@ -4144,10 +4144,10 @@ module.exports = function (exec) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9112:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9112
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var $ = __webpack_require__(6518);
@@ -4402,10 +4402,10 @@ $({ target: 'JSON', stat: true, forced: NO_SOURCE_SUPPORT }, {
 });
 
 
-/***/ }),
+/***/ },
 
-/***/ 9286:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9286
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var SetHelpers = __webpack_require__(4402);
@@ -4423,10 +4423,10 @@ module.exports = function (set) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9297:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9297
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var uncurryThis = __webpack_require__(9504);
@@ -4442,10 +4442,10 @@ module.exports = Object.hasOwn || function hasOwn(it, key) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9306:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9306
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var isCallable = __webpack_require__(4901);
@@ -4460,10 +4460,10 @@ module.exports = function (argument) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9429:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9429
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -4482,10 +4482,10 @@ module.exports = function (name) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9433:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9433
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -4502,10 +4502,10 @@ module.exports = function (key, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9462:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9462
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -4595,10 +4595,10 @@ module.exports = function (nextHandler, IS_ITERATOR, RETURN_HANDLER_RESULT) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9504:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9504
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var NATIVE_BIND = __webpack_require__(616);
@@ -4615,10 +4615,10 @@ module.exports = NATIVE_BIND ? uncurryThisWithBind : function (fn) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9519:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9519
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var globalThis = __webpack_require__(4576);
@@ -4650,10 +4650,10 @@ if (!version && userAgent) {
 module.exports = version;
 
 
-/***/ }),
+/***/ },
 
-/***/ 9539:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9539
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var call = __webpack_require__(9565);
@@ -4681,10 +4681,10 @@ module.exports = function (iterator, kind, value) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9565:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9565
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var NATIVE_BIND = __webpack_require__(616);
@@ -4696,10 +4696,10 @@ module.exports = NATIVE_BIND ? call.bind(call) : function () {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9577:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9577
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 
 var arrayWith = __webpack_require__(9928);
@@ -4743,10 +4743,10 @@ exportTypedArrayMethod('with', { 'with': function (index, value) {
 } }['with'], !PROPER_ORDER || THROW_ON_NEGATIVE_FRACTIONAL_INDEX);
 
 
-/***/ }),
+/***/ },
 
-/***/ 9617:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9617
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var toIndexedObject = __webpack_require__(5397);
@@ -4784,10 +4784,10 @@ module.exports = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9835:
-/***/ ((module) => {
+/***/ 9835
+(module) {
 
 
 // Should get iterator record of a set-like object before cloning this
@@ -4821,10 +4821,10 @@ module.exports = function (METHOD_NAME) {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ 9928:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 9928
+(module, __unused_webpack_exports, __webpack_require__) {
 
 
 var lengthOfArrayLike = __webpack_require__(6198);
@@ -4846,7 +4846,7 @@ module.exports = function (O, C, index, value) {
 };
 
 
-/***/ })
+/***/ }
 
 /******/ });
 /************************************************************************/
@@ -4954,6 +4954,7 @@ const {
   normalizeUnicode,
   OPS,
   OutputScale,
+  PagesMapper,
   PasswordResponses,
   PDFDataRangeTransport,
   PDFDateString,
@@ -5366,7 +5367,7 @@ class ProgressBar {
     return this.#percent;
   }
   set percent(val) {
-    this.#percent = MathClamp(val, 0, 100);
+    this.#percent = val;
     if (isNaN(val)) {
       this.#classList.add("indeterminate");
       return;
@@ -5492,16 +5493,12 @@ const calcRound = function () {
   } = navigator;
   const isAndroid = /Android/.test(userAgent);
   const isIOS = /\b(iPad|iPhone|iPod)(?=;)/.test(userAgent) || platform === "MacIntel" && maxTouchPoints > 1;
-  (function () {
-    if (isIOS || isAndroid) {
-      compatParams.set("maxCanvasPixels", 5242880);
-    }
-  })();
-  (function () {
-    if (isAndroid) {
-      compatParams.set("useSystemFonts", false);
-    }
-  })();
+  if (isIOS || isAndroid) {
+    compatParams.set("maxCanvasPixels", 5242880);
+  }
+  if (isAndroid) {
+    compatParams.set("useSystemFonts", false);
+  }
 }
 const OptionKind = {
   BROWSER: 0x01,
@@ -5670,6 +5667,10 @@ const defaultOptions = {
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
   enableSignatureEditor: {
+    value: false,
+    kind: OptionKind.VIEWER + OptionKind.PREFERENCE
+  },
+  enableSplitMerge: {
     value: false,
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
@@ -6410,50 +6411,7 @@ class BaseExternalServices {
 ;// ./web/preferences.js
 
 class BasePreferences {
-  #defaults = Object.freeze({
-    altTextLearnMoreUrl: "",
-    annotationEditorMode: 0,
-    annotationMode: 2,
-    capCanvasAreaFactor: 200,
-    commentLearnMoreUrl: "",
-    cursorToolOnLoad: 0,
-    defaultZoomDelay: 400,
-    defaultZoomValue: "",
-    disablePageLabels: false,
-    enableAltText: false,
-    enableAltTextModelDownload: true,
-    enableAutoLinking: true,
-    enableComment: false,
-    enableGuessAltText: true,
-    enableHighlightFloatingButton: false,
-    enableNewAltTextWhenAddingImage: true,
-    enableOptimizedPartialRendering: false,
-    enablePermissions: false,
-    enablePrintAutoRotate: true,
-    enableScripting: true,
-    enableSignatureEditor: false,
-    enableUpdatedAddImage: false,
-    externalLinkTarget: 0,
-    highlightEditorColors: "yellow=#FFFF98,green=#53FFBC,blue=#80EBFF,pink=#FFCBE6,red=#FF4F5F,yellow_HCM=#FFFFCC,green_HCM=#53FFBC,blue_HCM=#80EBFF,pink_HCM=#F6B8FF,red_HCM=#C50043",
-    historyUpdateUrl: false,
-    ignoreDestinationZoom: false,
-    forcePageColors: false,
-    pageColorsBackground: "Canvas",
-    pageColorsForeground: "CanvasText",
-    pdfBugEnabled: false,
-    sidebarViewOnLoad: -1,
-    scrollModeOnLoad: -1,
-    spreadModeOnLoad: -1,
-    textLayerMode: 1,
-    viewerCssTheme: 0,
-    viewOnLoad: 0,
-    disableAutoFetch: false,
-    disableFontFace: false,
-    disableRange: false,
-    disableStream: false,
-    enableHWA: true,
-    enableXfa: true
-  });
+  #defaults = Object.freeze(AppOptions.getAll(OptionKind.PREFERENCE, true));
   #initializedPromise = null;
   constructor() {
     this.#initializedPromise = this._readFromStorage(this.#defaults).then(({
@@ -6490,6 +6448,9 @@ class BasePreferences {
   async get(name) {
     await this.#initializedPromise;
     return AppOptions.get(name);
+  }
+  get defaults() {
+    return this.#defaults;
   }
   get initializedPromise() {
     return this.#initializedPromise;
@@ -8103,7 +8064,7 @@ class genericl10n_GenericL10n extends L10n {
     yield this.#createBundleFallback(lang);
   }
   static async #createBundleFallback(lang) {
-    const text = "pdfjs-previous-button =\n    .title = Previous Page\npdfjs-previous-button-label = Previous\npdfjs-next-button =\n    .title = Next Page\npdfjs-next-button-label = Next\npdfjs-page-input =\n    .title = Page\npdfjs-of-pages = of { $pagesCount }\npdfjs-page-of-pages = ({ $pageNumber } of { $pagesCount })\npdfjs-zoom-out-button =\n    .title = Zoom Out\npdfjs-zoom-out-button-label = Zoom Out\npdfjs-zoom-in-button =\n    .title = Zoom In\npdfjs-zoom-in-button-label = Zoom In\npdfjs-zoom-select =\n    .title = Zoom\npdfjs-presentation-mode-button =\n    .title = Switch to Presentation Mode\npdfjs-presentation-mode-button-label = Presentation Mode\npdfjs-open-file-button =\n    .title = Open File\npdfjs-open-file-button-label = Open\npdfjs-print-button =\n    .title = Print\npdfjs-print-button-label = Print\npdfjs-save-button =\n    .title = Save\npdfjs-save-button-label = Save\npdfjs-download-button =\n    .title = Download\npdfjs-download-button-label = Download\npdfjs-bookmark-button =\n    .title = Current Page (View URL from Current Page)\npdfjs-bookmark-button-label = Current Page\npdfjs-tools-button =\n    .title = Tools\npdfjs-tools-button-label = Tools\npdfjs-first-page-button =\n    .title = Go to First Page\npdfjs-first-page-button-label = Go to First Page\npdfjs-last-page-button =\n    .title = Go to Last Page\npdfjs-last-page-button-label = Go to Last Page\npdfjs-page-rotate-cw-button =\n    .title = Rotate Clockwise\npdfjs-page-rotate-cw-button-label = Rotate Clockwise\npdfjs-page-rotate-ccw-button =\n    .title = Rotate Counterclockwise\npdfjs-page-rotate-ccw-button-label = Rotate Counterclockwise\npdfjs-cursor-text-select-tool-button =\n    .title = Enable Text Selection Tool\npdfjs-cursor-text-select-tool-button-label = Text Selection Tool\npdfjs-cursor-hand-tool-button =\n    .title = Enable Hand Tool\npdfjs-cursor-hand-tool-button-label = Hand Tool\npdfjs-scroll-page-button =\n    .title = Use Page Scrolling\npdfjs-scroll-page-button-label = Page Scrolling\npdfjs-scroll-vertical-button =\n    .title = Use Vertical Scrolling\npdfjs-scroll-vertical-button-label = Vertical Scrolling\npdfjs-scroll-horizontal-button =\n    .title = Use Horizontal Scrolling\npdfjs-scroll-horizontal-button-label = Horizontal Scrolling\npdfjs-scroll-wrapped-button =\n    .title = Use Wrapped Scrolling\npdfjs-scroll-wrapped-button-label = Wrapped Scrolling\npdfjs-spread-none-button =\n    .title = Do not join page spreads\npdfjs-spread-none-button-label = No Spreads\npdfjs-spread-odd-button =\n    .title = Join page spreads starting with odd-numbered pages\npdfjs-spread-odd-button-label = Odd Spreads\npdfjs-spread-even-button =\n    .title = Join page spreads starting with even-numbered pages\npdfjs-spread-even-button-label = Even Spreads\npdfjs-document-properties-button =\n    .title = Document Properties\u2026\npdfjs-document-properties-button-label = Document Properties\u2026\npdfjs-document-properties-file-name = File name:\npdfjs-document-properties-file-size = File size:\npdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } bytes)\npdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } bytes)\npdfjs-document-properties-title = Title:\npdfjs-document-properties-author = Author:\npdfjs-document-properties-subject = Subject:\npdfjs-document-properties-keywords = Keywords:\npdfjs-document-properties-creation-date = Creation Date:\npdfjs-document-properties-modification-date = Modification Date:\npdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: \"short\", timeStyle: \"medium\") }\npdfjs-document-properties-creator = Creator:\npdfjs-document-properties-producer = PDF Producer:\npdfjs-document-properties-version = PDF Version:\npdfjs-document-properties-page-count = Page Count:\npdfjs-document-properties-page-size = Page Size:\npdfjs-document-properties-page-size-unit-inches = in\npdfjs-document-properties-page-size-unit-millimeters = mm\npdfjs-document-properties-page-size-orientation-portrait = portrait\npdfjs-document-properties-page-size-orientation-landscape = landscape\npdfjs-document-properties-page-size-name-a-three = A3\npdfjs-document-properties-page-size-name-a-four = A4\npdfjs-document-properties-page-size-name-letter = Letter\npdfjs-document-properties-page-size-name-legal = Legal\npdfjs-document-properties-page-size-dimension-string = { $width } \xD7 { $height } { $unit } ({ $orientation })\npdfjs-document-properties-page-size-dimension-name-string = { $width } \xD7 { $height } { $unit } ({ $name }, { $orientation })\npdfjs-document-properties-linearized = Fast Web View:\npdfjs-document-properties-linearized-yes = Yes\npdfjs-document-properties-linearized-no = No\npdfjs-document-properties-close-button = Close\npdfjs-print-progress-message = Preparing document for printing\u2026\npdfjs-print-progress-percent = { $progress }%\npdfjs-print-progress-close-button = Cancel\npdfjs-printing-not-supported = Warning: Printing is not fully supported by this browser.\npdfjs-printing-not-ready = Warning: The PDF is not fully loaded for printing.\npdfjs-current-outline-item-button =\n    .title = Find Current Outline Item\npdfjs-current-outline-item-button-label = Current Outline Item\npdfjs-findbar-button =\n    .title = Find in Document\npdfjs-findbar-button-label = Find\npdfjs-additional-layers = Additional Layers\npdfjs-thumb-page-title =\n    .title = Page { $page }\npdfjs-thumb-page-canvas =\n    .aria-label = Thumbnail of Page { $page }\npdfjs-find-input =\n    .title = Find\n    .placeholder = Find in document\u2026\npdfjs-find-previous-button =\n    .title = Find the previous occurrence of the phrase\npdfjs-find-previous-button-label = Previous\npdfjs-find-next-button =\n    .title = Find the next occurrence of the phrase\npdfjs-find-next-button-label = Next\npdfjs-find-highlight-checkbox = Highlight All\npdfjs-find-match-case-checkbox-label = Match Case\npdfjs-find-match-diacritics-checkbox-label = Match Diacritics\npdfjs-find-entire-word-checkbox-label = Whole Words\npdfjs-find-reached-top = Reached top of document, continued from bottom\npdfjs-find-reached-bottom = Reached end of document, continued from top\npdfjs-find-match-count =\n    { $total ->\n        [one] { $current } of { $total } match\n       *[other] { $current } of { $total } matches\n    }\npdfjs-find-match-count-limit =\n    { $limit ->\n        [one] More than { $limit } match\n       *[other] More than { $limit } matches\n    }\npdfjs-find-not-found = Phrase not found\npdfjs-page-scale-width = Page Width\npdfjs-page-scale-fit = Page Fit\npdfjs-page-scale-auto = Automatic Zoom\npdfjs-page-scale-actual = Actual Size\npdfjs-page-scale-percent = { $scale }%\npdfjs-page-landmark =\n    .aria-label = Page { $page }\npdfjs-loading-error = An error occurred while loading the PDF.\npdfjs-invalid-file-error = Invalid or corrupted PDF file.\npdfjs-missing-file-error = Missing PDF file.\npdfjs-unexpected-response-error = Unexpected server response.\npdfjs-rendering-error = An error occurred while rendering the page.\npdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: \"short\", timeStyle: \"medium\") }\npdfjs-text-annotation-type =\n    .alt = [{ $type } Annotation]\npdfjs-password-label = Enter the password to open this PDF file.\npdfjs-password-invalid = Invalid password. Please try again.\npdfjs-password-ok-button = OK\npdfjs-password-cancel-button = Cancel\npdfjs-web-fonts-disabled = Web fonts are disabled: unable to use embedded PDF fonts.\npdfjs-editor-free-text-button =\n    .title = Text\npdfjs-editor-color-picker-free-text-input =\n    .title = Change text color\npdfjs-editor-free-text-button-label = Text\npdfjs-editor-ink-button =\n    .title = Draw\npdfjs-editor-color-picker-ink-input =\n    .title = Change drawing color\npdfjs-editor-ink-button-label = Draw\npdfjs-editor-stamp-button =\n    .title = Add or edit images\npdfjs-editor-stamp-button-label = Add or edit images\npdfjs-editor-highlight-button =\n    .title = Highlight\npdfjs-editor-highlight-button-label = Highlight\npdfjs-highlight-floating-button1 =\n    .title = Highlight\n    .aria-label = Highlight\npdfjs-highlight-floating-button-label = Highlight\npdfjs-comment-floating-button =\n    .title = Comment\n    .aria-label = Comment\npdfjs-comment-floating-button-label = Comment\npdfjs-editor-comment-button =\n    .title = Comment\n    .aria-label = Comment\npdfjs-editor-comment-button-label = Comment\npdfjs-editor-signature-button =\n    .title = Add signature\npdfjs-editor-signature-button-label = Add signature\npdfjs-editor-highlight-editor =\n    .aria-label = Highlight editor\npdfjs-editor-ink-editor =\n    .aria-label = Drawing editor\npdfjs-editor-signature-editor1 =\n    .aria-description = Signature editor: { $description }\npdfjs-editor-stamp-editor =\n    .aria-label = Image editor\npdfjs-editor-remove-ink-button =\n    .title = Remove drawing\npdfjs-editor-remove-freetext-button =\n    .title = Remove text\npdfjs-editor-remove-stamp-button =\n    .title = Remove image\npdfjs-editor-remove-highlight-button =\n    .title = Remove highlight\npdfjs-editor-remove-signature-button =\n    .title = Remove signature\npdfjs-editor-free-text-color-input = Color\npdfjs-editor-free-text-size-input = Size\npdfjs-editor-ink-color-input = Color\npdfjs-editor-ink-thickness-input = Thickness\npdfjs-editor-ink-opacity-input = Opacity\npdfjs-editor-stamp-add-image-button =\n    .title = Add image\npdfjs-editor-stamp-add-image-button-label = Add image\npdfjs-editor-free-highlight-thickness-input = Thickness\npdfjs-editor-free-highlight-thickness-title =\n    .title = Change thickness when highlighting items other than text\npdfjs-editor-add-signature-container =\n    .aria-label = Signature controls and saved signatures\npdfjs-editor-signature-add-signature-button =\n    .title = Add new signature\npdfjs-editor-signature-add-signature-button-label = Add new signature\npdfjs-editor-add-saved-signature-button =\n    .title = Saved signature: { $description }\npdfjs-free-text2 =\n    .aria-label = Text Editor\n    .default-content = Start typing\u2026\npdfjs-editor-comments-sidebar-title =\n    { $count ->\n        [one] Comment\n       *[other] Comments\n    }\npdfjs-editor-comments-sidebar-close-button =\n    .title = Close the sidebar\n    .aria-label = Close the sidebar\npdfjs-editor-comments-sidebar-close-button-label = Close the sidebar\npdfjs-editor-comments-sidebar-no-comments1 = See something noteworthy? Highlight it and leave a comment.\npdfjs-editor-comments-sidebar-no-comments-link = Learn more\npdfjs-editor-alt-text-button =\n    .aria-label = Alt text\npdfjs-editor-alt-text-button-label = Alt text\npdfjs-editor-alt-text-edit-button =\n    .aria-label = Edit alt text\npdfjs-editor-alt-text-dialog-label = Choose an option\npdfjs-editor-alt-text-dialog-description = Alt text (alternative text) helps when people can\u2019t see the image or when it doesn\u2019t load.\npdfjs-editor-alt-text-add-description-label = Add a description\npdfjs-editor-alt-text-add-description-description = Aim for 1-2 sentences that describe the subject, setting, or actions.\npdfjs-editor-alt-text-mark-decorative-label = Mark as decorative\npdfjs-editor-alt-text-mark-decorative-description = This is used for ornamental images, like borders or watermarks.\npdfjs-editor-alt-text-cancel-button = Cancel\npdfjs-editor-alt-text-save-button = Save\npdfjs-editor-alt-text-decorative-tooltip = Marked as decorative\npdfjs-editor-alt-text-textarea =\n    .placeholder = For example, \u201CA young man sits down at a table to eat a meal\u201D\npdfjs-editor-resizer-top-left =\n    .aria-label = Top left corner \u2014 resize\npdfjs-editor-resizer-top-middle =\n    .aria-label = Top middle \u2014 resize\npdfjs-editor-resizer-top-right =\n    .aria-label = Top right corner \u2014 resize\npdfjs-editor-resizer-middle-right =\n    .aria-label = Middle right \u2014 resize\npdfjs-editor-resizer-bottom-right =\n    .aria-label = Bottom right corner \u2014 resize\npdfjs-editor-resizer-bottom-middle =\n    .aria-label = Bottom middle \u2014 resize\npdfjs-editor-resizer-bottom-left =\n    .aria-label = Bottom left corner \u2014 resize\npdfjs-editor-resizer-middle-left =\n    .aria-label = Middle left \u2014 resize\npdfjs-editor-highlight-colorpicker-label = Highlight color\npdfjs-editor-colorpicker-button =\n    .title = Change color\npdfjs-editor-colorpicker-dropdown =\n    .aria-label = Color choices\npdfjs-editor-colorpicker-yellow =\n    .title = Yellow\npdfjs-editor-colorpicker-green =\n    .title = Green\npdfjs-editor-colorpicker-blue =\n    .title = Blue\npdfjs-editor-colorpicker-pink =\n    .title = Pink\npdfjs-editor-colorpicker-red =\n    .title = Red\npdfjs-editor-highlight-show-all-button-label = Show all\npdfjs-editor-highlight-show-all-button =\n    .title = Show all\npdfjs-editor-new-alt-text-dialog-edit-label = Edit alt text (image description)\npdfjs-editor-new-alt-text-dialog-add-label = Add alt text (image description)\npdfjs-editor-new-alt-text-textarea =\n    .placeholder = Write your description here\u2026\npdfjs-editor-new-alt-text-description = Short description for people who can\u2019t see the image or when the image doesn\u2019t load.\npdfjs-editor-new-alt-text-disclaimer1 = This alt text was created automatically and may be inaccurate.\npdfjs-editor-new-alt-text-disclaimer-learn-more-url = Learn more\npdfjs-editor-new-alt-text-create-automatically-button-label = Create alt text automatically\npdfjs-editor-new-alt-text-not-now-button = Not now\npdfjs-editor-new-alt-text-error-title = Couldn\u2019t create alt text automatically\npdfjs-editor-new-alt-text-error-description = Please write your own alt text or try again later.\npdfjs-editor-new-alt-text-error-close-button = Close\npdfjs-editor-new-alt-text-ai-model-downloading-progress = Downloading alt text AI model ({ $downloadedSize } of { $totalSize } MB)\n    .aria-valuetext = Downloading alt text AI model ({ $downloadedSize } of { $totalSize } MB)\npdfjs-editor-new-alt-text-added-button =\n    .aria-label = Alt text added\npdfjs-editor-new-alt-text-added-button-label = Alt text added\npdfjs-editor-new-alt-text-missing-button =\n    .aria-label = Missing alt text\npdfjs-editor-new-alt-text-missing-button-label = Missing alt text\npdfjs-editor-new-alt-text-to-review-button =\n    .aria-label = Review alt text\npdfjs-editor-new-alt-text-to-review-button-label = Review alt text\npdfjs-editor-new-alt-text-generated-alt-text-with-disclaimer = Created automatically: { $generatedAltText }\npdfjs-image-alt-text-settings-button =\n    .title = Image alt text settings\npdfjs-image-alt-text-settings-button-label = Image alt text settings\npdfjs-editor-alt-text-settings-dialog-label = Image alt text settings\npdfjs-editor-alt-text-settings-automatic-title = Automatic alt text\npdfjs-editor-alt-text-settings-create-model-button-label = Create alt text automatically\npdfjs-editor-alt-text-settings-create-model-description = Suggests descriptions to help people who can\u2019t see the image or when the image doesn\u2019t load.\npdfjs-editor-alt-text-settings-download-model-label = Alt text AI model ({ $totalSize } MB)\npdfjs-editor-alt-text-settings-ai-model-description = Runs locally on your device so your data stays private. Required for automatic alt text.\npdfjs-editor-alt-text-settings-delete-model-button = Delete\npdfjs-editor-alt-text-settings-download-model-button = Download\npdfjs-editor-alt-text-settings-downloading-model-button = Downloading\u2026\npdfjs-editor-alt-text-settings-editor-title = Alt text editor\npdfjs-editor-alt-text-settings-show-dialog-button-label = Show alt text editor right away when adding an image\npdfjs-editor-alt-text-settings-show-dialog-description = Helps you make sure all your images have alt text.\npdfjs-editor-alt-text-settings-close-button = Close\npdfjs-editor-highlight-added-alert = Highlight added\npdfjs-editor-freetext-added-alert = Text added\npdfjs-editor-ink-added-alert = Drawing added\npdfjs-editor-stamp-added-alert = Image added\npdfjs-editor-signature-added-alert = Signature added\npdfjs-editor-undo-bar-message-highlight = Highlight removed\npdfjs-editor-undo-bar-message-freetext = Text removed\npdfjs-editor-undo-bar-message-ink = Drawing removed\npdfjs-editor-undo-bar-message-stamp = Image removed\npdfjs-editor-undo-bar-message-signature = Signature removed\npdfjs-editor-undo-bar-message-multiple =\n    { $count ->\n        [one] { $count } annotation removed\n       *[other] { $count } annotations removed\n    }\npdfjs-editor-undo-bar-undo-button =\n    .title = Undo\npdfjs-editor-undo-bar-undo-button-label = Undo\npdfjs-editor-undo-bar-close-button =\n    .title = Close\npdfjs-editor-undo-bar-close-button-label = Close\npdfjs-editor-add-signature-dialog-label = This modal allows the user to create a signature to add to a PDF document. The user can edit the name (which also serves as the alt text), and optionally save the signature for repeated use.\npdfjs-editor-add-signature-dialog-title = Add a signature\npdfjs-editor-add-signature-type-button = Type\n    .title = Type\npdfjs-editor-add-signature-draw-button = Draw\n    .title = Draw\npdfjs-editor-add-signature-image-button = Image\n    .title = Image\npdfjs-editor-add-signature-type-input =\n    .aria-label = Type your signature\n    .placeholder = Type your signature\npdfjs-editor-add-signature-draw-placeholder = Draw your signature\npdfjs-editor-add-signature-draw-thickness-range-label = Thickness\npdfjs-editor-add-signature-draw-thickness-range =\n    .title = Drawing thickness: { $thickness }\npdfjs-editor-add-signature-image-placeholder = Drag a file here to upload\npdfjs-editor-add-signature-image-browse-link =\n    { PLATFORM() ->\n        [macos] Or choose image files\n       *[other] Or browse image files\n    }\npdfjs-editor-add-signature-description-label = Description (alt text)\npdfjs-editor-add-signature-description-input =\n    .title = Description (alt text)\npdfjs-editor-add-signature-description-default-when-drawing = Signature\npdfjs-editor-add-signature-clear-button-label = Clear signature\npdfjs-editor-add-signature-clear-button =\n    .title = Clear signature\npdfjs-editor-add-signature-save-checkbox = Save signature\npdfjs-editor-add-signature-save-warning-message = You\u2019ve reached the limit of 5 saved signatures. Remove one to save more.\npdfjs-editor-add-signature-image-upload-error-title = Couldn\u2019t upload image\npdfjs-editor-add-signature-image-upload-error-description = Check your network connection or try another image.\npdfjs-editor-add-signature-image-no-data-error-title = Can\u2019t convert this image into a signature\npdfjs-editor-add-signature-image-no-data-error-description = Please try uploading a different image.\npdfjs-editor-add-signature-error-close-button = Close\npdfjs-editor-add-signature-cancel-button = Cancel\npdfjs-editor-add-signature-add-button = Add\npdfjs-editor-delete-signature-button1 =\n    .title = Remove saved signature\npdfjs-editor-delete-signature-button-label1 = Remove saved signature\npdfjs-editor-add-signature-edit-button-label = Edit description\npdfjs-editor-edit-signature-dialog-title = Edit description\npdfjs-editor-edit-signature-update-button = Update\npdfjs-show-comment-button =\n    .title = Show comment\npdfjs-editor-edit-comment-popup-button-label = Edit comment\npdfjs-editor-edit-comment-popup-button =\n    .title = Edit comment\npdfjs-editor-delete-comment-popup-button-label = Remove comment\npdfjs-editor-delete-comment-popup-button =\n    .title = Remove comment\npdfjs-editor-edit-comment-dialog-title-when-editing = Edit comment\npdfjs-editor-edit-comment-dialog-save-button-when-editing = Update\npdfjs-editor-edit-comment-dialog-title-when-adding = Add comment\npdfjs-editor-edit-comment-dialog-save-button-when-adding = Add\npdfjs-editor-edit-comment-dialog-text-input =\n    .placeholder = Start typing\u2026\npdfjs-editor-edit-comment-dialog-cancel-button = Cancel\npdfjs-editor-add-comment-button =\n    .title = Add comment\npdfjs-toggle-views-manager-button =\n    .title = Toggle Sidebar\npdfjs-toggle-views-manager-notification-button =\n    .title = Toggle Sidebar (document contains thumbnails/outline/attachments/layers)\npdfjs-toggle-views-manager-button-label = Toggle Sidebar\npdfjs-views-manager-sidebar =\n    .aria-label = Sidebar\npdfjs-views-manager-view-selector-button =\n    .title = Views\npdfjs-views-manager-view-selector-button-label = Views\npdfjs-views-manager-pages-title = Pages\npdfjs-views-manager-outlines-title = Document outline\npdfjs-views-manager-attachments-title = Attachments\npdfjs-views-manager-layers-title = Layers\npdfjs-views-manager-pages-option-label = Pages\npdfjs-views-manager-outlines-option-label = Document outline\npdfjs-views-manager-attachments-option-label = Attachments\npdfjs-views-manager-layers-option-label = Layers\npdfjs-views-manager-add-file-button =\n    .title = Add file\npdfjs-views-manager-add-file-button-label = Add file\npdfjs-views-manager-pages-status-action-label =\n    { $count ->\n        [one] { $count } selected\n        *[other] { $count } selected\n    }\npdfjs-views-manager-pages-status-none-action-label = Select pages\npdfjs-views-manager-pages-status-action-button-label = Manage\npdfjs-views-manager-pages-status-copy-button-label = Copy\npdfjs-views-manager-pages-status-cut-button-label = Cut\npdfjs-views-manager-pages-status-delete-button-label = Delete\npdfjs-views-manager-pages-status-save-as-button-label = Save as\u2026\npdfjs-views-manager-status-undo-cut-label =\n    { $count ->\n        [one] 1 page cut\n        *[other] { $count } pages cut\n    }\npdfjs-views-manager-pages-status-undo-copy-label =\n    { $count ->\n        [one] 1 page copied\n        *[other] { $count } pages copied\n    }\npdfjs-views-manager-pages-status-undo-delete-label =\n    { $count ->\n        [one] 1 page deleted\n        *[other] { $count } pages deleted\n    }\npdfjs-views-manager-pages-status-waiting-ready-label = Getting your file ready\u2026\npdfjs-views-manager-pages-status-waiting-uploading-label = Uploading file\u2026\npdfjs-views-manager-status-warning-cut-label = Couldn\u2019t cut. Refresh page and try again.\npdfjs-views-manager-status-warning-copy-label = Couldn\u2019t copy. Refresh page and try again.\npdfjs-views-manager-status-warning-delete-label = Couldn\u2019t delete. Refresh page and try again.\npdfjs-views-manager-status-warning-save-label = Couldn\u2019t save. Refresh page and try again.\npdfjs-views-manager-status-undo-button-label = Undo\npdfjs-views-manager-status-close-button =\n    .title = Close\npdfjs-views-manager-status-close-button-label = Close";
+    const text = "pdfjs-previous-button =\n    .title = Previous Page\npdfjs-previous-button-label = Previous\npdfjs-next-button =\n    .title = Next Page\npdfjs-next-button-label = Next\npdfjs-page-input =\n    .title = Page\npdfjs-of-pages = of { $pagesCount }\npdfjs-page-of-pages = ({ $pageNumber } of { $pagesCount })\npdfjs-zoom-out-button =\n    .title = Zoom Out\npdfjs-zoom-out-button-label = Zoom Out\npdfjs-zoom-in-button =\n    .title = Zoom In\npdfjs-zoom-in-button-label = Zoom In\npdfjs-zoom-select =\n    .title = Zoom\npdfjs-presentation-mode-button =\n    .title = Switch to Presentation Mode\npdfjs-presentation-mode-button-label = Presentation Mode\npdfjs-open-file-button =\n    .title = Open File\npdfjs-open-file-button-label = Open\npdfjs-print-button =\n    .title = Print\npdfjs-print-button-label = Print\npdfjs-save-button =\n    .title = Save\npdfjs-save-button-label = Save\npdfjs-download-button =\n    .title = Download\npdfjs-download-button-label = Download\npdfjs-bookmark-button =\n    .title = Current Page (View URL from Current Page)\npdfjs-bookmark-button-label = Current Page\npdfjs-tools-button =\n    .title = Tools\npdfjs-tools-button-label = Tools\npdfjs-first-page-button =\n    .title = Go to First Page\npdfjs-first-page-button-label = Go to First Page\npdfjs-last-page-button =\n    .title = Go to Last Page\npdfjs-last-page-button-label = Go to Last Page\npdfjs-page-rotate-cw-button =\n    .title = Rotate Clockwise\npdfjs-page-rotate-cw-button-label = Rotate Clockwise\npdfjs-page-rotate-ccw-button =\n    .title = Rotate Counterclockwise\npdfjs-page-rotate-ccw-button-label = Rotate Counterclockwise\npdfjs-cursor-text-select-tool-button =\n    .title = Enable Text Selection Tool\npdfjs-cursor-text-select-tool-button-label = Text Selection Tool\npdfjs-cursor-hand-tool-button =\n    .title = Enable Hand Tool\npdfjs-cursor-hand-tool-button-label = Hand Tool\npdfjs-scroll-page-button =\n    .title = Use Page Scrolling\npdfjs-scroll-page-button-label = Page Scrolling\npdfjs-scroll-vertical-button =\n    .title = Use Vertical Scrolling\npdfjs-scroll-vertical-button-label = Vertical Scrolling\npdfjs-scroll-horizontal-button =\n    .title = Use Horizontal Scrolling\npdfjs-scroll-horizontal-button-label = Horizontal Scrolling\npdfjs-scroll-wrapped-button =\n    .title = Use Wrapped Scrolling\npdfjs-scroll-wrapped-button-label = Wrapped Scrolling\npdfjs-spread-none-button =\n    .title = Do not join page spreads\npdfjs-spread-none-button-label = No Spreads\npdfjs-spread-odd-button =\n    .title = Join page spreads starting with odd-numbered pages\npdfjs-spread-odd-button-label = Odd Spreads\npdfjs-spread-even-button =\n    .title = Join page spreads starting with even-numbered pages\npdfjs-spread-even-button-label = Even Spreads\npdfjs-document-properties-button =\n    .title = Document Properties\u2026\npdfjs-document-properties-button-label = Document Properties\u2026\npdfjs-document-properties-file-name = File name:\npdfjs-document-properties-file-size = File size:\npdfjs-document-properties-size-kb = { NUMBER($kb, maximumSignificantDigits: 3) } KB ({ $b } bytes)\npdfjs-document-properties-size-mb = { NUMBER($mb, maximumSignificantDigits: 3) } MB ({ $b } bytes)\npdfjs-document-properties-title = Title:\npdfjs-document-properties-author = Author:\npdfjs-document-properties-subject = Subject:\npdfjs-document-properties-keywords = Keywords:\npdfjs-document-properties-creation-date = Creation Date:\npdfjs-document-properties-modification-date = Modification Date:\npdfjs-document-properties-date-time-string = { DATETIME($dateObj, dateStyle: \"short\", timeStyle: \"medium\") }\npdfjs-document-properties-creator = Creator:\npdfjs-document-properties-producer = PDF Producer:\npdfjs-document-properties-version = PDF Version:\npdfjs-document-properties-page-count = Page Count:\npdfjs-document-properties-page-size = Page Size:\npdfjs-document-properties-page-size-unit-inches = in\npdfjs-document-properties-page-size-unit-millimeters = mm\npdfjs-document-properties-page-size-orientation-portrait = portrait\npdfjs-document-properties-page-size-orientation-landscape = landscape\npdfjs-document-properties-page-size-name-a-three = A3\npdfjs-document-properties-page-size-name-a-four = A4\npdfjs-document-properties-page-size-name-letter = Letter\npdfjs-document-properties-page-size-name-legal = Legal\npdfjs-document-properties-page-size-dimension-string = { $width } \xD7 { $height } { $unit } ({ $orientation })\npdfjs-document-properties-page-size-dimension-name-string = { $width } \xD7 { $height } { $unit } ({ $name }, { $orientation })\npdfjs-document-properties-linearized = Fast Web View:\npdfjs-document-properties-linearized-yes = Yes\npdfjs-document-properties-linearized-no = No\npdfjs-document-properties-close-button = Close\npdfjs-print-progress-message = Preparing document for printing\u2026\npdfjs-print-progress-percent = { $progress }%\npdfjs-print-progress-close-button = Cancel\npdfjs-printing-not-supported = Warning: Printing is not fully supported by this browser.\npdfjs-printing-not-ready = Warning: The PDF is not fully loaded for printing.\npdfjs-current-outline-item-button =\n    .title = Find Current Outline Item\npdfjs-current-outline-item-button-label = Current Outline Item\npdfjs-findbar-button =\n    .title = Find in Document\npdfjs-findbar-button-label = Find\npdfjs-additional-layers = Additional Layers\npdfjs-thumb-page-title =\n    .title = Page { $page }\npdfjs-thumb-page-canvas =\n    .aria-label = Thumbnail of Page { $page }\npdfjs-find-input =\n    .title = Find\n    .placeholder = Find in document\u2026\npdfjs-find-previous-button =\n    .title = Find the previous occurrence of the phrase\npdfjs-find-previous-button-label = Previous\npdfjs-find-next-button =\n    .title = Find the next occurrence of the phrase\npdfjs-find-next-button-label = Next\npdfjs-find-highlight-checkbox = Highlight All\npdfjs-find-match-case-checkbox-label = Match Case\npdfjs-find-match-diacritics-checkbox-label = Match Diacritics\npdfjs-find-entire-word-checkbox-label = Whole Words\npdfjs-find-reached-top = Reached top of document, continued from bottom\npdfjs-find-reached-bottom = Reached end of document, continued from top\npdfjs-find-match-count =\n    { $total ->\n        [one] { $current } of { $total } match\n       *[other] { $current } of { $total } matches\n    }\npdfjs-find-match-count-limit =\n    { $limit ->\n        [one] More than { $limit } match\n       *[other] More than { $limit } matches\n    }\npdfjs-find-not-found = Phrase not found\npdfjs-page-scale-width = Page Width\npdfjs-page-scale-fit = Page Fit\npdfjs-page-scale-auto = Automatic Zoom\npdfjs-page-scale-actual = Actual Size\npdfjs-page-scale-percent = { $scale }%\npdfjs-page-landmark =\n    .aria-label = Page { $page }\npdfjs-loading-error = An error occurred while loading the PDF.\npdfjs-invalid-file-error = Invalid or corrupted PDF file.\npdfjs-missing-file-error = Missing PDF file.\npdfjs-unexpected-response-error = Unexpected server response.\npdfjs-rendering-error = An error occurred while rendering the page.\npdfjs-annotation-date-time-string = { DATETIME($dateObj, dateStyle: \"short\", timeStyle: \"medium\") }\npdfjs-text-annotation-type =\n    .alt = [{ $type } Annotation]\npdfjs-password-label = Enter the password to open this PDF file.\npdfjs-password-invalid = Invalid password. Please try again.\npdfjs-password-ok-button = OK\npdfjs-password-cancel-button = Cancel\npdfjs-web-fonts-disabled = Web fonts are disabled: unable to use embedded PDF fonts.\npdfjs-editor-free-text-button =\n    .title = Text\npdfjs-editor-color-picker-free-text-input =\n    .title = Change text color\npdfjs-editor-free-text-button-label = Text\npdfjs-editor-ink-button =\n    .title = Draw\npdfjs-editor-color-picker-ink-input =\n    .title = Change drawing color\npdfjs-editor-ink-button-label = Draw\npdfjs-editor-stamp-button =\n    .title = Add or edit images\npdfjs-editor-stamp-button-label = Add or edit images\npdfjs-editor-highlight-button =\n    .title = Highlight\npdfjs-editor-highlight-button-label = Highlight\npdfjs-highlight-floating-button1 =\n    .title = Highlight\n    .aria-label = Highlight\npdfjs-highlight-floating-button-label = Highlight\npdfjs-comment-floating-button =\n    .title = Comment\n    .aria-label = Comment\npdfjs-comment-floating-button-label = Comment\npdfjs-editor-comment-button =\n    .title = Comment\n    .aria-label = Comment\npdfjs-editor-comment-button-label = Comment\npdfjs-editor-signature-button =\n    .title = Add signature\npdfjs-editor-signature-button-label = Add signature\npdfjs-editor-highlight-editor =\n    .aria-label = Highlight editor\npdfjs-editor-ink-editor =\n    .aria-label = Drawing editor\npdfjs-editor-signature-editor1 =\n    .aria-description = Signature editor: { $description }\npdfjs-editor-stamp-editor =\n    .aria-label = Image editor\npdfjs-editor-remove-ink-button =\n    .title = Remove drawing\npdfjs-editor-remove-freetext-button =\n    .title = Remove text\npdfjs-editor-remove-stamp-button =\n    .title = Remove image\npdfjs-editor-remove-highlight-button =\n    .title = Remove highlight\npdfjs-editor-remove-signature-button =\n    .title = Remove signature\npdfjs-editor-free-text-color-input = Color\npdfjs-editor-free-text-size-input = Size\npdfjs-editor-ink-color-input = Color\npdfjs-editor-ink-thickness-input = Thickness\npdfjs-editor-ink-opacity-input = Opacity\npdfjs-editor-stamp-add-image-button =\n    .title = Add image\npdfjs-editor-stamp-add-image-button-label = Add image\npdfjs-editor-free-highlight-thickness-input = Thickness\npdfjs-editor-free-highlight-thickness-title =\n    .title = Change thickness when highlighting items other than text\npdfjs-editor-add-signature-container =\n    .aria-label = Signature controls and saved signatures\npdfjs-editor-signature-add-signature-button =\n    .title = Add new signature\npdfjs-editor-signature-add-signature-button-label = Add new signature\npdfjs-editor-add-saved-signature-button =\n    .title = Saved signature: { $description }\npdfjs-free-text2 =\n    .aria-label = Text Editor\n    .default-content = Start typing\u2026\npdfjs-editor-comments-sidebar-title =\n    { $count ->\n        [one] Comment\n       *[other] Comments\n    }\npdfjs-editor-comments-sidebar-close-button =\n    .title = Close the sidebar\n    .aria-label = Close the sidebar\npdfjs-editor-comments-sidebar-close-button-label = Close the sidebar\npdfjs-editor-comments-sidebar-no-comments1 = See something noteworthy? Highlight it and leave a comment.\npdfjs-editor-comments-sidebar-no-comments-link = Learn more\npdfjs-editor-alt-text-button =\n    .aria-label = Alt text\npdfjs-editor-alt-text-button-label = Alt text\npdfjs-editor-alt-text-edit-button =\n    .aria-label = Edit alt text\npdfjs-editor-alt-text-dialog-label = Choose an option\npdfjs-editor-alt-text-dialog-description = Alt text (alternative text) helps when people can\u2019t see the image or when it doesn\u2019t load.\npdfjs-editor-alt-text-add-description-label = Add a description\npdfjs-editor-alt-text-add-description-description = Aim for 1-2 sentences that describe the subject, setting, or actions.\npdfjs-editor-alt-text-mark-decorative-label = Mark as decorative\npdfjs-editor-alt-text-mark-decorative-description = This is used for ornamental images, like borders or watermarks.\npdfjs-editor-alt-text-cancel-button = Cancel\npdfjs-editor-alt-text-save-button = Save\npdfjs-editor-alt-text-decorative-tooltip = Marked as decorative\npdfjs-editor-alt-text-textarea =\n    .placeholder = For example, \u201CA young man sits down at a table to eat a meal\u201D\npdfjs-editor-resizer-top-left =\n    .aria-label = Top left corner \u2014 resize\npdfjs-editor-resizer-top-middle =\n    .aria-label = Top middle \u2014 resize\npdfjs-editor-resizer-top-right =\n    .aria-label = Top right corner \u2014 resize\npdfjs-editor-resizer-middle-right =\n    .aria-label = Middle right \u2014 resize\npdfjs-editor-resizer-bottom-right =\n    .aria-label = Bottom right corner \u2014 resize\npdfjs-editor-resizer-bottom-middle =\n    .aria-label = Bottom middle \u2014 resize\npdfjs-editor-resizer-bottom-left =\n    .aria-label = Bottom left corner \u2014 resize\npdfjs-editor-resizer-middle-left =\n    .aria-label = Middle left \u2014 resize\npdfjs-editor-highlight-colorpicker-label = Highlight color\npdfjs-editor-colorpicker-button =\n    .title = Change color\npdfjs-editor-colorpicker-dropdown =\n    .aria-label = Color choices\npdfjs-editor-colorpicker-yellow =\n    .title = Yellow\npdfjs-editor-colorpicker-green =\n    .title = Green\npdfjs-editor-colorpicker-blue =\n    .title = Blue\npdfjs-editor-colorpicker-pink =\n    .title = Pink\npdfjs-editor-colorpicker-red =\n    .title = Red\npdfjs-editor-highlight-show-all-button-label = Show all\npdfjs-editor-highlight-show-all-button =\n    .title = Show all\npdfjs-editor-new-alt-text-dialog-edit-label = Edit alt text (image description)\npdfjs-editor-new-alt-text-dialog-add-label = Add alt text (image description)\npdfjs-editor-new-alt-text-textarea =\n    .placeholder = Write your description here\u2026\npdfjs-editor-new-alt-text-description = Short description for people who can\u2019t see the image or when the image doesn\u2019t load.\npdfjs-editor-new-alt-text-disclaimer1 = This alt text was created automatically and may be inaccurate.\npdfjs-editor-new-alt-text-disclaimer-learn-more-url = Learn more\npdfjs-editor-new-alt-text-create-automatically-button-label = Create alt text automatically\npdfjs-editor-new-alt-text-not-now-button = Not now\npdfjs-editor-new-alt-text-error-title = Couldn\u2019t create alt text automatically\npdfjs-editor-new-alt-text-error-description = Please write your own alt text or try again later.\npdfjs-editor-new-alt-text-error-close-button = Close\npdfjs-editor-new-alt-text-ai-model-downloading-progress = Downloading alt text AI model ({ $downloadedSize } of { $totalSize } MB)\n    .aria-valuetext = Downloading alt text AI model ({ $downloadedSize } of { $totalSize } MB)\npdfjs-editor-new-alt-text-added-button =\n    .aria-label = Alt text added\npdfjs-editor-new-alt-text-added-button-label = Alt text added\npdfjs-editor-new-alt-text-missing-button =\n    .aria-label = Missing alt text\npdfjs-editor-new-alt-text-missing-button-label = Missing alt text\npdfjs-editor-new-alt-text-to-review-button =\n    .aria-label = Review alt text\npdfjs-editor-new-alt-text-to-review-button-label = Review alt text\npdfjs-editor-new-alt-text-generated-alt-text-with-disclaimer = Created automatically: { $generatedAltText }\npdfjs-image-alt-text-settings-button =\n    .title = Image alt text settings\npdfjs-image-alt-text-settings-button-label = Image alt text settings\npdfjs-editor-alt-text-settings-dialog-label = Image alt text settings\npdfjs-editor-alt-text-settings-automatic-title = Automatic alt text\npdfjs-editor-alt-text-settings-create-model-button-label = Create alt text automatically\npdfjs-editor-alt-text-settings-create-model-description = Suggests descriptions to help people who can\u2019t see the image or when the image doesn\u2019t load.\npdfjs-editor-alt-text-settings-download-model-label = Alt text AI model ({ $totalSize } MB)\npdfjs-editor-alt-text-settings-ai-model-description = Runs locally on your device so your data stays private. Required for automatic alt text.\npdfjs-editor-alt-text-settings-delete-model-button = Delete\npdfjs-editor-alt-text-settings-download-model-button = Download\npdfjs-editor-alt-text-settings-downloading-model-button = Downloading\u2026\npdfjs-editor-alt-text-settings-editor-title = Alt text editor\npdfjs-editor-alt-text-settings-show-dialog-button-label = Show alt text editor right away when adding an image\npdfjs-editor-alt-text-settings-show-dialog-description = Helps you make sure all your images have alt text.\npdfjs-editor-alt-text-settings-close-button = Close\npdfjs-editor-highlight-added-alert = Highlight added\npdfjs-editor-freetext-added-alert = Text added\npdfjs-editor-ink-added-alert = Drawing added\npdfjs-editor-stamp-added-alert = Image added\npdfjs-editor-signature-added-alert = Signature added\npdfjs-editor-undo-bar-message-highlight = Highlight removed\npdfjs-editor-undo-bar-message-freetext = Text removed\npdfjs-editor-undo-bar-message-ink = Drawing removed\npdfjs-editor-undo-bar-message-stamp = Image removed\npdfjs-editor-undo-bar-message-signature = Signature removed\npdfjs-editor-undo-bar-message-comment = Comment removed\npdfjs-editor-undo-bar-message-multiple =\n    { $count ->\n        [one] { $count } annotation removed\n       *[other] { $count } annotations removed\n    }\npdfjs-editor-undo-bar-undo-button =\n    .title = Undo\npdfjs-editor-undo-bar-undo-button-label = Undo\npdfjs-editor-undo-bar-close-button =\n    .title = Close\npdfjs-editor-undo-bar-close-button-label = Close\npdfjs-editor-add-signature-dialog-label = This modal allows the user to create a signature to add to a PDF document. The user can edit the name (which also serves as the alt text), and optionally save the signature for repeated use.\npdfjs-editor-add-signature-dialog-title = Add a signature\npdfjs-editor-add-signature-type-button = Type\n    .title = Type\npdfjs-editor-add-signature-draw-button = Draw\n    .title = Draw\npdfjs-editor-add-signature-image-button = Image\n    .title = Image\npdfjs-editor-add-signature-type-input =\n    .aria-label = Type your signature\n    .placeholder = Type your signature\npdfjs-editor-add-signature-draw-placeholder = Draw your signature\npdfjs-editor-add-signature-draw-thickness-range-label = Thickness\npdfjs-editor-add-signature-draw-thickness-range =\n    .title = Drawing thickness: { $thickness }\npdfjs-editor-add-signature-image-placeholder = Drag a file here to upload\npdfjs-editor-add-signature-image-browse-link =\n    { PLATFORM() ->\n        [macos] Or choose image files\n       *[other] Or browse image files\n    }\npdfjs-editor-add-signature-description-label = Description (alt text)\npdfjs-editor-add-signature-description-input =\n    .title = Description (alt text)\npdfjs-editor-add-signature-description-default-when-drawing = Signature\npdfjs-editor-add-signature-clear-button-label = Clear signature\npdfjs-editor-add-signature-clear-button =\n    .title = Clear signature\npdfjs-editor-add-signature-save-checkbox = Save signature\npdfjs-editor-add-signature-save-warning-message = You\u2019ve reached the limit of 5 saved signatures. Remove one to save more.\npdfjs-editor-add-signature-image-upload-error-title = Couldn\u2019t upload image\npdfjs-editor-add-signature-image-upload-error-description = Check your network connection or try another image.\npdfjs-editor-add-signature-image-no-data-error-title = Can\u2019t convert this image into a signature\npdfjs-editor-add-signature-image-no-data-error-description = Please try uploading a different image.\npdfjs-editor-add-signature-error-close-button = Close\npdfjs-editor-add-signature-cancel-button = Cancel\npdfjs-editor-add-signature-add-button = Add\npdfjs-editor-delete-signature-button1 =\n    .title = Remove saved signature\npdfjs-editor-delete-signature-button-label1 = Remove saved signature\npdfjs-editor-add-signature-edit-button-label = Edit description\npdfjs-editor-edit-signature-dialog-title = Edit description\npdfjs-editor-edit-signature-update-button = Update\npdfjs-show-comment-button =\n    .title = Show comment\npdfjs-editor-edit-comment-popup-button-label = Edit comment\npdfjs-editor-edit-comment-popup-button =\n    .title = Edit comment\npdfjs-editor-delete-comment-popup-button-label = Remove comment\npdfjs-editor-delete-comment-popup-button =\n    .title = Remove comment\npdfjs-editor-edit-comment-dialog-title-when-editing = Edit comment\npdfjs-editor-edit-comment-dialog-save-button-when-editing = Update\npdfjs-editor-edit-comment-dialog-title-when-adding = Add comment\npdfjs-editor-edit-comment-dialog-save-button-when-adding = Add\npdfjs-editor-edit-comment-dialog-text-input =\n    .placeholder = Start typing\u2026\npdfjs-editor-edit-comment-dialog-cancel-button = Cancel\npdfjs-editor-add-comment-button =\n    .title = Add comment\npdfjs-toggle-views-manager-button =\n    .title = Toggle Sidebar\npdfjs-toggle-views-manager-notification-button =\n    .title = Toggle Sidebar (document contains thumbnails/outline/attachments/layers)\npdfjs-toggle-views-manager-button-label = Toggle Sidebar\npdfjs-views-manager-sidebar =\n    .aria-label = Sidebar\npdfjs-views-manager-view-selector-button =\n    .title = Views\npdfjs-views-manager-view-selector-button-label = Views\npdfjs-views-manager-pages-title = Pages\npdfjs-views-manager-outlines-title = Document outline\npdfjs-views-manager-attachments-title = Attachments\npdfjs-views-manager-layers-title = Layers\npdfjs-views-manager-pages-option-label = Pages\npdfjs-views-manager-outlines-option-label = Document outline\npdfjs-views-manager-attachments-option-label = Attachments\npdfjs-views-manager-layers-option-label = Layers\npdfjs-views-manager-add-file-button =\n    .title = Add file\npdfjs-views-manager-add-file-button-label = Add file\npdfjs-views-manager-pages-status-action-label =\n    { $count ->\n        [one] { $count } selected\n        *[other] { $count } selected\n    }\npdfjs-views-manager-pages-status-none-action-label = Select pages\npdfjs-views-manager-pages-status-action-button-label = Manage\npdfjs-views-manager-pages-status-copy-button-label = Copy\npdfjs-views-manager-pages-status-cut-button-label = Cut\npdfjs-views-manager-pages-status-delete-button-label = Delete\npdfjs-views-manager-pages-status-save-as-button-label = Save as\u2026\npdfjs-views-manager-status-undo-cut-label =\n    { $count ->\n        [one] 1 page cut\n        *[other] { $count } pages cut\n    }\npdfjs-views-manager-pages-status-undo-copy-label =\n    { $count ->\n        [one] 1 page copied\n        *[other] { $count } pages copied\n    }\npdfjs-views-manager-pages-status-undo-delete-label =\n    { $count ->\n        [one] 1 page deleted\n        *[other] { $count } pages deleted\n    }\npdfjs-views-manager-pages-status-waiting-ready-label = Getting your file ready\u2026\npdfjs-views-manager-pages-status-waiting-uploading-label = Uploading file\u2026\npdfjs-views-manager-status-warning-cut-label = Couldn\u2019t cut. Refresh page and try again.\npdfjs-views-manager-status-warning-copy-label = Couldn\u2019t copy. Refresh page and try again.\npdfjs-views-manager-status-warning-delete-label = Couldn\u2019t delete. Refresh page and try again.\npdfjs-views-manager-status-warning-save-label = Couldn\u2019t save. Refresh page and try again.\npdfjs-views-manager-status-undo-button-label = Undo\npdfjs-views-manager-status-close-button =\n    .title = Close\npdfjs-views-manager-status-close-button-label = Close";
     return createBundle(lang, text);
   }
 }
@@ -9428,8 +9389,8 @@ class Sidebar {
     this.#isResizerOnTheLeft = isResizerOnTheLeft;
     const style = window.getComputedStyle(sidebar);
     this.#initialWidth = this.#width = parseFloat(style.getPropertyValue("--sidebar-width"));
-    resizer.ariaValueMin = parseFloat(style.getPropertyValue("--sidebar-min-width"));
-    resizer.ariaValueMax = parseFloat(style.getPropertyValue("--sidebar-max-width"));
+    resizer.ariaValueMin = parseFloat(style.getPropertyValue("--sidebar-min-width")) || 0;
+    resizer.ariaValueMax = parseFloat(style.getPropertyValue("--sidebar-max-width")) || Infinity;
     resizer.ariaValueNow = this.#width;
     this.#makeSidebarResizable();
     toggleButton.addEventListener("click", this.toggle.bind(this));
@@ -9482,7 +9443,7 @@ class Sidebar {
         signal
       });
       window.addEventListener("pointermove", ev => {
-        if (!pointerMoveAC) {
+        if (!pointerMoveAC || Math.abs(ev.clientX - this.#prevX) < 1) {
           return;
         }
         stopEvent(ev);
@@ -10330,9 +10291,15 @@ class CommentPopup {
           }
         }
       });
-      this.#editor.comment = null;
-      this.#editor.focus();
+      const editor = this.#editor;
+      const savedData = editor.comment;
       this.destroy();
+      if (savedData?.text) {
+        editor._uiManager.deleteComment(editor, savedData);
+      } else {
+        editor.comment = null;
+      }
+      editor.focus();
     });
     del.addEventListener("contextmenu", noContextMenu);
     buttons.append(edit, del);
@@ -10616,6 +10583,7 @@ class EditorUndoBar {
     stamp: "pdfjs-editor-undo-bar-message-stamp",
     ink: "pdfjs-editor-undo-bar-message-ink",
     signature: "pdfjs-editor-undo-bar-message-signature",
+    comment: "pdfjs-editor-undo-bar-message-comment",
     _multiple: "pdfjs-editor-undo-bar-message-multiple"
   });
   constructor({
@@ -11765,6 +11733,7 @@ class PDFFindController {
     this.#reset();
     eventBus._on("find", this.#onFind.bind(this));
     eventBus._on("findbarclose", this.#onFindBarClose.bind(this));
+    eventBus._on("pagesedited", this.#onPagesEdited.bind(this));
   }
   get highlightMatches() {
     return this._highlightMatches;
@@ -12239,6 +12208,24 @@ class PDFFindController {
     if (this._selected.pageIdx !== -1) {
       this._scrollMatches = true;
       this.#updatePage(this._selected.pageIdx);
+    }
+  }
+  #onPagesEdited({
+    pagesMapper
+  }) {
+    if (this._extractTextPromises.length === 0) {
+      return;
+    }
+    this.#onFindBarClose();
+    this._dirtyMatch = true;
+    const prevTextPromises = this._extractTextPromises;
+    const extractTextPromises = this._extractTextPromises.length = [];
+    for (let i = 0, ii = pagesMapper.length; i < ii; i++) {
+      const prevPageIndex = pagesMapper.getPrevPageNumber(i + 1) - 1;
+      if (prevPageIndex === -1) {
+        continue;
+      }
+      extractTextPromises.push(prevTextPromises[prevPageIndex] || Promise.resolve());
     }
   }
   #onFindBarClose(evt) {
@@ -14581,6 +14568,166 @@ class PdfTextExtractor {
   }
 }
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.find.js
+var es_iterator_find = __webpack_require__(116);
+;// ./web/menu.js
+
+
+
+
+class Menu {
+  #triggeringButton;
+  #menu;
+  #menuItems;
+  #openMenuAC = null;
+  #menuAC = new AbortController();
+  #lastIndex = -1;
+  constructor(menuContainer, triggeringButton, menuItems) {
+    this.#menu = menuContainer;
+    this.#triggeringButton = triggeringButton;
+    if (Array.isArray(menuItems)) {
+      this.#menuItems = menuItems;
+    } else {
+      this.#menuItems = [];
+      for (const button of this.#menu.querySelectorAll("button")) {
+        this.#menuItems.push(button);
+      }
+    }
+    this.#setUpMenu();
+  }
+  #closeMenu() {
+    if (!this.#openMenuAC) {
+      return;
+    }
+    const menu = this.#menu;
+    this.#triggeringButton.ariaExpanded = "false";
+    this.#openMenuAC.abort();
+    this.#openMenuAC = null;
+    if (menu.contains(document.activeElement)) {
+      setTimeout(() => {
+        if (!menu.contains(document.activeElement)) {
+          this.#triggeringButton.focus();
+        }
+      }, 0);
+    }
+    this.#lastIndex = -1;
+  }
+  #setUpMenu() {
+    this.#triggeringButton.addEventListener("click", e => {
+      if (this.#openMenuAC) {
+        this.#closeMenu();
+        return;
+      }
+      const menu = this.#menu;
+      this.#triggeringButton.ariaExpanded = "true";
+      this.#openMenuAC = new AbortController();
+      const signal = AbortSignal.any([this.#menuAC.signal, this.#openMenuAC.signal]);
+      window.addEventListener("pointerdown", ({
+        target
+      }) => {
+        if (target !== this.#triggeringButton && !menu.contains(target)) {
+          this.#closeMenu();
+        }
+      }, {
+        signal
+      });
+      window.addEventListener("blur", this.#closeMenu.bind(this), {
+        signal
+      });
+    });
+    const {
+      signal
+    } = this.#menuAC;
+    this.#menu.addEventListener("keydown", e => {
+      switch (e.key) {
+        case "Escape":
+          this.#closeMenu();
+          stopEvent(e);
+          break;
+        case "ArrowDown":
+        case "Tab":
+          this.#goToNextItem(e.target, true);
+          stopEvent(e);
+          break;
+        case "ArrowUp":
+        case "ShiftTab":
+          this.#goToNextItem(e.target, false);
+          stopEvent(e);
+          break;
+        case "Home":
+          this.#menuItems.find(item => !item.disabled && !item.classList.contains("hidden")).focus();
+          stopEvent(e);
+          break;
+        case "End":
+          this.#menuItems.findLast(item => !item.disabled && !item.classList.contains("hidden")).focus();
+          stopEvent(e);
+          break;
+        default:
+          const char = e.key.toLocaleLowerCase();
+          this.#goToNextItem(e.target, true, item => item.textContent.trim().toLowerCase().startsWith(char));
+          stopEvent(e);
+          break;
+      }
+    }, {
+      signal,
+      capture: true
+    });
+    this.#menu.addEventListener("contextmenu", noContextMenu, {
+      signal
+    });
+    this.#menu.addEventListener("click", this.#closeMenu.bind(this), {
+      signal,
+      capture: true
+    });
+    this.#triggeringButton.addEventListener("keydown", e => {
+      switch (e.key) {
+        case " ":
+        case "Enter":
+        case "ArrowDown":
+        case "Home":
+          if (!this.#openMenuAC) {
+            this.#triggeringButton.click();
+          }
+          this.#menuItems.find(item => !item.disabled && !item.classList.contains("hidden")).focus();
+          stopEvent(e);
+          break;
+        case "ArrowUp":
+        case "End":
+          if (!this.#openMenuAC) {
+            this.#triggeringButton.click();
+          }
+          this.#menuItems.findLast(item => !item.disabled && !item.classList.contains("hidden")).focus();
+          stopEvent(e);
+          break;
+        case "Escape":
+          this.#closeMenu();
+          stopEvent(e);
+          break;
+      }
+    }, {
+      signal
+    });
+  }
+  #goToNextItem(element, forward, check = () => true) {
+    const index = this.#lastIndex === -1 ? this.#menuItems.indexOf(element) : this.#lastIndex;
+    const len = this.#menuItems.length;
+    const increment = forward ? 1 : len - 1;
+    for (let i = (index + increment) % len; i !== index; i = (i + increment) % len) {
+      const menuItem = this.#menuItems[i];
+      if (!menuItem.disabled && !menuItem.classList.contains("hidden") && check(menuItem)) {
+        menuItem.focus();
+        this.#lastIndex = i;
+        break;
+      }
+    }
+  }
+  destroy() {
+    this.#closeMenu();
+    this.#menuAC?.abort();
+    this.#menuAC = null;
+  }
+}
+
 ;// ./web/pdf_thumbnail_view.js
 
 
@@ -14623,10 +14770,11 @@ class PDFThumbnailView {
     renderingQueue,
     maxCanvasPixels,
     maxCanvasDim,
-    pageColors
+    pageColors,
+    enableSplitMerge = false
   }) {
     this.id = id;
-    this.renderingId = "thumbnail" + id;
+    this.renderingId = `thumbnail${id}`;
     this.pageLabel = null;
     this.pdfPage = null;
     this.rotation = 0;
@@ -14642,19 +14790,31 @@ class PDFThumbnailView {
     this.renderTask = null;
     this.renderingState = RenderingStates.INITIAL;
     this.resume = null;
+    this.placeholder = null;
     const imageContainer = this.div = document.createElement("div");
     imageContainer.className = "thumbnail";
-    imageContainer.setAttribute("page-number", this.#pageNumber);
-    const checkbox = this.checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.tabIndex = -1;
+    imageContainer.setAttribute("page-number", id);
+    imageContainer.setAttribute("page-id", id);
+    if (enableSplitMerge) {
+      const checkbox = this.checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.tabIndex = -1;
+      imageContainer.append(checkbox);
+    }
     const image = this.image = document.createElement("img");
     image.classList.add("thumbnailImage", "missingThumbnailImage");
     image.role = "button";
     image.tabIndex = -1;
+    image.draggable = false;
     this.#updateDims();
-    imageContainer.append(checkbox, image);
+    imageContainer.append(image);
     container.append(imageContainer);
+  }
+  updateId(newId) {
+    this.id = newId;
+    this.renderingId = `thumbnail${newId}`;
+    this.div.setAttribute("page-number", newId);
+    this.setPageLabel(this.pageLabel);
   }
   #updateDims() {
     const {
@@ -14884,9 +15044,6 @@ class PDFThumbnailView {
       page: this.pageLabel ?? this.id
     });
   }
-  get #pageNumber() {
-    return this.pageLabel ?? this.id;
-  }
   setPageLabel(label) {
     this.pageLabel = typeof label === "string" ? label : null;
     this.image.setAttribute("data-l10n-args", this.#pageL10nArgs);
@@ -14898,13 +15055,47 @@ class PDFThumbnailView {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const SCROLL_OPTIONS = {
   behavior: "instant",
   block: "nearest",
   inline: "nearest",
   container: "nearest"
 };
+const DRAG_THRESHOLD_IN_PIXELS = 5;
+const PIXELS_TO_SCROLL_WHEN_DRAGGING = 20;
+const SPACE_FOR_DRAG_MARKER_WHEN_NO_NEXT_ELEMENT = 15;
 class PDFThumbnailViewer {
+  static #draggingScaleFactor = 0;
+  #enableSplitMerge = false;
+  #dragAC = null;
+  #draggedContainer = null;
+  #thumbnailsPositions = null;
+  #lastDraggedOverIndex = NaN;
+  #selectedPages = null;
+  #draggedImageX = 0;
+  #draggedImageY = 0;
+  #draggedImageWidth = 0;
+  #draggedImageHeight = 0;
+  #draggedImageOffsetX = 0;
+  #draggedImageOffsetY = 0;
+  #dragMarker = null;
+  #pageNumberToRemove = NaN;
+  #currentScrollBottom = 0;
+  #currentScrollTop = 0;
+  #pagesMapper = PagesMapper.instance;
+  #manageSaveAsButton = null;
   constructor({
     container,
     eventBus,
@@ -14914,7 +15105,9 @@ class PDFThumbnailViewer {
     maxCanvasDim,
     pageColors,
     abortSignal,
-    enableHWA
+    enableHWA,
+    enableSplitMerge,
+    manageMenu
   }) {
     this.scrollableContainer = container.parentElement;
     this.container = container;
@@ -14925,6 +15118,27 @@ class PDFThumbnailViewer {
     this.maxCanvasDim = maxCanvasDim;
     this.pageColors = pageColors || null;
     this.enableHWA = enableHWA || false;
+    this.#enableSplitMerge = enableSplitMerge || false;
+    if (this.#enableSplitMerge && manageMenu) {
+      const {
+        button,
+        menu,
+        copy,
+        cut,
+        delete: del,
+        saveAs
+      } = manageMenu;
+      this._manageMenu = new Menu(menu, button, [copy, cut, del, saveAs]);
+      this.#manageSaveAsButton = saveAs;
+      saveAs.addEventListener("click", () => {
+        this.eventBus.dispatch("savepageseditedpdf", {
+          source: this,
+          data: this.#pagesMapper.getPageMappingForSaving()
+        });
+      });
+    } else {
+      manageMenu.button.hidden = true;
+    }
     this.scroll = watchScroll(this.scrollableContainer, this.#scrollUpdated.bind(this), abortSignal);
     this.#resetView();
     this.#addEventListeners();
@@ -14963,14 +15177,15 @@ class PDFThumbnailViewer {
     } = this.#getVisibleThumbs();
     if (views.length > 0) {
       let shouldScroll = false;
-      if (pageNumber <= first.id || pageNumber >= last.id) {
+      if (pageNumber <= this.#pagesMapper.getPageNumber(first.id) || pageNumber >= this.#pagesMapper.getPageNumber(last.id)) {
         shouldScroll = true;
       } else {
         for (const {
           id,
           percent
         } of views) {
-          if (id !== pageNumber) {
+          const mappedPageNumber = this.#pagesMapper.getPageNumber(id);
+          if (mappedPageNumber !== pageNumber) {
             continue;
           }
           shouldScroll = percent < 100;
@@ -15049,7 +15264,8 @@ class PDFThumbnailViewer {
           maxCanvasPixels: this.maxCanvasPixels,
           maxCanvasDim: this.maxCanvasDim,
           pageColors: this.pageColors,
-          enableHWA: this.enableHWA
+          enableHWA: this.enableHWA,
+          enableSplitMerge: this.#enableSplitMerge
         });
         this._thumbnails.push(thumbnail);
       }
@@ -15117,7 +15333,248 @@ class PDFThumbnailViewer {
     }
     return false;
   }
+  static #getScaleFactor(image) {
+    return PDFThumbnailViewer.#draggingScaleFactor ||= parseFloat(getComputedStyle(image).getPropertyValue("--thumbnail-dragging-scale"));
+  }
+  #updateThumbnails() {
+    const pagesMapper = this.#pagesMapper;
+    this.container.replaceChildren();
+    const prevThumbnails = this._thumbnails;
+    const newThumbnails = this._thumbnails = [];
+    const fragment = document.createDocumentFragment();
+    for (let i = 0, ii = pagesMapper.pagesNumber; i < ii; i++) {
+      const prevPageIndex = pagesMapper.getPrevPageNumber(i + 1) - 1;
+      if (prevPageIndex === -1) {
+        continue;
+      }
+      const newThumbnail = prevThumbnails[prevPageIndex];
+      newThumbnails.push(newThumbnail);
+      newThumbnail.updateId(i + 1);
+      newThumbnail.checkbox.checked = false;
+      fragment.append(newThumbnail.div);
+    }
+    this.container.append(fragment);
+  }
+  #onStartDragging(draggedThumbnail) {
+    this.#currentScrollTop = this.scrollableContainer.scrollTop;
+    this.#currentScrollBottom = this.#currentScrollTop + this.scrollableContainer.clientHeight;
+    this.#dragAC = new AbortController();
+    this.container.classList.add("isDragging");
+    const startPageNumber = parseInt(draggedThumbnail.getAttribute("page-number"), 10);
+    this.#lastDraggedOverIndex = startPageNumber - 1;
+    if (!this.#selectedPages?.has(startPageNumber)) {
+      this.#pageNumberToRemove = startPageNumber;
+      this.#selectPage(startPageNumber, true);
+    }
+    for (const selected of this.#selectedPages) {
+      const thumbnail = this._thumbnails[selected - 1];
+      const placeholder = thumbnail.placeholder = document.createElement("div");
+      placeholder.classList.add("thumbnailImage", "placeholder");
+      const {
+        div,
+        image
+      } = thumbnail;
+      div.classList.add("isDragging");
+      placeholder.style.height = getComputedStyle(image).height;
+      image.after(placeholder);
+      if (selected !== startPageNumber) {
+        image.classList.add("hidden");
+        continue;
+      }
+      if (this.#selectedPages.size === 1) {
+        image.classList.add("draggingThumbnail");
+        this.#draggedContainer = image;
+        continue;
+      }
+      const draggedContainer = this.#draggedContainer = document.createElement("div");
+      draggedContainer.classList.add("draggingThumbnail", "thumbnailImage", "multiple");
+      draggedContainer.style.height = getComputedStyle(image).height;
+      image.replaceWith(draggedContainer);
+      image.classList.remove("thumbnailImage");
+      draggedContainer.append(image);
+      draggedContainer.setAttribute("data-multiple-count", this.#selectedPages.size);
+    }
+  }
+  #onStopDragging(isDropping = false) {
+    const draggedContainer = this.#draggedContainer;
+    this.#draggedContainer = null;
+    const lastDraggedOverIndex = this.#lastDraggedOverIndex;
+    this.#lastDraggedOverIndex = NaN;
+    this.#dragMarker?.remove();
+    this.#dragMarker = null;
+    this.#dragAC.abort();
+    this.#dragAC = null;
+    this.container.classList.remove("isDragging");
+    for (const selected of this.#selectedPages) {
+      const thumbnail = this._thumbnails[selected - 1];
+      const {
+        div,
+        placeholder,
+        image
+      } = thumbnail;
+      placeholder.remove();
+      image.classList.remove("draggingThumbnail", "hidden");
+      div.classList.remove("isDragging");
+    }
+    if (draggedContainer.classList.contains("multiple")) {
+      const originalImage = draggedContainer.firstElementChild;
+      draggedContainer.replaceWith(originalImage);
+      originalImage.classList.add("thumbnailImage");
+    } else {
+      draggedContainer.style.translate = "";
+    }
+    const selectedPages = this.#selectedPages;
+    if (!isNaN(lastDraggedOverIndex) && isDropping && !(selectedPages.size === 1 && (selectedPages.has(lastDraggedOverIndex + 1) || selectedPages.has(lastDraggedOverIndex + 2)))) {
+      const newIndex = lastDraggedOverIndex + 1;
+      const pagesToMove = Array.from(selectedPages).sort((a, b) => a - b);
+      const pagesMapper = this.#pagesMapper;
+      const currentPageId = pagesMapper.getPageId(this._currentPageNumber);
+      const newCurrentPageId = pagesMapper.getPageId(isNaN(this.#pageNumberToRemove) ? pagesToMove[0] : this.#pageNumberToRemove);
+      this.eventBus.dispatch("beforepagesedited", {
+        source: this,
+        pagesMapper
+      });
+      pagesMapper.movePages(selectedPages, pagesToMove, newIndex);
+      this.#updateThumbnails();
+      this._currentPageNumber = pagesMapper.getPageNumber(currentPageId);
+      this.#computeThumbnailsPosition();
+      selectedPages.clear();
+      this.#pageNumberToRemove = NaN;
+      const isIdentity = this.#manageSaveAsButton.disabled = !this.#pagesMapper.hasBeenAltered();
+      if (!isIdentity) {
+        this.eventBus.dispatch("pagesedited", {
+          source: this,
+          pagesMapper,
+          index: newIndex,
+          pagesToMove
+        });
+      }
+      const newCurrentPageNumber = pagesMapper.getPageNumber(newCurrentPageId);
+      setTimeout(() => {
+        this.linkService.goToPage(newCurrentPageNumber);
+      }, 0);
+    }
+    if (!isNaN(this.#pageNumberToRemove)) {
+      this.#selectPage(this.#pageNumberToRemove, false);
+      this.#pageNumberToRemove = NaN;
+    }
+  }
+  #moveDraggedContainer(dx, dy) {
+    this.#draggedImageOffsetX += dx;
+    this.#draggedImageOffsetY += dy;
+    this.#draggedImageX += dx;
+    this.#draggedImageY += dy;
+    this.#draggedContainer.style.translate = `${this.#draggedImageOffsetX}px ${this.#draggedImageOffsetY}px`;
+    if (this.#draggedImageY + this.#draggedImageHeight > this.#currentScrollBottom) {
+      this.scrollableContainer.scrollTop = Math.min(this.scrollableContainer.scrollTop + PIXELS_TO_SCROLL_WHEN_DRAGGING, this.scrollableContainer.scrollHeight);
+    } else if (this.#draggedImageY < this.#currentScrollTop) {
+      this.scrollableContainer.scrollTop = Math.max(this.scrollableContainer.scrollTop - PIXELS_TO_SCROLL_WHEN_DRAGGING, 0);
+    }
+    const positionData = this.#findClosestThumbnail(this.#draggedImageX + this.#draggedImageWidth / 2, this.#draggedImageY + this.#draggedImageHeight / 2);
+    if (!positionData) {
+      return;
+    }
+    let dragMarker = this.#dragMarker;
+    if (!dragMarker) {
+      dragMarker = this.#dragMarker = document.createElement("div");
+      dragMarker.className = "dragMarker";
+      this.container.firstChild.before(dragMarker);
+    }
+    const [index, space] = positionData;
+    const dragMarkerStyle = dragMarker.style;
+    const {
+      bbox,
+      x: xPos
+    } = this.#thumbnailsPositions;
+    let x, y, width, height;
+    if (index < 0) {
+      if (xPos.length === 1) {
+        y = bbox[1] - SPACE_FOR_DRAG_MARKER_WHEN_NO_NEXT_ELEMENT;
+        x = bbox[4];
+        width = bbox[2];
+      } else {
+        y = bbox[1];
+        x = bbox[0] - SPACE_FOR_DRAG_MARKER_WHEN_NO_NEXT_ELEMENT;
+        height = bbox[3];
+      }
+    } else if (xPos.length === 1) {
+      y = bbox[index * 4 + 1] + bbox[index * 4 + 3] + space;
+      x = bbox[index * 4];
+      width = bbox[index * 4 + 2];
+    } else {
+      y = bbox[index * 4 + 1];
+      x = bbox[index * 4] + bbox[index * 4 + 2] + space;
+      height = bbox[index * 4 + 3];
+    }
+    dragMarkerStyle.translate = `${x}px ${y}px`;
+    dragMarkerStyle.width = width ? `${width}px` : "";
+    dragMarkerStyle.height = height ? `${height}px` : "";
+  }
+  #computeThumbnailsPosition() {
+    const positionsX = [];
+    const positionsY = [];
+    const positionsLastX = [];
+    const bbox = new Float32Array(this._thumbnails.length * 4);
+    let prevX = -Infinity;
+    let prevY = -Infinity;
+    let reminder = -1;
+    let firstRightX;
+    let lastRightX;
+    let firstBottomY;
+    for (let i = 0, ii = this._thumbnails.length; i < ii; i++) {
+      const {
+        div
+      } = this._thumbnails[i];
+      const {
+        offsetTop: y,
+        offsetLeft: x,
+        offsetWidth: w,
+        offsetHeight: h
+      } = div;
+      if (w === 0) {
+        return;
+      }
+      bbox[i * 4] = x;
+      bbox[i * 4 + 1] = y;
+      bbox[i * 4 + 2] = w;
+      bbox[i * 4 + 3] = h;
+      if (x > prevX) {
+        prevX = x + w / 2;
+        firstRightX ??= prevX + w;
+        positionsX.push(prevX);
+      }
+      if (reminder > 0 && i >= ii - reminder) {
+        const cx = x + w / 2;
+        positionsLastX.push(cx);
+        lastRightX ??= cx + w;
+      }
+      if (y > prevY) {
+        if (reminder === -1 && positionsX.length > 1) {
+          reminder = ii % positionsX.length;
+        }
+        prevY = y + h / 2;
+        firstBottomY ??= prevY + h;
+        positionsY.push(prevY);
+      }
+    }
+    const space = positionsX.length > 1 ? (positionsX[1] - firstRightX) / 2 : (positionsY[1] - firstBottomY) / 2;
+    this.#thumbnailsPositions = {
+      x: positionsX,
+      y: positionsY,
+      lastX: positionsLastX,
+      space,
+      lastSpace: (positionsLastX.at(-1) - lastRightX) / 2,
+      bbox
+    };
+  }
   #addEventListeners() {
+    this.eventBus.on("resize", ({
+      source
+    }) => {
+      if (source.thumbnailsView === this.container) {
+        this.#computeThumbnailsPosition();
+      }
+    });
     this.container.addEventListener("keydown", e => {
       switch (e.key) {
         case "ArrowLeft":
@@ -15150,7 +15607,146 @@ class PDFThumbnailViewer {
           break;
       }
     });
-    this.container.addEventListener("click", this.#goToPage.bind(this));
+    this.container.addEventListener("click", e => {
+      const {
+        target
+      } = e;
+      if (target instanceof HTMLInputElement) {
+        const pageNumber = parseInt(target.parentElement.getAttribute("page-number"), 10);
+        this.#selectPage(pageNumber, target.checked);
+        return;
+      }
+      this.#goToPage(e);
+    });
+    this.#addDragListeners();
+  }
+  #selectPage(pageNumber, checked) {
+    const set = this.#selectedPages ??= new Set();
+    if (checked) {
+      set.add(pageNumber);
+    } else {
+      set.delete(pageNumber);
+    }
+  }
+  #addDragListeners() {
+    if (!this.#enableSplitMerge) {
+      return;
+    }
+    this.container.addEventListener("pointerdown", e => {
+      const {
+        target: draggedImage,
+        clientX: clickX,
+        clientY: clickY,
+        pointerId: dragPointerId
+      } = e;
+      if (!isNaN(this.#lastDraggedOverIndex) || !draggedImage.classList.contains("thumbnailImage")) {
+        return;
+      }
+      const thumbnail = draggedImage.parentElement;
+      const pointerDownAC = new AbortController();
+      const {
+        signal: pointerDownSignal
+      } = pointerDownAC;
+      let prevDragX = clickX;
+      let prevDragY = clickY;
+      let prevScrollTop = this.scrollableContainer.scrollTop;
+      const scaleFactor = PDFThumbnailViewer.#getScaleFactor(draggedImage);
+      this.#draggedImageOffsetX = ((scaleFactor - 1) * e.layerX + draggedImage.offsetLeft) / scaleFactor;
+      this.#draggedImageOffsetY = ((scaleFactor - 1) * e.layerY + draggedImage.offsetTop) / scaleFactor;
+      this.#draggedImageX = thumbnail.offsetLeft + this.#draggedImageOffsetX;
+      this.#draggedImageY = thumbnail.offsetTop + this.#draggedImageOffsetY;
+      this.#draggedImageWidth = draggedImage.offsetWidth / scaleFactor;
+      this.#draggedImageHeight = draggedImage.offsetHeight / scaleFactor;
+      this.container.addEventListener("pointermove", ev => {
+        const {
+          clientX: x,
+          clientY: y,
+          pointerId
+        } = ev;
+        if (pointerId !== dragPointerId || Math.abs(x - clickX) <= DRAG_THRESHOLD_IN_PIXELS && Math.abs(y - clickY) <= DRAG_THRESHOLD_IN_PIXELS) {
+          return;
+        }
+        if (isNaN(this.#lastDraggedOverIndex)) {
+          this.#onStartDragging(thumbnail);
+          const stopDragging = (_e, isDropping = false) => {
+            this.#onStopDragging(isDropping);
+            pointerDownAC.abort();
+          };
+          const {
+            signal
+          } = this.#dragAC;
+          window.addEventListener("touchmove", stopEvent, {
+            passive: false,
+            signal
+          });
+          window.addEventListener("contextmenu", noContextMenu, {
+            signal
+          });
+          this.scrollableContainer.addEventListener("scrollend", () => {
+            const {
+              scrollableContainer: {
+                clientHeight,
+                scrollTop
+              }
+            } = this;
+            this.#currentScrollTop = scrollTop;
+            this.#currentScrollBottom = scrollTop + clientHeight;
+            const dy = scrollTop - prevScrollTop;
+            prevScrollTop = scrollTop;
+            this.#moveDraggedContainer(0, dy);
+          }, {
+            passive: true,
+            signal
+          });
+          window.addEventListener("pointerup", upEv => {
+            if (upEv.pointerId !== dragPointerId) {
+              return;
+            }
+            window.addEventListener("click", stopEvent, {
+              capture: true,
+              once: true,
+              signal
+            });
+            stopEvent(upEv);
+            stopDragging(upEv, true);
+          }, {
+            signal
+          });
+          window.addEventListener("blur", stopDragging, {
+            signal
+          });
+          window.addEventListener("pointercancel", stopDragging, {
+            signal
+          });
+          window.addEventListener("wheel", stopEvent, {
+            passive: false,
+            signal
+          });
+        }
+        const dx = x - prevDragX;
+        const dy = y - prevDragY;
+        prevDragX = x;
+        prevDragY = y;
+        this.#moveDraggedContainer(dx, dy);
+      }, {
+        passive: true,
+        signal: pointerDownSignal
+      });
+      window.addEventListener("pointerup", ({
+        pointerId
+      }) => {
+        if (pointerId !== dragPointerId) {
+          return;
+        }
+        pointerDownAC.abort();
+      }, {
+        signal: pointerDownSignal
+      });
+      window.addEventListener("dragstart", stopEvent, {
+        capture: true,
+        signal: pointerDownSignal
+      });
+    });
   }
   #goToPage(e) {
     const {
@@ -15200,6 +15796,41 @@ class PDFThumbnailViewer {
     if (nextThumbnail) {
       nextThumbnail.image.focus();
     }
+  }
+  #findClosestThumbnail(x, y) {
+    if (!this.#thumbnailsPositions) {
+      this.#computeThumbnailsPosition();
+    }
+    const {
+      x: positionsX,
+      y: positionsY,
+      lastX: positionsLastX,
+      space: spaceBetweenThumbnails,
+      lastSpace: lastSpaceBetweenThumbnails
+    } = this.#thumbnailsPositions;
+    const lastDraggedOverIndex = this.#lastDraggedOverIndex;
+    let xPos = lastDraggedOverIndex % positionsX.length;
+    let yPos = Math.floor(lastDraggedOverIndex / positionsX.length);
+    let xArray = yPos === positionsY.length - 1 ? positionsLastX : positionsX;
+    if (positionsY[yPos] <= y && y < (positionsY[yPos + 1] ?? Infinity) && xArray[xPos] <= x && x < (xArray[xPos + 1] ?? Infinity)) {
+      return null;
+    }
+    yPos = binarySearchFirstItem(positionsY, cy => y < cy) - 1;
+    xArray = yPos === positionsY.length - 1 && positionsLastX.length > 0 ? positionsLastX : positionsX;
+    xPos = Math.max(0, binarySearchFirstItem(xArray, cx => x < cx) - 1);
+    if (yPos < 0) {
+      if (xPos <= 0) {
+        xPos = -1;
+      }
+      yPos = 0;
+    }
+    const index = MathClamp(yPos * positionsX.length + xPos, -1, this._thumbnails.length - 1);
+    if (index === lastDraggedOverIndex) {
+      return null;
+    }
+    this.#lastDraggedOverIndex = index;
+    const space = yPos === positionsY.length - 1 && positionsLastX.length > 0 && xPos >= 0 ? lastSpaceBetweenThumbnails : spaceBetweenThumbnails;
+    return [index, space];
   }
 }
 
@@ -15624,7 +16255,7 @@ class Autolinker {
   static #regex;
   static #numericTLDRegex;
   static findLinks(text) {
-    this.#regex ??= /\b(?:https?:\/\/|mailto:|www\.)(?:[\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]|\/|[\0-\x08\x0E-\x1F!-Z\\\^-\x9F\xA1-\u167F\u1681-\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u205E\u2060-\u2FFF\u3001-\uFEFE\uFF00-\u{10FFFF}]+[\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}])+|(?=\p{L})[\0-\x08\x0E-\x1F!-'\*-;=\?A-Z\\\^-z\|~-\x9F\xA1-\u0F39\u0F3E-\u167F\u1681-\u169A\u169D-\u1FFF\u200B-\u2019\u201B-\u201D\u201F-\u2027\u202A-\u202E\u2030-\u2044\u2047-\u205E\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2E21\u2E2A-\u2E41\u2E43-\u2E54\u2E5D-\u2FFF\u3001-\u3007\u3012\u3013\u301C\u3020-\uFD3D\uFD40-\uFE16\uFE19-\uFE34\uFE45\uFE46\uFE49-\uFE58\uFE5F-\uFEFE\uFF00-\uFF07\uFF0A-\uFF3A\uFF3C\uFF3E-\uFF5A\uFF5C\uFF5E\uFF61\uFF64-\u{10FFFF}]+@([\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]+(?:\.[\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]+)+)/gmu;
+    this.#regex ??= /\b(?:https?:\/\/|mailto:|www\.)(?:[\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]|\/|[\0-\x08\x0E-\x1F!-Z\\\^-\x9F\xA1-\u167F\u1681-\u1FFF\u200B-\u2027\u202A-\u202E\u2030-\u205E\u2060-\u2FFF\u3001-\uFEFE\uFF00-\u{10FFFF}]+[\0-\x08\x0E-\x1F\$\+0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}])+|(?=\p{L})[\0-\x08\x0E-\x1F!-'\*-;=\?A-Z\\\^-z\|~-\x9F\xA1-\u0F39\u0F3E-\u167F\u1681-\u169A\u169D-\u1FFF\u200B-\u2019\u201B-\u201D\u201F-\u2027\u202A-\u202E\u2030-\u2044\u2047-\u205E\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2E21\u2E2A-\u2E41\u2E43-\u2E54\u2E5D-\u2FFF\u3001-\u3007\u3012\u3013\u301C\u3020-\uFD3D\uFD40-\uFE16\uFE19-\uFE34\uFE45\uFE46\uFE49-\uFE58\uFE5F-\uFEFE\uFF00-\uFF07\uFF0A-\uFF3A\uFF3C\uFF3E-\uFF5A\uFF5C\uFF5E\uFF61\uFF64-\u{10FFFF}]+@([\0-\x08\x0E-\x1F\$\+\x2D0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]+(?:\.[\0-\x08\x0E-\x1F\$\+\x2D0-9=A-Z\^`-z\|~-\x9F\xA2-\xA6\xA8-\xAA\xAC-\xB5\xB8-\xBA\xBC-\xBE\xC0-\u037D\u037F-\u0386\u0388-\u0559\u0560-\u0588\u058B-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7-\u05F2\u05F5-\u0608\u060B\u060E-\u061A\u061C\u0620-\u0669\u066E-\u06D3\u06D5-\u06FF\u070E-\u07F6\u07FA-\u082F\u083F-\u085D\u085F-\u0963\u0966-\u096F\u0971-\u09FC\u09FE-\u0A75\u0A77-\u0AEF\u0AF1-\u0C76\u0C78-\u0C83\u0C85-\u0DF3\u0DF5-\u0E4E\u0E50-\u0E59\u0E5C-\u0F03\u0F13\u0F15-\u0F39\u0F3E-\u0F84\u0F86-\u0FCF\u0FD5-\u0FD8\u0FDB-\u1049\u1050-\u10FA\u10FC-\u135F\u1369-\u13FF\u1401-\u166D\u166F-\u167F\u1681-\u169A\u169D-\u16EA\u16EE-\u1734\u1737-\u17D3\u17D7\u17DB-\u17FF\u180B-\u1943\u1946-\u1A1D\u1A20-\u1A9F\u1AA7\u1AAE-\u1B4D\u1B50-\u1B59\u1B61-\u1B7C\u1B80-\u1BFB\u1C00-\u1C3A\u1C40-\u1C7D\u1C80-\u1CBF\u1CC8-\u1CD2\u1CD4-\u1FFF\u200B-\u200F\u202A-\u202E\u2044\u2052\u2060-\u207C\u207F-\u208C\u208F-\u2307\u230C-\u2328\u232B-\u2767\u2776-\u27C4\u27C7-\u27E5\u27F0-\u2982\u2999-\u29D7\u29DC-\u29FB\u29FE-\u2CF8\u2CFD\u2D00-\u2D6F\u2D71-\u2DFF\u2E2F\u2E50\u2E51\u2E5E-\u2FFF\u3004-\u3007\u3012\u3013\u3020-\u302F\u3031-\u303C\u303E-\u309F\u30A1-\u30FA\u30FC-\uA4FD\uA500-\uA60C\uA610-\uA672\uA674-\uA67D\uA67F-\uA6F1\uA6F8-\uA873\uA878-\uA8CD\uA8D0-\uA8F7\uA8FB\uA8FD-\uA92D\uA930-\uA95E\uA960-\uA9C0\uA9CE-\uA9DD\uA9E0-\uAA5B\uAA60-\uAADD\uAAE0-\uAAEF\uAAF2-\uABEA\uABEC-\uFD3D\uFD40-\uFE0F\uFE1A-\uFE2F\uFE53\uFE62\uFE64-\uFE67\uFE69\uFE6C-\uFEFE\uFF00\uFF04\uFF0B\uFF10-\uFF19\uFF1C-\uFF1E\uFF21-\uFF3A\uFF3E\uFF40-\uFF5A\uFF5C\uFF5E\uFF66-\u{100FF}\u{10103}-\u{1039E}\u{103A0}-\u{103CF}\u{103D1}-\u{1056E}\u{10570}-\u{10856}\u{10858}-\u{1091E}\u{10920}-\u{1093E}\u{10940}-\u{10A4F}\u{10A59}-\u{10A7E}\u{10A80}-\u{10AEF}\u{10AF7}-\u{10B38}\u{10B40}-\u{10B98}\u{10B9D}-\u{10D6D}\u{10D6F}-\u{10EAC}\u{10EAE}-\u{10ECF}\u{10ED1}-\u{10F54}\u{10F5A}-\u{10F85}\u{10F8A}-\u{11046}\u{1104E}-\u{110BA}\u{110BD}\u{110C2}-\u{1113F}\u{11144}-\u{11173}\u{11176}-\u{111C4}\u{111C9}-\u{111CC}\u{111CE}-\u{111DA}\u{111DC}\u{111E0}-\u{11237}\u{1123E}-\u{112A8}\u{112AA}-\u{113D3}\u{113D6}\u{113D9}-\u{1144A}\u{11450}-\u{11459}\u{1145C}\u{1145E}-\u{114C5}\u{114C7}-\u{115C0}\u{115D8}-\u{11640}\u{11644}-\u{1165F}\u{1166D}-\u{116B8}\u{116BA}-\u{1173B}\u{1173F}-\u{1183A}\u{1183C}-\u{11943}\u{11947}-\u{119E1}\u{119E3}-\u{11A3E}\u{11A47}-\u{11A99}\u{11A9D}\u{11AA3}-\u{11AFF}\u{11B0A}-\u{11BE0}\u{11BE2}-\u{11C40}\u{11C46}-\u{11C6F}\u{11C72}-\u{11EF6}\u{11EF9}-\u{11F42}\u{11F50}-\u{11FFE}\u{12000}-\u{1246F}\u{12475}-\u{12FF0}\u{12FF3}-\u{16A6D}\u{16A70}-\u{16AF4}\u{16AF6}-\u{16B36}\u{16B3C}-\u{16B43}\u{16B45}-\u{16D6C}\u{16D70}-\u{16E96}\u{16E9B}-\u{16FE1}\u{16FE3}-\u{1BC9E}\u{1BCA0}-\u{1DA86}\u{1DA8C}-\u{1E5FE}\u{1E600}-\u{1E95D}\u{1E960}-\u{10FFFF}]+)+)/gmu;
     const [normalizedText, diffs] = normalize(text, {
       ignoreDashEOL: true
     });
@@ -15874,18 +16505,13 @@ class BasePDFPageView {
 
 class DrawLayerBuilder {
   #drawLayer = null;
-  constructor(options) {
-    this.pageIndex = options.pageIndex;
-  }
   async render({
     intent = "display"
   }) {
     if (intent !== "display" || this.#drawLayer || this._cancelled) {
       return;
     }
-    this.#drawLayer = new DrawLayer({
-      pageIndex: this.pageIndex
-    });
+    this.#drawLayer = new DrawLayer();
   }
   cancel() {
     this._cancelled = true;
@@ -16124,6 +16750,7 @@ class PDFPageDetailView extends BasePDFPageView {
 
 
 
+
 const PDF_ROLE_TO_HTML_ROLE = {
   Document: null,
   DocumentFragment: null,
@@ -16192,6 +16819,8 @@ class StructTreeLayerBuilder {
   #elementAttributes = new Map();
   #rawDims;
   #elementsToAddToTextLayer = null;
+  #elementsToHideInTextLayer = null;
+  #elementsToStealFromTextLayer = null;
   constructor(pdfPage, rawDims) {
     this.#promise = pdfPage.getStructTree();
     this.#rawDims = rawDims;
@@ -16300,15 +16929,43 @@ class StructTreeLayerBuilder {
     style.top = `${calc}${pageHeight - bbox[3] + pageY}px)`;
     return true;
   }
-  addElementsToTextLayer() {
-    if (!this.#elementsToAddToTextLayer) {
-      return;
+  updateTextLayer() {
+    if (this.#elementsToAddToTextLayer) {
+      for (const [id, img] of this.#elementsToAddToTextLayer) {
+        document.getElementById(id)?.append(img);
+      }
+      this.#elementsToAddToTextLayer.clear();
+      this.#elementsToAddToTextLayer = null;
     }
-    for (const [id, img] of this.#elementsToAddToTextLayer) {
-      document.getElementById(id)?.append(img);
+    if (this.#elementsToHideInTextLayer) {
+      for (const id of this.#elementsToHideInTextLayer) {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.ariaHidden = true;
+        }
+      }
+      this.#elementsToHideInTextLayer.length = 0;
+      this.#elementsToHideInTextLayer = null;
     }
-    this.#elementsToAddToTextLayer.clear();
-    this.#elementsToAddToTextLayer = null;
+    if (this.#elementsToStealFromTextLayer) {
+      for (let i = 0, ii = this.#elementsToStealFromTextLayer.length; i < ii; i += 2) {
+        const element = this.#elementsToStealFromTextLayer[i];
+        const ids = this.#elementsToStealFromTextLayer[i + 1];
+        let textContent = "";
+        for (const id of ids) {
+          const elem = document.getElementById(id);
+          if (elem) {
+            textContent += elem.textContent.trim() || "";
+            elem.ariaHidden = "true";
+          }
+        }
+        if (textContent) {
+          element.textContent = textContent;
+        }
+      }
+      this.#elementsToStealFromTextLayer.length = 0;
+      this.#elementsToStealFromTextLayer = null;
+    }
   }
   #walk(node) {
     if (!node) {
@@ -16321,22 +16978,16 @@ class StructTreeLayerBuilder {
       } = node;
       if (MathMLElements.has(role)) {
         element = document.createElementNS(MathMLNamespace, role);
-        let text = "";
+        const ids = [];
+        (this.#elementsToStealFromTextLayer ||= []).push(element, ids);
         for (const {
           type,
           id
         } of node.children || []) {
-          if (type !== "content" || !id) {
-            continue;
+          if (type === "content" && id) {
+            ids.push(id);
           }
-          const elem = document.getElementById(id);
-          if (!elem) {
-            continue;
-          }
-          text += elem.textContent.trim() || "";
-          elem.ariaHidden = "true";
         }
-        element.textContent = text;
       } else {
         element = document.createElement("span");
       }
@@ -16361,14 +17012,13 @@ class StructTreeLayerBuilder {
             if (!id) {
               continue;
             }
-            const elem = document.getElementById(id);
-            if (elem) {
-              elem.ariaHidden = true;
-            }
+            (this.#elementsToHideInTextLayer ||= []).push(id);
           }
+          delete node.alt;
         }
         if (!node.mathML && node.children.length === 1 && node.children[0].role !== "math") {
           element = document.createElementNS(MathMLNamespace, "math");
+          delete node.alt;
         }
       }
     }
@@ -17123,6 +17773,25 @@ class PDFPageView extends BasePDFPageView {
     }
     setLayerDimensions(div, viewport, true, false);
   }
+  updatePageNumber(newPageNumber) {
+    if (this.id === newPageNumber) {
+      return;
+    }
+    this.id = newPageNumber;
+    this.renderingId = `page${newPageNumber}`;
+    if (this.pdfPage) {
+      this.pdfPage.pageNumber = newPageNumber;
+    }
+    this.setPageLabel(this.pageLabel);
+    const {
+      div
+    } = this;
+    div.setAttribute("data-page-number", newPageNumber);
+    div.setAttribute("data-l10n-args", JSON.stringify({
+      page: newPageNumber
+    }));
+    this._textHighlighter.pageIdx = newPageNumber - 1;
+  }
   setPdfPage(pdfPage) {
     if (this._isStandalone && (this.pageColors?.foreground === "CanvasText" || this.pageColors?.background === "Canvas")) {
       this._container?.style.setProperty("--hcm-highlight-filter", pdfPage.filterFactory.addHighlightHCMFilter("highlight", "CanvasText", "Canvas", "HighlightText", "Highlight"));
@@ -17245,7 +17914,7 @@ class PDFPageView extends BasePDFPageView {
     const treeDom = await this.structTreeLayer?.render();
     if (treeDom) {
       this.l10n.pause();
-      this.structTreeLayer?.addElementsToTextLayer();
+      this.structTreeLayer?.updateTextLayer();
       if (this.canvas && treeDom.parentNode !== this.canvas) {
         this.canvas.append(treeDom);
       }
@@ -17711,9 +18380,7 @@ class PDFPageView extends BasePDFPageView {
       if (!annotationEditorUIManager) {
         return;
       }
-      this.drawLayer ||= new DrawLayerBuilder({
-        pageIndex: this.id
-      });
+      this.drawLayer ||= new DrawLayerBuilder();
       await this.#renderDrawLayer();
       this.drawLayer.setParent(canvasWrapper);
       if (this.annotationLayer || this.#annotationMode === AnnotationMode.DISABLE) {
@@ -17883,8 +18550,9 @@ class PDFViewer {
   #supportsPinchToZoom = true;
   #textLayerMode = TextLayerMode.ENABLE;
   #viewerAlert = null;
+  #pagesMapper = PagesMapper.instance;
   constructor(options) {
-    const viewerVersion = "5.4.530";
+    const viewerVersion = "5.4.624";
     if (version !== viewerVersion) {
       throw new Error(`The API version "${version}" does not match the Viewer version "${viewerVersion}".`);
     }
@@ -18266,6 +18934,7 @@ class PDFViewer {
       this.#annotationEditorUIManager = null;
       this.#annotationEditorMode = AnnotationEditorType.NONE;
       this.#printingAllowed = true;
+      this.#pagesMapper.pagesNumber = 0;
     }
     this.pdfDocument = pdfDocument;
     if (!pdfDocument) {
@@ -18472,6 +19141,44 @@ class PDFViewer {
     }).catch(reason => {
       console.error("Unable to initialize viewer", reason);
       this._pagesCapability.reject(reason);
+    });
+  }
+  async onBeforePagesEdited({
+    pagesMapper
+  }) {
+    await this._pagesCapability.promise;
+    this._currentPageId = pagesMapper.getPageId(this._currentPageNumber);
+  }
+  onPagesEdited({
+    pagesMapper
+  }) {
+    this._currentPageNumber = pagesMapper.getPageNumber(this._currentPageId);
+    const prevPages = this._pages;
+    const newPages = this._pages = [];
+    for (let i = 0, ii = pagesMapper.pagesNumber; i < ii; i++) {
+      const prevPageNumber = pagesMapper.getPrevPageNumber(i + 1) - 1;
+      if (prevPageNumber === -1) {
+        continue;
+      }
+      const page = prevPages[prevPageNumber];
+      newPages[i] = page;
+      page.updatePageNumber(i + 1);
+    }
+    const viewerElement = this._scrollMode === ScrollMode.PAGE ? null : this.viewer;
+    if (viewerElement) {
+      viewerElement.replaceChildren();
+      const fragment = document.createDocumentFragment();
+      for (let i = 0, ii = pagesMapper.pagesNumber; i < ii; i++) {
+        const {
+          div
+        } = newPages[i];
+        div.setAttribute("data-page-number", i + 1);
+        fragment.append(div);
+      }
+      viewerElement.append(fragment);
+    }
+    setTimeout(() => {
+      this.forceRendering();
     });
   }
   setPageLabels(labels) {
@@ -18900,18 +19607,18 @@ class PDFViewer {
     }
     this.renderingQueue.renderHighestPriority(visible);
     const isSimpleLayout = this._spreadMode === SpreadMode.NONE && (this._scrollMode === ScrollMode.PAGE || this._scrollMode === ScrollMode.VERTICAL);
-    const currentId = this._currentPageNumber;
+    const currentPageNumber = this._currentPageNumber;
     let stillFullyVisible = false;
     for (const page of visiblePages) {
       if (page.percent < 100) {
         break;
       }
-      if (page.id === currentId && isSimpleLayout) {
+      if (page.id === currentPageNumber && isSimpleLayout) {
         stillFullyVisible = true;
         break;
       }
     }
-    this._setCurrentPageNumber(stillFullyVisible ? currentId : visiblePages[0].id);
+    this._setCurrentPageNumber(stillFullyVisible ? this._currentPageNumber : visiblePages[0].id);
     this._updateLocation(visible.first);
     this.eventBus.dispatch("updateviewarea", {
       source: this,
@@ -21053,157 +21760,6 @@ class ViewHistory {
   }
 }
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.find.js
-var es_iterator_find = __webpack_require__(116);
-;// ./web/menu.js
-
-
-
-
-class Menu {
-  #triggeringButton;
-  #menu;
-  #menuItems;
-  #openMenuAC = null;
-  #menuAC = new AbortController();
-  #lastIndex = -1;
-  constructor(menuContainer, triggeringButton, menuItems) {
-    this.#menu = menuContainer;
-    this.#triggeringButton = triggeringButton;
-    if (Array.isArray(menuItems)) {
-      this.#menuItems = menuItems;
-    } else {
-      this.#menuItems = [];
-      for (const button of this.#menu.querySelectorAll("button")) {
-        this.#menuItems.push(button);
-      }
-    }
-    this.#setUpMenu();
-  }
-  #closeMenu() {
-    if (!this.#openMenuAC) {
-      return;
-    }
-    const menu = this.#menu;
-    menu.classList.toggle("hidden", true);
-    this.#triggeringButton.ariaExpanded = "false";
-    this.#openMenuAC.abort();
-    this.#openMenuAC = null;
-    if (menu.contains(document.activeElement)) {
-      setTimeout(() => {
-        if (!menu.contains(document.activeElement)) {
-          this.#triggeringButton.focus();
-        }
-      }, 0);
-    }
-    this.#lastIndex = -1;
-  }
-  #setUpMenu() {
-    this.#triggeringButton.addEventListener("click", e => {
-      if (this.#openMenuAC) {
-        this.#closeMenu();
-        return;
-      }
-      const menu = this.#menu;
-      menu.classList.toggle("hidden", false);
-      this.#triggeringButton.ariaExpanded = "true";
-      this.#openMenuAC = new AbortController();
-      const signal = AbortSignal.any([this.#menuAC.signal, this.#openMenuAC.signal]);
-      window.addEventListener("pointerdown", ({
-        target
-      }) => {
-        if (target !== this.#triggeringButton && !menu.contains(target)) {
-          this.#closeMenu();
-        }
-      }, {
-        signal
-      });
-      window.addEventListener("blur", this.#closeMenu.bind(this), {
-        signal
-      });
-    });
-    const {
-      signal
-    } = this.#menuAC;
-    this.#menu.addEventListener("keydown", e => {
-      switch (e.key) {
-        case "Escape":
-          this.#closeMenu();
-          stopEvent(e);
-          break;
-        case "ArrowDown":
-        case "Tab":
-          this.#goToNextItem(e.target, true);
-          stopEvent(e);
-          break;
-        case "ArrowUp":
-        case "ShiftTab":
-          this.#goToNextItem(e.target, false);
-          stopEvent(e);
-          break;
-        case "Home":
-          this.#menuItems.find(item => !item.disabled && !item.classList.contains("hidden")).focus();
-          stopEvent(e);
-          break;
-        case "End":
-          this.#menuItems.findLast(item => !item.disabled && !item.classList.contains("hidden")).focus();
-          stopEvent(e);
-          break;
-      }
-    }, {
-      signal,
-      capture: true
-    });
-    this.#menu.addEventListener("contextmenu", noContextMenu, {
-      signal
-    });
-    this.#menu.addEventListener("click", this.#closeMenu.bind(this), {
-      signal,
-      capture: true
-    });
-    this.#triggeringButton.addEventListener("keydown", ev => {
-      if (!this.#openMenuAC) {
-        return;
-      }
-      switch (ev.key) {
-        case "ArrowDown":
-        case "Home":
-          this.#menuItems.find(item => !item.disabled && !item.classList.contains("hidden")).focus();
-          stopEvent(ev);
-          break;
-        case "ArrowUp":
-        case "End":
-          this.#menuItems.findLast(item => !item.disabled && !item.classList.contains("hidden")).focus();
-          stopEvent(ev);
-          break;
-        case "Escape":
-          this.#closeMenu();
-          stopEvent(ev);
-      }
-    }, {
-      signal
-    });
-  }
-  #goToNextItem(element, forward) {
-    const index = this.#lastIndex === -1 ? this.#menuItems.indexOf(element) : this.#lastIndex;
-    const len = this.#menuItems.length;
-    const increment = forward ? 1 : len - 1;
-    for (let i = (index + increment) % len; i !== index; i = (i + increment) % len) {
-      const menuItem = this.#menuItems[i];
-      if (!menuItem.disabled && !menuItem.classList.contains("hidden")) {
-        menuItem.focus();
-        this.#lastIndex = i;
-        break;
-      }
-    }
-  }
-  destroy() {
-    this.#closeMenu();
-    this.#menuAC?.abort();
-    this.#menuAC = null;
-  }
-}
-
 ;// ./web/views_manager.js
 
 
@@ -21863,7 +22419,9 @@ const PDFViewerApplication = {
         maxCanvasDim,
         pageColors,
         abortSignal,
-        enableHWA
+        enableHWA,
+        enableSplitMerge: AppOptions.get("enableSplitMerge"),
+        manageMenu: appConfig.viewsManager.manageMenu
       });
       renderingQueue.setThumbnailViewer(this.pdfThumbnailViewer);
     }
@@ -22257,12 +22815,7 @@ const PDFViewerApplication = {
       this.passwordPrompt.setUpdateCallback(updateCallback, reason);
       this.passwordPrompt.open();
     };
-    loadingTask.onProgress = ({
-      loaded,
-      total
-    }) => {
-      this.progress(loaded / total);
-    };
+    loadingTask.onProgress = evt => this.progress(evt.percent);
     return loadingTask.promise.then(pdfDocument => {
       this.load(pdfDocument);
     }, reason => {
@@ -22352,8 +22905,7 @@ const PDFViewerApplication = {
     console.error(`${message}\n\n${moreInfoText.join("\n")}`);
     return message;
   },
-  progress(level) {
-    const percent = Math.round(level * 100);
+  progress(percent) {
     if (!this.loadingBar || percent <= this.loadingBar.percent) {
       return;
     }
@@ -22870,6 +23422,9 @@ const PDFViewerApplication = {
     eventBus._on("updatefindcontrolstate", onUpdateFindControlState.bind(this), opts);
     eventBus._on("fileinputchange", onFileInputChange.bind(this), opts);
     eventBus._on("openfile", onOpenFile.bind(this), opts);
+    eventBus._on("pagesedited", this.onPagesEdited.bind(this), opts);
+    eventBus._on("beforepagesedited", this.onBeforePagesEdited.bind(this), opts);
+    eventBus._on("savepageseditedpdf", this.onSavePagesEditedPDF.bind(this), opts);
   },
   bindWindowEvents() {
     if (this._windowAbortController) {
@@ -23011,6 +23566,35 @@ const PDFViewerApplication = {
     this._globalAbortController = null;
     this.findBar?.close();
     await Promise.all([this.l10n?.destroy(), this.close()]);
+  },
+  onBeforePagesEdited(data) {
+    this.pdfViewer.onBeforePagesEdited(data);
+  },
+  onPagesEdited(data) {
+    this.pdfViewer.onPagesEdited(data);
+  },
+  async onSavePagesEditedPDF({
+    data: {
+      includePages,
+      excludePages,
+      pageIndices
+    }
+  }) {
+    if (!this.pdfDocument) {
+      return;
+    }
+    const pageInfo = {
+      document: null,
+      includePages,
+      excludePages,
+      pageIndices
+    };
+    const modifiedPdfBytes = await this.pdfDocument.extractPages([pageInfo]);
+    if (!modifiedPdfBytes) {
+      console.error("Something wrong happened when saving the edited PDF.\nPlease file a bug.");
+      return;
+    }
+    this.downloadManager.download(modifiedPdfBytes, this._downloadUrl, this._docFilename);
   },
   _accumulateTicks(ticks, prop) {
     if (this[prop] > 0 && ticks < 0 || this[prop] < 0 && ticks > 0) {
@@ -23724,7 +24308,15 @@ function getViewerConfiguration() {
       layersView: document.getElementById("layersView"),
       viewsManagerAddFileButton: document.getElementById("viewsManagerAddFileButton"),
       viewsManagerCurrentOutlineButton: document.getElementById("viewsManagerCurrentOutlineButton"),
-      viewsManagerHeaderLabel: document.getElementById("viewsManagerHeaderLabel")
+      viewsManagerHeaderLabel: document.getElementById("viewsManagerHeaderLabel"),
+      manageMenu: {
+        button: document.getElementById("viewsManagerStatusActionButton"),
+        menu: document.getElementById("viewsManagerStatusActionOptions"),
+        copy: document.getElementById("viewsManagerStatusActionCopy"),
+        cut: document.getElementById("viewsManagerStatusActionCut"),
+        delete: document.getElementById("viewsManagerStatusActionDelete"),
+        saveAs: document.getElementById("viewsManagerStatusActionSaveAs")
+      }
     },
     findBar: {
       bar: document.getElementById("findbar"),
