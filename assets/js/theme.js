@@ -28,6 +28,7 @@ let applyTheme = () => {
   setHighlight(theme);
   setGiscusTheme(theme);
   setSearchTheme(theme);
+  setCookieConsentTheme(theme);
   updateCalendarUrl();
 
   // if mermaid is not defined, do nothing
@@ -241,6 +242,18 @@ let setSearchTheme = (theme) => {
     ninjaKeys.classList.add("dark");
   } else {
     ninjaKeys.classList.remove("dark");
+  }
+};
+
+let setCookieConsentTheme = (theme) => {
+  // Sync cookie consent modal with site's theme
+  // The cookie consent library supports dark mode via the cc--darkmode class
+  var htmlElement = document.documentElement;
+
+  if (theme === "dark") {
+    htmlElement.classList.add("cc--darkmode");
+  } else {
+    htmlElement.classList.remove("cc--darkmode");
   }
 };
 

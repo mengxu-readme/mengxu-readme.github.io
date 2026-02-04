@@ -189,20 +189,78 @@
   <!-- Removed Pseudocode -->
 {% endif %}
 
+{% if site.enable_cookie_consent %}
+  <!-- Cookie Consent -->
+  <script
+    defer
+    src="{{ site.third_party_libraries.vanilla-cookieconsent.url.js }}"
+    integrity="{{ site.third_party_libraries.vanilla-cookieconsent.integrity.js }}"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="{{ '/assets/js/cookie-consent-setup.js' | relative_url }}"></script>
+{% endif %}
+
 {% if site.enable_google_analytics %}
   <!-- Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    async
+    src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
+  ></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    defer
+    src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"
+  ></script>
 {% endif %}
 
 {% if site.enable_cronitor_analytics %}
   <!-- Cronitor RUM -->
-  <script async src="https://rum.cronitor.io/script.js"></script>
-  <script defer src="{{ '/assets/js/cronitor-analytics-setup.js' | relative_url }}"></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    async
+    src="https://rum.cronitor.io/script.js"
+  ></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    defer
+    src="{{ '/assets/js/cronitor-analytics-setup.js' | relative_url }}"
+  ></script>
+{% endif %}
+{% if site.enable_microsoft_clarity %}
+  <!-- Microsoft Clarity -->
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    defer
+    src="{{ '/assets/js/clarity-setup.js' | relative_url | bust_file_cache }}"
+  ></script>
+{% endif %}
+{% if site.enable_new_relic_browser %}
+  <!-- New Relic Browser -->
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    defer
+    src="{{ '/assets/js/new-relic-setup.js' | relative_url | bust_file_cache }}"
+  ></script>
 {% endif %}
 {% if site.enable_pirsch_analytics %}
   <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
     defer
     src="https://api.pirsch.io/pa.js"
     id="pianjs"
@@ -210,8 +268,21 @@
   ></script>
 {% endif %}
 {% if site.enable_openpanel_analytics %}
-  <script defer src="{{ '/assets/js/open-panel-analytics-setup.js' | relative_url }}"></script>
-  <script async defer src="https://openpanel.dev/op1.js"></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    defer
+    src="{{ '/assets/js/open-panel-analytics-setup.js' | relative_url }}"
+  ></script>
+  <script
+    {% if site.enable_cookie_consent %}
+      type="text/plain" data-category="analytics"
+    {% endif %}
+    async
+    defer
+    src="https://openpanel.dev/op1.js"
+  ></script>
 {% endif %}
 
 {% if site.enable_progressbar %}
