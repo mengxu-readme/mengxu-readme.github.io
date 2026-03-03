@@ -121,7 +121,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/cv/Meng_Xu_CV.pdf", "_blank");
+          window.open("/%7B%22value%22=%3E%22/assets/pdf/cv/Meng_Xu_CV.pdf%22,%20%22title%22=%3E%22CV%22%7D", "_blank");
         },
       },{
         id: 'social-email',
@@ -135,7 +135,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/mxu", "_blank");
+          window.open("https://www.linkedin.com/in/{"value"=>"mxu", "title"=>"LinkedIn"}", "_blank");
         },
       },{
         id: 'social-rss',
@@ -149,7 +149,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=GXFOOWUAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user={"value"=>"GXFOOWUAAAAJ", "title"=>"Google Scholar"}", "_blank");
         },
       },{
         id: 'social-school',
