@@ -1,0 +1,74 @@
+$code-bg-color: #2c3237 !default;
+$bg-color: #131418 !default;
+$text-color: #ddd !default;
+
+body {
+  background-color: #{$bg-color};
+  color: #{$text-color};
+  font-size: 1rem;
+}
+
+a {
+  color: bisque;
+}
+
+pre {
+  color: #{$text-color};
+  background-color: #{$code-bg-color};
+  border-radius: 6px;
+  padding: 6px 12px;
+
+  pre,
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+code {
+  color: #{$text-color};
+  background-color: #{$code-bg-color};
+  border-radius: 3px;
+  padding: 3px 3px;
+}
+
+.social {
+  text-align: center;
+
+  .contact-icons {
+    font-size: 4rem;
+
+    a {
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      svg {
+        width: 3.5rem;
+        height: 4rem;
+        margin-bottom: 0.5rem;
+
+        image {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+
+      i::before {
+        color: #{$text-color};
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before {
+          color: green;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+url: https://george-gca.github.io # the base hostname & protocol for your site
+baseurl: /jekyll-socials # the subpath of your site, e.g. /blog/. Leave blank for root
+
+# Build settings
+plugins:
+  - jekyll-socials
+
+include: ["_pages"]
+
+exclude:
+  - .gitignore
+
+sass:
+  sourcemap: never
+  style: compressed
+
+# Markdown and syntax highlight
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# -----------------------------------------------------------------------------
+# jekyll-socials settings
+# -----------------------------------------------------------------------------
+
+# using default values from plugin, excluding `enabled` and `verbose`
+animation:
+  enabled: true # enables css animation of individual elements
+  selector: "audio, blockquote, div.card, div.highlighter-rouge, div.news, div.repositories, div.row, div.social, div.tag-category-list, figure, h2, h3, ol, p, tr, ul, video" # selector to select elements in page
+  name: enter
+  duration: 0.6s
+  # `from` and `to` can be either a string or a hash
+  from:
+    opacity: 0
+    transform: translateY(10px)
+  to: "opacity:1;transform:none"
+  delay: 100ms # delay before each consecutive animation starts
+  max_elements: 20 # maximum number of elements to animate (set to -1 to animate all elements)
+  verbose: true
