@@ -57,7 +57,7 @@ RUN mkdir /srv/jekyll
 ADD Gemfile.lock /srv/jekyll
 ADD Gemfile /srv/jekyll
 
-# copy submodules to the image
+# copy modules to the image
 ADD _modules /srv/jekyll/_modules
 
 # set the working directory

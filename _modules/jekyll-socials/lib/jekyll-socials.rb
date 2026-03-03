@@ -190,26 +190,27 @@ module Jekyll
             end
           else
             # Use default icon for built-in social
+            social_value = social[1].is_a?(Hash) && social[1]['value'] ? social[1]['value'] : social[1]
             if social[0] == 'academia_edu'
               url = url_template % [social[1]['organization'], social[1]['username']]
             elsif social[0] == 'cv_pdf'
-              if social[1] =~ %r{://}
-                url = social[1]
+              if social_value =~ %r{://}
+                url = social_value
               elsif !context.registers[:site].respond_to?(:active_lang) || !context.registers[:site].active_lang || context.registers[:site].active_lang.empty?
                 baseurl = context.registers[:site].baseurl.to_s.empty? ? '' : context.registers[:site].baseurl
-                url = baseurl + social[1]
+                url = baseurl + social_value
               else
                 # support for jekyll-polyglot
                 baseurl = context.registers[:site].baseurl.to_s.empty? ? '' : context.registers[:site].baseurl
-                url = baseurl + social[1].gsub('[LANG]', context.registers[:site].active_lang)
+                url = baseurl + social_value.gsub('[LANG]', context.registers[:site].active_lang)
               end
             elsif social[0] == 'rss_icon'
               baseurl = context.registers[:site].baseurl.to_s.empty? ? '' : context.registers[:site].baseurl
               url = url_template % (baseurl + '/feed.xml')
             else
-              url = url_template % social[1]
+              url = url_template % social_value
             end
-            "<a href='#{url}' title='#{social[0].gsub('_', ' ').capitalize}'>#{icon}</a>"
+            "<a href='#{url}' title='#{social[1].is_a?(Hash) && social[1]['title'] ? social[1]['title'] : social[0].gsub('_', ' ').capitalize}' target='_blank'>#{icon}</a>"
           end
         else
           # Check if logo is an icon class or an image
