@@ -192,6 +192,7 @@ exclude:
   - purgecss.config.js
   - README.md
   - requirements.txt
+  - update-subtrees.sh
 keep_files:
   - CNAME
   - .nojekyll
