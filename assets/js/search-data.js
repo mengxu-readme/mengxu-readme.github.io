@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-i-passed-comps-reflections-struggles-and-tips-for-future-students",
+        },{id: "post-the-third-annual-state-of-the-phd-address",
+        
+          title: "The Third Annual State of the PhD Address",
+        
+        description: "Meng Xu&#39;s Third Annual State of the PhD Address",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the_third_annual_state_of_the_phd_address/";
+          
+        },
+      },{id: "post-i-passed-comps-reflections-struggles-and-tips-for-future-students",
         
           title: "I Passed Comps! Reflections, Struggles, and Tips for Future Students",
         
