@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install JS lint deps
+        run: npm ci
+
+      - name: Run prettier lint
+        run: npm run lint:prettier
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+
+      - name: Build and install gem
+        run: |
+          GEMSPEC=$(ls *.gemspec | head -n1)
+          gem build "$GEMSPEC"
+          GEM_NAME=$(ruby -e "spec = Gem::Specification.load('$GEMSPEC'); puts spec.name")
+          GEM_VERSION=$(ruby -e "spec = Gem::Specification.load('$GEMSPEC'); puts spec.version")
+          gem install --no-document "./${GEM_NAME}-${GEM_VERSION}.gem"
+
+      - name: Run tests
+        run: ruby -Ilib:test -e 'Dir["test/**/*_test.rb"].sort.each { |f| require File.expand_path(f) }'
