@@ -1,0 +1,26 @@
+from: 1.0.0
+to: 1.1.0
+contract:
+  api_version: 1
+  style_engine: tailwind
+checks:
+  - id: missing_al_folio_namespace
+    risk: breaking
+    autofix: safe
+    description: Ensure al_folio namespace exists in _config.yml.
+  - id: legacy_bootstrap_runtime_asset
+    risk: breaking
+    autofix: none
+    description: Remove direct Bootstrap/jQuery/MDB includes from core templates.
+  - id: legacy_data_toggle
+    risk: warning
+    autofix: none
+    description: Legacy bootstrap data-toggle markers should move to compat adapters.
+  - id: legacy_jquery_usage
+    risk: warning
+    autofix: none
+    description: Move jQuery snippets to vanilla JavaScript APIs.
+manual_steps:
+  - Review al-folio-upgrade-report.md and resolve all blocking findings.
+  - If your content still uses Bootstrap-marked patterns, enable al_folio.compat.bootstrap.enabled.
+  - Run bundle exec al-folio upgrade apply --safe and review diff.

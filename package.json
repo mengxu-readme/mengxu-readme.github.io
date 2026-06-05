@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build:css": "npm run build:tailwind && npm run build:tailwind:compat",
+    "build:tailwind": "tailwindcss -i ./assets/tailwind/app.css -o ./assets/css/tailwind.css --minify",
+    "build:tailwind:compat": "tailwindcss -i ./assets/tailwind/bootstrap-compat.input.css -o ./assets/css/bootstrap-compat.css --minify",
+    "build:tailwind:watch": "tailwindcss -i ./assets/tailwind/app.css -o ./assets/css/tailwind.css --watch",
+    "lint:prettier": "prettier . --check"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@shopify/prettier-plugin-liquid": "^1.10.2",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^4.1.18"
+  }
+}
