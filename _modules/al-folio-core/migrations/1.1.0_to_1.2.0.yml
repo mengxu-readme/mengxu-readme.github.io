@@ -1,0 +1,17 @@
+from: 1.1.0
+to: 1.2.0
+contract:
+  api_version: 1
+  style_engine: tailwind
+checks:
+  - id: legacy_data_toggle
+    risk: warning
+    autofix: none
+    description: Remaining legacy Bootstrap behavior should be isolated to compat mode.
+  - id: legacy_jquery_usage
+    risk: warning
+    autofix: none
+    description: jQuery usage is deprecated and should be migrated before v1.3.
+manual_steps:
+  - Keep compatibility mode enabled only while migrating legacy pages.
+  - Remove compatibility mode before v1.3 if possible.

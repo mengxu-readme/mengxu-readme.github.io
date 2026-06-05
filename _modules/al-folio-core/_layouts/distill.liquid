@@ -1,0 +1,21 @@
+{% assign distill_feature_enabled = site.al_folio.features.distill.enabled | default: true %}
+
+{% if site.plugins contains 'al_folio_distill' and distill_feature_enabled %}
+  {% al_folio_distill_render %}
+{% else %}
+  <!doctype html>
+  <html lang="{{ site.lang }}">
+    <head>
+      {% include head.liquid %}
+    </head>
+    <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+      {% include header.liquid %}
+      <div class="container mt-5" role="main">
+        <h1>{{ page.title }}</h1>
+        <p>Distill rendering is unavailable. Enable <code>al_folio_distill</code> and set <code>al_folio.features.distill.enabled: true</code>.</p>
+      </div>
+      {% include footer.liquid %}
+      {% include scripts.liquid %}
+    </body>
+  </html>
+{% endif %}

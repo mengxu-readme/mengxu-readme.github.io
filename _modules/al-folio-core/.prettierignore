@@ -1,0 +1,14 @@
+node_modules/
+vendor/
+*.gem
+Gemfile.lock
+package-lock.json
+**/*.map
+**/*.min.css
+**/*.min.js
+assets/**
+lib/assets/**
+_scripts/**
+**/*.liquid.js
+**/*.js.liquid
+_sass/font-awesome/**
