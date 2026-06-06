@@ -9,7 +9,7 @@
   --global-bg-color: #{v.$white-color};
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{darken(v.$grey-color, 20%)};
+  --global-text-color-light: #{color.adjust(v.$grey-color, $lightness: -20%)};
   --global-theme-color: #{v.$purple-color};
   --global-hover-color: #{v.$purple-color};
   --global-hover-text-color: #{v.$white-color};
