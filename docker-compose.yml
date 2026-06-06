@@ -18,7 +18,6 @@ services:
       - 35729:35729
     volumes:
       - .:/srv/jekyll
-      - ./_site:/tmp/_site
     environment:
       - JEKYLL_ENV=development
     healthcheck:
