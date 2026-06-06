@@ -30,7 +30,7 @@ ul.task-list input[type="checkbox"] {
 .caption {
   font-size: 0.875rem;
   margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -46,6 +46,7 @@ ul.task-list input[type="checkbox"] {
 
   .card-title {
     color: var(--global-text-color);
+    font-size: 1.25rem;
   }
 
   .card-body {
@@ -77,6 +78,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Profile
+
+.post .desc {
+  font-style: italic;
+}
 
 .profile {
   width: 100%;
@@ -116,8 +121,6 @@ ul.task-list input[type="checkbox"] {
 // CV
 
 .cv {
-  margin-bottom: 40px;
-
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
@@ -131,6 +134,14 @@ ul.task-list input[type="checkbox"] {
         background-color: var(--global-theme-color) !important;
       }
     }
+  }
+
+  .inline-img {
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.95rem;
+    padding: 0;
+    vertical-align: baseline;
   }
 }
 
@@ -150,6 +161,7 @@ ul.task-list input[type="checkbox"] {
 .projects {
   a {
     text-decoration: none;
+    text-align: center;
 
     &:hover {
       .card-title {
@@ -171,16 +183,16 @@ ul.task-list input[type="checkbox"] {
   .grid-sizer,
   .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   h2.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.25rem;
     text-align: right;
+    font-size: 1.75rem;
   }
 }
 

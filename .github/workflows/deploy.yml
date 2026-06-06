@@ -6,21 +6,25 @@ on:
       - master
       - main
     paths-ignore:
-      - ".devcontainer/devcontainer.json"
+      - ".devcontainer/**"
       - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links-site.yml"
       - ".github/workflows/broken-links.yml"
+      - ".github/workflows/check-external-links.yml"
       - ".github/workflows/codeql.yml"
       - ".github/workflows/license-year.yml"
       - ".github/workflows/lighthouse-badger.yml"
       - ".github/workflows/prettier-html.yml"
       - ".github/workflows/prettier.yml"
       - ".github/workflows/schedule-posts.txt"
-      - "bin/entry_point.sh"
+      - ".github/workflows/update-citations.yml"
+      - "bin/**"
       - "lighthouse_results/**"
       - ".dockerignore"
       - ".git-blame-ignore-revs"
       - .gitattributes
       - .gitignore
+      - .lycheeignore
       - ".pre-commit-config.yaml"
       - ".prettierignore"
       - ".prettierrc"
@@ -28,26 +32,31 @@ on:
       - "Dockerfile"
       - "LICENSE"
       - "README.md"
+      - "update-subtree.sh"
   pull_request:
     branches:
       - master
       - main
     paths-ignore:
-      - ".devcontainer/devcontainer.json"
+      - ".devcontainer/**"
       - ".github/workflows/axe.yml"
+      - ".github/workflows/broken-links-site.yml"
       - ".github/workflows/broken-links.yml"
+      - ".github/workflows/check-external-links.yml"
       - ".github/workflows/codeql.yml"
       - ".github/workflows/license-year.yml"
       - ".github/workflows/lighthouse-badger.yml"
       - ".github/workflows/prettier-html.yml"
       - ".github/workflows/prettier.yml"
       - ".github/workflows/schedule-posts.txt"
-      - "bin/entry_point.sh"
+      - ".github/workflows/update-citations.yml"
+      - "bin/**"
       - "lighthouse_results/**"
       - ".dockerignore"
       - ".git-blame-ignore-revs"
       - .gitattributes
       - .gitignore
+      - .lycheeignore
       - ".pre-commit-config.yaml"
       - ".prettierignore"
       - ".prettierrc"
@@ -55,6 +64,7 @@ on:
       - "Dockerfile"
       - "LICENSE"
       - "README.md"
+      - "update-subtree.sh"
   schedule:
     - cron: "0 8 1 1 *"
   workflow_dispatch:
@@ -79,6 +89,13 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+      - name: Setup Node 🧰
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - name: Install JS deps 📦
+        run: npm ci
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

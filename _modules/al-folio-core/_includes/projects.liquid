@@ -9,11 +9,11 @@
           sizes = "250px"
           alt="project thumbnail"
           class="card-img-top"
+          cache_bust=true
         %}
       {% endif %}
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon">

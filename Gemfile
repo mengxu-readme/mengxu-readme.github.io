@@ -31,11 +31,30 @@ end
 # Gems for development or external data fetching (outside :jekyll_plugins)
 group :other_plugins do
     gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin
     # gem 'terser'         # used by jekyll-terser
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
+end
+
+# Gems for al-folio plugins
+group :al_folio_plugins do
+    gem 'al_folio_core', path: '_modules/al-folio-core'
+    gem 'al_icons', '= 1.0.0'
+    gem 'al_folio_cv', '= 1.0.0'
+    gem 'al_folio_distill', '= 1.0.2'
+    gem 'al_folio_upgrade', '= 1.0.3'
+    gem 'al_folio_bootstrap_compat', '= 1.0.0'
+    gem 'al_cookie', '= 1.0.0'
+
+    gem 'al_analytics', path: '_modules/al-analytics'
+    gem 'al_citations', '= 1.0.1'
+    gem 'al_ext_posts', '= 1.0.1'
+    gem 'al_img_tools', '= 1.0.2'
+    gem 'al_search', path: '_modules/al-search'
+    gem 'al_charts', '= 1.0.1'
+    gem 'al_math', '= 1.0.1'
+    gem 'al_comments', '= 1.0.0'
+    gem 'al_newsletter', '= 1.0.0'
 end

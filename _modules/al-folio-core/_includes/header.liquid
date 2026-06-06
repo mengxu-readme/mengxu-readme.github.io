@@ -4,21 +4,10 @@
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
-            {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
-            {% endif %}
-          {% else %}
-            {{- site.title -}}
-          {% endif %}
+          <span class="font-weight-bold">
+            {{- site.first_name -}}</span
+          >&nbsp;
+          {{- site.last_name -}}
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
@@ -98,7 +87,8 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                {% assign page_url_prefix = page.url | slice: 0, parent_link.size %}
+                <li class="nav-item {% if page_url_prefix == parent_link %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -120,14 +110,14 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" type="button" title="Search" aria-label="Open search">
-                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+                <span class="nav-link" style="visibility: hidden;">Ctrl K <i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
-              <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+              <button id="light-toggle" type="button" title="Change Theme" aria-label="Change color theme" style="padding-bottom: 1.5px;">
                 <i class="fa-half-sun-moon" id="light-toggle-system"></i>
                 <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
                 <i class="fa-solid fa-sun" id="light-toggle-light"></i>

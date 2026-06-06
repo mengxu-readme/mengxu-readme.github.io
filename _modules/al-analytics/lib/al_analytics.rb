@@ -1,6 +1,29 @@
 require "jekyll"
 
 module AlAnalytics
+  PLUGIN_NAME = 'al_analytics'
+  ASSETS_DIR = 'assets'
+  JS_DIR = 'js'
+
+  class PluginStaticFile < Jekyll::StaticFile; end
+
+  class AssetsGenerator < Jekyll::Generator
+    safe true
+    priority :low
+
+    def generate(site)
+      plugin_lib_path = File.expand_path('.', __dir__)
+      asset_root = File.join(plugin_lib_path, ASSETS_DIR, PLUGIN_NAME, JS_DIR)
+      Dir.glob(File.join(asset_root, '**', '*')).each do |source_path|
+        next if File.directory?(source_path)
+
+        relative_dir = File.dirname(source_path).sub("#{plugin_lib_path}/", '')
+        file_name = File.basename(source_path)
+        site.static_files << PluginStaticFile.new(site, plugin_lib_path, relative_dir, file_name)
+      end
+    end
+  end
+
   class AnalyticsTag < Liquid::Tag
     def render(context)
       site = context.registers[:site]
@@ -68,6 +91,23 @@ module AlAnalytics
         HTML
       end
 
+      site = context.registers[:site]
+      baseurl = site.config['baseurl'] || ''
+
+      if enabled?(site, "enable_microsoft_clarity")
+        output << <<~HTML
+          <!-- Microsoft Clarity -->
+          <script#{cookie_attrs} async defer src="#{baseurl}/assets/al_analytics/js/clarity-setup.js"></script>
+        HTML
+      end
+
+      if enabled?(site, "enable_new_relic_browser")
+        output << <<~HTML
+          <!-- New Relic Browser -->
+          <script#{cookie_attrs} async defer src="#{baseurl}/assets/al_analytics/js/new-relic-setup.js"></script>
+        HTML
+      end
+
       output.join("\n")
     end
 
@@ -87,13 +127,17 @@ module AlAnalytics
       legacy_config[legacy_key]
     end
 
-    def enabled?(site, flag_key, value)
-      return false if value_blank?(value)
+    def enabled?(site, flag_key, value = nil)
+      if value.nil?
+        !!site.config[flag_key]
+      else
+        return false if value_blank?(value)
 
-      flag = site.config[flag_key]
-      return true if flag.nil?
+        flag = site.config[flag_key]
+        return true if flag.nil?
 
-      !!flag
+        !!flag
+      end
     end
 
     def value_blank?(value)

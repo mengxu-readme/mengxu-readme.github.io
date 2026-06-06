@@ -3,7 +3,54 @@ layout: default
 ---
 {% assign cv_feature_enabled = site.al_folio.features.cv.enabled | default: true %}
 
-{% if site.plugins contains 'al_folio_cv' and cv_feature_enabled %}
+{% if page.cv_pdf %}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h2>
+        Click
+        <a
+          {% if page.cv_pdf contains '://' %}
+            href="{{ page.cv_pdf }}"
+          {% else %}
+            href="{{ page.cv_pdf | relative_url }}"
+          {% endif %}
+          aria-label="CV"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-size: 1.6rem;"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+        to View or Download a Copy
+      </h2>
+  </header>
+  <article>
+    <div class="cv">
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          max-width: {{ site.max_width }};
+          margin: 1rem auto 0 auto;
+          aspect-ratio: 8.5/11;
+          border-radius: 10px;
+          overflow: hidden;
+        "
+      >
+        <iframe
+          src="{{ '/assets/js/pdfjs/web/viewer.html' | relative_url }}?file={% if page.cv_pdf contains '://' %}{{ page.cv_pdf | url_encode }}{% else %}{{ page.cv_pdf | relative_url | url_encode }}{% endif %}"
+          title="Embedded CV PDF"
+          aria-label="Embedded CV PDF"
+          allowfullscreen
+          loading="lazy"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px;"
+        ></iframe>
+      </div>
+    </div>
+  </article>
+</div>
+{% elsif site.plugins contains 'al_folio_cv' and cv_feature_enabled %}
   {% al_folio_cv_render %}
 {% else %}
   <div class="post">

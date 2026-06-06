@@ -4,6 +4,10 @@
 
 @use "variables" as v;
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);

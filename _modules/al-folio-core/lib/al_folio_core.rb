@@ -212,6 +212,17 @@ module AlFolioCore
     vendored_bundle_prefix = File.join(expanded_site_source, "vendor", "bundle") + File::SEPARATOR
     return false if expanded_asset_path.start_with?(vendored_bundle_prefix)
 
+    # Subtree-pinned gems live under `<site>/_modules/**`.
+    # Treat those as external runtime assets, not local source overrides.
+    modules_prefix = File.join(expanded_site_source, "_modules") + File::SEPARATOR
+    return false if expanded_asset_path.start_with?(modules_prefix)
+
+    # Third-party library files live under `<site>/assets/libs/**`.
+    # They are already production-ready bundles; re-minifying changes their hash
+    # and breaks Subresource Integrity checks.
+    libs_prefix = File.join(expanded_site_source, "assets", "libs") + File::SEPARATOR
+    return false if expanded_asset_path.start_with?(libs_prefix)
+    
     true
   end
 

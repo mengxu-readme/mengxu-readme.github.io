@@ -130,7 +130,7 @@ ninja.data = [
           {%- capture social_url %}"https://discord.com/users/{{ social[1] }}"{% endcapture -%}
         {%- when "email" -%}
           {%- assign social_id = "social-email" -%}
-          {%- assign social_title = "email" -%}
+          {%- assign social_title = "Email" -%}
           {%- capture social_url %}"mailto:{{ social[1] | encode_email }}"{% endcapture -%}
         {%- when "facebook_id" -%}
           {%- assign social_id = "social-facebook" -%}
@@ -187,7 +187,7 @@ ninja.data = [
         {%- when "linkedin_username" -%}
           {%- assign social_id = "social-linkedin" -%}
           {%- assign social_title = "LinkedIn" -%}
-          {%- capture social_url %}"https://www.linkedin.com/in/{{ social[1] }}"{% endcapture -%}
+          {%- capture social_url %}"https://www.linkedin.com/in/{{ social[1].value }}"{% endcapture -%}
         {%- when "mastodon_username" -%}
           {%- assign social_id = "social-mastodon" -%}
           {%- assign social_title = "Mastodon" -%}
@@ -227,7 +227,7 @@ ninja.data = [
         {%- when "scholar_userid" -%}
           {%- assign social_id = "social-scholar" -%}
           {%- assign social_title = "Google Scholar" -%}
-          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
+          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1].value }}"{% endcapture -%}
         {%- when "scopus_id" -%}
           {%- assign social_id = "social-scopus" -%}
           {%- assign social_title = "Scopus" -%}
@@ -309,7 +309,7 @@ ninja.data = [
   {%- if site.enable_darkmode -%}
     {
       id: 'light-theme',
-      title: 'Change theme to light',
+      title: 'Change Theme to Light',
       description: 'Change the theme of the site to Light',
       section: 'Theme',
       handler: () => {
@@ -318,7 +318,7 @@ ninja.data = [
     },
     {
       id: 'dark-theme',
-      title: 'Change theme to dark',
+      title: 'Change Theme to Dark',
       description: 'Change the theme of the site to Dark',
       section: 'Theme',
       handler: () => {
@@ -327,7 +327,7 @@ ninja.data = [
     },
     {
       id: 'system-theme',
-      title: 'Use system default theme',
+      title: 'Use System Default Theme',
       description: 'Change the theme of the site to System Default',
       section: 'Theme',
       handler: () => {

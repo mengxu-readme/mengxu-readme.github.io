@@ -2,14 +2,10 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
+  <header>
+    <h1>
+      <span class="font-weight-bold scan">{{ site.first_name }}</span> {{ site.last_name }}
+      <img src="{{ '/assets/img/about/icon.svg' | relative_url | bust_file_cache }}" title="Website Icon" alt="Website Icon">
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
@@ -25,10 +21,10 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt="My Profile Picture"
             cache_bust=true
           %}
         {% endif %}
@@ -42,26 +38,32 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <div style="margin-top: 1rem;">
+        <h2>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      </div>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <div style="margin-top: 1rem;">
+        <h2>
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      </div>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <div style="margin-top: 1rem;">
+        <h2>
+          <a href="{{ '/research/' | relative_url }}" style="color: inherit">Selected Research</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      </div>
     {% endif %}
 
     <!-- Social -->
