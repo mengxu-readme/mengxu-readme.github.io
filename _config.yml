@@ -202,7 +202,6 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
-  - al-folio-upgrade-report.md
   - bin/
   - lighthouse_results/
   - docker-compose.yml
