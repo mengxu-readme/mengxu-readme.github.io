@@ -2,9 +2,7 @@ name: update-citations
 
 on:
   schedule:
-    - cron: "0 0 * * 1" # Monday
-    - cron: "0 0 * * 3" # Wednesday
-    - cron: "0 0 * * 5" # Friday
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
