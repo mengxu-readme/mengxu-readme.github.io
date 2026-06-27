@@ -21,8 +21,8 @@
  */
 
 /**
- * pdfjsVersion = 6.0.227
- * pdfjsBuild = 241dbabbf
+ * pdfjsVersion = 6.1.200
+ * pdfjsBuild = 6353acefe
  */
 /******/ var __webpack_modules__ = ({
 
@@ -288,61 +288,6 @@ var $TypeError = TypeError;
 module.exports = function (it) {
   if (isDetached(it)) throw new $TypeError('ArrayBuffer is detached');
   return it;
-};
-
-
-/***/ },
-
-/***/ 5636
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var globalThis = __webpack_require__(4576);
-var uncurryThis = __webpack_require__(9504);
-var uncurryThisAccessor = __webpack_require__(6706);
-var toIndex = __webpack_require__(7696);
-var notDetached = __webpack_require__(5169);
-var arrayBufferByteLength = __webpack_require__(7394);
-var detachTransferable = __webpack_require__(4483);
-var PROPER_STRUCTURED_CLONE_TRANSFER = __webpack_require__(1548);
-
-var structuredClone = globalThis.structuredClone;
-var ArrayBuffer = globalThis.ArrayBuffer;
-var DataView = globalThis.DataView;
-var max = Math.max;
-var min = Math.min;
-var ArrayBufferPrototype = ArrayBuffer.prototype;
-var DataViewPrototype = DataView.prototype;
-var slice = uncurryThis(ArrayBufferPrototype.slice);
-var isResizable = uncurryThisAccessor(ArrayBufferPrototype, 'resizable', 'get');
-var maxByteLength = uncurryThisAccessor(ArrayBufferPrototype, 'maxByteLength', 'get');
-var getInt8 = uncurryThis(DataViewPrototype.getInt8);
-var setInt8 = uncurryThis(DataViewPrototype.setInt8);
-
-module.exports = (PROPER_STRUCTURED_CLONE_TRANSFER || detachTransferable) && function (arrayBuffer, newLength, preserveResizability) {
-  var byteLength = arrayBufferByteLength(arrayBuffer);
-  var newByteLength = newLength === undefined ? byteLength : toIndex(newLength);
-  var fixedLength = !isResizable || !isResizable(arrayBuffer);
-  var newBuffer;
-  notDetached(arrayBuffer);
-  if (PROPER_STRUCTURED_CLONE_TRANSFER) {
-    arrayBuffer = structuredClone(arrayBuffer, { transfer: [arrayBuffer] });
-    if (byteLength === newByteLength && (preserveResizability || fixedLength)) return arrayBuffer;
-  }
-  if (byteLength >= newByteLength && (!preserveResizability || fixedLength)) {
-    newBuffer = slice(arrayBuffer, 0, newByteLength);
-  } else {
-    var options = preserveResizability && !fixedLength && maxByteLength
-      ? { maxByteLength: max(newByteLength, maxByteLength(arrayBuffer)) }
-      : undefined;
-    newBuffer = new ArrayBuffer(newByteLength, options);
-    var a = new DataView(arrayBuffer);
-    var b = new DataView(newBuffer);
-    var copyLength = min(newByteLength, byteLength);
-    for (var i = 0; i < copyLength; i++) setInt8(b, i, getInt8(a, i));
-  }
-  if (!PROPER_STRUCTURED_CLONE_TRANSFER) detachTransferable(arrayBuffer);
-  return newBuffer;
 };
 
 
@@ -952,50 +897,6 @@ module.exports = !fails(function () {
 
 /***/ },
 
-/***/ 4483
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var globalThis = __webpack_require__(4576);
-var getBuiltInNodeModule = __webpack_require__(9429);
-var PROPER_STRUCTURED_CLONE_TRANSFER = __webpack_require__(1548);
-
-var structuredClone = globalThis.structuredClone;
-var $ArrayBuffer = globalThis.ArrayBuffer;
-var $MessageChannel = globalThis.MessageChannel;
-var detach = false;
-var WorkerThreads, channel, buffer, $detach;
-
-if (PROPER_STRUCTURED_CLONE_TRANSFER) {
-  detach = function (transferable) {
-    structuredClone(transferable, { transfer: [transferable] });
-  };
-} else if ($ArrayBuffer) try {
-  if (!$MessageChannel) {
-    WorkerThreads = getBuiltInNodeModule('worker_threads');
-    if (WorkerThreads) $MessageChannel = WorkerThreads.MessageChannel;
-  }
-
-  if ($MessageChannel) {
-    channel = new $MessageChannel();
-    buffer = new $ArrayBuffer(2);
-
-    $detach = function (transferable) {
-      channel.port1.postMessage(null, [transferable]);
-    };
-
-    if (buffer.byteLength === 2) {
-      $detach(buffer);
-      if (buffer.byteLength === 0) detach = $detach;
-    }
-  }
-} catch (error) { /* empty */ }
-
-module.exports = detach;
-
-
-/***/ },
-
 /***/ 4055
 (module, __unused_webpack_exports, __webpack_require__) {
 
@@ -1082,17 +983,6 @@ module.exports = [
 
 /***/ },
 
-/***/ 6193
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var ENVIRONMENT = __webpack_require__(4215);
-
-module.exports = ENVIRONMENT === 'NODE';
-
-
-/***/ },
-
 /***/ 2839
 (module, __unused_webpack_exports, __webpack_require__) {
 
@@ -1142,35 +1032,7 @@ module.exports = version;
 
 /***/ },
 
-/***/ 4215
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-/* global Bun, Deno -- detection */
-var globalThis = __webpack_require__(4576);
-var userAgent = __webpack_require__(2839);
-var classof = __webpack_require__(2195);
-
-var userAgentStartsWith = function (string) {
-  return userAgent.slice(0, string.length) === string;
-};
-
-module.exports = (function () {
-  if (userAgentStartsWith('Bun/')) return 'BUN';
-  if (userAgentStartsWith('Cloudflare-Workers')) return 'CLOUDFLARE';
-  if (userAgentStartsWith('Deno/')) return 'DENO';
-  if (userAgentStartsWith('Node.js/')) return 'NODE';
-  if (globalThis.Bun && typeof Bun.version == 'string') return 'BUN';
-  if (globalThis.Deno && typeof Deno.version == 'object') return 'DENO';
-  if (classof(globalThis.process) === 'process') return 'NODE';
-  if (globalThis.window && globalThis.document) return 'BROWSER';
-  return 'REST';
-})();
-
-
-/***/ },
-
-/***/ 8574
+/***/ 6193
 (module, __unused_webpack_exports, __webpack_require__) {
 
 
@@ -1429,28 +1291,6 @@ module.exports = function (options) {
   var alphabet = options && options.alphabet;
   if (alphabet === undefined || alphabet === 'base64' || alphabet === 'base64url') return alphabet || 'base64';
   throw new $TypeError('Incorrect `alphabet` option');
-};
-
-
-/***/ },
-
-/***/ 9429
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var globalThis = __webpack_require__(4576);
-var IS_NODE = __webpack_require__(6193);
-
-module.exports = function (name) {
-  if (IS_NODE) {
-    try {
-      return globalThis.process.getBuiltinModule(name);
-    } catch (error) { /* empty */ }
-    try {
-      // eslint-disable-next-line no-new-func -- safe
-      return Function('return require("' + name + '")')();
-    } catch (error) { /* empty */ }
-  }
 };
 
 
@@ -3529,29 +3369,6 @@ module.exports = function (key, value) {
 
 /***/ },
 
-/***/ 1548
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var globalThis = __webpack_require__(4576);
-var fails = __webpack_require__(9039);
-var V8 = __webpack_require__(9519);
-var ENVIRONMENT = __webpack_require__(4215);
-
-var structuredClone = globalThis.structuredClone;
-
-module.exports = !!structuredClone && !fails(function () {
-  // prevent V8 ArrayBufferDetaching protector cell invalidation and performance degradation
-  // https://github.com/zloirock/core-js/issues/679
-  if ((ENVIRONMENT === 'DENO' && V8 > 92) || (ENVIRONMENT === 'NODE' && V8 > 94) || (ENVIRONMENT === 'BROWSER' && V8 > 97)) return false;
-  var buffer = new ArrayBuffer(8);
-  var clone = structuredClone(buffer, { transfer: [buffer] });
-  return buffer.byteLength !== 0 || clone.byteLength !== 8;
-});
-
-
-/***/ },
-
 /***/ 4495
 (module, __unused_webpack_exports, __webpack_require__) {
 
@@ -3613,28 +3430,6 @@ module.exports = function (argument) {
   if (typeof prim == 'number') throw new $TypeError("Can't convert number to bigint");
   // eslint-disable-next-line es/no-bigint -- safe
   return BigInt(prim);
-};
-
-
-/***/ },
-
-/***/ 7696
-(module, __unused_webpack_exports, __webpack_require__) {
-
-
-var toIntegerOrInfinity = __webpack_require__(1291);
-var toLength = __webpack_require__(8014);
-
-var $RangeError = RangeError;
-
-// `ToIndex` abstract operation
-// https://tc39.es/ecma262/#sec-toindex
-module.exports = function (it) {
-  if (it === undefined) return 0;
-  var number = toIntegerOrInfinity(it);
-  var length = toLength(number);
-  if (number !== length) throw new $RangeError('Wrong length or index');
-  return length;
 };
 
 
@@ -4191,66 +3986,6 @@ module.exports = function (name) {
       : createWellKnownSymbol('Symbol.' + name);
   } return WellKnownSymbolsStore[name];
 };
-
-
-/***/ },
-
-/***/ 6573
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var DESCRIPTORS = __webpack_require__(3724);
-var defineBuiltInAccessor = __webpack_require__(2106);
-var isDetached = __webpack_require__(3238);
-
-var ArrayBufferPrototype = ArrayBuffer.prototype;
-
-// `ArrayBuffer.prototype.detached` getter
-// https://tc39.es/ecma262/#sec-get-arraybuffer.prototype.detached
-if (DESCRIPTORS && !('detached' in ArrayBufferPrototype)) {
-  defineBuiltInAccessor(ArrayBufferPrototype, 'detached', {
-    configurable: true,
-    get: function detached() {
-      return isDetached(this);
-    }
-  });
-}
-
-
-/***/ },
-
-/***/ 7936
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var $ = __webpack_require__(6518);
-var $transfer = __webpack_require__(5636);
-
-// `ArrayBuffer.prototype.transferToFixedLength` method
-// https://tc39.es/ecma262/#sec-arraybuffer.prototype.transfertofixedlength
-if ($transfer) $({ target: 'ArrayBuffer', proto: true }, {
-  transferToFixedLength: function transferToFixedLength() {
-    return $transfer(this, arguments.length ? arguments[0] : undefined, false);
-  }
-});
-
-
-/***/ },
-
-/***/ 8100
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var $ = __webpack_require__(6518);
-var $transfer = __webpack_require__(5636);
-
-// `ArrayBuffer.prototype.transfer` method
-// https://tc39.es/ecma262/#sec-arraybuffer.prototype.transfer
-if ($transfer) $({ target: 'ArrayBuffer', proto: true }, {
-  transfer: function transfer() {
-    return $transfer(this, arguments.length ? arguments[0] : undefined, true);
-  }
-});
 
 
 /***/ },
@@ -6101,7 +5836,7 @@ var anInstance = __webpack_require__(679);
 var inheritIfRequired = __webpack_require__(3167);
 var normalizeStringArgument = __webpack_require__(2603);
 var DOMExceptionConstants = __webpack_require__(5002);
-var clearErrorStack = __webpack_require__(8574);
+var clearErrorStack = __webpack_require__(6193);
 var DESCRIPTORS = __webpack_require__(3724);
 var IS_PURE = __webpack_require__(6395);
 
@@ -6157,122 +5892,6 @@ if (PolyfilledDOMExceptionPrototype.constructor !== PolyfilledDOMException) {
       defineProperty(PolyfilledDOMException, constantName, createPropertyDescriptor(6, constant.c));
     }
   }
-}
-
-
-/***/ },
-
-/***/ 4603
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var defineBuiltIn = __webpack_require__(6840);
-var uncurryThis = __webpack_require__(9504);
-var toString = __webpack_require__(655);
-var validateArgumentsLength = __webpack_require__(2812);
-
-var $URLSearchParams = URLSearchParams;
-var URLSearchParamsPrototype = $URLSearchParams.prototype;
-var append = uncurryThis(URLSearchParamsPrototype.append);
-var $delete = uncurryThis(URLSearchParamsPrototype['delete']);
-var forEach = uncurryThis(URLSearchParamsPrototype.forEach);
-var push = uncurryThis([].push);
-var params = new $URLSearchParams('a=1&a=2&b=3');
-
-params['delete']('a', 1);
-// `undefined` case is a Chromium 117 bug
-// https://bugs.chromium.org/p/v8/issues/detail?id=14222
-params['delete']('b', undefined);
-
-if (params + '' !== 'a=2') {
-  defineBuiltIn(URLSearchParamsPrototype, 'delete', function (name /* , value */) {
-    var length = arguments.length;
-    var $value = length < 2 ? undefined : arguments[1];
-    if (length && $value === undefined) return $delete(this, name);
-    var entries = [];
-    forEach(this, function (v, k) { // also validates `this`
-      push(entries, { key: k, value: v });
-    });
-    validateArgumentsLength(length, 1);
-    var key = toString(name);
-    var value = toString($value);
-    var index = 0;
-    var entriesLength = entries.length;
-    var entry;
-    while (index < entriesLength) {
-      entry = entries[index];
-      $delete(this, entry.key);
-      index++;
-    }
-    index = 0;
-    while (index < entriesLength) {
-      entry = entries[index++];
-      if (!(entry.key === key && entry.value === value)) append(this, entry.key, entry.value);
-    }
-  }, { enumerable: true, unsafe: true });
-}
-
-
-/***/ },
-
-/***/ 7566
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var defineBuiltIn = __webpack_require__(6840);
-var uncurryThis = __webpack_require__(9504);
-var toString = __webpack_require__(655);
-var validateArgumentsLength = __webpack_require__(2812);
-
-var $URLSearchParams = URLSearchParams;
-var URLSearchParamsPrototype = $URLSearchParams.prototype;
-var getAll = uncurryThis(URLSearchParamsPrototype.getAll);
-var $has = uncurryThis(URLSearchParamsPrototype.has);
-var params = new $URLSearchParams('a=1');
-
-// `undefined` case is a Chromium 117 bug
-// https://bugs.chromium.org/p/v8/issues/detail?id=14222
-if (params.has('a', 2) || !params.has('a', undefined)) {
-  defineBuiltIn(URLSearchParamsPrototype, 'has', function has(name /* , value */) {
-    var length = arguments.length;
-    var $value = length < 2 ? undefined : arguments[1];
-    if (length && $value === undefined) return $has(this, name);
-    var values = getAll(this, name); // also validates `this`
-    validateArgumentsLength(length, 1);
-    var value = toString($value);
-    var index = 0;
-    while (index < values.length) {
-      if (values[index++] === value) return true;
-    } return false;
-  }, { enumerable: true, unsafe: true });
-}
-
-
-/***/ },
-
-/***/ 8721
-(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
-
-
-var DESCRIPTORS = __webpack_require__(3724);
-var uncurryThis = __webpack_require__(9504);
-var defineBuiltInAccessor = __webpack_require__(2106);
-
-var URLSearchParamsPrototype = URLSearchParams.prototype;
-var forEach = uncurryThis(URLSearchParamsPrototype.forEach);
-
-// `URLSearchParams.prototype.size` getter
-// https://github.com/whatwg/url/pull/734
-if (DESCRIPTORS && !('size' in URLSearchParamsPrototype)) {
-  defineBuiltInAccessor(URLSearchParamsPrototype, 'size', {
-    get: function size() {
-      var count = 0;
-      forEach(this, function () { count++; });
-      return count;
-    },
-    configurable: true,
-    enumerable: true
-  });
 }
 
 
@@ -6358,12 +5977,6 @@ $({ target: 'URL', stat: true, forced: !USE_NATIVE_URL }, {
 var es_array_includes = __webpack_require__(4423);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(4114);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array-buffer.detached.js
-var es_array_buffer_detached = __webpack_require__(6573);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array-buffer.transfer.js
-var es_array_buffer_transfer = __webpack_require__(8100);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array-buffer.transfer-to-fixed-length.js
-var es_array_buffer_transfer_to_fixed_length = __webpack_require__(7936);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.constructor.js
 var es_iterator_constructor = __webpack_require__(8111);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.filter.js
@@ -6385,9 +5998,6 @@ var es_uint8_array_to_hex = __webpack_require__(456);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.url.parse.js
 var web_url_parse = __webpack_require__(5781);
 ;// ./src/shared/util.js
-
-
-
 
 
 
@@ -6512,11 +6122,19 @@ const AnnotationType = {
   TRAPNET: 23,
   WATERMARK: 24,
   THREED: 25,
-  REDACT: 26
+  REDACT: 26,
+  RICHMEDIA: 27
 };
 const AnnotationReplyType = (/* unused pure expression or super */ null && ({
   GROUP: "Group",
   REPLY: "R"
+}));
+const AnnotationRenditionOperation = (/* unused pure expression or super */ null && ({
+  PLAY_OR_RESUME: 0,
+  STOP: 1,
+  PAUSE: 2,
+  RESUME: 3,
+  PLAY: 4
 }));
 const AnnotationFlag = (/* unused pure expression or super */ null && ({
   INVISIBLE: 0x01,
@@ -6901,6 +6519,9 @@ class FeatureTest {
     input.value = "#ff000080";
     return shadow(this, "isAlphaColorInputSupported", input.value !== "#ff0000");
   }
+  static get isBackdropFilterSupported() {
+    return shadow(this, "isBackdropFilterSupported", typeof CSS !== "undefined" && CSS.supports("backdrop-filter", "blur(1px)"));
+  }
 }
 class Util {
   static get hexNums() {
@@ -7170,12 +6791,6 @@ if (typeof Response.prototype.bytes !== "function") {
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.map.js
 var es_iterator_map = __webpack_require__(1701);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.url-search-params.delete.js
-var web_url_search_params_delete = __webpack_require__(4603);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.url-search-params.has.js
-var web_url_search_params_has = __webpack_require__(7566);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.url-search-params.size.js
-var web_url_search_params_size = __webpack_require__(8721);
 ;// ./src/shared/math_clamp.js
 function MathClamp(v, min, max) {
   return Math.min(Math.max(v, min), max);
@@ -7286,13 +6901,6 @@ class PageViewport {
     const p = [x, y];
     Util.applyTransform(p, this.transform);
     return p;
-  }
-  convertToViewportRectangle(rect) {
-    const topLeft = [rect[0], rect[1]];
-    Util.applyTransform(topLeft, this.transform);
-    const bottomRight = [rect[2], rect[3]];
-    Util.applyTransform(bottomRight, this.transform);
-    return [topLeft[0], topLeft[1], bottomRight[0], bottomRight[1]];
   }
   convertToPdfPoint(x, y) {
     const p = [x, y];
@@ -7574,12 +7182,6 @@ class XfaLayer {
 }
 
 ;// ./src/display/display_utils.js
-
-
-
-
-
-
 
 
 
@@ -8173,6 +7775,8 @@ var es_json_stringify = __webpack_require__(3110);
 var es_iterator_drop = __webpack_require__(9314);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.every.js
 var es_iterator_every = __webpack_require__(1148);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.find.js
+var es_iterator_find = __webpack_require__(116);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.json.parse.js
 var es_json_parse = __webpack_require__(9112);
 ;// ./src/display/editor/toolbar.js
@@ -8476,14 +8080,12 @@ class FloatingToolbar {
 }
 
 ;// ./src/shared/internal_evt.js
-const INTERNAL_EVT = "a0babde2-53ef-4493-91fe-62dfc3177bcf";
+const INTERNAL_EVT = "d3d019bf-c73b-49f4-94f3-e62eb099fd62";
 const internalOpt = Object.freeze({
   internal: INTERNAL_EVT
 });
 
 ;// ./src/display/editor/tools.js
-
-
 
 
 
@@ -8841,55 +8443,89 @@ class CommandManager {
   }
 }
 class KeyboardManager {
+  static ALT = 0x1;
+  static CTRL = 0x2;
+  static META = 0x4;
+  static SHIFT = 0x8;
   constructor(callbacks) {
-    this.buffer = [];
     this.callbacks = new Map();
-    this.allKeys = new Set();
     const {
       isMac
     } = FeatureTest.platform;
     for (const [keys, callback, options = {}] of callbacks) {
+      const hasMacOverride = keys.some(k => k.startsWith("mac+"));
       for (const key of keys) {
-        const isMacKey = key.startsWith("mac+");
-        if (isMac && isMacKey) {
-          this.callbacks.set(key.slice(4), {
-            callback,
-            options
-          });
-          this.allKeys.add(key.split("+").at(-1));
-        } else if (!isMac && !isMacKey) {
-          this.callbacks.set(key, {
-            callback,
-            options
-          });
-          this.allKeys.add(key.split("+").at(-1));
+        let shortcut = key;
+        if (hasMacOverride) {
+          const isMacKey = key.startsWith("mac+");
+          if (isMac !== isMacKey) {
+            continue;
+          }
+          if (isMacKey) {
+            shortcut = key.slice(4);
+          }
         }
+        const [keyName, modifiers] = KeyboardManager.#parseShortcut(shortcut);
+        if (keyName === null) {
+          continue;
+        }
+        this.callbacks.getOrInsertComputed(keyName, makeArr).push({
+          callback,
+          options,
+          modifiers
+        });
       }
     }
   }
-  #serialize(event) {
-    if (event.altKey) {
-      this.buffer.push("alt");
+  static #parseShortcut(value) {
+    let keyPart = null;
+    let modifiers = 0;
+    for (let part of value.split("+")) {
+      part = part.trim();
+      if (!part) {
+        continue;
+      }
+      const upper = part.toUpperCase();
+      const modifier = KeyboardManager[upper];
+      if (modifier) {
+        modifiers |= modifier;
+        continue;
+      }
+      if (keyPart !== null) {
+        warn(`KeyboardManager: multiple keys in shortcut "${value}"`);
+        break;
+      }
+      keyPart = upper === "SPACE" ? " " : part;
     }
-    if (event.ctrlKey) {
-      this.buffer.push("ctrl");
+    if (keyPart === null) {
+      warn(`KeyboardManager: no key found in shortcut "${value}"`);
     }
-    if (event.metaKey) {
-      this.buffer.push("meta");
+    return [keyPart, modifiers];
+  }
+  static #codeToKey(code) {
+    const match = /^(?:Key([A-Z])|(?:Digit|Numpad)(\d))$/.exec(code);
+    if (!match) {
+      return null;
     }
-    if (event.shiftKey) {
-      this.buffer.push("shift");
-    }
-    this.buffer.push(event.key);
-    const str = this.buffer.join("+");
-    this.buffer.length = 0;
-    return str;
+    return match[1]?.toLowerCase() ?? match[2];
   }
   exec(self, event) {
-    if (!this.allKeys.has(event.key)) {
-      return;
+    let shortcuts = this.callbacks.get(event.key);
+    if (!shortcuts) {
+      if (/^[a-z]$/i.test(event.key)) {
+        return;
+      }
+      const fallback = KeyboardManager.#codeToKey(event.code);
+      if (fallback === null || fallback === event.key) {
+        return;
+      }
+      shortcuts = this.callbacks.get(fallback);
+      if (!shortcuts) {
+        return;
+      }
     }
-    const info = this.callbacks.get(this.#serialize(event));
+    const eventModifiers = (event.altKey ? KeyboardManager.ALT : 0) | (event.ctrlKey ? KeyboardManager.CTRL : 0) | (event.metaKey ? KeyboardManager.META : 0) | (event.shiftKey ? KeyboardManager.SHIFT : 0);
+    const info = shortcuts.find(shortcut => shortcut.modifiers === eventModifiers);
     if (!info) {
       return;
     }
@@ -9022,33 +8658,33 @@ class AnnotationEditorUIManager {
       checker: textInputChecker
     }], [["Backspace", "alt+Backspace", "ctrl+Backspace", "shift+Backspace", "mac+Backspace", "mac+alt+Backspace", "mac+ctrl+Backspace", "Delete", "ctrl+Delete", "shift+Delete", "mac+Delete"], proto.delete, {
       checker: textInputChecker
-    }], [["Enter", "mac+Enter"], proto.addNewEditorFromKeyboard, {
+    }], [["Enter"], proto.addNewEditorFromKeyboard, {
       checker: (self, {
         target: el
       }) => !(el instanceof HTMLButtonElement) && self.#container.contains(el) && !self.isEnterHandled
-    }], [[" ", "mac+ "], proto.addNewEditorFromKeyboard, {
+    }], [["Space"], proto.addNewEditorFromKeyboard, {
       checker: (self, {
         target: el
       }) => !(el instanceof HTMLButtonElement) && self.#container.contains(document.activeElement)
-    }], [["Escape", "mac+Escape"], proto.unselectAll], [["ArrowLeft", "mac+ArrowLeft"], proto.translateSelectedEditors, {
+    }], [["Escape"], proto.unselectAll], [["ArrowLeft"], proto.translateSelectedEditors, {
       args: [-small, 0],
       checker: arrowChecker
     }], [["ctrl+ArrowLeft", "mac+shift+ArrowLeft"], proto.translateSelectedEditors, {
       args: [-big, 0],
       checker: arrowChecker
-    }], [["ArrowRight", "mac+ArrowRight"], proto.translateSelectedEditors, {
+    }], [["ArrowRight"], proto.translateSelectedEditors, {
       args: [small, 0],
       checker: arrowChecker
     }], [["ctrl+ArrowRight", "mac+shift+ArrowRight"], proto.translateSelectedEditors, {
       args: [big, 0],
       checker: arrowChecker
-    }], [["ArrowUp", "mac+ArrowUp"], proto.translateSelectedEditors, {
+    }], [["ArrowUp"], proto.translateSelectedEditors, {
       args: [0, -small],
       checker: arrowChecker
     }], [["ctrl+ArrowUp", "mac+shift+ArrowUp"], proto.translateSelectedEditors, {
       args: [0, -big],
       checker: arrowChecker
-    }], [["ArrowDown", "mac+ArrowDown"], proto.translateSelectedEditors, {
+    }], [["ArrowDown"], proto.translateSelectedEditors, {
       args: [0, small],
       checker: arrowChecker
     }], [["ctrl+ArrowDown", "mac+shift+ArrowDown"], proto.translateSelectedEditors, {
@@ -9279,7 +8915,7 @@ class AnnotationEditorUIManager {
         resolve();
       }
     };
-    this._eventBus.on("editorsrendered", onEditorsRendered);
+    this._eventBus.on("editorsrendered", onEditorsRendered, internalOpt);
     await promise;
   }
   getSignature(editor) {
@@ -9294,7 +8930,8 @@ class AnnotationEditorUIManager {
   switchToMode(mode, callback) {
     this._eventBus.on("annotationeditormodechanged", callback, {
       once: true,
-      signal: this._signal
+      signal: this._signal,
+      ...internalOpt
     });
     this._eventBus.dispatch("showannotationeditorui", {
       source: this,
@@ -10240,9 +9877,6 @@ class AnnotationEditorUIManager {
     this.#dispatchUpdateStates({
       hasSelectedEditor: true
     });
-  }
-  isSelected(editor) {
-    return this.#selectedEditors.has(editor);
   }
   get firstSelectedEditor() {
     return this.#selectedEditors.values().next().value;
@@ -11409,23 +11043,23 @@ class AnnotationEditor {
     const resize = AnnotationEditor.prototype._resizeWithKeyboard;
     const small = AnnotationEditorUIManager.TRANSLATE_SMALL;
     const big = AnnotationEditorUIManager.TRANSLATE_BIG;
-    return shadow(this, "_resizerKeyboardManager", new KeyboardManager([[["ArrowLeft", "mac+ArrowLeft"], resize, {
+    return shadow(this, "_resizerKeyboardManager", new KeyboardManager([[["ArrowLeft"], resize, {
       args: [-small, 0]
     }], [["ctrl+ArrowLeft", "mac+shift+ArrowLeft"], resize, {
       args: [-big, 0]
-    }], [["ArrowRight", "mac+ArrowRight"], resize, {
+    }], [["ArrowRight"], resize, {
       args: [small, 0]
     }], [["ctrl+ArrowRight", "mac+shift+ArrowRight"], resize, {
       args: [big, 0]
-    }], [["ArrowUp", "mac+ArrowUp"], resize, {
+    }], [["ArrowUp"], resize, {
       args: [0, -small]
     }], [["ctrl+ArrowUp", "mac+shift+ArrowUp"], resize, {
       args: [0, -big]
-    }], [["ArrowDown", "mac+ArrowDown"], resize, {
+    }], [["ArrowDown"], resize, {
       args: [0, small]
     }], [["ctrl+ArrowDown", "mac+shift+ArrowDown"], resize, {
       args: [0, big]
-    }], [["Escape", "mac+Escape"], AnnotationEditor.prototype._stopResizingWithKeyboard]]));
+    }], [["Escape"], AnnotationEditor.prototype._stopResizingWithKeyboard]]));
   }
   constructor(parameters) {
     this.parent = parameters.parent;
@@ -13036,9 +12670,6 @@ class FakeEditor extends AnnotationEditor {
 
 
 
-
-
-
 const SEED = 0xc3d2e1f0;
 const MASK_HIGH = 0xffff0000;
 const MASK_LOW = 0xffff;
@@ -13295,9 +12926,7 @@ class AnnotationStorage {
       const {
         type
       } = editorStats;
-      if (!typeToEditor.has(type)) {
-        typeToEditor.set(type, Object.getPrototypeOf(value).constructor);
-      }
+      typeToEditor.getOrInsertComputed(type, () => Object.getPrototypeOf(value).constructor);
       stats ||= Object.create(null);
       const map = stats[type] ||= new Map();
       for (const [key, val] of Object.entries(editorStats)) {
@@ -13406,9 +13035,6 @@ class PrintAnnotationStorage extends AnnotationStorage {
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.for-each.js
 var es_iterator_for_each = __webpack_require__(7588);
 ;// ./src/display/canvas_dependency_tracker.js
-
-
-
 
 
 
@@ -14198,8 +13824,12 @@ class CanvasImagesTracker {
 
 
 
+
+
+
 class FontLoader {
   #systemFonts = new Set();
+  #styleSheet = null;
   constructor({
     ownerDocument = globalThis.document,
     styleElement = null
@@ -14219,12 +13849,29 @@ class FontLoader {
     this._document.fonts.delete(nativeFontFace);
   }
   insertRule(rule) {
+    const styleSheet = this.#getStyleSheet();
+    styleSheet.insertRule(rule, styleSheet.cssRules.length);
+  }
+  #getStyleSheet() {
+    if (this.#styleSheet) {
+      return this.#styleSheet;
+    }
+    const StyleSheet = this._document.defaultView?.CSSStyleSheet || globalThis.CSSStyleSheet;
+    if (!this.styleElement && StyleSheet) {
+      const {
+        adoptedStyleSheets
+      } = this._document;
+      if (adoptedStyleSheets) {
+        const styleSheet = new StyleSheet();
+        adoptedStyleSheets.push(styleSheet);
+        return this.#styleSheet = styleSheet;
+      }
+    }
     if (!this.styleElement) {
       this.styleElement = this._document.createElement("style");
       this._document.documentElement.getElementsByTagName("head")[0].append(this.styleElement);
     }
-    const styleSheet = this.styleElement.sheet;
-    styleSheet.insertRule(rule, styleSheet.cssRules.length);
+    return this.#styleSheet = this.styleElement.sheet;
   }
   clear() {
     for (const nativeFontFace of this.nativeFontFaces) {
@@ -14232,6 +13879,15 @@ class FontLoader {
     }
     this.nativeFontFaces.clear();
     this.#systemFonts.clear();
+    if (this.#styleSheet) {
+      const {
+        adoptedStyleSheets
+      } = this._document;
+      if (adoptedStyleSheets?.includes(this.#styleSheet)) {
+        this._document.adoptedStyleSheets = adoptedStyleSheets.filter(styleSheet => styleSheet !== this.#styleSheet);
+      }
+      this.#styleSheet = null;
+    }
     if (this.styleElement) {
       this.styleElement.remove();
       this.styleElement = null;
@@ -14581,9 +14237,6 @@ class PATTERN_INFO {
 
 
 
-
-
-
 class CssFontInfo {
   #buffer;
   #decoder = new TextDecoder();
@@ -14899,12 +14552,6 @@ class FontPathInfo {
 }
 
 ;// ./src/display/api_utils.js
-
-
-
-
-
-
 
 
 
@@ -15413,9 +15060,6 @@ class MessageHandler {
 }
 
 ;// ./src/display/binary_data_factory.js
-
-
-
 
 
 
@@ -15951,9 +15595,6 @@ function blend(fg, bg, alpha) {
 
 
 
-
-
-
 if (isNodeJS) {
   let canvas;
   try {
@@ -15971,13 +15612,6 @@ if (isNodeJS) {
       globalThis.DOMMatrix = canvas.DOMMatrix;
     } else {
       warn("Cannot polyfill `DOMMatrix`, rendering may be broken.");
-    }
-  }
-  if (!globalThis.ImageData) {
-    if (canvas?.ImageData) {
-      globalThis.ImageData = canvas.ImageData;
-    } else {
-      warn("Cannot polyfill `ImageData`, rendering may be broken.");
     }
   }
   if (!globalThis.Path2D) {
@@ -16014,10 +15648,120 @@ class NodeBinaryDataFactory extends BaseBinaryDataFactory {
   }
 }
 
+;// ./src/shared/image_utils.js
+/* unused harmony import specifier */ var image_utils_ImageKind;
+/* unused harmony import specifier */ var image_utils_FeatureTest;
+
+
+function convertToRGBA(params) {
+  switch (params.kind) {
+    case image_utils_ImageKind.GRAYSCALE_1BPP:
+      return convertBlackAndWhiteToRGBA(params);
+    case image_utils_ImageKind.RGB_24BPP:
+      return convertRGBToRGBA(params);
+  }
+  return null;
+}
+function convertBlackAndWhiteToRGBA({
+  src,
+  srcPos = 0,
+  dest,
+  width,
+  height,
+  nonBlackColor = 0xffffffff,
+  inverseDecode = false
+}) {
+  const black = FeatureTest.isLittleEndian ? 0xff000000 : 0x000000ff;
+  const [zeroMapping, oneMapping] = inverseDecode ? [nonBlackColor, black] : [black, nonBlackColor];
+  const widthInSource = width >> 3;
+  const widthRemainder = width & 7;
+  const xorMask = zeroMapping ^ oneMapping;
+  const srcLength = src.length;
+  dest = new Uint32Array(dest.buffer);
+  let destPos = 0;
+  for (let i = 0; i < height; ++i) {
+    for (const max = srcPos + widthInSource; srcPos < max; ++srcPos, destPos += 8) {
+      const elem = src[srcPos];
+      dest[destPos] = zeroMapping ^ -(elem >> 7 & 1) & xorMask;
+      dest[destPos + 1] = zeroMapping ^ -(elem >> 6 & 1) & xorMask;
+      dest[destPos + 2] = zeroMapping ^ -(elem >> 5 & 1) & xorMask;
+      dest[destPos + 3] = zeroMapping ^ -(elem >> 4 & 1) & xorMask;
+      dest[destPos + 4] = zeroMapping ^ -(elem >> 3 & 1) & xorMask;
+      dest[destPos + 5] = zeroMapping ^ -(elem >> 2 & 1) & xorMask;
+      dest[destPos + 6] = zeroMapping ^ -(elem >> 1 & 1) & xorMask;
+      dest[destPos + 7] = zeroMapping ^ -(elem & 1) & xorMask;
+    }
+    if (widthRemainder === 0) {
+      continue;
+    }
+    const elem = srcPos < srcLength ? src[srcPos++] : 255;
+    for (let j = 0; j < widthRemainder; ++j, ++destPos) {
+      dest[destPos] = zeroMapping ^ -(elem >> 7 - j & 1) & xorMask;
+    }
+  }
+  return {
+    srcPos,
+    destPos
+  };
+}
+function convertRGBToRGBA({
+  src,
+  srcPos = 0,
+  dest,
+  destPos = 0,
+  width,
+  height
+}) {
+  let i = 0;
+  const len = width * height * 3;
+  const len32 = len >> 2;
+  const src32 = new Uint32Array(src.buffer, srcPos, len32);
+  const alphaMask = FeatureTest.isLittleEndian ? 0xff000000 : 0xff;
+  if (FeatureTest.isLittleEndian) {
+    for (; i < len32 - 2; i += 3, destPos += 4) {
+      const s1 = src32[i],
+        s2 = src32[i + 1],
+        s3 = src32[i + 2];
+      dest[destPos] = s1 | alphaMask;
+      dest[destPos + 1] = s1 >>> 24 | s2 << 8 | alphaMask;
+      dest[destPos + 2] = s2 >>> 16 | s3 << 16 | alphaMask;
+      dest[destPos + 3] = s3 >>> 8 | alphaMask;
+    }
+    for (let j = i * 4, jj = srcPos + len; j < jj; j += 3) {
+      dest[destPos++] = src[j] | src[j + 1] << 8 | src[j + 2] << 16 | alphaMask;
+    }
+  } else {
+    for (; i < len32 - 2; i += 3, destPos += 4) {
+      const s1 = src32[i],
+        s2 = src32[i + 1],
+        s3 = src32[i + 2];
+      dest[destPos] = s1 | alphaMask;
+      dest[destPos + 1] = s1 << 24 | s2 >>> 8 | alphaMask;
+      dest[destPos + 2] = s2 << 16 | s3 >>> 16 | alphaMask;
+      dest[destPos + 3] = s3 << 8 | alphaMask;
+    }
+    for (let j = i * 4, jj = srcPos + len; j < jj; j += 3) {
+      dest[destPos++] = src[j] << 24 | src[j + 1] << 16 | src[j + 2] << 8 | alphaMask;
+    }
+  }
+  return {
+    srcPos: srcPos + len,
+    destPos
+  };
+}
+function grayToRGBA(src, dest) {
+  if (image_utils_FeatureTest.isLittleEndian) {
+    for (let i = 0, ii = src.length; i < ii; i++) {
+      dest[i] = src[i] * 0x10101 | 0xff000000;
+    }
+  } else {
+    for (let i = 0, ii = src.length; i < ii; i++) {
+      dest[i] = src[i] * 0x1010100 | 0x000000ff;
+    }
+  }
+}
+
 ;// ./src/display/webgpu.js
-
-
-
 
 const MESH_WGSL = `
 struct Uniforms {
@@ -16224,9 +15968,6 @@ function drawMeshWithGPU(posData, colData, vertexCount, context, backgroundColor
 }
 
 ;// ./src/display/pattern_helper.js
-
-
-
 
 
 
@@ -16841,125 +16582,7 @@ class TilingPattern {
   }
 }
 
-;// ./src/shared/image_utils.js
-/* unused harmony import specifier */ var image_utils_ImageKind;
-/* unused harmony import specifier */ var image_utils_FeatureTest;
-
-
-
-
-
-function convertToRGBA(params) {
-  switch (params.kind) {
-    case image_utils_ImageKind.GRAYSCALE_1BPP:
-      return convertBlackAndWhiteToRGBA(params);
-    case image_utils_ImageKind.RGB_24BPP:
-      return convertRGBToRGBA(params);
-  }
-  return null;
-}
-function convertBlackAndWhiteToRGBA({
-  src,
-  srcPos = 0,
-  dest,
-  width,
-  height,
-  nonBlackColor = 0xffffffff,
-  inverseDecode = false
-}) {
-  const black = FeatureTest.isLittleEndian ? 0xff000000 : 0x000000ff;
-  const [zeroMapping, oneMapping] = inverseDecode ? [nonBlackColor, black] : [black, nonBlackColor];
-  const widthInSource = width >> 3;
-  const widthRemainder = width & 7;
-  const xorMask = zeroMapping ^ oneMapping;
-  const srcLength = src.length;
-  dest = new Uint32Array(dest.buffer);
-  let destPos = 0;
-  for (let i = 0; i < height; ++i) {
-    for (const max = srcPos + widthInSource; srcPos < max; ++srcPos, destPos += 8) {
-      const elem = src[srcPos];
-      dest[destPos] = zeroMapping ^ -(elem >> 7 & 1) & xorMask;
-      dest[destPos + 1] = zeroMapping ^ -(elem >> 6 & 1) & xorMask;
-      dest[destPos + 2] = zeroMapping ^ -(elem >> 5 & 1) & xorMask;
-      dest[destPos + 3] = zeroMapping ^ -(elem >> 4 & 1) & xorMask;
-      dest[destPos + 4] = zeroMapping ^ -(elem >> 3 & 1) & xorMask;
-      dest[destPos + 5] = zeroMapping ^ -(elem >> 2 & 1) & xorMask;
-      dest[destPos + 6] = zeroMapping ^ -(elem >> 1 & 1) & xorMask;
-      dest[destPos + 7] = zeroMapping ^ -(elem & 1) & xorMask;
-    }
-    if (widthRemainder === 0) {
-      continue;
-    }
-    const elem = srcPos < srcLength ? src[srcPos++] : 255;
-    for (let j = 0; j < widthRemainder; ++j, ++destPos) {
-      dest[destPos] = zeroMapping ^ -(elem >> 7 - j & 1) & xorMask;
-    }
-  }
-  return {
-    srcPos,
-    destPos
-  };
-}
-function convertRGBToRGBA({
-  src,
-  srcPos = 0,
-  dest,
-  destPos = 0,
-  width,
-  height
-}) {
-  let i = 0;
-  const len = width * height * 3;
-  const len32 = len >> 2;
-  const src32 = new Uint32Array(src.buffer, srcPos, len32);
-  const alphaMask = image_utils_FeatureTest.isLittleEndian ? 0xff000000 : 0xff;
-  if (image_utils_FeatureTest.isLittleEndian) {
-    for (; i < len32 - 2; i += 3, destPos += 4) {
-      const s1 = src32[i],
-        s2 = src32[i + 1],
-        s3 = src32[i + 2];
-      dest[destPos] = s1 | alphaMask;
-      dest[destPos + 1] = s1 >>> 24 | s2 << 8 | alphaMask;
-      dest[destPos + 2] = s2 >>> 16 | s3 << 16 | alphaMask;
-      dest[destPos + 3] = s3 >>> 8 | alphaMask;
-    }
-    for (let j = i * 4, jj = srcPos + len; j < jj; j += 3) {
-      dest[destPos++] = src[j] | src[j + 1] << 8 | src[j + 2] << 16 | alphaMask;
-    }
-  } else {
-    for (; i < len32 - 2; i += 3, destPos += 4) {
-      const s1 = src32[i],
-        s2 = src32[i + 1],
-        s3 = src32[i + 2];
-      dest[destPos] = s1 | alphaMask;
-      dest[destPos + 1] = s1 << 24 | s2 >>> 8 | alphaMask;
-      dest[destPos + 2] = s2 << 16 | s3 >>> 16 | alphaMask;
-      dest[destPos + 3] = s3 << 8 | alphaMask;
-    }
-    for (let j = i * 4, jj = srcPos + len; j < jj; j += 3) {
-      dest[destPos++] = src[j] << 24 | src[j + 1] << 16 | src[j + 2] << 8 | alphaMask;
-    }
-  }
-  return {
-    srcPos: srcPos + len,
-    destPos
-  };
-}
-function grayToRGBA(src, dest) {
-  if (image_utils_FeatureTest.isLittleEndian) {
-    for (let i = 0, ii = src.length; i < ii; i++) {
-      dest[i] = src[i] * 0x10101 | 0xff000000;
-    }
-  } else {
-    for (let i = 0, ii = src.length; i < ii; i++) {
-      dest[i] = src[i] * 0x1010100 | 0x000000ff;
-    }
-  }
-}
-
 ;// ./src/display/canvas.js
-
-
 
 
 
@@ -17109,66 +16732,35 @@ class CanvasExtraState {
   }
 }
 function putBinaryImageData(ctx, imgData) {
-  if (imgData instanceof ImageData) {
-    ctx.putImageData(imgData, 0, 0);
-    return;
-  }
-  const height = imgData.height,
-    width = imgData.width;
+  const {
+    width,
+    height,
+    kind
+  } = imgData;
   const partialChunkHeight = height % FULL_CHUNK_HEIGHT;
   const fullChunks = (height - partialChunkHeight) / FULL_CHUNK_HEIGHT;
   const totalChunks = partialChunkHeight === 0 ? fullChunks : fullChunks + 1;
   const chunkImgData = ctx.createImageData(width, FULL_CHUNK_HEIGHT);
-  let srcPos = 0,
-    destPos;
+  let srcPos = 0;
   const src = imgData.data;
   const dest = chunkImgData.data;
-  let i, j, thisChunkHeight, elemsInThisChunk;
-  if (imgData.kind === ImageKind.GRAYSCALE_1BPP) {
-    const srcLength = src.byteLength;
-    const dest32 = new Uint32Array(dest.buffer, 0, dest.byteLength >> 2);
-    const dest32DataLength = dest32.length;
-    const fullSrcDiff = width + 7 >> 3;
-    const white = 0xffffffff;
-    const black = FeatureTest.isLittleEndian ? 0xff000000 : 0x000000ff;
+  let i;
+  if (kind === ImageKind.GRAYSCALE_1BPP) {
     for (i = 0; i < totalChunks; i++) {
-      thisChunkHeight = i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight;
-      destPos = 0;
-      for (j = 0; j < thisChunkHeight; j++) {
-        const srcDiff = srcLength - srcPos;
-        let k = 0;
-        const kEnd = srcDiff > fullSrcDiff ? width : srcDiff * 8 - 7;
-        const kEndUnrolled = kEnd & ~7;
-        let mask = 0;
-        let srcByte = 0;
-        for (; k < kEndUnrolled; k += 8) {
-          srcByte = src[srcPos++];
-          dest32[destPos++] = srcByte & 128 ? white : black;
-          dest32[destPos++] = srcByte & 64 ? white : black;
-          dest32[destPos++] = srcByte & 32 ? white : black;
-          dest32[destPos++] = srcByte & 16 ? white : black;
-          dest32[destPos++] = srcByte & 8 ? white : black;
-          dest32[destPos++] = srcByte & 4 ? white : black;
-          dest32[destPos++] = srcByte & 2 ? white : black;
-          dest32[destPos++] = srcByte & 1 ? white : black;
-        }
-        for (; k < kEnd; k++) {
-          if (mask === 0) {
-            srcByte = src[srcPos++];
-            mask = 128;
-          }
-          dest32[destPos++] = srcByte & mask ? white : black;
-          mask >>= 1;
-        }
-      }
-      while (destPos < dest32DataLength) {
-        dest32[destPos++] = 0;
-      }
+      ({
+        srcPos
+      } = convertBlackAndWhiteToRGBA({
+        src,
+        srcPos,
+        dest,
+        width,
+        height: i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight
+      }));
       ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
     }
-  } else if (imgData.kind === ImageKind.RGBA_32BPP) {
-    j = 0;
-    elemsInThisChunk = width * FULL_CHUNK_HEIGHT * 4;
+  } else if (kind === ImageKind.RGBA_32BPP) {
+    let j = 0;
+    let elemsInThisChunk = width * FULL_CHUNK_HEIGHT * 4;
     for (i = 0; i < fullChunks; i++) {
       dest.set(src.subarray(srcPos, srcPos + elemsInThisChunk));
       srcPos += elemsInThisChunk;
@@ -17180,25 +16772,21 @@ function putBinaryImageData(ctx, imgData) {
       dest.set(src.subarray(srcPos, srcPos + elemsInThisChunk));
       ctx.putImageData(chunkImgData, 0, j);
     }
-  } else if (imgData.kind === ImageKind.RGB_24BPP) {
-    thisChunkHeight = FULL_CHUNK_HEIGHT;
-    elemsInThisChunk = width * thisChunkHeight;
+  } else if (kind === ImageKind.RGB_24BPP) {
     for (i = 0; i < totalChunks; i++) {
-      if (i >= fullChunks) {
-        thisChunkHeight = partialChunkHeight;
-        elemsInThisChunk = width * thisChunkHeight;
-      }
-      destPos = 0;
-      for (j = elemsInThisChunk; j--;) {
-        dest[destPos++] = src[srcPos++];
-        dest[destPos++] = src[srcPos++];
-        dest[destPos++] = src[srcPos++];
-        dest[destPos++] = 255;
-      }
+      ({
+        srcPos
+      } = convertRGBToRGBA({
+        src,
+        srcPos,
+        dest: new Uint32Array(dest.buffer),
+        width,
+        height: i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight
+      }));
       ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
     }
   } else {
-    throw new Error(`bad image kind: ${imgData.kind}`);
+    throw new Error(`bad image kind: ${kind}`);
   }
 }
 function putBinaryImageMask(ctx, imgData) {
@@ -17206,8 +16794,10 @@ function putBinaryImageMask(ctx, imgData) {
     ctx.drawImage(imgData.bitmap, 0, 0);
     return;
   }
-  const height = imgData.height,
-    width = imgData.width;
+  const {
+    width,
+    height
+  } = imgData;
   const partialChunkHeight = height % FULL_CHUNK_HEIGHT;
   const fullChunks = (height - partialChunkHeight) / FULL_CHUNK_HEIGHT;
   const totalChunks = partialChunkHeight === 0 ? fullChunks : fullChunks + 1;
@@ -17216,7 +16806,6 @@ function putBinaryImageMask(ctx, imgData) {
   const src = imgData.data;
   const dest = chunkImgData.data;
   for (let i = 0; i < totalChunks; i++) {
-    const thisChunkHeight = i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight;
     ({
       srcPos
     } = convertBlackAndWhiteToRGBA({
@@ -17224,7 +16813,7 @@ function putBinaryImageMask(ctx, imgData) {
       srcPos,
       dest,
       width,
-      height: thisChunkHeight,
+      height: i < fullChunks ? FULL_CHUNK_HEIGHT : partialChunkHeight,
       nonBlackColor: 0
     }));
     ctx.putImageData(chunkImgData, 0, i * FULL_CHUNK_HEIGHT);
@@ -17899,11 +17488,7 @@ class CanvasGraphics {
     }
     let knockoutFilter = "none";
     if (needsAlphaScaling && this.#knockoutFilterCache instanceof Map) {
-      knockoutFilter = this.#knockoutFilterCache.get(alpha);
-      if (!knockoutFilter) {
-        knockoutFilter = this.filterFactory.addKnockoutFilter(alpha);
-        this.#knockoutFilterCache.set(alpha, knockoutFilter);
-      }
+      knockoutFilter = this.#knockoutFilterCache.getOrInsertComputed(alpha, () => this.filterFactory.addKnockoutFilter(alpha));
     }
     if (!needsAlphaScaling || knockoutFilter !== "none") {
       if (reuseEntry) {
@@ -18447,12 +18032,7 @@ class CanvasGraphics {
       bold = "bold";
     }
     const italic = fontObj.italic ? "italic" : "normal";
-    let browserFontSize = size;
-    if (size < MIN_FONT_SIZE) {
-      browserFontSize = MIN_FONT_SIZE;
-    } else if (size > MAX_FONT_SIZE) {
-      browserFontSize = MAX_FONT_SIZE;
-    }
+    const browserFontSize = MathClamp(size, MIN_FONT_SIZE, MAX_FONT_SIZE);
     this.current.fontSizeScale = size / browserFontSize;
     this.ctx.font = `${italic} ${bold} ${browserFontSize}px ${typeface}`;
   }
@@ -18597,12 +18177,12 @@ class CanvasGraphics {
       this.showType3Text(opIdx, glyphs);
       this.dependencyTracker?.recordShowTextOperation(opIdx);
       this.#endKnockoutElement(started);
-      return undefined;
+      return;
     }
     const fontSize = current.fontSize;
     if (fontSize === 0) {
       this.dependencyTracker?.recordOperation(opIdx);
-      return undefined;
+      return;
     }
     const started = this.#beginKnockoutElement(current.fillAlpha);
     const ctx = this.ctx;
@@ -18676,7 +18256,7 @@ class CanvasGraphics {
       ctx.restore();
       this.compose();
       this.#endKnockoutElement(started);
-      return undefined;
+      return;
     }
     let x = 0,
       i;
@@ -18747,7 +18327,6 @@ class CanvasGraphics {
     this.compose();
     this.dependencyTracker?.recordShowTextOperation(opIdx);
     this.#endKnockoutElement(started);
-    return undefined;
   }
   showType3Text(opIdx, glyphs) {
     const ctx = this.ctx;
@@ -18790,6 +18369,10 @@ class CanvasGraphics {
         warn(`Type3 character "${glyph.operatorListId}" is not available.`);
       } else if (this.contentVisible) {
         this.save();
+        if (operatorList.fnArray[0] === OPS.setCharWidth) {
+          current.fillAlpha = current.strokeAlpha = 1;
+          ctx.globalAlpha = 1;
+        }
         ctx.scale(fontSize, fontSize);
         ctx.transform(...fontMatrix);
         this.executeOperatorList(operatorList);
@@ -18949,10 +18532,7 @@ class CanvasGraphics {
       this.current.activeSMask = null;
     }
     const currentCtx = this.ctx;
-    if (!group.isolated && !group.knockout && this.#knockoutGroupLevel === 0) {
-      info("TODO: Fully support non-isolated non-knockout groups.");
-    }
-    if (!group.needsIsolation && !group.knockout && this.#knockoutGroupLevel === 0 && currentCtx.globalAlpha === 1 && currentCtx.globalCompositeOperation === "source-over" && !inSMaskMode) {
+    if ((!group.needsIsolation || !group.isolated && !group.hasSoftMask) && !group.knockout && !group.isGray && this.#knockoutGroupLevel === 0 && currentCtx.globalAlpha === 1 && currentCtx.globalCompositeOperation === "source-over" && !inSMaskMode) {
       if (group.bbox) {
         let clip = new Path2D();
         const [x0, y0, x1, y1] = group.bbox;
@@ -18968,6 +18548,9 @@ class CanvasGraphics {
       this.#groupStackMeta.push(null);
       this.groupLevel++;
       return;
+    }
+    if (!group.isolated && !group.knockout && this.#knockoutGroupLevel === 0) {
+      info("TODO: Fully support non-isolated non-knockout groups.");
     }
     const currentTransform = getCurrentTransform(currentCtx);
     if (group.matrix) {
@@ -19068,6 +18651,9 @@ class CanvasGraphics {
       this.restore(opIdx);
       return;
     }
+    if (group.isGray) {
+      this.#convertGroupToGray(groupCtx);
+    }
     this.ctx = ctx;
     this.ctx.imageSmoothingEnabled = false;
     this.dependencyTracker?.popBaseTransform();
@@ -19146,6 +18732,34 @@ class CanvasGraphics {
       this.compose(dirtyBox);
     }
   }
+  #convertGroupToGray(groupCtx) {
+    const {
+      canvas
+    } = groupCtx;
+    const {
+      width,
+      height
+    } = canvas;
+    if (FeatureTest.isCanvasFilterSupported) {
+      groupCtx.save();
+      groupCtx.setTransform(1, 0, 0, 1, 0, 0);
+      groupCtx.filter = "grayscale(1)";
+      groupCtx.globalAlpha = 1;
+      groupCtx.globalCompositeOperation = "copy";
+      groupCtx.drawImage(canvas, 0, 0);
+      groupCtx.restore();
+      return;
+    }
+    const imageData = groupCtx.getImageData(0, 0, width, height);
+    const {
+      data
+    } = imageData;
+    for (let i = 0, ii = data.length; i < ii; i += 4) {
+      const gray = data[i] * 0.2126 + data[i + 1] * 0.7152 + data[i + 2] * 0.0722 + 0.5 | 0;
+      data[i] = data[i + 1] = data[i + 2] = gray;
+    }
+    groupCtx.putImageData(imageData, 0, 0);
+  }
   #destroyKnockoutPools(groupMeta) {
     if (!groupMeta) {
       return;
@@ -19163,7 +18777,7 @@ class CanvasGraphics {
       groupMeta.knockoutBackdropEntry = null;
     }
   }
-  beginAnnotation(opIdx, id, rect, transform, matrix, hasOwnCanvas) {
+  beginAnnotation(opIdx, id, rect, transform, matrix, hasOwnCanvas, canvasName) {
     this.#restoreInitialState();
     resetCtxToDefault(this.ctx);
     this.ctx.save();
@@ -19193,7 +18807,18 @@ class CanvasGraphics {
           canvas,
           context
         } = this.annotationCanvas;
-        this.annotationCanvasMap.set(id, canvas);
+        if (canvasName) {
+          const canvases = this.annotationCanvasMap.getOrInsertComputed(id, makeArr);
+          canvas.setAttribute("data-canvas-name", canvasName);
+          const index = canvases.findIndex(c => c.getAttribute("data-canvas-name") === canvasName);
+          if (index === -1) {
+            canvases.push(canvas);
+          } else {
+            canvases[index] = canvas;
+          }
+        } else {
+          this.annotationCanvasMap.set(id, canvas);
+        }
         this.annotationCanvas.savedCtx = this.ctx;
         this.ctx = context;
         this.ctx.save();
@@ -19394,8 +19019,6 @@ class CanvasGraphics {
       const result = this.applyTransferMapsToBitmap(imgData);
       imgToPaint = result.img;
       inlineImgCanvas = result.canvasEntry;
-    } else if (typeof HTMLElement === "function" && imgData instanceof HTMLElement || !imgData.data) {
-      imgToPaint = imgData;
     } else {
       const tmpCanvas = this.canvasFactory.create(width, height);
       putBinaryImageData(tmpCanvas.context, imgData);
@@ -19941,9 +19564,6 @@ function ensureResponseOrigin(rangeOrigin, origin) {
 
 
 
-
-
-
 function fetchUrl(url, headers, withCredentials, abortController) {
   return fetch(url, {
     method: "GET",
@@ -20084,12 +19704,7 @@ class PDFFetchStreamRangeReader extends BasePDFStreamRangeReader {
   }
 }
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.iterator.find.js
-var es_iterator_find = __webpack_require__(116);
 ;// ./src/display/transport_stream.js
-
-
-
 
 
 
@@ -20834,16 +20449,24 @@ class OptionalContentGroup {
     this.#userSet = userSet;
     this.#visible = visible;
   }
+  get serializable() {
+    return {
+      userSet: this.#userSet,
+      visible: this.#visible
+    };
+  }
 }
 class OptionalContentConfig {
   #cachedGetHash = null;
   #groups = new Map();
   #initialHash = null;
   #order = null;
-  constructor(data, renderingIntent = RenderingIntentFlag.DISPLAY) {
+  #rawData;
+  creator = null;
+  name = null;
+  constructor(data, renderingIntent = RenderingIntentFlag.DISPLAY, groupState = null) {
+    this.#rawData = data;
     this.renderingIntent = renderingIntent;
-    this.name = null;
-    this.creator = null;
     if (data === null) {
       return;
     }
@@ -20853,16 +20476,25 @@ class OptionalContentConfig {
     for (const group of data.groups) {
       this.#groups.set(group.id, new OptionalContentGroup(renderingIntent, group));
     }
-    if (data.baseState === "OFF") {
-      for (const group of this.#groups.values()) {
-        group._setVisible(INTERNAL, false);
+    if (groupState) {
+      if (groupState.size !== this.#groups.size) {
+        unreachable("Incorrect serialized groupState.");
       }
-    }
-    for (const on of data.on) {
-      this.#groups.get(on)._setVisible(INTERNAL, true);
-    }
-    for (const off of data.off) {
-      this.#groups.get(off)._setVisible(INTERNAL, false);
+      for (const [id, group] of groupState) {
+        this.#groups.get(id)._setVisible(INTERNAL, group.visible, group.userSet);
+      }
+    } else {
+      if (data.baseState === "OFF") {
+        for (const group of this.#groups.values()) {
+          group._setVisible(INTERNAL, false);
+        }
+      }
+      for (const on of data.on) {
+        this.#groups.get(on)._setVisible(INTERNAL, true);
+      }
+      for (const off of data.off) {
+        this.#groups.get(off)._setVisible(INTERNAL, false);
+      }
     }
     this.#initialHash = this.getHash();
   }
@@ -21048,12 +20680,27 @@ class OptionalContentConfig {
   [Symbol.iterator]() {
     return this.#groups.entries();
   }
+  get serializable() {
+    const groupState = new Map();
+    for (const [id, group] of this.#groups) {
+      groupState.set(id, group.serializable);
+    }
+    return {
+      data: this.#rawData,
+      renderingIntent: this.renderingIntent,
+      groupState
+    };
+  }
+  static fromSerializable({
+    data,
+    renderingIntent,
+    groupState
+  }) {
+    return new OptionalContentConfig(data, renderingIntent, groupState);
+  }
 }
 
 ;// ./src/display/pages_mapper.js
-
-
-
 
 
 
@@ -21783,12 +21430,6 @@ class TextLayer {
 
 
 
-
-
-
-
-
-
 const RENDERING_CANCELLED_TIMEOUT = 100;
 function getDocument(src = {}) {
   const task = new PDFDocumentLoadingTask();
@@ -21859,7 +21500,7 @@ function getDocument(src = {}) {
   }
   const docParams = {
     docId,
-    apiVersion: "6.0.227",
+    apiVersion: "6.1.200",
     data,
     password,
     disableAutoFetch,
@@ -22070,6 +21711,9 @@ class PDFDocumentProxy {
   }
   getAttachments() {
     return this._transport.getAttachments();
+  }
+  getAttachmentContent(id) {
+    return this._transport.getAttachmentContent(id);
   }
   getAnnotationsByType(types, pageIndexesToSkip) {
     return this._transport.getAnnotationsByType(types, pageIndexesToSkip);
@@ -23304,6 +22948,9 @@ class WorkerTransport {
   getAttachments() {
     return this.messageHandler.sendWithPromise("GetAttachments", null);
   }
+  getAttachmentContent(id) {
+    return this.messageHandler.sendWithPromise("GetAttachmentContent", id);
+  }
   getAnnotationsByType(types, pageIndexesToSkip) {
     return this.messageHandler.sendWithPromise("GetAnnotationsByType", {
       types,
@@ -23566,8 +23213,8 @@ class InternalRenderTask {
     }
   }
 }
-const version = "6.0.227";
-const build = "241dbabbf";
+const version = "6.1.200";
+const build = "6353acefe";
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.math.sum-precise.js
 var es_math_sum_precise = __webpack_require__(3068);
@@ -23588,7 +23235,7 @@ class ColorPicker {
   #uiManager = null;
   static #l10nColor = null;
   static get _keyboardManager() {
-    return shadow(this, "_keyboardManager", new KeyboardManager([[["Escape", "mac+Escape"], ColorPicker.prototype._hideDropdownFromKeyboard], [[" ", "mac+ "], ColorPicker.prototype._colorSelectFromKeyboard], [["ArrowDown", "ArrowRight", "mac+ArrowDown", "mac+ArrowRight"], ColorPicker.prototype._moveToNext], [["ArrowUp", "ArrowLeft", "mac+ArrowUp", "mac+ArrowLeft"], ColorPicker.prototype._moveToPrevious], [["Home", "mac+Home"], ColorPicker.prototype._moveToBeginning], [["End", "mac+End"], ColorPicker.prototype._moveToEnd]]));
+    return shadow(this, "_keyboardManager", new KeyboardManager([[["Escape"], ColorPicker.prototype._hideDropdownFromKeyboard], [["Space"], ColorPicker.prototype._colorSelectFromKeyboard], [["ArrowDown", "ArrowRight"], ColorPicker.prototype._moveToNext], [["ArrowUp", "ArrowLeft"], ColorPicker.prototype._moveToPrevious], [["Home"], ColorPicker.prototype._moveToBeginning], [["End"], ColorPicker.prototype._moveToEnd]]));
   }
   constructor({
     editor = null,
@@ -24074,6 +23721,9 @@ class AnnotationElementFactory {
         return new StampAnnotationElement(parameters);
       case AnnotationType.FILEATTACHMENT:
         return new FileAttachmentAnnotationElement(parameters);
+      case AnnotationType.RICHMEDIA:
+      case AnnotationType.SCREEN:
+        return new MediaAnnotationElement(parameters);
       default:
         return new AnnotationElement(parameters);
     }
@@ -24310,7 +23960,7 @@ class AnnotationElement {
     } = this;
     const container = document.createElement("section");
     container.setAttribute("data-annotation-id", data.id);
-    if (!(this instanceof WidgetAnnotationElement) && !(this instanceof LinkAnnotationElement)) {
+    if (!(this instanceof WidgetAnnotationElement) && !(this instanceof LinkAnnotationElement) && !(this instanceof MediaAnnotationElement)) {
       container.tabIndex = 0;
     }
     const {
@@ -24343,9 +23993,6 @@ class AnnotationElement {
       const verticalRadius = data.borderStyle.verticalCornerRadius;
       if (horizontalRadius > 0 || verticalRadius > 0) {
         const radius = `calc(${horizontalRadius}px * var(--total-scale-factor)) / calc(${verticalRadius}px * var(--total-scale-factor))`;
-        style.borderRadius = radius;
-      } else if (this instanceof RadioButtonWidgetAnnotationElement) {
-        const radius = `calc(${width}px * var(--total-scale-factor)) / calc(${height}px * var(--total-scale-factor))`;
         style.borderRadius = radius;
       }
       switch (data.borderStyle.style) {
@@ -24745,6 +24392,10 @@ class AnnotationElement {
   get height() {
     return this.data.rect[3] - this.data.rect[1];
   }
+  _setBackgroundColor(element) {
+    const color = this.data.backgroundColor || null;
+    element.style.backgroundColor = color === null ? "transparent" : Util.makeHexColor(...color);
+  }
 }
 class EditorAnnotationElement extends AnnotationElement {
   constructor(parameters) {
@@ -24816,7 +24467,7 @@ class LinkAnnotationElement extends AnnotationElement {
       this._bindNamedAction(link, data.action, data.overlaidText);
       isBound = true;
     } else if (data.attachment) {
-      this.#bindAttachment(link, data.attachment, data.overlaidText, data.attachmentDest);
+      this.#bindAttachment(link, data.attachmentId, data.attachment, data.overlaidText, data.attachmentDest);
       isBound = true;
     } else if (data.setOCGState) {
       this.#bindSetOCGState(link, data.setOCGState, data.overlaidText);
@@ -24873,15 +24524,21 @@ class LinkAnnotationElement extends AnnotationElement {
     }
     this.#setInternalLink();
   }
-  #bindAttachment(link, attachment, overlaidText = "", dest = null) {
+  #bindAttachment(link, attachmentId, attachment, overlaidText = "", dest = null) {
     link.href = this.linkService.getAnchorUrl("");
     if (attachment.description) {
       link.title = attachment.description;
     } else if (overlaidText) {
       link.title = overlaidText;
     }
+    const openAttachment = async () => {
+      const content = await this.linkService.getAttachmentContent(attachmentId);
+      if (content) {
+        this.downloadManager?.openOrDownloadData(content, attachment.filename, dest);
+      }
+    };
     link.onclick = () => {
-      this.downloadManager?.openOrDownloadData(attachment.content, attachment.filename, dest);
+      openAttachment();
       return false;
     };
     this.#setInternalLink();
@@ -25053,14 +24710,6 @@ class WidgetAnnotationElement extends AnnotationElement {
   render() {
     return this.container;
   }
-  showElementAndHideCanvas(element) {
-    if (this.data.hasOwnCanvas) {
-      if (element.previousSibling?.nodeName === "CANVAS") {
-        element.previousSibling.hidden = true;
-      }
-      element.hidden = false;
-    }
-  }
   _getKeyModifier(event) {
     return FeatureTest.platform.isMac ? event.metaKey : event.ctrlKey;
   }
@@ -25122,10 +24771,6 @@ class WidgetAnnotationElement extends AnnotationElement {
       }
     }
   }
-  _setBackgroundColor(element) {
-    const color = this.data.backgroundColor || null;
-    element.style.backgroundColor = color === null ? "transparent" : Util.makeHexColor(...color);
-  }
   _setTextStyle(element) {
     const TEXT_ALIGNMENT = ["left", "center", "right"];
     const {
@@ -25147,7 +24792,7 @@ class WidgetAnnotationElement extends AnnotationElement {
     }
     style.fontSize = `calc(${computedFontSize}px * var(--total-scale-factor))`;
     style.color = Util.makeHexColor(...fontColor);
-    if (this.data.textAlignment !== null) {
+    if (this.data.textAlignment !== null && !this.data.comb) {
       style.textAlign = TEXT_ALIGNMENT[this.data.textAlignment];
     }
   }
@@ -25220,7 +24865,10 @@ class TextWidgetAnnotationElement extends WidgetAnnotationElement {
         }
       }
       if (this.data.hasOwnCanvas) {
-        element.hidden = true;
+        this.container.classList.add("hasOwnCanvas");
+        if (storage.has(id)) {
+          this.container.classList.add("sandboxModified");
+        }
       }
       GetElementsByNameSet.add(element);
       this.contentElement = element;
@@ -25297,7 +24945,7 @@ class TextWidgetAnnotationElement extends WidgetAnnotationElement {
           }
         });
         element.addEventListener("updatefromsandbox", jsEvent => {
-          this.showElementAndHideCanvas(jsEvent.target);
+          this.container.classList.add("sandboxModified");
           const actions = {
             value(event) {
               elementData.userValue = event.detail.value ?? "";
@@ -25509,7 +25157,18 @@ class TextWidgetAnnotationElement extends WidgetAnnotationElement {
         const fieldWidth = this.data.rect[2] - this.data.rect[0];
         const combWidth = fieldWidth / maxLen;
         element.classList.add("comb");
-        element.style.letterSpacing = `calc(${combWidth}px * var(--total-scale-factor) - 1ch)`;
+        element.style.setProperty("--comb-width", `calc(${combWidth}px * var(--total-scale-factor))`);
+        const alignment = this.data.textAlignment;
+        if (alignment === 1 || alignment === 2) {
+          const setCombOffset = () => {
+            const free = maxLen - element.value.length;
+            element.style.setProperty("--comb-offset", `${alignment === 1 ? free >> 1 : free}`);
+          };
+          setCombOffset();
+          for (const evt of ["input", "blur", "resetform", "updatefromsandbox"]) {
+            element.addEventListener(evt, setCombOffset);
+          }
+        }
       }
     } else {
       element = document.createElement("div");
@@ -25602,7 +25261,6 @@ class CheckboxWidgetAnnotationElement extends WidgetAnnotationElement {
       });
       this._setEventListeners(element, null, [["change", "Validate"], ["change", "Action"], ["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"]], event => event.target.checked);
     }
-    this._setBackgroundColor(element);
     this._setDefaultPropertiesFromJS(element);
     this.container.append(element);
     return this.container;
@@ -25620,7 +25278,7 @@ class RadioButtonWidgetAnnotationElement extends WidgetAnnotationElement {
     const data = this.data;
     const id = data.id;
     let value = storage.getValue(id, {
-      value: data.fieldValue === data.buttonValue
+      value: data.buttonValue !== null && data.fieldValue === data.buttonValue
     }).value;
     if (typeof value === "string") {
       value = value !== data.buttonValue;
@@ -25685,7 +25343,6 @@ class RadioButtonWidgetAnnotationElement extends WidgetAnnotationElement {
       });
       this._setEventListeners(element, null, [["change", "Validate"], ["change", "Action"], ["focus", "Focus"], ["blur", "Blur"], ["mousedown", "Mouse Down"], ["mouseenter", "Mouse Enter"], ["mouseleave", "Mouse Exit"], ["mouseup", "Mouse Up"]], event => event.target.checked);
     }
-    this._setBackgroundColor(element);
     this._setDefaultPropertiesFromJS(element);
     this.container.append(element);
     return this.container;
@@ -27041,12 +26698,15 @@ class FileAttachmentAnnotationElement extends AnnotationElement {
       isRenderable: true
     });
     const {
+      fileId,
       file
     } = this.data;
     this.filename = file.filename;
     this.content = file.content;
+    this.fileId = fileId;
     this.linkService.eventBus?.dispatch("fileattachmentannotation", {
       source: this,
+      attachmentId: this.fileId,
       ...file
     });
   }
@@ -27091,8 +26751,130 @@ class FileAttachmentAnnotationElement extends AnnotationElement {
   addHighlightArea() {
     this.container.classList.add("highlightArea");
   }
-  #download() {
-    this.downloadManager?.openOrDownloadData(this.content, this.filename);
+  async #download() {
+    const {
+      fileId,
+      filename,
+      content: fallbackContent
+    } = this;
+    const content = (await this.linkService.getAttachmentContent(fileId)) || fallbackContent;
+    if (content) {
+      this.downloadManager?.openOrDownloadData(content, filename);
+    }
+  }
+}
+class MediaAnnotationElement extends AnnotationElement {
+  #abortController = new AbortController();
+  #contentUrl = null;
+  #media = null;
+  constructor(parameters) {
+    super(parameters, {
+      isRenderable: !!parameters.data.richMedia
+    });
+  }
+  render() {
+    this.container.classList.add("mediaAnnotation");
+    const {
+      filename
+    } = this.data.richMedia;
+    const button = document.createElement("button");
+    button.className = "mediaPlayButton";
+    button.type = "button";
+    button.title = button.ariaLabel = filename;
+    button.addEventListener("click", () => this.#load(button), {
+      signal: this.#abortController.signal
+    });
+    this.container.append(button);
+    return this.container;
+  }
+  async #load(button) {
+    const {
+      fileId,
+      filename,
+      contentType
+    } = this.data.richMedia;
+    button.disabled = true;
+    let content;
+    try {
+      content = await this.linkService.getAttachmentContent(fileId);
+    } catch {
+      return;
+    } finally {
+      button.disabled = false;
+    }
+    if (!content || !button.isConnected) {
+      return;
+    }
+    const {
+      signal
+    } = this.#abortController;
+    const url = URL.createObjectURL(new Blob([content], {
+      type: contentType
+    }));
+    this.#contentUrl = url;
+    const isAudio = contentType.startsWith("audio/");
+    const media = document.createElement(isAudio ? "audio" : "video");
+    this.#media = media;
+    media.className = "mediaContent";
+    this._setBackgroundColor(media);
+    media.src = url;
+    media.title = filename;
+    media.controls = true;
+    media.autoplay = true;
+    media.tabIndex = 0;
+    if (isAudio) {
+      let hovered = false;
+      let focused = false;
+      const updateControls = () => {
+        media.controls = hovered || focused;
+      };
+      this.container.addEventListener("pointerenter", () => {
+        hovered = true;
+        updateControls();
+      }, {
+        signal
+      });
+      this.container.addEventListener("pointerleave", () => {
+        hovered = false;
+        updateControls();
+      }, {
+        signal
+      });
+      this.container.addEventListener("focusin", () => {
+        focused = true;
+        updateControls();
+      }, {
+        signal
+      });
+      this.container.addEventListener("focusout", () => {
+        focused = false;
+        updateControls();
+      }, {
+        signal
+      });
+    }
+    media.addEventListener("emptied", () => this.#revokeContentUrl(url), {
+      once: true,
+      signal
+    });
+    button.replaceWith(media);
+    media.play().catch(() => {});
+  }
+  #revokeContentUrl(url = this.#contentUrl) {
+    if (url && url === this.#contentUrl) {
+      URL.revokeObjectURL(url);
+      this.#contentUrl = null;
+    }
+  }
+  destroy() {
+    this.#abortController.abort();
+    if (this.#media) {
+      this.#media.pause();
+      this.#media.removeAttribute("src");
+      this.#media.load();
+      this.#media = null;
+    }
+    this.#revokeContentUrl();
   }
 }
 class AnnotationLayer {
@@ -27322,6 +27104,15 @@ class AnnotationLayer {
     this.#setAnnotationCanvasMap();
     layer.hidden = false;
   }
+  destroy() {
+    for (const element of this.#elements) {
+      element.destroy?.();
+      this.#accessibilityManager?.removePointerInTextLayer(element.contentElement);
+    }
+    this.#elements.length = 0;
+    this.#editableAnnotations.clear();
+    this.div.replaceChildren();
+  }
   #setAnnotationCanvasMap() {
     if (!this.#annotationCanvasMap) {
       return;
@@ -27332,19 +27123,43 @@ class AnnotationLayer {
       if (!element) {
         continue;
       }
-      canvas.className = "annotationContent";
+      if (Array.isArray(canvas)) {
+        for (const cvs of canvas) {
+          cvs.className = "annotationContent";
+          cvs.ariaHidden = true;
+        }
+      } else {
+        canvas.className = "annotationContent";
+        canvas.ariaHidden = true;
+      }
+      const toRemove = [];
+      for (const child of element.children) {
+        if (child.nodeName === "CANVAS") {
+          toRemove.push(child);
+        }
+      }
+      for (const child of toRemove) {
+        child.remove();
+      }
+      const firstCanvas = Array.isArray(canvas) ? canvas[0] : canvas;
       const {
         firstChild
       } = element;
       if (!firstChild) {
-        element.append(canvas);
-      } else if (firstChild.nodeName === "CANVAS") {
-        firstChild.replaceWith(canvas);
+        element.append(firstCanvas);
       } else if (!firstChild.classList.contains("annotationContent")) {
-        firstChild.before(canvas);
+        firstChild.before(firstCanvas);
       } else {
-        firstChild.after(canvas);
+        firstChild.after(firstCanvas);
       }
+      if (Array.isArray(canvas)) {
+        let lastCanvas = firstCanvas;
+        for (let i = 1, ii = canvas.length; i < ii; i++) {
+          lastCanvas.after(canvas[i]);
+          lastCanvas = canvas[i];
+        }
+      }
+      this.#annotationCanvasMap.delete(id);
       const editableAnnotation = this.#editableAnnotations.get(id);
       if (!editableAnnotation) {
         continue;
@@ -27356,7 +27171,9 @@ class AnnotationLayer {
         editableAnnotation.canvas = canvas;
       }
     }
-    this.#annotationCanvasMap.clear();
+  }
+  refreshCanvases() {
+    this.#setAnnotationCanvasMap();
   }
   getEditableAnnotations() {
     return this.#editableAnnotations.values();
@@ -27452,25 +27269,25 @@ class FreeTextEditor extends AnnotationEditor {
     const big = AnnotationEditorUIManager.TRANSLATE_BIG;
     return shadow(this, "_keyboardManager", new KeyboardManager([[["ctrl+s", "mac+meta+s", "ctrl+p", "mac+meta+p"], proto.commitOrRemove, {
       bubbles: true
-    }], [["ctrl+Enter", "mac+meta+Enter", "Escape", "mac+Escape"], proto.commitOrRemove], [["ArrowLeft", "mac+ArrowLeft"], proto._translateEmpty, {
+    }], [["ctrl+Enter", "mac+meta+Enter"], proto.commitOrRemove], [["Escape"], proto.commitOrRemove], [["ArrowLeft"], proto._translateEmpty, {
       args: [-small, 0],
       checker: arrowChecker
     }], [["ctrl+ArrowLeft", "mac+shift+ArrowLeft"], proto._translateEmpty, {
       args: [-big, 0],
       checker: arrowChecker
-    }], [["ArrowRight", "mac+ArrowRight"], proto._translateEmpty, {
+    }], [["ArrowRight"], proto._translateEmpty, {
       args: [small, 0],
       checker: arrowChecker
     }], [["ctrl+ArrowRight", "mac+shift+ArrowRight"], proto._translateEmpty, {
       args: [big, 0],
       checker: arrowChecker
-    }], [["ArrowUp", "mac+ArrowUp"], proto._translateEmpty, {
+    }], [["ArrowUp"], proto._translateEmpty, {
       args: [0, -small],
       checker: arrowChecker
     }], [["ctrl+ArrowUp", "mac+shift+ArrowUp"], proto._translateEmpty, {
       args: [0, -big],
       checker: arrowChecker
-    }], [["ArrowDown", "mac+ArrowDown"], proto._translateEmpty, {
+    }], [["ArrowDown"], proto._translateEmpty, {
       args: [0, small],
       checker: arrowChecker
     }], [["ctrl+ArrowDown", "mac+shift+ArrowDown"], proto._translateEmpty, {
@@ -27975,7 +27792,7 @@ class FreeTextEditor extends AnnotationEditor {
           }
         }
       } = data;
-      if (!textContent || textContent.length === 0) {
+      if (!textContent?.length) {
         return null;
       }
       initialData = data = {
@@ -28073,9 +27890,6 @@ class FreeTextEditor extends AnnotationEditor {
 ;// ./src/display/editor/drawers/outline.js
 
 
-
-
-
 class Outline {
   static PRECISION = 1e-4;
   toSVGPath() {
@@ -28132,9 +27946,6 @@ class Outline {
 }
 
 ;// ./src/display/editor/drawers/freedraw.js
-
-
-
 
 
 
@@ -28513,9 +28324,6 @@ class FreeDrawOutline extends Outline {
 
 
 
-
-
-
 class HighlightOutliner {
   #box;
   #firstPoint;
@@ -28760,9 +28568,6 @@ class HighlightOutline extends Outline {
   get box() {
     return this.#box;
   }
-  get classNamesForOutlining() {
-    return ["highlightOutline"];
-  }
 }
 class FreeHighlightOutliner extends FreeDrawOutliner {
   newFreeDrawOutline(outline, points, box, scaleFactor, innerMargin, isLTR) {
@@ -28776,9 +28581,6 @@ class FreeHighlightOutline extends FreeDrawOutline {
 }
 
 ;// ./src/display/editor/highlight.js
-
-
-
 
 
 
@@ -28819,13 +28621,13 @@ class HighlightEditor extends AnnotationEditor {
   static _freeHighlightClipId = "";
   static get _keyboardManager() {
     const proto = HighlightEditor.prototype;
-    return shadow(this, "_keyboardManager", new KeyboardManager([[["ArrowLeft", "mac+ArrowLeft"], proto._moveCaret, {
+    return shadow(this, "_keyboardManager", new KeyboardManager([[["ArrowLeft"], proto._moveCaret, {
       args: [0]
-    }], [["ArrowRight", "mac+ArrowRight"], proto._moveCaret, {
+    }], [["ArrowRight"], proto._moveCaret, {
       args: [1]
-    }], [["ArrowUp", "mac+ArrowUp"], proto._moveCaret, {
+    }], [["ArrowUp"], proto._moveCaret, {
       args: [2]
-    }], [["ArrowDown", "mac+ArrowDown"], proto._moveCaret, {
+    }], [["ArrowDown"], proto._moveCaret, {
       args: [3]
     }]]));
   }
@@ -30333,9 +30135,6 @@ class DrawingEditor extends AnnotationEditor {
 
 
 
-
-
-
 class InkDrawOutliner {
   #last = new Float64Array(6);
   #line;
@@ -30371,7 +30170,7 @@ class InkDrawOutliner {
     return Outline._normalizePoint(x, y, this.#parentWidth, this.#parentHeight, this.#rotation);
   }
   isEmpty() {
-    return !this.#lines || this.#lines.length === 0;
+    return !this.#lines?.length;
   }
   isCancellable() {
     return this.#points.length <= 10;
@@ -31268,9 +31067,6 @@ class ContourDrawOutline extends InkDrawOutline {
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.uint8-array.from-base64.js
 var es_uint8_array_from_base64 = __webpack_require__(5213);
 ;// ./src/display/editor/drawers/signaturedraw.js
-
-
-
 
 
 
@@ -34493,6 +34289,7 @@ globalThis.pdfjsLib = {
   normalizeUnicode: normalizeUnicode,
   OPS: OPS,
   OutputScale: OutputScale,
+  PasswordException: PasswordException,
   PasswordResponses: PasswordResponses,
   PDFDataRangeTransport: PDFDataRangeTransport,
   PDFDateString: PDFDateString,
@@ -34517,6 +34314,6 @@ globalThis.pdfjsLib = {
   XfaLayer: XfaLayer
 };
 
-export { AbortException, AnnotationEditorLayer, AnnotationEditorParamsType, AnnotationEditorType, AnnotationEditorUIManager, AnnotationLayer, AnnotationMode, AnnotationType, CSSConstants, ColorPicker, DOMSVGFactory, DrawLayer, FeatureTest, GlobalWorkerOptions, ImageKind, InvalidPDFException, MathClamp, OPS, OutputScale, PDFDataRangeTransport, PDFDateString, PDFWorker, PasswordResponses, PermissionFlag, PixelsPerInch, RenderingCancelledException, ResponseException, SignatureExtractor, SupportedImageMimeTypes, TextLayer, TextLayerImages, TouchManager, Util, VerbosityLevel, XfaLayer, applyOpacity, build, createValidAbsoluteUrl, fetchData, findContrastColor, getDocument, getFilenameFromUrl, getPdfFilenameFromUrl, getRGB, getRGBA, getUuid, isDataScheme, isPdfFile, isValidExplicitDest, makeArr, makeMap, makeObj, noContextMenu, normalizeUnicode, renderRichText, setLayerDimensions, shadow, stopEvent, updateUrlHash, version };
+export { AbortException, AnnotationEditorLayer, AnnotationEditorParamsType, AnnotationEditorType, AnnotationEditorUIManager, AnnotationLayer, AnnotationMode, AnnotationType, CSSConstants, ColorPicker, DOMSVGFactory, DrawLayer, FeatureTest, GlobalWorkerOptions, ImageKind, InvalidPDFException, MathClamp, OPS, OutputScale, PDFDataRangeTransport, PDFDateString, PDFWorker, PasswordException, PasswordResponses, PermissionFlag, PixelsPerInch, RenderingCancelledException, ResponseException, SignatureExtractor, SupportedImageMimeTypes, TextLayer, TextLayerImages, TouchManager, Util, VerbosityLevel, XfaLayer, applyOpacity, build, createValidAbsoluteUrl, fetchData, findContrastColor, getDocument, getFilenameFromUrl, getPdfFilenameFromUrl, getRGB, getRGBA, getUuid, isDataScheme, isPdfFile, isValidExplicitDest, makeArr, makeMap, makeObj, noContextMenu, normalizeUnicode, renderRichText, setLayerDimensions, shadow, stopEvent, updateUrlHash, version };
 
 //# sourceMappingURL=pdf.mjs.map
