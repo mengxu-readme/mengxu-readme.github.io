@@ -582,6 +582,14 @@ input.raw_input {
 }
 
 
+video {
+  display: inline;
+  vertical-align: middle;
+  align-content: center;
+  margin-left: 20%;
+}
+
+
 .well {
   background-color: #2f2f2f;
   border: 1px solid #2f2f2f;
