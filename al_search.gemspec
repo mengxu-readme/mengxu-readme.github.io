@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "al_search"
-  spec.version       = "1.0.2"
+  spec.version       = "1.0.3"
   spec.authors       = ["al-org"]
   spec.email         = ["dev@al-org.dev"]
   spec.summary       = "Search modal assets and data generation for Jekyll"

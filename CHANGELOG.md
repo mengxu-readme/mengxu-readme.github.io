@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 - 2026-07-27
+
+- Replaced the full `site.pages` scan used to find the home page title with a single `where`/`map`/`first` filter chain in the generated search data.
+- Added regression coverage asserting the home navigation entry resolves the title of the page whose permalink is `/`.
+
 ## 1.0.2 - 2026-02-17
 
 - Hardened navbar search button handling by binding `#search-toggle` directly to `openSearchModal`.
