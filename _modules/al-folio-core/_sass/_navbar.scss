@@ -35,6 +35,28 @@
       align-items: flex-start;
       width: 100%;
     }
+
+    // `align-items: flex-start` above makes every nav item shrink to the width
+    // of its own label, so the dropdown's `width: 100%` would otherwise resolve
+    // against the toggle link rather than the menu. Stretch the item that owns
+    // a dropdown so the open menu spans the collapsed navbar.
+    .navbar-menu-list > .nav-item.dropdown {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+      min-width: 100%;
+      margin-top: 0;
+      text-align: left;
+      box-shadow: none;
+    }
+
+    .dropdown-item {
+      white-space: normal;
+      text-align: left;
+    }
   }
 }
 

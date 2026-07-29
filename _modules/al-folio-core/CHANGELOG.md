@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.12 - 2026-07-27
+
+- Switched the default repository/user stat-card service from the unmaintained `github-readme-stats.vercel.app` to the actively maintained `github-stats-extended.vercel.app` fork (`_includes/repository/repo.liquid`, `_includes/repository/repo_user.liquid`). The public github-readme-stats instance has been unreliable for a long time, leaving repository cards blank; the fork is API-compatible, so every existing query parameter (`theme`, `locale`, `show_owner`, `description_lines_count`, `show_icons`) keeps working and the cards render identically. Requested upstream by a github-stats-extended maintainer in alshedivat/al-folio#3629.
+- Stat-card service URLs now resolve through a `default:` fallback instead of interpolating `site.external_services.*` directly. Previously a site without an `external_services` block emitted a relative `/api/pin/?…` URL and every card 404'd; the service is still fully overridable for self-hosting. Applied to the trophy card as well (`_includes/repository/repo_trophies.liquid`), which keeps `github-profile-trophy.vercel.app`.
+- Updated the in-template locale-code documentation links to the fork's `docs/advanced_documentation.md#available-locales`.
+- Fixed `og:image` and `twitter:image` emitting relative asset paths (`_includes/metadata.liquid`). External scrapers (Discord, LinkedIn, Mastodon, Slack) cannot resolve a relative image URL, so shared link previews rendered without an image. Relative values are now prefixed with `site.url` + `site.baseurl`, matching how `og:url` is already built; values that are already absolute (contain `://`) are left untouched so a user-supplied CDN URL is not double-prefixed. Fixes alshedivat/al-folio#3666.
+- Fixed mobile submenus rendering off-screen (`_sass/_navbar.scss`). Inside the collapsed navbar the dropdown inherited `position: absolute` and `right: 0` from the base Tailwind rule, which anchored it past the left edge of the viewport — measured at `left: -85.7px` on a 393px screen, leaving the menu items unreadable. Below the `sm` breakpoint the menu is now statically positioned, left-aligned, and wraps long entries. Fixes alshedivat/al-folio#3663. Thanks to @bibliophilecoder.
+- Made those mobile submenus span the full navbar width. The mobile block sets `align-items: flex-start` on `.navbar-menu-list`, so each nav item is a shrink-to-fit flex item and the dropdown's `width: 100%` resolved against the toggle link rather than the navbar (102.5px inside a 361px navbar). The item owning a dropdown is now stretched, and the two adjacent `max-width: 575.98px` blocks are merged into one.
+
 ## 1.0.11 - 2026-06-02
 
 - Added `onerror` handlers to all repository stat-card images (`repo.liquid`, `repo_user.liquid`, `repo_trophies.liquid`). When the external github-readme-stats or github-profile-trophy service is unavailable the entire card is now hidden gracefully instead of showing broken alt-text.

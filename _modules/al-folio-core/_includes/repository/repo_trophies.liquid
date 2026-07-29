@@ -1,16 +1,19 @@
+{% comment %} Service URL is overridable via `external_services.github_profile_trophy_url` for self-hosting. {% endcomment %}
+{% assign trophy_url = site.external_services.github_profile_trophy_url | default: 'https://github-profile-trophy.vercel.app' %}
+
 <div class="repo p-2 text-center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <span class="d-none d-sm-none d-md-block">
       <img
         class="only-light"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
         onerror="this.closest('.repo').style.display='none'"
       >
       <img
         class="only-dark"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
         onerror="this.closest('.repo').style.display='none'"
       >
     </span>
@@ -19,13 +22,13 @@
       <img
         class="only-light"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
         onerror="this.closest('.repo').style.display='none'"
       >
       <img
         class="only-dark"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
         onerror="this.closest('.repo').style.display='none'"
       >
     </span>
@@ -34,13 +37,13 @@
       <img
         class="only-light"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
         onerror="this.closest('.repo').style.display='none'"
       >
       <img
         class="only-dark"
         alt="{{ include.username }}"
-        src="{{ site.external_services.github_profile_trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
+        src="{{ trophy_url }}/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
         onerror="this.closest('.repo').style.display='none'"
       >
     </span>
