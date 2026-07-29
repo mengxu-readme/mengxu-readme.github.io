@@ -8,6 +8,7 @@
 - Cronitor Analytics
 - Pirsch Analytics
 - OpenPanel Analytics
+- Cloudflare Web Analytics
 - Simple Analytics
 
 ## Installation
@@ -39,6 +40,11 @@ pirsch_analytics: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 enable_openpanel_analytics: false
 openpanel_analytics: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+
+# Cloudflare Web Analytics. The token is the value Cloudflare shows in the
+# `data-cf-beacon` snippet; without it nothing is rendered.
+enable_cloudflare_analytics: false
+cloudflare_analytics: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 # Simple Analytics identifies your site by domain, so there is no key to set.
 enable_simple_analytics: false
