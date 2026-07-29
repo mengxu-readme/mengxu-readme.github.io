@@ -16,6 +16,12 @@ class AlSearchAssetsTagTest < Minitest::Test
     def site_payload
       @payload
     end
+
+    # Jekyll's `where` filter memoizes property lookups through the registered
+    # site, so the fake has to expose the same cache a real Jekyll::Site does.
+    def filter_cache
+      @filter_cache ||= {}
+    end
   end
 
   def render_assets(config:, payload:, page: {})
@@ -48,6 +54,27 @@ class AlSearchAssetsTagTest < Minitest::Test
     assert_includes output, '/base/assets/al_search/js/search/ninja-keys.min.js'
     assert_includes output, '/base/assets/al_search/js/search-setup.js'
     assert_includes output, '/base/assets/al_search/js/shortcut-key.js'
+  end
+
+  def test_home_nav_entry_uses_title_of_page_with_root_permalink
+    payload = minimal_payload
+    payload['site']['pages'] = [
+      { 'permalink' => '/blog/', 'title' => 'Blog' },
+      { 'permalink' => '/', 'title' => '  Home Page  ' }
+    ]
+
+    output, = render_assets(
+      config: { 'search_enabled' => true, 'baseurl' => '' },
+      payload: payload
+    )
+
+    assert_includes output, 'title: "Home Page"'
+    # The home entry must come from the page whose permalink is "/", not simply
+    # the first page in the list.
+    refute_includes output, 'Blog'
+    # An invalid filter chain (e.g. `| first.title`) silently drops the property
+    # lookup and leaks the whole page hash into the generated JavaScript.
+    refute_includes output, 'permalink'
   end
 
   def test_returns_empty_when_search_disabled
