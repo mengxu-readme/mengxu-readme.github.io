@@ -12,3 +12,7 @@ assets/libs/
 al-folio-upgrade-report.md
 node_modules/
 vendor
+
+# Python bytecode from bin/ helper scripts
+__pycache__/
+*.pyc
