@@ -14,22 +14,25 @@
     {% endcase %}
 
     {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
+    {% comment %} If you still encounter language-display issues, check the available locale codes in github-stats-extended (different from ISO-639 standard used in your website) {% endcomment %}
+    {% comment %} https://github.com/stats-organization/github-stats-extended/blob/master/docs/advanced_documentation.md#available-locales {% endcomment %}
 {% endcase %}
+
+{% comment %} Defaults to the maintained github-stats-extended fork; override via `external_services.github_readme_stats_url` to self-host. {% endcomment %}
+{% assign stats_url = site.external_services.github_readme_stats_url | default: 'https://github-stats-extended.vercel.app' %}
 
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.username }}">
     <img
       class="only-light w-100"
       alt="{{ include.username }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true"
+      src="{{ stats_url }}/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true"
       onerror="this.closest('.repo').style.display='none'"
     >
     <img
       class="only-dark w-100"
       alt="{{ include.username }}"
-      src="{{ site.external_services.github_readme_stats_url }}/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true"
+      src="{{ stats_url }}/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true"
       onerror="this.closest('.repo').style.display='none'"
     >
   </a>

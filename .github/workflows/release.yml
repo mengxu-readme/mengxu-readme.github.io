@@ -1,0 +1,119 @@
+name: Release gem
+
+# Publishing is deliberately tag-driven: pushing a `v<version>` tag is the only
+# thing that ships a gem. That keeps `main` freely mergeable while making the
+# moment of publication explicit and auditable.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build and verify only; do not push to RubyGems"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    # Never publish from a fork.
+    if: github.repository_owner == 'al-org-dev'
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v6
+
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Resolve gemspec and version 🔍
+        id: gem
+        run: |
+          set -euo pipefail
+          spec_file="$(ls -1 ./*.gemspec | head -n1)"
+          gem_name="$(basename "$spec_file" .gemspec)"
+          # Ask RubyGems itself rather than grepping, so a version.rb constant,
+          # a heredoc or any other indirection all resolve correctly.
+          version="$(ruby -e 'puts Gem::Specification.load(ARGV[0]).version' "$spec_file")"
+          echo "name=$gem_name"       >> "$GITHUB_OUTPUT"
+          echo "version=$version"     >> "$GITHUB_OUTPUT"
+          echo "spec=$spec_file"      >> "$GITHUB_OUTPUT"
+          echo "Resolved $gem_name $version from $spec_file"
+
+      - name: Verify tag matches gemspec version 🏷️
+        if: github.event_name == 'push'
+        run: |
+          set -euo pipefail
+          tag="${GITHUB_REF_NAME#v}"
+          spec="${{ steps.gem.outputs.version }}"
+          if [ "$tag" != "$spec" ]; then
+            echo "::error::Tag v$tag does not match gemspec version $spec."
+            echo "Publishing a mismatched version is how a release silently ships the wrong code."
+            exit 1
+          fi
+          echo "Tag v$tag matches gemspec version $spec."
+
+      - name: Refuse to overwrite a published version 🛑
+        run: |
+          set -euo pipefail
+          name="${{ steps.gem.outputs.name }}"
+          version="${{ steps.gem.outputs.version }}"
+          code="$(curl -sS -o /dev/null -w '%{http_code}' \
+            "https://rubygems.org/api/v2/rubygems/${name}/versions/${version}.json" || echo 000)"
+          if [ "$code" = "200" ]; then
+            echo "::error::${name} ${version} is already on RubyGems. Bump the version before tagging."
+            exit 1
+          fi
+          echo "${name} ${version} is not yet published (lookup returned ${code}); proceeding."
+
+      - name: Build gem 📦
+        run: gem build "${{ steps.gem.outputs.spec }}"
+
+      - name: Install gem and run tests 🧪
+        # Runtime dependencies (liquid, jekyll, ...) are declared in the gemspec,
+        # not in a Gemfile — most of these repos do not have one, so there is
+        # nothing for `bundle install` to read. Installing the freshly built gem
+        # is what puts those dependencies on the load path, and it means the
+        # tests exercise the exact artifact about to be pushed rather than the
+        # working tree. Same sequence tests.yml uses.
+        run: |
+          set -euo pipefail
+          gem install --no-document "./${{ steps.gem.outputs.name }}-${{ steps.gem.outputs.version }}.gem"
+          if [ -z "$(ruby -e 'puts Dir["test/**/*_test.rb"]')" ]; then
+            echo "No test/**/*_test.rb found; skipping."
+            exit 0
+          fi
+          ruby -Ilib:test -e 'Dir["test/**/*_test.rb"].sort.each { |f| require File.expand_path(f) }'
+
+      - name: Publish to RubyGems 🚀
+        if: github.event_name == 'push' || inputs.dry_run == false
+        env:
+          # Org-level secret. `gem push` reads this directly, so no credentials
+          # file is ever written to disk on the runner.
+          GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GEM_HOST_API_KEY:-}" ]; then
+            echo "::error::RUBYGEMS_API_KEY is not available to this repository."
+            echo "Check that the org secret is shared with this repo in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          gem push "${{ steps.gem.outputs.name }}-${{ steps.gem.outputs.version }}.gem"
+
+      - name: Summary 📝
+        run: |
+          {
+            echo "### ${{ steps.gem.outputs.name }} ${{ steps.gem.outputs.version }}"
+            if [ "${{ github.event_name }}" = "push" ]; then
+              echo "Published to RubyGems from tag \`${GITHUB_REF_NAME}\`."
+            elif [ "${{ inputs.dry_run }}" = "false" ]; then
+              echo "Published to RubyGems via manual dispatch."
+            else
+              echo "Dry run: built and verified, not published."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
