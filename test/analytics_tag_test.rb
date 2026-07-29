@@ -49,6 +49,30 @@ class AlAnalyticsTagTest < Minitest::Test
     assert_includes output, 'clientId: "123e4567-e89b-12d3-a456-426614174000"'
   end
 
+  def test_renders_simple_analytics_when_enabled
+    output = render_scripts(
+      'enable_simple_analytics' => true
+    )
+
+    assert_includes output, 'scripts.simpleanalyticscdn.com/latest.js'
+    refute_includes output, 'type="text/plain"'
+  end
+
+  def test_renders_simple_analytics_with_cookie_consent_attributes
+    output = render_scripts(
+      'enable_cookie_consent' => true,
+      'enable_simple_analytics' => true
+    )
+
+    assert_includes output, 'scripts.simpleanalyticscdn.com/latest.js'
+    assert_includes output, 'type="text/plain" data-category="analytics"'
+  end
+
+  def test_skips_simple_analytics_unless_flag_is_set
+    assert_equal '', render_scripts({})
+    assert_equal '', render_scripts('enable_simple_analytics' => false)
+  end
+
   def test_skips_blank_identifiers
     output = render_scripts(
       'pirsch_analytics' => '   ',

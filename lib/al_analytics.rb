@@ -68,6 +68,12 @@ module AlAnalytics
         HTML
       end
 
+      if flag_enabled?(site, "enable_simple_analytics")
+        output << <<~HTML
+          <script#{cookie_attrs} async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        HTML
+      end
+
       output.join("\n")
     end
 
@@ -85,6 +91,13 @@ module AlAnalytics
       return nil unless legacy_config.is_a?(Hash)
 
       legacy_config[legacy_key]
+    end
+
+    # Simple Analytics identifies a site by its domain rather than by an
+    # embedded key, so there is no identifier to fall back on: the provider is
+    # controlled by its enable flag alone and stays off unless it is set.
+    def flag_enabled?(site, flag_key)
+      !!site.config[flag_key]
     end
 
     def enabled?(site, flag_key, value)
