@@ -8,6 +8,7 @@
 - Cronitor Analytics
 - Pirsch Analytics
 - OpenPanel Analytics
+- Simple Analytics
 
 ## Installation
 
@@ -38,6 +39,9 @@ pirsch_analytics: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 enable_openpanel_analytics: false
 openpanel_analytics: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+
+# Simple Analytics identifies your site by domain, so there is no key to set.
+enable_simple_analytics: false
 ```
 
 Render scripts in your layout:

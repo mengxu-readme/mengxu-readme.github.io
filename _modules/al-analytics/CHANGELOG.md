@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2026-07-27
+
+- Added support for Simple Analytics via `enable_simple_analytics`. The provider has no site key, so it is controlled by the flag alone and honors `enable_cookie_consent` like every other provider.
+
 ## 0.1.1 - 2026-02-07
 
 - Fixed a Liquid compatibility bug by renaming the internal `blank?` helper to avoid conflict with Liquid parser internals.

@@ -91,17 +91,23 @@ module AlAnalytics
         HTML
       end
 
+      if flag_enabled?(site, "enable_simple_analytics")
+        output << <<~HTML
+          <script#{cookie_attrs} async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        HTML
+      end
+
       site = context.registers[:site]
       baseurl = site.config['baseurl'] || ''
 
-      if enabled?(site, "enable_microsoft_clarity")
+      if flag_enabled?(site, "enable_microsoft_clarity")
         output << <<~HTML
           <!-- Microsoft Clarity -->
           <script#{cookie_attrs} async defer src="#{baseurl}/assets/al_analytics/js/clarity-setup.js"></script>
         HTML
       end
 
-      if enabled?(site, "enable_new_relic_browser")
+      if flag_enabled?(site, "enable_new_relic_browser")
         output << <<~HTML
           <!-- New Relic Browser -->
           <script#{cookie_attrs} async defer src="#{baseurl}/assets/al_analytics/js/new-relic-setup.js"></script>
@@ -127,17 +133,20 @@ module AlAnalytics
       legacy_config[legacy_key]
     end
 
-    def enabled?(site, flag_key, value = nil)
-      if value.nil?
-        !!site.config[flag_key]
-      else
-        return false if value_blank?(value)
+    # Simple Analytics identifies a site by its domain rather than by an
+    # embedded key, so there is no identifier to fall back on: the provider is
+    # controlled by its enable flag alone and stays off unless it is set.
+    def flag_enabled?(site, flag_key)
+      !!site.config[flag_key]
+    end
 
-        flag = site.config[flag_key]
-        return true if flag.nil?
+    def enabled?(site, flag_key, value)
+      return false if value_blank?(value)
 
-        !!flag
-      end
+      flag = site.config[flag_key]
+      return true if flag.nil?
+
+      !!flag
     end
 
     def value_blank?(value)

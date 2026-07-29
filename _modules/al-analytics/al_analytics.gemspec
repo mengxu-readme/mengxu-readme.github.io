@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "al_analytics"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["al-org"]
   spec.email         = ["dev@al-org.dev"]
   spec.summary       = "Analytics integration tags for al-folio Jekyll sites"
