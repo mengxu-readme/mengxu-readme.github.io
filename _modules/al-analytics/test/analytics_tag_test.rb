@@ -49,6 +49,49 @@ class AlAnalyticsTagTest < Minitest::Test
     assert_includes output, 'clientId: "123e4567-e89b-12d3-a456-426614174000"'
   end
 
+  def test_renders_cloudflare_when_enabled
+    output = render_scripts(
+      'cloudflare_analytics' => 'abcdef0123456789abcdef0123456789',
+      'enable_cloudflare_analytics' => true
+    )
+
+    assert_includes output, 'static.cloudflareinsights.com/beacon.min.js'
+    assert_includes output, %(data-cf-beacon='{"token": "abcdef0123456789abcdef0123456789"}')
+    refute_includes output, 'type="text/plain"'
+  end
+
+  def test_renders_cloudflare_with_cookie_consent_attributes
+    output = render_scripts(
+      'enable_cookie_consent' => true,
+      'cloudflare_analytics' => 'abcdef0123456789abcdef0123456789'
+    )
+
+    assert_includes output, 'static.cloudflareinsights.com/beacon.min.js'
+    assert_includes output, 'type="text/plain" data-category="analytics"'
+  end
+
+  def test_renders_cloudflare_from_legacy_analytics_hash
+    output = render_scripts(
+      'analytics' => { 'cloudflare' => 'cf-legacy-token' }
+    )
+
+    assert_includes output, %(data-cf-beacon='{"token": "cf-legacy-token"}')
+  end
+
+  def test_skips_cloudflare_without_a_token
+    assert_equal '', render_scripts('enable_cloudflare_analytics' => true)
+    assert_equal '', render_scripts('enable_cloudflare_analytics' => true, 'cloudflare_analytics' => '   ')
+  end
+
+  def test_respects_explicit_cloudflare_disable_flag
+    output = render_scripts(
+      'cloudflare_analytics' => 'abcdef0123456789abcdef0123456789',
+      'enable_cloudflare_analytics' => false
+    )
+
+    refute_includes output, 'cloudflareinsights.com'
+  end
+
   def test_renders_simple_analytics_when_enabled
     output = render_scripts(
       'enable_simple_analytics' => true

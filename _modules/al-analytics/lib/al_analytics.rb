@@ -91,6 +91,14 @@ module AlAnalytics
         HTML
       end
 
+      cloudflare_token = analytics_value(site, "cloudflare_analytics", "cloudflare")
+      if enabled?(site, "enable_cloudflare_analytics", cloudflare_token)
+        output << <<~HTML
+          <!-- Cloudflare Web Analytics -->
+          <script#{cookie_attrs} defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "#{cloudflare_token}"}'></script>
+        HTML
+      end
+
       if flag_enabled?(site, "enable_simple_analytics")
         output << <<~HTML
           <script#{cookie_attrs} async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
