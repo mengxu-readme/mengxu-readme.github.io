@@ -77,13 +77,47 @@
   >
 {% endif %}
 
+{% comment %}
+  Note: `x != blank` is unreliable here — Liquid's `blank` literal compares by calling
+  `blank?` on the other operand, and plain Ruby's NilClass/String have no `blank?`, so
+  the comparison yields nil and `!=` is therefore always true. An unset `site.icon`
+  used to fall through to the `elsif` below and emit `href="/assets/img/"`. Truthiness
+  plus an explicit empty-string check behaves correctly with or without ActiveSupport.
+{% endcomment %}
 {% if site.icon.size <= 4 %}
   <link
     rel="shortcut icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>"
   >
-{% elsif site.icon != blank %}
+{% elsif site.icon and site.icon != '' %}
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
+{% endif %}
+{% comment %}
+  iOS home-screen bookmarks need `rel="apple-touch-icon"` pointing at a real raster
+  image; Safari ignores the inline SVG data URI used for the emoji favicon above and
+  falls back to a screenshot of the page. So the tag is emitted only when a usable
+  asset actually exists — an explicit `apple_touch_icon` (a 180x180 PNG is what Apple
+  recommends), or an `icon` that is already a raster image file. When `icon` is an
+  emoji, nothing is emitted rather than a link that would 404.
+  See alshedivat/al-folio#2774.
+{% endcomment %}
+{% if site.apple_touch_icon and site.apple_touch_icon != '' %}
+  {% assign apple_touch_icon = site.apple_touch_icon %}
+{% elsif site.icon and site.icon.size > 4 %}
+  {% assign icon_extension = site.icon | split: '.' | last | split: '?' | first | downcase %}
+  {% if icon_extension == 'png' or icon_extension == 'jpg' or icon_extension == 'jpeg' %}
+    {% assign apple_touch_icon = site.icon %}
+  {% endif %}
+{% endif %}
+{% if apple_touch_icon %}
+  {% if apple_touch_icon contains '://' %}
+    {% assign apple_touch_icon_url = apple_touch_icon %}
+  {% elsif apple_touch_icon contains '/' %}
+    {% assign apple_touch_icon_url = apple_touch_icon | relative_url | bust_file_cache %}
+  {% else %}
+    {% assign apple_touch_icon_url = apple_touch_icon | prepend: '/assets/img/' | relative_url | bust_file_cache %}
+  {% endif %}
+  <link rel="apple-touch-icon" href="{{ apple_touch_icon_url }}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 {% if page.layout == 'cv' and site.plugins contains 'al_folio_cv' and site.al_folio.features.cv.enabled != false %}

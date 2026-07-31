@@ -1,7 +1,12 @@
-{% assign extension = include.path | split: '.' | last %}
+{%- comment -%}
+  Normalize the extension before matching: strip any query string (`clip.mp4?raw=1`)
+  and lower-case it (`CLIP.MP4`), otherwise a perfectly good video file falls through
+  to the <iframe> branch below and renders as an empty frame.
+{%- endcomment -%}
+{% assign extension = include.path | split: '.' | last | split: '?' | first | downcase %}
 
 <figure>
-  {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
+  {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' or extension == 'mov' %}
     <video
       src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}
