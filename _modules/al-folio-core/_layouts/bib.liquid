@@ -26,7 +26,23 @@
         {% endif %}
       {% endif %}
       {% if entry.preview %}
-        {% if entry.preview contains '://' %}
+        {%- comment -%}
+          A preview may be a video file rather than an image. Rendering one through the
+          image path below produces a broken <img>, so hand it to video.liquid instead.
+          Keep this list in sync with the native-video branch of _includes/video.liquid:
+          an extension it does not recognize falls through to its <iframe> branch.
+          See alshedivat/al-folio#3564.
+        {%- endcomment -%}
+        {% assign preview_video_extensions = 'mp4,webm,ogg,mov' | split: ',' %}
+        {% assign preview_extension = entry.preview | split: '.' | last | split: '?' | first | downcase %}
+        {% if preview_video_extensions contains preview_extension %}
+          {% if entry.preview contains '://' %}
+            {% assign preview_video_path = entry.preview %}
+          {% else %}
+            {% assign preview_video_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% endif %}
+          {% include video.liquid path=preview_video_path class="preview z-depth-1 rounded" controls=true %}
+        {% elsif entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/research_preview/' %}

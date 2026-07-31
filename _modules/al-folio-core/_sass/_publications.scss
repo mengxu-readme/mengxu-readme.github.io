@@ -43,6 +43,14 @@
         display: inline-block;
       }
 
+      // Video previews have no intrinsic responsive sizing the way <img> does, so
+      // without this a <video class="preview"> falls back to its 300x150 default and
+      // overflows the thumbnail column.
+      video.preview {
+        max-width: 100%;
+        height: auto;
+      }
+
       .abbr {
         margin-bottom: 0.25rem;
 
