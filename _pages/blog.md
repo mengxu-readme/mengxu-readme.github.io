@@ -148,7 +148,7 @@ pagination:
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}
       </p>
-      <p class="post-tags" style="margin-bottom: 0rem;">
+      <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | relative_url  }}">
           <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
 
