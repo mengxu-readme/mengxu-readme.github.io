@@ -57,6 +57,10 @@
       white-space: normal;
       text-align: left;
     }
+
+    .toggle-container {
+      margin-left: -5.5px;
+    }
   }
 }
 
@@ -225,6 +229,7 @@
 
 @media (min-width: 576px) {
   #light-toggle {
+    padding-bottom: 1.5px;
     transform: translateY(4px);
   }
 }
