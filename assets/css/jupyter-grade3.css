@@ -1,4 +1,12 @@
 /* From https://github.com/dunovank/jupyter-themes/blob/master/jupyterthemes/styles/compiled/grade3.css */
+div#notebook {
+  font-family: sans-serif;
+  font-size: 13pt;
+  line-height: 170%;
+  color: #303030;
+  -webkit-font-smoothing: antialiased !important;
+  padding-top: 25px !important;
+}
 
 body,
 div.body {
@@ -100,6 +108,12 @@ ul#tabs a {
 .nav > li.disabled > a,
 .nav > li.disabled > a:hover {
   color: #828892;
+}
+
+div#notebook {
+  font-family: sans-serif;
+  font-size: 13pt;
+  padding-top: 4px;
 }
 
 .container {
