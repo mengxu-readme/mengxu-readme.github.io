@@ -1,5 +1,22 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+{%- comment -%}
+  al_rtl owns the language and direction attributes when it is installed, because
+  `dir` has to sit on <html> for the browser's bidi handling, CSS logical
+  properties and Tailwind's rtl: variant to apply to the whole document.
+
+  Captured into a variable rather than wrapping the <html> tag in a conditional:
+  a conditional there stops the tag being a single static element, and Prettier
+  then re-indents the entire document body. The guard keeps this parse-safe —
+  without the plugin the tag does not exist and Liquid fails on every page.
+{%- endcomment -%}
+{%- capture html_attributes -%}
+  {%- if site.plugins contains 'al_rtl' -%}
+    {%- include plugins/al_rtl_html_attrs.liquid -%}
+  {%- else -%}
+    lang="{{ site.lang }}"
+  {%- endif -%}
+{%- endcapture -%}
+<html {{ html_attributes }}>
   <!-- Head -->
   <head>
     {% if page.redirect %}

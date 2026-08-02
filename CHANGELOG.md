@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.14 - 2026-08-02
+
+- Added invocation hooks for three new plugin gems: `al_rtl`, `al_email_protect` and `al_marimo`. Each is a parse-safe wrapper under `_includes/plugins/` called from `head.liquid`, `scripts.liquid` or `default.liquid`, and every call sits inside a `site.plugins contains` guard — an unguarded custom tag is a parse error on any site that has not installed the gem, which fails the whole build rather than just the feature.
+- `al_rtl` needs `dir` on the `<html>` element, which is what the browser's bidi algorithm, CSS logical properties and Tailwind's `rtl:` variant key off; a wrapper `div` would leave the navbar, footer and scrollbar placement laid out left-to-right. The attributes are captured into a variable rather than the tag being wrapped in `{% if %}`, because a conditional there stops Prettier seeing a static root element and it re-indents the entire document body. Sites without `al_rtl` get byte-identical output from the fallback branch.
+- Added `.gitignore`. The repo had none, so `npm ci` (needed for the prettier lint) left `node_modules` addable and a routine `git add -A` swept ~208k lines of vendored JS into a commit.
+
 ## 1.0.13 - 2026-07-29
 
 - Added an `apple-touch-icon` link to `_includes/head.liquid`. Without it, "Add to Home Screen" on iOS falls back to a screenshot of the page instead of the site icon, because Safari only reads `rel="apple-touch-icon"` for that thumbnail — it never uses `rel="shortcut icon"`. The link is emitted only when a raster asset actually exists: a new optional `apple_touch_icon` config key (resolved under `/assets/img/` like `icon`, or used verbatim when it is a rooted path or an absolute URL), otherwise an `icon` that is itself a `.png`/`.jpg`/`.jpeg` file. The default emoji `icon` renders as an inline SVG data URI, which Safari ignores for touch icons, so in that case nothing is emitted rather than a link that would 404. Apple's recommended asset is a 180x180 PNG. Fixes alshedivat/al-folio#2774.

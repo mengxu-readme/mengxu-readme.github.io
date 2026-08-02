@@ -191,3 +191,18 @@
   <!-- Cookie Consent -->
   {% include plugins/al_cookie_styles.liquid %}
 {% endif %}
+
+{% if site.plugins contains 'al_rtl' %}
+  <!-- Right-to-left support -->
+  {% include plugins/al_rtl_styles.liquid %}
+{% endif %}
+
+{% if site.protect_email and site.plugins contains 'al_email_protect' %}
+  <!-- Email obfuscation -->
+  {% include plugins/al_email_protect_styles.liquid %}
+{% endif %}
+
+{% if page.marimo and site.plugins contains 'al_marimo' %}
+  <!-- Marimo notebooks -->
+  {% include plugins/al_marimo_styles.liquid %}
+{% endif %}
