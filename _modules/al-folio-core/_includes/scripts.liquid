@@ -142,3 +142,13 @@
     {% include plugins/al_newsletter_scripts.liquid %}
   {% endif %}
 {% endif %}
+
+{% if site.protect_email and site.plugins contains 'al_email_protect' %}
+  <!-- Email obfuscation -->
+  {% include plugins/al_email_protect_scripts.liquid %}
+{% endif %}
+
+{% if page.marimo and site.plugins contains 'al_marimo' %}
+  <!-- Marimo notebooks -->
+  {% include plugins/al_marimo_scripts.liquid %}
+{% endif %}

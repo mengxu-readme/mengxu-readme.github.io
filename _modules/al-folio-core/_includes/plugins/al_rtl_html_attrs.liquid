@@ -1,0 +1,7 @@
+{%- comment -%}
+  Parse-safe wrapper for al_rtl custom tag.
+
+  Whitespace-controlled: the output of this include lands *inside* the <html>
+  tag, so a stray newline would sit between the tag name and its attributes.
+{%- endcomment -%}
+{%- al_rtl_html_attrs -%}
