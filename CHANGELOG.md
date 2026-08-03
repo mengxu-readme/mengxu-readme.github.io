@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.15 - 2026-08-03
+
+- Fixed text colour staggering when switching between light and dark themes, which read as a flicker. `color`, `fill` and `stroke` are inherited properties, but the theme-transition rule applied them to `html.transition *`, so every inheriting element ran its own 240ms ease toward a parent whose colour was still animating — convergence compounded once per level of nesting, and deeper text landed visibly later before snapping when the class was removed. Measured on the about page, an `h2 > a` sat at `rgb(50,50,50)` while the paragraph beside it was already at `rgb(130,130,130)`. Those properties are now transitioned once, on the root and on `body`; non-inherited properties keep their per-element transitions. Text now changes uniformly rather than in waves.
+- Fixed `transition-delay: 0` being silently dropped by the CSS parser — a `<time>` value requires a unit even for zero, unlike `<length>`. Now `0s`.
+- Widened the margin before the `.transition` class is removed. It was 260ms against a 240ms transition, so a single slow frame during the theme repaint truncated the transition into a snap; the cleanup delay is now derived from the duration.
+
 ## 1.0.14 - 2026-08-02
 
 - Added invocation hooks for three new plugin gems: `al_rtl`, `al_email_protect` and `al_marimo`. Each is a parse-safe wrapper under `_includes/plugins/` called from `head.liquid`, `scripts.liquid` or `default.liquid`, and every call sits inside a `site.plugins contains` guard — an unguarded custom tag is a parse error on any site that has not installed the gem, which fails the whole build rather than just the feature.

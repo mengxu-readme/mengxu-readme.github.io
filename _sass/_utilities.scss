@@ -120,14 +120,35 @@ progress::-moz-progress-bar {
 
 // Themes transition
 
+// `color`, `fill` and `stroke` are INHERITED properties, so they are
+// transitioned on the root only. Applying them to every descendant made each
+// inheriting element run its own 240ms ease toward a parent that was itself
+// still animating — so text converged later the deeper it sat in the tree, and
+// then snapped when this class was removed. Measured on the about page: an
+// `h2 > a` was roughly 2.5x behind the surrounding paragraph mid-transition.
+// Transitioning them once at the root lets every descendant inherit the same
+// animated value on the same frame.
+// `body` is included because it declares `color` itself; without it the value
+// every descendant inherits would change instantly and text would snap rather
+// than fade.
 html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
+html.transition body {
   transition-property: color, background-color, border-color, fill, stroke, box-shadow !important;
   transition-duration: 240ms !important;
   transition-timing-function: ease !important;
-  transition-delay: 0 !important;
+  transition-delay: 0s !important;
+}
+
+// Non-inherited properties still need to be transitioned per element.
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition-property: background-color, border-color, box-shadow !important;
+  transition-duration: 240ms !important;
+  transition-timing-function: ease !important;
+  // `0` alone is invalid for a <time> value — unlike <length>, time requires a
+  // unit even for zero — so this declaration was being dropped by the parser.
+  transition-delay: 0s !important;
 }
 
 // Copy button
