@@ -182,11 +182,11 @@ module Jekyll
                   img_code = "<img src='#{relative_url(logo_value, context)}' alt='#{social[0].gsub('_', ' ').capitalize}'>"
                 end
               end
-              "<a href='#{url}' title='#{social[0].gsub('_', ' ').capitalize}'>#{img_code}</a>"
+              "<a href='#{url}' title='#{social[1].is_a?(Hash) && social[1]['title'] ? social[1]['title'] : social[0].gsub('_', ' ').capitalize}'>#{img_code}</a>"
             else
               # It's an icon class string, render as icon (from any font source)
               icon_html = "<i class='#{logo_value}'></i>"
-              "<a href='#{url}' title='#{social[0].gsub('_', ' ').capitalize}'>#{icon_html}</a>"
+              "<a href='#{url}' title='#{social[1].is_a?(Hash) && social[1]['title'] ? social[1]['title'] : social[0].gsub('_', ' ').capitalize}'>#{icon_html}</a>"
             end
           else
             # Use default icon for built-in social
