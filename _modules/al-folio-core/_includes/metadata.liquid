@@ -140,10 +140,10 @@
         {% capture link %}{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'cv_pdf' %}
-        {% if social[1] contains '://' %}
-          {% capture link %}{{ social[1] }}{% endcapture %}
+        {% if social[1].value contains '://' %}
+          {% capture link %}{{ social[1].value }}{% endcapture %}
         {% else %}
-          {% capture link %}{{ social[1] | relative_url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+          {% capture link %}{{ social[1].value | relative_url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
         {% endif %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'dblp_url' %}
